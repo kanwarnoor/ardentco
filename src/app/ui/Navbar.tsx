@@ -14,7 +14,7 @@ export default function Navbar() {
             <Link href="/contact" className='flex justify-center items-center w-32 h-10 bg-yellow-400 rounded-full font-medium'>{"Let's Connect"}</Link>
         </div>
     </div>
-    <div className='w-100 h-screen bg-red-200 bottom-10'></div>
+    <div className='w-100 h-16 bg-white '></div>
     </>
   )
 }
