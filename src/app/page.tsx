@@ -1,5 +1,7 @@
 export default function Home() {
   return (
-    "under devlopement"
+   <>
+   <div className="w-full h-screen  "></div>
+   </>
   );
 }
