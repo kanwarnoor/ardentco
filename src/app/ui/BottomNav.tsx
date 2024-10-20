@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function BottomNav() {
   const navLinks : string[] = ["Home", "Services", "Manigesto", "Team", "Contact"]
-  let key = 0;
+  const key = 0;
 
   return (
     <div className='fixed bottom-0 left-1/2 transform -translate-x-1/2 h-16 bg-black rounded-full text-white text-center flex justify-center items-center mb-5 '>
