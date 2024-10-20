@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link";
 import { FlipWords } from "./components/ui/flip-words";
 
 export default function Home() {
