@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./ui/Navbar";
+import Navbar from "./components/ui/Navbar";
 import { Rethink_Sans  } from 'next/font/google'
-import BottomNav from "./ui/BottomNav";
+import BottomNav from "./components/ui/BottomNav";
 
 const rethink = Rethink_Sans({ subsets: ['latin'] })
 
