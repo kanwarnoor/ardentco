@@ -5,4 +5,15 @@
 body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
+
+::-moz-selection {
+    color: black;
+    background: rgb(250 204 21);
+  }
+  
+::selection {
+    color: black;
+    background: rgb(250 204 21);
+  }

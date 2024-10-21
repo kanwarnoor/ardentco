@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./components/ui/Navbar";
 import { Rethink_Sans  } from 'next/font/google'
-import BottomNav from "./components/ui/BottomNav";
 
 const rethink = Rethink_Sans({ subsets: ['latin'] })
 
@@ -20,9 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={rethink.className}>
-        <Navbar/>
         {children}
-        <BottomNav/>
       </body>
     </html>
   );

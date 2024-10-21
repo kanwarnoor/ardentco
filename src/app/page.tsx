@@ -1,22 +1,14 @@
 "use client"
 
 import Link from "next/link";
-import { FlipWords } from "./components/ui/flip-words";
-import { Spotlight } from "./components/ui/Spotlight";
 
 export default function Home() {
-  const avail : string[] = ["Rewiring" ,"Transforming", "Rewriting", "Modernizing", "Elevating"]
-
   return (
-   <>
-      <div className='w-100 h-[520px] bg-black rounded-3xl mx-5 p-20' >
-        <Spotlight className="right-0"/>
-        <FlipWords words={avail} duration={3000} className="text-9xl font-bold text-white"/>
-        <p className="text-9xl font-bold text-white text-opacity-50 mb-10">Status Quo</p>
-
-        <Link href="/contact" className="text-white border-2 border-white px-5 py-3 rounded-full text-lg hover:opacity-100 hover:transition-all transition-all opacity-100">Get in Touch</Link>
-
-      </div>
-   </>
+    <div className="w-full h-fit absolute top-0 bottom-0 left-0 right-0 m-auto text-center flex flex-col justify-center items-center">
+      <p className="font-bold text-5xl mb-5">Different Options</p>
+      <Link href="/1" className="flex w-fit text-center justify-center px-5 py-3 bg-black text-white mb-2 hover:bg-opacity-80 transition hover:transition">Option 1</Link>
+      <Link href="/2" className="flex w-fit text-center justify-center px-5 py-3 bg-black text-white mb-2 hover:bg-opacity-80 transition hover:transition">Option 2</Link> <br />
+      <Link href="/3" className="flex w-fit text-center justify-center px-5 py-3 bg-black text-white mb-2 hover:bg-opacity-80 transition hover:transition">Option 3</Link>
+    </div>
   );
 }
