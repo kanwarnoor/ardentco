@@ -27,7 +27,7 @@ export default function BottomNav() {
     key = 4;
   }
 
-  const [overlap, setOverlap] = useState("bg-black");
+  const [overlap, setOverlap] = useState("bg-black text-white");
 
   useEffect(() => {
     const element = () => {
@@ -35,7 +35,7 @@ export default function BottomNav() {
 
       if (window.scrollY > 1910) {
         setOverlap("bg-white text-black");
-      } else{
+      } else {
         setOverlap("bg-black text-white");
       }
     };
@@ -61,7 +61,7 @@ export default function BottomNav() {
               className={`w-32 h-16 flex justify-center items-center text-center cursor-pointer transition duration-300 hover:px-10 rounded-full
             ${index === navLinks.length - 1 ? "rounded-r-full" : ""}
             ${index === 0 ? "rounded-l-full" : ""}
-            ${index === key ? "bg-yellow-400 text-black" : {overlap}}
+            ${index === key ? "bg-yellow-400 text-black" : { overlap }}
           `}
               key={index}
             >
