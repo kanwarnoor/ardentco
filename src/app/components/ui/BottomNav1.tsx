@@ -31,13 +31,25 @@ export default function BottomNav() {
 
   useEffect(() => {
     const element = () => {
-      console.log(window.scrollY);
+      const scroll = window.scrollY;
+      const height = window.outerHeight;
 
-      if (window.scrollY > 1910) {
-        setOverlap("bg-white text-black");
-      } else {
-        setOverlap("bg-black text-white");
+      if(height >= 1000){
+        if (scroll >= 1878) {
+          setOverlap("bg-white text-black");
+        } else {
+          setOverlap("bg-black text-white");
+        }
       }
+      else if(height >= 800){
+        if (scroll >= 1571) {
+          setOverlap("bg-white text-black");
+        } else {
+          setOverlap("bg-black text-white");
+        }
+      }
+
+      
     };
     window.addEventListener("scroll", element);
 

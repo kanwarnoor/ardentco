@@ -6,32 +6,39 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      
-      // Calculate relative scroll positions
-      const firstThreshold = 0.04 * windowHeight;  // 4% of viewport height
-      const secondThreshold = 0.75 * windowHeight; // 75% of viewport height
-      const thirdThreshold = 2.5 * windowHeight;   // 250% of viewport height
-  
-      if (scrollPosition > firstThreshold && scrollPosition < secondThreshold) {
-        setOverlap("text-white");
-      } else if (scrollPosition > secondThreshold && scrollPosition < thirdThreshold) {
-        setOverlap("text-black");
-      } else if (scrollPosition > thirdThreshold) {
-        setOverlap("text-white");
-      } else if (scrollPosition < firstThreshold) {
-        setOverlap("text-black");
+      const scroll = window.scrollY;
+      const height = window.outerHeight;
+
+      if (height >= 1000) {
+        if (scroll >= 48 && scroll <= 798) {
+          setOverlap("text-white");
+        } else if (scroll >= 798 && scroll <= 2712) {
+          setOverlap("text-black");
+        } else if (scroll >= 2712) {
+          setOverlap("text-white");
+        } else {
+          setOverlap("text-black");
+        }
+      } else if (height >= 800) {
+        if (scroll >= 45 && scroll <= 641) {
+          setOverlap("text-white");
+        } else if (scroll >= 641 && scroll <= 2204) {
+          setOverlap("text-black");
+        } else if (scroll >= 2204) {
+          setOverlap("text-white");
+        } else {
+          setOverlap("text-black");
+        }
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);  // Cleanup listener on unmount
+      window.removeEventListener("scroll", handleScroll); // Cleanup listener on unmount
     };
   }, []);
-  
+
   return (
     <>
       <div className={`w-full h-16 text-black flex fixed z-50`}>

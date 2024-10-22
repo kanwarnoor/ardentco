@@ -1,19 +1,19 @@
-@tailwind base;
+;@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 ::-moz-selection {
-    color: black;
-    background: rgb(250 204 21);
-  }
-  
+  color: black;
+  background: rgb(250 204 21);
+}
+
 ::selection {
-    color: black;
-    background: rgb(250 204 21);
-  }
+  color: black;
+  background: rgb(250 204 21);
+}
