@@ -8,7 +8,7 @@ export default function Footer() {
           {/* <!-- Column 1: Company Info --> */}
           <div>
             <h2 className="font-bold text-xl">ARDENT CO.</h2>
-            <p className="text-black mt-2">
+            <p className="text-black mt-4">
               Communications, Research and Public Policy Advisory
             </p>
             <p className="mt-4 text-black leading-relaxed">
@@ -21,7 +21,7 @@ export default function Footer() {
   <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
 </svg>
 
-              212 386 5575
+              <p className="pl-2">7888312479</p>
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export default function Footer() {
                 >
                   <path d="M3.654 1.328a.678.678 0 0 1 .866-.326c.893.337 2.678 1.177 3.771 2.119a16.933 16.933 0 0 1 1.867 1.867c.94 1.093 1.781 2.878 2.119 3.771a.678.678 0 0 1-.326.866l-2.507 1.003a.678.678 0 0 1-.821-.287L6.533 7.56l-1.187-.646-.646-1.187L1.956 3.658a.678.678 0 0 1 .287-.821L3.654 1.328z" />
                 </svg>
-                +91 1723 801 729
+                +91 7888312479
               </li>
               <li>
                 <svg
@@ -120,7 +120,7 @@ export default function Footer() {
                   <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4z" />
                   <path d="M8 9.5l4-3H4l4 3z" />
                 </svg>
-                example@email.com
+                wellitsnoor@gmail.com
               </li>
             </ul>
             <div className="mt-4 flex space-x-3">
