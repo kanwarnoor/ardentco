@@ -40,7 +40,7 @@ export default function Home() {
             </p>
 
             <Link
-              href="/contact"
+              href=""
               className="text-white border-2 border-white px-5 py-3 rounded-full text-lg hover:opacity-100 hover:transition-all transition-all opacity-100 w-fit"
             >
               Get in Touch
@@ -306,12 +306,7 @@ export default function Home() {
             </div>
           </div>
 
-
-
-
-                  {/* i wanna work with you */}
-
-
+          {/* i wanna work with you */}
 
           <div
             className={`flex flex-col w-[50%] mt-10 rounded-3xl duration-300`}
@@ -434,15 +429,13 @@ export default function Home() {
               }}
             >
               <div
-                className={`h-fit m-auto pt-5 ${
-                  clicked1 ? "hidden" : "block"
-                }`}
+                className={`h-fit m-auto pt-5 ${clicked1 ? "hidden" : "block"}`}
               >
                 <p className="text-white text-5xl font-bold top-5">
-                i wanna <br />
-                work with <br />
-              </p>
-              <p className="text-white text-9xl font-black underline">YOU</p>
+                  i wanna <br />
+                  work with <br />
+                </p>
+                <p className="text-white text-9xl font-black underline">YOU</p>
               </div>
             </div>
           </div>
@@ -456,12 +449,8 @@ export default function Home() {
               <p className="text-white text-9xl font-black underline">YOU</p>
             </div>
           </div> */}
-
-
-
-
         </div>
-            <Footer/>
+        <Footer />
         <BottomNav />
       </main>
       <main className="md:hidden block">
@@ -473,7 +462,6 @@ export default function Home() {
             </p>
           </div>
         </div>
-
       </main>
     </>
   );

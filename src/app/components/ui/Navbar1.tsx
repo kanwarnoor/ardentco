@@ -52,7 +52,7 @@ export default function Navbar() {
 
         <div className="flex ml-auto text-center justify-center items-center mr-10">
           <Link
-            href="/contact"
+            href=""
             className="flex justify-center items-center w-32 h-10 bg-yellow-400 rounded-full font-medium"
           >
             {"Let's Connect"}

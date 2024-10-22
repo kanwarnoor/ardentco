@@ -68,11 +68,13 @@ export default function BottomNav() {
         {navLinks.map((nav, index) => {
           return (
             <Link
-              href={`/${
+              href={`${
                 navLinks[index].toLowerCase() == "home"
-                  ? ""
-                  : navLinks[index].toLowerCase()
+                  ? "/"
+                  : ""
+                  // : navLinks[index].toLowerCase()
               }`}
+    
               className={`w-32 h-16 flex justify-center items-center text-center cursor-pointer transition duration-300 hover:px-10 rounded-full
             ${index === navLinks.length - 1 ? "rounded-r-full" : ""}
             ${index === 0 ? "rounded-l-full" : ""}
