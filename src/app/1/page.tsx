@@ -21,12 +21,14 @@ export default function Home() {
       <Navbar />
       <div className="flex flex-row w-100 h-[82vh] bg-black rounded-3xl mx-5 pl-20">
         <Spotlight className="right-0" />
-        <div className="flex w-fit my-auto flex-col">
-          <FlipWords
-            words={avail}
-            duration={3000}
-            className="text-9xl font-bold text-white"
-          />
+        <div className="flex w-[70%] my-auto flex-col z-20">
+          <div className="relative w-[400px] mb-32">
+            <FlipWords
+              words={avail}
+              duration={3000}
+              className="absolute text-9xl font-bold text-white w-full text-center"
+            />
+          </div> 
           <p className="text-9xl font-bold text-white text-opacity-50 mb-10">
             Status Quo
           </p>
@@ -39,7 +41,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="flex w-[50%] h-[100%] ml-auto mt-auto">
+        <div className="flex w-[50%] h-[100%] mr-auto mt-auto">
           <Image
             src="/buildings.png"
             width={600}

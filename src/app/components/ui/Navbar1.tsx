@@ -5,25 +5,33 @@ export default function Navbar() {
   const [overlap, setOverlap] = useState("");
 
   useEffect(() => {
-    const element = () => {
-      console.log(window.scrollY);
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
       
-      if (window.scrollY > 40 && window.scrollY < 796) {
+      // Calculate relative scroll positions
+      const firstThreshold = 0.04 * windowHeight;  // 4% of viewport height
+      const secondThreshold = 0.75 * windowHeight; // 75% of viewport height
+      const thirdThreshold = 2.5 * windowHeight;   // 250% of viewport height
+  
+      if (scrollPosition > firstThreshold && scrollPosition < secondThreshold) {
         setOverlap("text-white");
-      } else if (window.scrollY > 796 && window.scrollY < 2712) {
+      } else if (scrollPosition > secondThreshold && scrollPosition < thirdThreshold) {
         setOverlap("text-black");
-      } else if (window.scrollY > 2712) {
+      } else if (scrollPosition > thirdThreshold) {
         setOverlap("text-white");
-      } else if (window.scrollY < 40) {
+      } else if (scrollPosition < firstThreshold) {
         setOverlap("text-black");
       }
     };
-    window.addEventListener("scroll", element);
-
+  
+    window.addEventListener("scroll", handleScroll);
+  
     return () => {
-      window.addEventListener("scroll", element);
+      window.removeEventListener("scroll", handleScroll);  // Cleanup listener on unmount
     };
-  });
+  }, []);
+  
   return (
     <>
       <div className={`w-full h-16 text-black flex fixed z-50`}>
