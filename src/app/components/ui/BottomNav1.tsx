@@ -34,22 +34,25 @@ export default function BottomNav() {
       const scroll = window.scrollY;
       const height = window.outerHeight;
 
-      if(height >= 1000){
-        if (scroll >= 1878) {
+      if (height >= 1000) {
+        console.log(scroll);
+        if (scroll >= 1878 && scroll <= 2800) {
           setOverlap("bg-white text-black");
+        } else if (scroll >= 2800) {
+          setOverlap("bg-black text-white");
         } else {
           setOverlap("bg-black text-white");
         }
-      }
-      else if(height >= 800){
-        if (scroll >= 1571) {
-          setOverlap("bg-white text-black");
-        } else {
-          setOverlap("bg-black text-white");
-        }
-      }
+      } else if (height >= 800) {
 
-      
+        if (scroll >= 1571 && scroll <= 2306) {
+          setOverlap("bg-white text-black");
+        } else if (scroll >= 2306) {
+          setOverlap("bg-black text-white");
+        } else {
+          setOverlap("bg-black text-white");
+        }
+      }
     };
     window.addEventListener("scroll", element);
 

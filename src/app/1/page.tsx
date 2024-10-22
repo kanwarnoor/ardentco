@@ -7,6 +7,7 @@ import Navbar from "../components/ui/Navbar1";
 import BottomNav from "../components/ui/BottomNav1";
 import Image from "next/image";
 import { useState } from "react";
+import Footer from "@/app/components/ui/Footer";
 
 export default function Home() {
   const [clicked, setClicked] = useState(false);
@@ -460,7 +461,7 @@ export default function Home() {
 
 
         </div>
-
+            <Footer/>
         <BottomNav />
       </main>
       <main className="md:hidden block">
@@ -472,6 +473,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+
       </main>
     </>
   );
