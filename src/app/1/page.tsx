@@ -440,7 +440,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer theme="light"/>
         <BottomNav />
       </main>
       <main className="md:hidden block">
