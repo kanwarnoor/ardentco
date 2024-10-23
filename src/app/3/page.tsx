@@ -31,6 +31,7 @@ export default function Home() {
 
   return (
     <>
+    <main className="md:block hidden">
       <div
         className={`w-full h-16 flex fixed z-50 duration-300 ${
           scrolled ? "bg-black text-white" : "bg-white text-black"
@@ -194,6 +195,18 @@ export default function Home() {
       </div>
       <div className="mb-20"></div>
       <Footer />
+      </main>
+
+      <main className="md:hidden block">
+        <div className="flex w-full h-[100vh] bg-black">
+          <div className="flex flex-col w-fit h-fit m-auto  text-center">
+            <p className="text-white text-3xl font-black">View on desktop</p>
+            <p className="text-white text-xs font-medium">
+              mobile version not complete yet.
+            </p>
+          </div>
+        </div>
+      </main>
     </>
   );
 }
