@@ -88,7 +88,7 @@ export default function Home() {
             ecosystem for unleashing untapped potential.
           </p>
         </div>
-        <Footer theme="dark"/>
+        <Footer theme="dark" />
       </main>
 
       <main className="md:hidden block">
