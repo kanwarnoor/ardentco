@@ -84,43 +84,115 @@ export default function Home() {
         <p className="text-6xl font-black text-center mx-auto w-fit mt-20">
           Our perspectives
         </p>
-        <div className="flex flex-row w-fit h-fit mt-10 space-x-10 mx-auto">
-
+        <div className="flex flex-row w-fit h-fit mt-10 space-x-10 mx-auto flex-wrap">
           <div className="flex w-96 h-96 bg-[url(/money.jpg)] bg-cover bg-[center_top_70%] rounded-xl cursor-pointer hover:scale-[1.05] duration-300">
             <div className="flex w-full h-[30%] mt-auto rounded-b-xl">
-                <p className="flex text-center m-auto text-white font-bold text-xl">
-                  Making Sense of Union <br /> Budget {year - 1} - {year}
-                </p>
+              <p className="flex text-center m-auto text-white font-bold text-xl">
+                Making Sense of Union <br /> Budget {year - 1} - {year}
+              </p>
             </div>
           </div>
 
           <div className="flex w-96 h-96 bg-[url(/globe3.jpg)] bg-cover bg-[50%_50%] rounded-xl cursor-pointer hover:scale-[1.05] duration-300">
             <div className="flex w-full h-[30%] mt-auto rounded-b-xl">
-  
-                <p className="flex text-center m-auto text-white font-bold text-xl">
-                  Strengthening India&apos;s Focus on Investments in Climate Adaptation
-                </p>
-   
+              <p className="flex text-center m-auto text-white font-bold text-xl">
+                Strengthening India&apos;s Focus on Investments in Climate
+                Adaptation
+              </p>
             </div>
           </div>
 
           <div className="flex w-96 h-96 bg-[url(/abstract.jpg)] bg-cover bg-[50%_50%] rounded-xl cursor-pointer hover:scale-[1.05] duration-300">
             <div className="flex w-full h-[30%] mt-auto rounded-b-xl">
-  
-                <p className="flex text-center m-auto text-white font-bold text-xl">
-                  Brief on Strengthening Quantum Applications Ecosystem in India
-                </p>
-   
+              <p className="flex text-center m-auto text-white font-bold text-xl">
+                Brief on Strengthening Quantum Applications Ecosystem in India
+              </p>
             </div>
           </div>
-          
         </div>
-
 
         <p className="text-6xl font-black text-center mx-auto w-fit mt-20">
           Our views in media
         </p>
+
+        <div className="flex flex-wrap mx-auto mt-5 py-5 px-20 gap-5 text-white cursor-pointer w-fit justify-center">
+          <div className="flex w-[400px] h-[200px] bg-black rounded-xl">
+            <div className="w-[170px] h-[170px] my-auto ml-4 rounded-xl bg-[url(/globe2.jpg)] bg-cover bg-center duration-300"></div>
+            <div className="flex flex-col w-[192px] my-4 mx-auto rounded-xl">
+              <p className="font-bold text-xl">Navigating Climate Financing</p>
+              <a
+                className="flex font-medium text-base mt-auto underline"
+                href=""
+              >
+                Read more {"->"}
+              </a>
+            </div>
+          </div>
+
+          <div className="flex w-[400px] h-[200px] bg-black rounded-xl">
+            <div className="w-[170px] h-[170px] my-auto ml-4 rounded-xl bg-[url(/upi.webp)] bg-cover bg-[35%]"></div>
+            <div className="flex flex-col w-[192px] my-4 mx-auto rounded-xl">
+              <p className="font-bold text-xl">
+                UPI&apos;s global rise shows India as a digital trailblazer
+              </p>
+              <a
+                className="flex font-medium text-base mt-auto underline"
+                href=""
+              >
+                Read more {"->"}
+              </a>
+            </div>
+          </div>
+
+          <div className="flex w-[400px] h-[200px] bg-black rounded-xl ">
+            <div className="w-[170px] h-[170px] my-auto ml-4 rounded-xl bg-[url(/workplace.jpg)] bg-cover bg-[35%]"></div>
+            <div className="flex flex-col w-[192px] my-4 mx-auto rounded-xl">
+              <p className="font-bold text-xl">
+                Embracing empathy in the workplace landscape
+              </p>
+              <a
+                className="flex font-medium text-base mt-auto underline"
+                href=""
+              >
+                Read more {"->"}
+              </a>
+            </div>
+          </div>
+
+          {/* last two */}
+
+          <div className="flex w-[400px] h-[200px] bg-black rounded-xl ">
+            <div className="w-[170px] h-[170px] my-auto ml-4 rounded-xl bg-[url(/workplace.jpg)] bg-cover bg-[35%]"></div>
+            <div className="flex flex-col w-[192px] my-4 mx-auto rounded-xl">
+              <p className="font-bold text-xl">
+                Embracing empathy in the workplace landscape
+              </p>
+              <a
+                className="flex font-medium text-base mt-auto underline"
+                href=""
+              >
+                Read more {"->"}
+              </a>
+            </div>
+          </div>
+
+          <div className="flex w-[400px] h-[200px] bg-black rounded-xl ">
+            <div className="w-[170px] h-[170px] my-auto ml-4 rounded-xl bg-[url(/workplace.jpg)] bg-cover bg-[35%]"></div>
+            <div className="flex flex-col w-[192px] my-4 mx-auto rounded-xl">
+              <p className="font-bold text-xl">
+                Embracing empathy in the workplace landscape
+              </p>
+              <a
+                className="flex font-medium text-base mt-auto underline"
+                href=""
+              >
+                Read more {"->"}
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+      <div className="mb-20"></div>
       <Footer />
     </>
   );
