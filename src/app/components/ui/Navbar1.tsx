@@ -1,56 +1,56 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
-  const [overlap, setOverlap] = useState("");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scroll = window.scrollY;
-      const height = window.outerHeight;
 
-      if (height >= 1000) {
-        if (scroll >= 48 && scroll <= 798) {
-          setOverlap("text-white");
-        } else if (scroll >= 798 && scroll <= 2712) {
-          setOverlap("text-black");
-        } else if (scroll >= 2712) {
-          setOverlap("text-white");
-        } else {
-          setOverlap("text-black");
-        }
-      } else if (height >= 800) {
-        if (scroll >= 45 && scroll <= 641) {
-          setOverlap("text-white");
-        } else if (scroll >= 641 && scroll <= 2204) {
-          setOverlap("text-black");
-        } else if (scroll >= 2204) {
-          setOverlap("text-white");
-        } else {
-          setOverlap("text-black");
-        }
+      if (scroll >= 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll); // Cleanup listener on unmount
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <>
-      <div className={`w-full h-16 text-black flex fixed z-50`}>
-        <div
-          className={`flex pl-10 justify-center items-center duration-300 ${overlap}`}
+      <div
+        className={`w-full h-16 text-black flex fixed z-50 ${
+          scrolled ? "text-black bg-white" : "text-white "
+        } duration-300 shadow-`}
+      >
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          className={`flex justify-center items-center pl-10`}
         >
           <Link className="text-xl font-bold cursor-pointer" href="/">
             Ardent Co.
           </Link>
-        </div>
+        </motion.div>
 
-        <div className="flex ml-auto text-center justify-center items-center mr-10">
+        <div
+          className={`flex ml-auto text-center justify-center items-center mr-10 ${
+            scrolled ? "show" : "hidden"
+          }`}
+        >
           <Link
             href=""
             className="flex justify-center items-center w-32 h-10 bg-yellow-400 rounded-full font-medium"
@@ -59,7 +59,6 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-      <div className="w-100 h-16 bg-white "></div>
     </>
   );
 }
