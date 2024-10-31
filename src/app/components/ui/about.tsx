@@ -1,33 +1,102 @@
 "use client";
 
-import React from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { easeInOut, motion } from "framer-motion";
 
-export default function about() {
+export default function About() {
+  const [clicked, setClicked] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    if (clicked) {
+      timer = setTimeout(() => {
+        setVisible(true);
+      }, 500);
+    } else {
+      setVisible(false);
+    }
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [clicked]);
+
   return (
-    <div className="flex h-screen ">
-      <div className="w-full h-fit px-10 flex m-auto">
+    <div className="flex h-screen">
+      <div className="w-fit h-fit flex m-auto">
         <motion.div
           initial={{
             opacity: 0,
-            transform: "translateX(-10%)",
+            x: "-10%",
+            rotateY: 0,
+          }}
+          animate={{
+            rotateY: clicked ? 180 : 0,
           }}
           whileInView={{
             opacity: 1,
-            transform: "translateX(0%)",
+            x: 0,
           }}
-          className="flex w-1/2 translate-y-6 mx-10 "
+          transition={{
+            duration: 0.5,
+          }}
+          onClick={() => setClicked(!clicked)}
+          className={`flex flex-col mr-10 w-[400px] h-[400px]  cursor-pointer rounded-2xl bg-black`}
         >
+          {visible && (
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              exit={{
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+              }}
+              style={{
+                rotateY: -180,
+              }}
+            >
+              <p
+                className={`text-white px-10 pt-10 pb-5 text-center text-2xl font-bold`}
+              >
+                Nalanda Mahavihara
+              </p>
+              <p className="text-white px-10 text-center text-sm ">
+                Ardent Co. embodies the spirit of Nalanda University by serving
+                as a modern center for knowledge and impactful dialogue. Just as
+                Nalanda attracted scholars from around the world to exchange
+                ideas and foster learning, Ardent Co. brings together diverse
+                insights and expertise to craft innovative, purpose-driven
+                strategies. Our commitment to bridging ambition and action
+                mirrors {"Nalanda’s"} dedication to intellectual advancement,
+                ensuring that we empower our clients to navigate complex
+                landscapes and create meaningful impact in society.
+              </p>
+            </motion.div>
+          )}
+
           <Image
-            src="/compass.gif"
-            height={700}
-            width={700}
+            src="/places/nalanda.jpg"
+            height={0}
+            width={0}
+            sizes="100%, 100%"
             alt="compass"
-            className="flex m-auto hover:scale-105 hover:transition transition mt-10"
+            className={`flex w-[400px] h-[400px] bg-red-200 transition rounded-2xl cursor-pointer duration-[350ms] ${
+              clicked ? "opacity-0" : "opacity-100"
+            }`}
           ></Image>
+          
         </motion.div>
-        <div className="w-[70%]  h-fit flex flex-col justify-center my-auto ">
+
+        <div className="w-[700px] h-fit flex flex-col justify-center my-auto ">
           <motion.p
             initial={{
               opacity: 0,
@@ -42,11 +111,11 @@ export default function about() {
               ease: easeInOut,
             }}
             viewport={{ amount: 0.5 }}
-            className="text-5xl font-black mb-10"
+            className="text-5xl font-black mb-5"
           >
             Who are we?
           </motion.p>
-          <div className="w-[70%]">
+          <div className="">
             <motion.p
               initial={{
                 opacity: 0,

@@ -9,6 +9,7 @@ import Footer from "./components/ui/Footer";
 import Counter from "./components/ui/Counter";
 
 export default function Home() {
+
   const avail: string[] = [
     "Rewiring",
     "Transforming",
@@ -88,10 +89,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white w-full h-screen" id="second">
+      <section className="bg-white w-full h-screen" id="about">
         <About />
       </section>
 
+      <section className="bg-white w-full h-screen" id="third">
+
+      </section>
       <Footer theme="dark" />
     </>
   );
