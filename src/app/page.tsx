@@ -27,7 +27,7 @@ export default function Home() {
       >
         <motion.video
           initial={{
-            scale: 0.9,
+            scale: 0.8,
             borderRadius: "1rem",
           }}
           animate={{
