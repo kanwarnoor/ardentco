@@ -25,9 +25,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`w-full h-16 text-black flex fixed z-50 ${
-          scrolled ? "text-black bg-white" : "text-white "
-        } duration-300 shadow-`}
+        className={`w-full h-16 text-white flex fixed z-50 bg-black duration-300`}
       >
         <motion.div
           initial={{
@@ -47,13 +45,13 @@ export default function Navbar() {
         </motion.div>
 
         <div
-          className={`flex ml-auto text-center justify-center items-center mr-10 ${
-            scrolled ? "show" : "hidden"
+          className={`flex ml-auto text-center text-black justify-center items-center mr-10 duration-300 transition-all ${
+            scrolled ? "opacity-100" : "opacity-0"
           }`}
         >
           <Link
             href=""
-            className="flex justify-center items-center w-32 h-10 bg-yellow-400 rounded-full font-medium"
+            className="flex justify-center items-center w-32 h-10 bg-yellow-400 rounded-full font-medium duration-300"
           >
             {"Let's Connect"}
           </Link>
