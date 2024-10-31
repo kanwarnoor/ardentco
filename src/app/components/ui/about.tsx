@@ -84,7 +84,7 @@ export default function About() {
           )}
 
           <Image
-            src="/places/nalanda.jpg"
+            src="/places/Nalanda.jpg"
             height={0}
             width={0}
             sizes="100%, 100%"
@@ -93,7 +93,6 @@ export default function About() {
               clicked ? "opacity-0" : "opacity-100"
             }`}
           ></Image>
-          
         </motion.div>
 
         <div className="w-[700px] h-fit flex flex-col justify-center my-auto ">
