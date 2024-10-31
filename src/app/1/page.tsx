@@ -3,7 +3,7 @@
 import { FlipWords } from "@/app/components/ui/flip-words";
 import { Spotlight } from "@/app/components/ui/Spotlight";
 import Link from "next/link";
-import Navbar from "../components/ui/Navbar1";
+import Navbar from "../components/ui/Navbar";
 import BottomNav from "../components/ui/BottomNav1";
 import Image from "next/image";
 import { useState } from "react";
@@ -440,7 +440,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Footer theme="light"/>
+        <Footer theme="light" />
         <BottomNav />
       </main>
       <main className="md:hidden block">

@@ -3,7 +3,10 @@
 import { motion } from "framer-motion";
 import { FlipWords } from "./components/ui/flip-words";
 import Link from "next/link";
-import Navbar from "./components/ui/Navbar1";
+import Navbar from "./components/ui/Navbar";
+import About from "./components/ui/about";
+import Footer from "./components/ui/Footer";
+import Counter from "./components/ui/Counter";
 
 export default function Home() {
   const avail: string[] = [
@@ -15,8 +18,32 @@ export default function Home() {
   ];
   return (
     <>
-    <Navbar/>
-      <section id="home" className="w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-black text-white ">
+      <Counter />
+      <Navbar />
+      <section
+        id="home"
+        className="w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-black text-black "
+      >
+        <motion.video
+          initial={{
+            scale: 0.9,
+            borderRadius: "1rem",
+          }}
+          animate={{
+            scale: 1,
+            borderRadius: "0px",
+          }}
+          transition={{
+            duration: 0.3,
+          }}
+          src="/street.mp4"
+          autoPlay
+          loop
+          muted
+          className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none"
+        >
+          Your browser does not support the video tag.
+        </motion.video>
         <div>
           <FlipWords
             words={avail}
@@ -38,21 +65,22 @@ export default function Home() {
             Status Quo
           </motion.p>{" "}
           <br />
-          <motion.div className="w-fit flex mx-auto"
+          <motion.div
+            className="w-fit flex mx-auto absolute justify-center text-center left-0 right-0"
             whileHover={{
               scale: 1.1,
-              transition: { duration: 0.1 }
+              transition: { duration: 0.1 },
             }}
             whileTap={{
               scale: 1,
-              transition: { duration: 0.1 }
+              transition: { duration: 0.1 },
             }}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1,  transition: { duration: 1 } }}
+            animate={{ opacity: 1, transition: { duration: 1, delay: 0.9 } }}
           >
             <Link
               href=""
-              className="text-xl border-2 font-bold border-white px-5 py-2 rounded-full"
+              className="text-xl border-2 font-bold border-black px-5 py-2 rounded-full"
             >
               Book a call
             </Link>
@@ -60,9 +88,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white w-full h-screen" id="second"> 
-          
+      <section className="bg-white w-full h-screen" id="second">
+        <About />
       </section>
+
+      <Footer theme="dark" />
     </>
   );
 }
