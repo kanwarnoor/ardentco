@@ -35,13 +35,25 @@ export default function About() {
           }}
           animate={{
             rotateY: clicked ? 180 : 0,
+            transition: {
+              duration: 0.5,
+            },
           }}
           whileInView={{
             opacity: 1,
             x: 0,
+            transition: {
+              duration: 0.5,
+            },
+          }}
+          whileHover={{
+            scale: 1.02,
+            transition: {
+              duration: 0.1,
+            },
           }}
           transition={{
-            duration: 0.5,
+            duration: 0.1,
           }}
           onClick={() => setClicked(!clicked)}
           className={`flex flex-col mr-10 w-[400px] h-[400px]  cursor-pointer rounded-2xl bg-black`}
