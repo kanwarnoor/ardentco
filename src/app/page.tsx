@@ -108,7 +108,6 @@ export default function Home() {
               duration: 0.5,
               ease: easeInOut,
             }}
-            
             viewport={{ amount: 0.5 }}
             className="text-5xl font-black"
           >
@@ -138,11 +137,11 @@ export default function Home() {
                 duration: 0.5,
               }}
               viewport={{
-                amount: 0.5
+                amount: 0.5,
               }}
-              className="flex flex-col w-[30vw] h-[450px] bg-black rounded-2xl"
+              className="flex flex-col w-[400px] h-[450px] bg-black rounded-2xl"
             >
-              <motion.div className="bg-red-200 w-full h-[60%] rounded-t-2xl">
+              <motion.div className="relative bg-black w-full h-[60%] rounded-t-2xl">
                 <Image
                   src="/SaturnRoman.jpg"
                   width={0}
@@ -151,7 +150,7 @@ export default function Home() {
                   alt="Saturn Roman"
                   className="w-full h-full rounded-t-2xl object-cover object-bottom"
                 ></Image>
-                <p className="text-center text-white text-xs font-medium mt-1 opacity-80">
+                <p className="text-center text-white text-xs opacity-80 font-bold mt-1 ">
                   Temple of Saturn Roman - Rome
                 </p>
               </motion.div>
@@ -165,7 +164,7 @@ export default function Home() {
             <motion.div
               initial={{
                 opacity: 0,
-                scale: 0.95
+                scale: 0.95,
               }}
               animate={{
                 transition: {
@@ -179,14 +178,13 @@ export default function Home() {
                   duration: 0.5,
                 },
               }}
-
               transition={{
                 duration: 0.5,
               }}
               viewport={{
-                amount: 0.5
+                amount: 0.5,
               }}
-              className="flex flex-col w-[30vw] h-[450px] bg-black rounded-2xl"
+              className="flex flex-col w-[400px] h-[450px] bg-black rounded-2xl"
             >
               <div className="bg-red-200 w-full h-[60%] rounded-t-2xl">
                 <Image
@@ -229,9 +227,9 @@ export default function Home() {
                 duration: 0.5,
               }}
               viewport={{
-                amount: 0.5
+                amount: 0.5,
               }}
-              className="flex flex-col w-[30vw] h-[450px] bg-black rounded-2xl"
+              className="flex flex-col w-[400px] h-[450px] bg-black rounded-2xl"
             >
               <div className="bg-red-200 w-full h-[60%] rounded-t-2xl">
                 <Image
