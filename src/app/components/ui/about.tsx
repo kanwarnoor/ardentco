@@ -47,6 +47,7 @@ export default function About() {
             },
           }}
           whileHover={{
+          
             scale: 1.02,
             transition: {
               duration: 0.1,
@@ -121,7 +122,6 @@ export default function About() {
               duration: 0.5,
               ease: easeInOut,
             }}
-            viewport={{ amount: 0.5 }}
             className="text-5xl font-black mb-5"
           >
             Who are we?
@@ -136,7 +136,6 @@ export default function About() {
                 opacity: 1,
                 transform: "translateY(0%)",
               }}
-              viewport={{ amount: 0.5 }}
               transition={{
                 duration: 0.5,
               }}
