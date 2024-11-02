@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Rethink_Sans  } from 'next/font/google'
+import { Rethink_Sans } from "next/font/google";
 
-const rethink = Rethink_Sans({ subsets: ['latin'] })
+const rethink = Rethink_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ardent Co",
@@ -14,12 +14,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
-      <body className={rethink.className}>
-        {children}
-      </body>
+      <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+      <body className={rethink.className}>{children}</body>
     </html>
   );
 }

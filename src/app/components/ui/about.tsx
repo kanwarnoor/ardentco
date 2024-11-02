@@ -47,7 +47,7 @@ export default function About() {
             },
           }}
           viewport={{
-            amount: 0.5,
+            amount: 0.3,
           }}
           whileHover={{
             scale: 1.02,
@@ -82,7 +82,7 @@ export default function About() {
                 duration: 0.5,
               }}
               viewport={{
-                amount: 0.5,
+                amount: 0.3,
               }}
               style={{
                 rotateY: -180,
