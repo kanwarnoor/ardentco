@@ -8,9 +8,9 @@ import About from "./components/ui/about";
 import Footer from "./components/ui/Footer";
 import Counter from "./components/ui/Counter";
 import Enable from "./components/ui/Enable";
+import Contact from "./components/ui/Contact";
 
 export default function Home() {
-
   const avail: string[] = [
     "Rewiring",
     "Transforming",
@@ -26,32 +26,31 @@ export default function Home() {
         id="home"
         className="w-full h-screen m-auto text-center flex flex-col justify-center items-center  bg-opacity-100 bg-white"
       >
-       
-          <motion.video
-            initial={{
-              scale: 0.8,
-              borderRadius: "1rem",
-            }}
-            animate={{
-              scale: 1,
-              borderRadius: "0px",
-            }}
-            transition={{
-              duration: 0.3,
-            }}
-            src="/kabootar.mp4"
-            autoPlay
-            loop
-            muted
-            className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-80"
-          >
-            Your browser does not support the video tag.
-          </motion.video>
+        <motion.video
+          initial={{
+            scale: 0.8,
+            borderRadius: "1rem",
+          }}
+          animate={{
+            scale: 1,
+            borderRadius: "0px",
+          }}
+          transition={{
+            duration: 0.3,
+          }}
+          src="/street.mp4"
+          autoPlay
+          loop
+          muted
+          className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-80"
+        >
+          Your browser does not support the video tag.
+        </motion.video>
         <div className="absolute">
           <FlipWords
             words={avail}
             duration={3000}
-            className="text-9xl font-bold text-center"
+            className="text-9xl text-black font-bold text-center"
           />
           <motion.p
             initial={{
@@ -83,7 +82,7 @@ export default function Home() {
           >
             <Link
               href=""
-              className="text-xl border-2 font-bold  border-black px-5 py-2 rounded-full"
+              className="text-xl border-2 font-bold text-black border-black px-5 py-2 rounded-full"
             >
               Book a call
             </Link>
@@ -97,6 +96,10 @@ export default function Home() {
 
       <section className="bg-white flex w-full h-screen" id="enable">
         <Enable />
+      </section>
+
+      <section className="bg-white flex w-full h-screen" id="contact">
+        <Contact />
       </section>
       <Footer theme="dark" />
     </>

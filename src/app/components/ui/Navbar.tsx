@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,7 +12,7 @@ export default function Navbar() {
       if (scroll >= 10) {
         setScrolled(true);
       } else {
-        setScrolled(false);
+        setScrolled(true);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -24,9 +24,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div
-        className={`w-full h-16 text-black flex fixed z-50 duration-300`}
-      >
+      <div className={`w-full h-16 text-black flex fixed z-50 duration-300`}>
         <motion.div
           initial={{
             opacity: 0,
@@ -39,7 +37,7 @@ export default function Navbar() {
           }}
           className={`flex justify-center items-center pl-10`}
         >
-          <Link className="text-xl font-bold cursor-pointer" href="/">
+          <Link className="text-xl font-bold cursor-pointer text-black" href="/">
             Ardent Co.
           </Link>
         </motion.div>
