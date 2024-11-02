@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className={`w-full h-16 text-black flex fixed z-50 duration-300`}>
+      <div className={`w-full h-16 text-black flex fixed z-30 duration-300 `}>
         <motion.div
           initial={{
             opacity: 0,

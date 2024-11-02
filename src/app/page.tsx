@@ -24,7 +24,7 @@ export default function Home() {
       <Navbar />
       <section
         id="home"
-        className="w-full h-screen m-auto text-center flex flex-col justify-center items-center  bg-opacity-100 bg-white"
+        className="relative w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-opacity-100 bg-white"
       >
         <motion.video
           initial={{
@@ -42,10 +42,19 @@ export default function Home() {
           autoPlay
           loop
           muted
-          className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-80"
+          className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-100"
         >
           Your browser does not support the video tag.
         </motion.video>
+        <motion.div initial={{
+          opacity: 0
+        }}
+        animate={{
+          opacity: 0.7
+        }}
+        transition={{
+          duration: 2
+        }} className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_20%,transparent_50%)]"></motion.div>
         <div className="absolute">
           <FlipWords
             words={avail}
@@ -90,15 +99,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white w-full h-screen" id="about">
+      <section
+        className="relative bg-white bg-dot-black/[0.5] w-full h-screen "
+        id="about"
+      >
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div>
         <About />
       </section>
 
-      <section className="bg-white flex w-full h-screen" id="enable">
+      <section
+        className="relative bg-white bg-dot-black/[0.5] flex w-full h-screen"
+        id="enable"
+      >
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div>
         <Enable />
       </section>
 
-      <section className="bg-white flex w-full h-screen" id="contact">
+      <section className="relative bg-white flex w-full h-screen" id="contact">
+        {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div> */}
         <Contact />
       </section>
       <Footer theme="dark" />

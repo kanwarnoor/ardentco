@@ -25,7 +25,7 @@ export default function About() {
   }, [clicked]);
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen z-10">
       <div className="w-fit h-fit flex m-auto">
         <motion.div
           initial={{
@@ -113,7 +113,7 @@ export default function About() {
             width={0}
             sizes="100%, 100%"
             alt="compass"
-            className={`flex w-[400px] h-[400px] bg-red-200 transition rounded-2xl cursor-pointer duration-[350ms] ${
+            className={`flex w-[400px] h-[400px] bg-red-200 transition rounded-2xl cursor-pointer duration-[350ms] z-10 ${
               clicked ? "opacity-0" : "opacity-100"
             }`}
           ></Image>

@@ -9,7 +9,7 @@ export default function Enable() {
   const [clicked3, setClicked3] = useState(false);
 
   return (
-    <div className="flex flex-col w-full h-fit m-auto justify-center items-center">
+    <div className="flex flex-col w-full h-fit m-auto justify-center items-center z-10">
       <motion.p
         initial={{
           opacity: 0,
