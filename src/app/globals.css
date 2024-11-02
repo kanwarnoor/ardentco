@@ -8,7 +8,6 @@ body {
   overflow-x: hidden;
   background-color: black;
 }
-
 ::-moz-selection {
   color: black;
   background: rgb(250 204 21);

@@ -46,8 +46,10 @@ export default function About() {
               duration: 0.5,
             },
           }}
+          viewport={{
+            amount: 0.5,
+          }}
           whileHover={{
-          
             scale: 1.02,
             transition: {
               duration: 0.1,
@@ -66,12 +68,21 @@ export default function About() {
               }}
               animate={{
                 opacity: 1,
+                transition: {
+                  duration: 0.5,
+                },
               }}
               exit={{
                 opacity: 0,
+                transition: {
+                  duration: 0.5,
+                },
               }}
               transition={{
                 duration: 0.5,
+              }}
+              viewport={{
+                amount: 0.5,
               }}
               style={{
                 rotateY: -180,
@@ -118,6 +129,9 @@ export default function About() {
               opacity: 1,
               transform: "translateY(0%)",
             }}
+            viewport={{
+              amount: 0.5,
+            }}
             transition={{
               duration: 0.5,
               ease: easeInOut,
@@ -138,6 +152,9 @@ export default function About() {
               }}
               transition={{
                 duration: 0.5,
+              }}
+              viewport={{
+                amount: 0.5,
               }}
               className="mr-10 text-xl"
             >

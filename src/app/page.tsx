@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       <section className="bg-white flex w-full h-screen" id="enable">
-          <Enable/>
+        <Enable />
       </section>
       <Footer theme="dark" />
     </>
