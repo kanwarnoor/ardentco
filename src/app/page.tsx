@@ -101,7 +101,7 @@ export default function Home() {
             }}
             className="text-7xl font-bold text-black"
           >
-            Status Quo
+            Status Quo (new changes)
           </motion.p>
           <br />
           <motion.div
