@@ -5,11 +5,11 @@ import { FlipWords } from "./components/ui/flip-words";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "./components/ui/Navbar";
-import About from "./components/ui/about";
 import Footer from "./components/ui/Footer";
 import Counter from "./components/ui/Counter";
 import Enable from "./components/ui/Enable";
 import Contact from "./components/ui/Contact";
+import About from "./components/ui/About";
 
 export default function Home() {
   const avail: string[] = [
@@ -101,7 +101,7 @@ export default function Home() {
             }}
             className="text-7xl font-bold text-black"
           >
-            Status Quo (new changes)
+            Status Quo
           </motion.p>
           <br />
           <motion.div
