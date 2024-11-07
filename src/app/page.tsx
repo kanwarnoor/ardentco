@@ -118,10 +118,10 @@ export default function Home() {
             animate={{ opacity: 1, transition: { duration: 1, delay: 0.9 } }}
           >
             <Link
-              href="#contact"
+              href="#about"
               className="text-xl border-2 font-bold text-black border-black px-5 py-2 rounded-full"
             >
-              Book a call
+              Know more
             </Link>
           </motion.div>
         </div>
