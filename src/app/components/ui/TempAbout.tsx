@@ -10,7 +10,6 @@ export default function About() {
 
   useEffect(() => {
     const angles = [0, 90, 180, 270, 360];
-
     setCompass(angles[para]);
 
     const interval = setInterval(() => {
@@ -397,7 +396,7 @@ export default function About() {
       </div>
 
       <div
-        className="absolute w-20 h-screen left-0 text-center mb-5 flex justify-center items-center cursor-pointer hover:scale-110"
+        className="absolute w-20 h-screen left-0 text-center mb-5 flex justify-center items-center cursor-pointer hover:scale-110 z-10"
         onClick={() => setPara((prev) => (prev != 0 ? prev - 1 : prev))}
       >
         <div className="absolute left-0 w-full flex items-center justify-center">
