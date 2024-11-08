@@ -9,7 +9,7 @@ import Footer from "./components/ui/Footer";
 // import Counter from "./components/ui/Counter";
 import Enable from "./components/ui/Enable";
 import Contact from "./components/ui/Contact";
-import About from "./components/ui/About";
+import About from "./components/ui/TempAbout";
 
 export default function Home() {
   const avail: string[] = [
@@ -68,7 +68,7 @@ export default function Home() {
             sizes="100% 100%"
             className="absolute object-cover inset-0 w-full h-full scale-100 opacity-100"
             alt="athens"
-            no-select
+            no-select="true"
           ></Image>
         </motion.div>
         <motion.div
