@@ -8,8 +8,9 @@ export default function Enable() {
   const [clicked1, setClicked1] = useState(false);
   const [clicked2, setClicked2] = useState(false);
   const [clicked3, setClicked3] = useState(false);
-  // const [clicked4, setClicked4] = useState(false);
-  // const [clicked5, setClicked5] = useState(false);
+  const [clicked4, setClicked4] = useState(false);
+  const [clicked5, setClicked5] = useState(false);
+  const [clicked6, setClicked6] = useState(false);
 
   const [next, setNext] = useState(false);
 
@@ -110,15 +111,22 @@ export default function Enable() {
                       Temple of Saturn Roman - Rome
                     </p>
                   </motion.div>
-                  <div
-                    className={`w-fit h-fit m-auto transition ${
-                      clicked1 ? "hidden" : "block"
-                    }`}
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className={`w-fit h-fit m-auto transition`}
                   >
                     <p className="text-white font-bold text-xl text-center">
                       Strategic Comunications & <br /> Public Relations
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
               )}
 
@@ -157,17 +165,21 @@ export default function Enable() {
                         duration: 0.5,
                       }}
                     >
-                      sometext
+                      Our expertise in policy affairs and research equips our
+                      communications interventions with a 360 degree
+                      perspective, ensuring impactful outputs for your
+                      organization and leadership.
                     </motion.p>
 
                     <motion.div
                       initial={{
                         opacity: 0,
-                        y: 20,
                       }}
                       animate={{
                         opacity: 1,
-                        y: 0,
+                      }}
+                      transition={{
+                        duration: 0.5,
                       }}
                       className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
                     >
@@ -187,7 +199,7 @@ export default function Enable() {
             <motion.div
               initial={{
                 opacity: 0,
-                scale: 0.95,
+                scale: 0.9,
               }}
               animate={{
                 transition: {
@@ -198,78 +210,137 @@ export default function Enable() {
                 scale: 1.02,
               }}
               whileInView={{
-                opacity: 1,
                 scale: 1,
+                opacity: 1,
+                x: 0,
                 transition: {
                   duration: 0.5,
                 },
               }}
-              viewport={{
-                amount: 0.3,
-              }}
               transition={{
                 duration: 0.1,
               }}
-              onClick={() => setClicked2((clicked2) => !clicked2)}
+              viewport={{
+                amount: 0.3,
+              }}
               className="flex flex-col cursor-pointer w-[400px] h-[450px] bg-black rounded-2xl"
             >
-              <motion.div
-                className={`relative bg-black w-full duration-300  ${
-                  clicked2 ? "h-[100%] rounded-2xl" : "h-[60%] rounded-t-2xl"
-                }`}
-              >
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: clicked2 ? 1 : 0,
-                  }}
-                  exit={{
-                    transition: {
-                      delay: 0,
-                    },
-                  }}
-                  transition={{
-                    delay: clicked2 ? 0.2 : 0,
-                    duration: clicked2 ? 0.5 : 0.1,
-                  }}
-                  className={`absolute bottom-0 m-5`}
+              {!clicked2 && (
+                <div
+                  className="flex flex-col bg-black h-full rounded-2xl"
+                  onClick={() => setClicked2((clicked2) => !clicked2)}
                 >
-                  <p className=" bg-black text-white px-2 rounded-lg bg-opacity-50">
-                    The United Nations Headquarters symbolizes global
-                    policy-making and regulation, mirroring Ardent Co.&apos;s
-                    expertise in navigating public policy and regulatory affairs
-                    to drive impactful change for clients.
-                  </p>
-                </motion.div>
-                <Image
-                  src="/unitednations.jpg"
-                  width={0}
-                  height={0}
-                  sizes="100% 100%"
-                  alt="Saturn Roman"
-                  className={`w-full h-full object-cover duration-300 ${
-                    clicked1 ? "rounded-2xl" : "rounded-t-2xl"
-                  }`}
-                ></Image>
-                <p
-                  className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
-                    clicked2 ? "hidden" : "block"
-                  }`}
-                >
-                  United Nations Headquarters - Manhatten
-                </p>
-              </motion.div>
-              <div
-                className={`w-fit h-fit m-auto transition ${
-                  clicked2 ? "hidden" : "block"
-                }`}
-              >
-                <p className="text-white font-bold text-xl text-center">
-                  Public Policy and & <br /> Regulatory Affairs
-                </p>
-              </div>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
+                  >
+                    <Image
+                      src="/unitednations.jpg"
+                      width={0}
+                      height={0}
+                      sizes="100% 100%"
+                      alt="Saturn Roman"
+                      className={`w-full h-full object-cover object-bottom duration-300 rounded-t-2xl`}
+                    ></Image>
+                    <p
+                      className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
+                        clicked2 ? "hidden" : "block"
+                      }`}
+                    >
+                      United Nations Headquarters - New York
+                    </p>
+                  </motion.div>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className={`w-fit h-fit m-auto transition`}
+                  >
+                    <p className="text-white font-bold text-xl text-center">
+                      Public policy & <br />
+                      Regulatory Affairs
+                    </p>
+                  </motion.div>
+                </div>
+              )}
+
+              {clicked2 && (
+                <>
+                  <div className="flex justify-end p-5 cursor-default">
+                    <motion.svg
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      className="size-9 cursor-pointer hover:scale-110 duration-150"
+                      onClick={() => setClicked2((clicked2) => !clicked2)}
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                        clip-rule="evenodd"
+                      />
+                    </motion.svg>
+                  </div>
+                  <div className="relative h-full p-10 text-white text-center cursor-default">
+                    <motion.p
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                    >
+                      Ardent Co. helps your organization in defining and
+                      engaging with its public policy priorities through a
+                      unique understanding of the stakeholder ecosystem and
+                      powered by in-depth research driven policy insights.
+                    </motion.p>
+
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                      className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
+                    >
+                      <Link
+                        href=""
+                        className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
+                      >
+                        Know more
+                      </Link>
+                    </motion.div>
+                  </div>
+                </>
+              )}
             </motion.div>
 
             {/* third */}
@@ -293,80 +364,137 @@ export default function Enable() {
                   duration: 0.5,
                 },
               }}
-              viewport={{
-                amount: 0.3,
-              }}
               transition={{
                 duration: 0.1,
               }}
-              onClick={() => setClicked3((clicked3) => !clicked3)}
+              viewport={{
+                amount: 0.3,
+              }}
               className="flex flex-col cursor-pointer w-[400px] h-[450px] bg-black rounded-2xl"
             >
-              <motion.div
-                className={`relative bg-black w-full duration-300  ${
-                  clicked3 ? "h-[100%] rounded-2xl" : "h-[60%] rounded-t-2xl"
-                }`}
-              >
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: clicked3 ? 1 : 0,
-                  }}
-                  exit={{
-                    transition: {
-                      delay: 0,
-                    },
-                  }}
-                  transition={{
-                    delay: clicked3 ? 0.2 : 0,
-                    duration: clicked3 ? 0.5 : 0.1,
-                  }}
-                  className={`absolute bottom-0 m-5`}
+              {!clicked3 && (
+                <div
+                  className="flex flex-col bg-black h-full rounded-2xl"
+                  onClick={() => setClicked3((clicked3) => !clicked3)}
                 >
-                  <p className=" bg-black text-white px-2 rounded-lg bg-opacity-50">
-                    The Library of Alexandria, an ancient center of knowledge,
-                    mirrors Ardent Co.&apos;s commitment to research and
-                    insightful analysis. Just as the library expanded human
-                    understanding, Ardent Co. empowers organizations to navigate
-                    challenges and drive positive change.
-                  </p>
-                </motion.div>
-                <Image
-                  src="/LibraryAlexandriaEgypt.jpg"
-                  width={0}
-                  height={0}
-                  sizes="100% 100%"
-                  alt="Saturn Roman"
-                  className={`w-full h-full object-cover object-bottom duration-300 ${
-                    clicked3 ? "rounded-2xl" : "rounded-t-2xl"
-                  }`}
-                ></Image>
-                <p
-                  className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
-                    clicked3 ? "hidden" : "block"
-                  }`}
-                >
-                  The Library of Alexandria - Egypt
-                </p>
-              </motion.div>
-              <div
-                className={`w-fit h-fit m-auto transition ${
-                  clicked3 ? "hidden" : "block"
-                }`}
-              >
-                <p className="text-white font-bold text-xl text-center">
-                  Research & <br /> Collateral Development
-                </p>
-              </div>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
+                  >
+                    <Image
+                      src="/LibraryAlexandriaEgypt.jpg"
+                      width={0}
+                      height={0}
+                      sizes="100% 100%"
+                      alt="Saturn Roman"
+                      className={`w-full h-full object-cover object-bottom duration-300 rounded-t-2xl`}
+                    ></Image>
+                    <p
+                      className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
+                        clicked3 ? "hidden" : "block"
+                      }`}
+                    >
+                      United Nations Headquarters - New York
+                    </p>
+                  </motion.div>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className={`w-fit h-fit m-auto transition`}
+                  >
+                    <p className="text-white font-bold text-xl text-center">
+                      Research & <br />
+                      Collateral Development
+                    </p>
+                  </motion.div>
+                </div>
+              )}
+
+              {clicked3 && (
+                <>
+                  <div className="flex justify-end p-5 cursor-default">
+                    <motion.svg
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      className="size-9 cursor-pointer hover:scale-110 duration-150"
+                      onClick={() => setClicked3((clicked3) => !clicked3)}
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                        clip-rule="evenodd"
+                      />
+                    </motion.svg>
+                  </div>
+                  <div className="relative h-full p-10 text-white text-center cursor-default">
+                    <motion.p
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                    >
+                      Our experienced team of researchers and content experts
+                      deliver quality analysis and reports, providing actionable
+                      insights for our stakeholders across domains and sectors.
+                    </motion.p>
+
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                      className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
+                    >
+                      <Link
+                        href=""
+                        className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
+                      >
+                        Know more
+                      </Link>
+                    </motion.div>
+                  </div>
+                </>
+              )}
             </motion.div>
           </>
         )}
 
+        {/* add images is this section */}
         {next && (
           <>
-            {/* first */}
+            {/* fourth */}
             <motion.div
               initial={{
                 opacity: 0,
@@ -393,73 +521,280 @@ export default function Enable() {
               viewport={{
                 amount: 0.3,
               }}
-              onClick={() => setClicked1((clicked1) => !clicked1)}
               className="flex flex-col cursor-pointer w-[400px] h-[450px] bg-black rounded-2xl"
             >
-              <motion.div
-                className={`relative bg-black w-full duration-300  ${
-                  clicked1 ? "h-[100%] rounded-2xl" : "h-[60%] rounded-t-2xl"
-                }`}
-              >
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: clicked1 ? 1 : 0,
-                  }}
-                  exit={{
-                    transition: {
-                      delay: 0,
-                    },
-                  }}
-                  transition={{
-                    delay: clicked1 ? 0.2 : 0,
-                    duration: clicked1 ? 0.5 : 0.1,
-                  }}
-                  className={`absolute bottom-0 m-5`}
+              {!clicked4 && (
+                <div
+                  className="flex flex-col bg-black h-full rounded-2xl"
+                  onClick={() => setClicked4((clicked4) => !clicked4)}
                 >
-                  <p className=" bg-black text-white px-2 rounded-lg bg-opacity-50">
-                    The Roman Forum, as the center of public life and discourse
-                    in ancient Rome, parallels Ardent Co&apos;s role in shaping
-                    public narratives through strategic communications and
-                    engaging audiences to influence perceptions for its clients.
-                  </p>
-                </motion.div>
-                <Image
-                  src="/SaturnRoman.jpg"
-                  width={0}
-                  height={0}
-                  sizes="100% 100%"
-                  alt="Saturn Roman"
-                  className={`w-full h-full object-cover object-bottom duration-300 ${
-                    clicked1 ? "rounded-2xl" : "rounded-t-2xl"
-                  }`}
-                ></Image>
-                <p
-                  className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
-                    clicked1 ? "hidden" : "block"
-                  }`}
-                >
-                  Temple of Saturn Roman - Rome
-                </p>
-              </motion.div>
-              <div
-                className={`w-fit h-fit m-auto transition ${
-                  clicked1 ? "hidden" : "block"
-                }`}
-              >
-                <p className="text-white font-bold text-xl text-center">
-                  Stragetic Comunications & <br /> Public Relations
-                </p>
-              </div>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className={`relative w-full duration-300 rounded-t-2xl`}
+                  >
+                    <Image
+                      src="/SaturnRoman.jpg"
+                      width={0}
+                      height={0}
+                      sizes="100% 100%"
+                      alt="Saturn Roman"
+                      className={`w-full h-full object-cover object-bottom duration-300 rounded-t-2xl`}
+                    ></Image>
+                    <p
+                      className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
+                        clicked4 ? "hidden" : "block"
+                      }`}
+                    >
+                      Temple of Saturn Roman - Rome
+                    </p>
+                  </motion.div>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className={`w-fit h-fit m-auto transition`}
+                  >
+                    <p className="text-white font-bold text-xl text-center">
+                      Digital Communications
+                    </p>
+                  </motion.div>
+                </div>
+              )}
+
+              {clicked4 && (
+                <>
+                  <div className="flex justify-end p-5 cursor-default">
+                    <motion.svg
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      className="size-9 cursor-pointer hover:scale-110 duration-150"
+                      onClick={() => setClicked4((clicked4) => !clicked4)}
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                        clip-rule="evenodd"
+                      />
+                    </motion.svg>
+                  </div>
+                  <div className="relative h-full p-10 text-white text-center cursor-default">
+                    <motion.p
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                    >
+                      Ardent Co supports end-to-end management of social media
+                      properties for our partners cutting across platforms. Our
+                      team specializes in designing and executing tailored,
+                      platform-centric social media strategies, aligned with
+                      communication and business goals, and made richer with
+                      perspective-driven content
+                    </motion.p>
+
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                      className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
+                    >
+                      <Link
+                        href=""
+                        className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
+                      >
+                        Know more
+                      </Link>
+                    </motion.div>
+                  </div>
+                </>
+              )}
             </motion.div>
 
-            {/* second */}
+            {/* fifth */}
             <motion.div
               initial={{
                 opacity: 0,
-                scale: 0.95,
+                scale: 0.9,
+              }}
+              animate={{
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+              whileHover={{
+                scale: 1.02,
+              }}
+              whileInView={{
+                scale: 1,
+                opacity: 1,
+                x: 0,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+              transition={{
+                duration: 0.1,
+              }}
+              viewport={{
+                amount: 0.3,
+              }}
+              className="flex flex-col cursor-pointer w-[400px] h-[450px] bg-black rounded-2xl"
+            >
+              {!clicked5 && (
+                <div
+                  className="flex flex-col bg-black h-full rounded-2xl"
+                  onClick={() => setClicked5((clicked5) => !clicked5)}
+                >
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
+                  >
+                    <Image
+                      src="/unitednations.jpg"
+                      width={0}
+                      height={0}
+                      sizes="100% 100%"
+                      alt="Saturn Roman"
+                      className={`w-full h-full object-cover object-bottom duration-300 rounded-t-2xl`}
+                    ></Image>
+                    <p
+                      className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
+                        clicked5 ? "hidden" : "block"
+                      }`}
+                    >
+                      United Nations Headquarters - New York
+                    </p>
+                  </motion.div>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className={`w-fit h-fit m-auto transition`}
+                  >
+                    <p className="text-white font-bold text-xl text-center">
+                      Talent Nexus Solutions
+                    </p>
+                  </motion.div>
+                </div>
+              )}
+
+              {clicked5 && (
+                <>
+                  <div className="flex justify-end p-5 cursor-default">
+                    <motion.svg
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      className="size-9 cursor-pointer hover:scale-110 duration-150"
+                      onClick={() => setClicked5((clicked5) => !clicked5)}
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                        clip-rule="evenodd"
+                      />
+                    </motion.svg>
+                  </div>
+                  <div className="relative h-full p-10 text-white text-center cursor-default">
+                    <motion.p
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                    >
+                      uilding upon our extensive experience as a dynamic young
+                      advisory, we have now decided to leverage our expertise to
+                      address challenges faced by other agencies when it comes
+                      to manpower management through our latest initiative,
+                      “Talent Nexus Solutions”
+                    </motion.p>
+
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                      className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
+                    >
+                      <Link
+                        href=""
+                        className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
+                      >
+                        Know more
+                      </Link>
+                    </motion.div>
+                  </div>
+                </>
+              )}
+            </motion.div>
+
+            {/* sixth */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: "10%",
               }}
               animate={{
                 transition: {
@@ -471,77 +806,135 @@ export default function Enable() {
               }}
               whileInView={{
                 opacity: 1,
-                scale: 1,
+                x: 0,
                 transition: {
                   duration: 0.5,
                 },
               }}
-              viewport={{
-                amount: 0.3,
-              }}
               transition={{
                 duration: 0.1,
               }}
-              onClick={() => setClicked2((clicked2) => !clicked2)}
+              viewport={{
+                amount: 0.3,
+              }}
               className="flex flex-col cursor-pointer w-[400px] h-[450px] bg-black rounded-2xl"
             >
-              <motion.div
-                className={`relative bg-black w-full duration-300  ${
-                  clicked2 ? "h-[100%] rounded-2xl" : "h-[60%] rounded-t-2xl"
-                }`}
-              >
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: clicked2 ? 1 : 0,
-                  }}
-                  exit={{
-                    transition: {
-                      delay: 0,
-                    },
-                  }}
-                  transition={{
-                    delay: clicked2 ? 0.2 : 0,
-                    duration: clicked2 ? 0.5 : 0.1,
-                  }}
-                  className={`absolute bottom-0 m-5`}
+              {!clicked6 && (
+                <div
+                  className="flex flex-col bg-black h-full rounded-2xl"
+                  onClick={() => setClicked6((clicked6) => !clicked6)}
                 >
-                  <p className=" bg-black text-white px-2 rounded-lg bg-opacity-50">
-                    The United Nations Headquarters symbolizes global
-                    policy-making and regulation, mirroring Ardent Co.&apos;s
-                    expertise in navigating public policy and regulatory affairs
-                    to drive impactful change for clients.
-                  </p>
-                </motion.div>
-                <Image
-                  src="/unitednations.jpg"
-                  width={0}
-                  height={0}
-                  sizes="100% 100%"
-                  alt="Saturn Roman"
-                  className={`w-full h-full object-cover duration-300 ${
-                    clicked1 ? "rounded-2xl" : "rounded-t-2xl"
-                  }`}
-                ></Image>
-                <p
-                  className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
-                    clicked2 ? "hidden" : "block"
-                  }`}
-                >
-                  United Nations Headquarters - Manhatten
-                </p>
-              </motion.div>
-              <div
-                className={`w-fit h-fit m-auto transition ${
-                  clicked2 ? "hidden" : "block"
-                }`}
-              >
-                <p className="text-white font-bold text-xl text-center">
-                  Public Policy and & <br /> Regulatory Affairs
-                </p>
-              </div>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
+                  >
+                    <Image
+                      src="/LibraryAlexandriaEgypt.jpg"
+                      width={0}
+                      height={0}
+                      sizes="100% 100%"
+                      alt="Saturn Roman"
+                      className={`w-full h-full object-cover object-bottom duration-300 rounded-t-2xl`}
+                    ></Image>
+                    <p
+                      className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
+                        clicked6 ? "hidden" : "block"
+                      }`}
+                    >
+                      United Nations Headquarters - New York
+                    </p>
+                  </motion.div>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className={`w-fit h-fit m-auto transition`}
+                  >
+                    <p className="text-white font-bold text-xl text-center">
+                      Graphics Designing
+                    </p>
+                  </motion.div>
+                </div>
+              )}
+
+              {clicked6 && (
+                <>
+                  <div className="flex justify-end p-5 cursor-default">
+                    <motion.svg
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      className="size-9 cursor-pointer hover:scale-110 duration-150"
+                      onClick={() => setClicked6((clicked6) => !clicked6)}
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                        clip-rule="evenodd"
+                      />
+                    </motion.svg>
+                  </div>
+                  <div className="relative h-full p-10 text-white text-center cursor-default">
+                    <motion.p
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                    >
+                      Ardent Co creates impactful graphic design solutions,
+                      enhancing your {"brand’s"} identity with precision-crafted
+                      visuals and content. Our team develops brand-centric
+                      designs that align with communication goals, bringing
+                      ideas to life and driving strong audience engagement.
+                    </motion.p>
+
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                      className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
+                    >
+                      <Link
+                        href=""
+                        className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
+                      >
+                        Know more
+                      </Link>
+                    </motion.div>
+                  </div>
+                </>
+              )}
             </motion.div>
           </>
         )}
