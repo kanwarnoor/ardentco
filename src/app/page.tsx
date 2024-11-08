@@ -6,10 +6,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "./components/ui/Navbar";
 import Footer from "./components/ui/Footer";
-import Counter from "./components/ui/Counter";
+// import Counter from "./components/ui/Counter";
 import Enable from "./components/ui/Enable";
 import Contact from "./components/ui/Contact";
-import About from "@/app/components/ui/About";
+import About from "./components/ui/About";
 
 export default function Home() {
   const avail: string[] = [
@@ -21,7 +21,7 @@ export default function Home() {
   ];
   return (
     <>
-      <Counter />
+      {/* <Counter /> */}
       <Navbar />
       <section
         id="home"
