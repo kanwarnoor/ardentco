@@ -29,7 +29,7 @@ export default function About() {
 
   return (
     <div className="flex h-screen z-10">
-      <div className="w-fit h-fit flex m-auto">
+      <div className="w-fit h-fit flex m-auto ">
         <motion.div
           initial={{
             opacity: 0,
@@ -363,9 +363,33 @@ export default function About() {
       </div>
 
       {/* add bottom navigation on paras */}
-      <div className="absolute bg-red-200 w-screen bottom-0 text-center mb-5 flex justify-center">
-        <div className="absolute bottom-0 w-[50%] h-10 bg-green-200 flex items-center justify-center">
-          dfsadas
+      <div className="absolute w-screen bottom-0 text-center flex justify-center">
+        <div className="absolute bottom-0 w-[50%] h-10 flex items-center justify-center space-x-2">
+          <div
+            className={`w-4 h-4 rounded-full border-2 border-black ${
+              para == 0 ? "bg-black" : "bg-white"
+            } duration-300`}
+          ></div>
+          <div
+            className={`w-4 h-4 rounded-full border-2 border-black ${
+              para == 1 ? "bg-black" : "bg-white"
+            } duration-300`}
+          ></div>
+          <div
+            className={`w-4 h-4 rounded-full border-2 border-black ${
+              para == 2 ? "bg-black" : "bg-white"
+            } duration-300`}
+          ></div>
+          <div
+            className={`w-4 h-4 rounded-full border-2 border-black ${
+              para == 3 ? "bg-black" : "bg-white"
+            } duration-300`}
+          ></div>
+          <div
+            className={`w-4 h-4 rounded-full border-2 border-black ${
+              para == 4 ? "bg-black" : "bg-white"
+            } duration-300`}
+          ></div>
         </div>
       </div>
 
