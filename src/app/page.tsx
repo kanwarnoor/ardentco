@@ -9,7 +9,7 @@ import Footer from "./components/ui/Footer";
 import Counter from "./components/ui/Counter";
 import Enable from "./components/ui/Enable";
 import Contact from "./components/ui/Contact";
-import About from "./components/ui/About";
+import About from "@/app/components/ui/About";
 
 export default function Home() {
   const avail: string[] = [
