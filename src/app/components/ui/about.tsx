@@ -12,20 +12,20 @@ export default function About() {
 
   useEffect(() => {
     const angles = [0, 90, 180, 270, 360];
-    let i = 1;
-    const interval = setInterval(() => {
-      setCompass(angles[i]);
-      setPara(i);
-      i++;
 
-      if (i >= angles.length) {
-        i = 0;
-      }
-    }, 10000);
+    setCompass(angles[para]);
+
+    const interval = setInterval(() => {
+      setPara((prev) => prev + 1);
+    }, 5000);
+
+    if (para >= angles.length) {
+      setPara(0);
+    }
 
     // Cleanup function to clear the interval
     return () => clearInterval(interval);
-  }, []);
+  }, [para]);
 
   return (
     <div className="flex h-screen z-10">
@@ -366,29 +366,34 @@ export default function About() {
       <div className="absolute w-screen bottom-0 text-center flex justify-center">
         <div className="absolute bottom-0 w-[50%] h-10 flex items-center justify-center space-x-2">
           <div
-            className={`w-4 h-4 rounded-full border-2 border-black ${
+            className={`w-4 h-4 rounded-full border-2 border-black cursor-pointer hover:scale-110 ${
               para == 0 ? "bg-black" : "bg-white"
             } duration-300`}
+            onClick={() => setPara(0)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full border-2 border-black ${
+            className={`w-4 h-4 rounded-full border-2 border-black cursor-pointer hover:scale-110 ${
               para == 1 ? "bg-black" : "bg-white"
             } duration-300`}
+            onClick={() => setPara(1)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full border-2 border-black ${
+            className={`w-4 h-4 rounded-full border-2 border-black cursor-pointer hover:scale-110 ${
               para == 2 ? "bg-black" : "bg-white"
             } duration-300`}
+            onClick={() => setPara(2)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full border-2 border-black ${
+            className={`w-4 h-4 rounded-full border-2 border-black cursor-pointer hover:scale-110 ${
               para == 3 ? "bg-black" : "bg-white"
             } duration-300`}
+            onClick={() => setPara(3)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full border-2 border-black ${
+            className={`w-4 h-4 rounded-full border-2 border-black cursor-pointer hover:scale-110 ${
               para == 4 ? "bg-black" : "bg-white"
             } duration-300`}
+            onClick={() => setPara(4)}
           ></div>
         </div>
       </div>
