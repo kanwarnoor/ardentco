@@ -538,10 +538,10 @@ export default function Enable() {
                     transition={{
                       duration: 0.5,
                     }}
-                    className={`relative w-full duration-300 rounded-t-2xl`}
+                    className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
                   >
                     <Image
-                      src="/SaturnRoman.jpg"
+                      src="/places/silicon.jpg"
                       width={0}
                       height={0}
                       sizes="100% 100%"
@@ -553,7 +553,7 @@ export default function Enable() {
                         clicked4 ? "hidden" : "block"
                       }`}
                     >
-                      Temple of Saturn Roman - Rome
+                      Silicon Valley - California
                     </p>
                   </motion.div>
                   <motion.div
@@ -690,7 +690,7 @@ export default function Enable() {
                     className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
                   >
                     <Image
-                      src="/unitednations.jpg"
+                      src="/places/bangalore.jpg"
                       width={0}
                       height={0}
                       sizes="100% 100%"
@@ -702,7 +702,7 @@ export default function Enable() {
                         clicked5 ? "hidden" : "block"
                       }`}
                     >
-                      United Nations Headquarters - New York
+                      Silicon Valley of India - Bangalore
                     </p>
                   </motion.div>
                   <motion.div
@@ -759,7 +759,7 @@ export default function Enable() {
                         duration: 0.5,
                       }}
                     >
-                      uilding upon our extensive experience as a dynamic young
+                      Building upon our extensive experience as a dynamic young
                       advisory, we have now decided to leverage our expertise to
                       address challenges faced by other agencies when it comes
                       to manpower management through our latest initiative,
@@ -837,7 +837,7 @@ export default function Enable() {
                     className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
                   >
                     <Image
-                      src="/LibraryAlexandriaEgypt.jpg"
+                      src="/places/florence.jpg"
                       width={0}
                       height={0}
                       sizes="100% 100%"
