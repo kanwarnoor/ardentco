@@ -1,5 +1,3 @@
-// link para and i together
-
 "use client";
 
 import Image from "next/image";

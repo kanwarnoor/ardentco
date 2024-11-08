@@ -1,5 +1,5 @@
 import { easeInOut, motion } from "framer-motion";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -8,8 +8,8 @@ export default function Enable() {
   const [clicked1, setClicked1] = useState(false);
   const [clicked2, setClicked2] = useState(false);
   const [clicked3, setClicked3] = useState(false);
-  const [clicked4, setClicked4] = useState(false);
-  const [clicked5, setClicked5] = useState(false);
+  // const [clicked4, setClicked4] = useState(false);
+  // const [clicked5, setClicked5] = useState(false);
 
   const [next, setNext] = useState(false);
 
