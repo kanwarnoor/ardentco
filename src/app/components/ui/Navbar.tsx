@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -59,7 +61,7 @@ export default function Navbar() {
           className={`flex ml-auto text-center text-black justify-center items-center mr-10 duration-300 transition-all`}
         >
           <Link
-            href="#contact"
+            href="/#contact"
             className="flex justify-center items-center w-32 h-10 bg-yellow-400 rounded-full font-medium duration-300"
           >
             {"Let's Connect"}

@@ -184,7 +184,7 @@ export default function Enable() {
                       className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
                     >
                       <Link
-                        href=""
+                        href="/PublicRelations"
                         className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
                       >
                         Know more
