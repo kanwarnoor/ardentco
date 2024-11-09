@@ -184,7 +184,7 @@ export default function Enable() {
                       className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
                     >
                       <Link
-                        href="/PublicRelations"
+                        href="/public-relations"
                         className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
                       >
                         Know more
@@ -332,7 +332,7 @@ export default function Enable() {
                       className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
                     >
                       <Link
-                        href="/PublicPolicy"
+                        href="/public-policy"
                         className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
                       >
                         Know more
@@ -631,7 +631,7 @@ export default function Enable() {
                       className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
                     >
                       <Link
-                        href=""
+                        href="/digital-comms"
                         className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
                       >
                         Know more
@@ -779,7 +779,7 @@ export default function Enable() {
                       className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
                     >
                       <Link
-                        href=""
+                        href="/talent-nexus"
                         className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
                       >
                         Know more
@@ -849,7 +849,7 @@ export default function Enable() {
                         clicked6 ? "hidden" : "block"
                       }`}
                     >
-                      United Nations Headquarters - New York
+                      Capital of artists - Florence
                     </p>
                   </motion.div>
                   <motion.div
@@ -926,7 +926,7 @@ export default function Enable() {
                       className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
                     >
                       <Link
-                        href=""
+                        href="/graphics-designing"
                         className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
                       >
                         Know more
