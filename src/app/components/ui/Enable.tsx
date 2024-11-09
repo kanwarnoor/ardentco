@@ -940,7 +940,7 @@ export default function Enable() {
         )}
       </div>
 
-      <div className="w-full h-fit flex m-auto text-center justify-center items-center mt-10">
+      <div className="mt-10 w-full h-fit flex m-auto text-center justify-center items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

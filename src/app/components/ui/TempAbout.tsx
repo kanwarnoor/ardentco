@@ -1,5 +1,3 @@
-
-
 import Image from "next/image";
 import { easeInOut, motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -359,7 +357,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* add bottom navigation on paras */}
       <div className="absolute w-screen bottom-0 text-center flex justify-center">
         <div className="absolute bottom-0 w-[50%] h-10 flex items-center justify-center space-x-2">
           <div
