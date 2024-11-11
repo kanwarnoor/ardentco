@@ -93,22 +93,22 @@ export default function Enable() {
                     transition={{
                       duration: 0.5,
                     }}
-                    className={`relative w-full duration-300 rounded-t-2xl`}
+                    className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
                   >
                     <Image
-                      src="/SaturnRoman.jpg"
+                      src="/publicRelations.jpg"
                       width={0}
                       height={0}
                       sizes="100% 100%"
                       alt="Saturn Roman"
-                      className={`w-full h-full object-cover object-bottom duration-300 rounded-t-2xl`}
+                      className={`w-full h-full object-cover object-center duration-300 rounded-t-2xl`}
                     ></Image>
                     <p
                       className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
                         clicked1 ? "hidden" : "block"
                       }`}
                     >
-                      Temple of Saturn Roman - Rome
+                      King Arthur and the Knights of the Round Table
                     </p>
                   </motion.div>
                   <motion.div
@@ -243,19 +243,19 @@ export default function Enable() {
                     className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
                   >
                     <Image
-                      src="/unitednations.jpg"
+                      src="/publicPolicy.jpg"
                       width={0}
                       height={0}
                       sizes="100% 100%"
                       alt="Saturn Roman"
-                      className={`w-full h-full object-cover object-bottom duration-300 rounded-t-2xl`}
+                      className={`w-full h-full object-cover object-center duration-300 rounded-t-2xl`}
                     ></Image>
                     <p
                       className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
                         clicked2 ? "hidden" : "block"
                       }`}
                     >
-                      United Nations Headquarters - New York
+                      Cicero Denounces Catiline
                     </p>
                   </motion.div>
                   <motion.div
@@ -390,7 +390,7 @@ export default function Enable() {
                     className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
                   >
                     <Image
-                      src="/LibraryAlexandriaEgypt.jpg"
+                      src="/research.jpg"
                       width={0}
                       height={0}
                       sizes="100% 100%"
@@ -402,7 +402,7 @@ export default function Enable() {
                         clicked3 ? "hidden" : "block"
                       }`}
                     >
-                      United Nations Headquarters - New York
+                      The Great Library of Alexandria
                     </p>
                   </motion.div>
                   <motion.div
@@ -541,19 +541,19 @@ export default function Enable() {
                     className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
                   >
                     <Image
-                      src="/places/silicon.jpg"
+                      src="/digitalComms.png"
                       width={0}
                       height={0}
                       sizes="100% 100%"
                       alt="Saturn Roman"
-                      className={`w-full h-full object-cover object-bottom duration-300 rounded-t-2xl`}
+                      className={`w-full h-full object-cover object-center duration-300 rounded-t-2xl`}
                     ></Image>
                     <p
                       className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
                         clicked4 ? "hidden" : "block"
                       }`}
                     >
-                      Silicon Valley - California
+                      Medieval Age painting of Wifi-Not working
                     </p>
                   </motion.div>
                   <motion.div
@@ -690,19 +690,19 @@ export default function Enable() {
                     className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
                   >
                     <Image
-                      src="/places/bangalore.jpg"
+                      src="/nexus.jpg"
                       width={0}
                       height={0}
                       sizes="100% 100%"
                       alt="Saturn Roman"
-                      className={`w-full h-full object-cover object-bottom duration-300 rounded-t-2xl`}
+                      className={`w-full h-full object-cover object-center duration-300 rounded-t-2xl`}
                     ></Image>
                     <p
                       className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
                         clicked5 ? "hidden" : "block"
                       }`}
                     >
-                      Silicon Valley of India - Bangalore
+                      Farming in the Medieval Age
                     </p>
                   </motion.div>
                   <motion.div
@@ -821,7 +821,7 @@ export default function Enable() {
             >
               {!clicked6 && (
                 <div
-                  className="flex flex-col bg-black h-full rounded-2xl"
+                  className="flex flex-col  h-full rounded-2xl"
                   onClick={() => setClicked6((clicked6) => !clicked6)}
                 >
                   <motion.div
@@ -837,19 +837,19 @@ export default function Enable() {
                     className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
                   >
                     <Image
-                      src="/places/florence.jpg"
+                      src="/graphics.jpg"
                       width={0}
                       height={0}
                       sizes="100% 100%"
                       alt="Saturn Roman"
-                      className={`w-full h-full object-cover object-bottom duration-300 rounded-t-2xl`}
+                      className={`w-full h-full object-cover object-top duration-300 rounded-t-2xl`}
                     ></Image>
                     <p
                       className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
                         clicked6 ? "hidden" : "block"
                       }`}
                     >
-                      Capital of artists - Florence
+                      Roman wall painting of a harbor scene
                     </p>
                   </motion.div>
                   <motion.div

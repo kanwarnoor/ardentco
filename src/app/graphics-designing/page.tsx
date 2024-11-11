@@ -29,7 +29,7 @@ export default function page() {
           className="relative object-cover inset-0 w-full h-full scale-90 rounded-2xl opacity-100"
         >
           <Image
-            src="/places/florence.jpg"
+            src="/graphics.jpg"
             height={0}
             width={0}
             sizes="100% 100%"
