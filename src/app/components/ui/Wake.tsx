@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+// import { easeInOut, easeOut, motion } from "framer-motion";
+// import Image from "next/Image";
+
 import { motion } from "framer-motion";
 
 export default function Wake() {
@@ -57,5 +60,30 @@ export default function Wake() {
         </motion.div>
       </>
     )
+
+    // <motion.div className="fixed w-screen h-screen z-50 flex bg-black">
+    //   <motion.div
+    //     initial={{
+    //       x: -155,
+    //       y: -95,
+    //       rotate: 45,
+    //     }}
+    //     animate={{
+    //       x: [-155, 200, 400, 600, 700, 800, 1000, 1500],
+    //       y: [-95, 455, 455, 155, 155, 455, 455, 955],
+    //       rotate: [45, 45, -45, -45, 45, 45, -10, 45],
+    //       transition: {
+    //         duration: 2, // Increased duration for smoother movement
+    //         ease: "linear", // Use linear easing for continuous motion
+    //         times: [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1], // Ensure consistent spacing
+    //         repeat: Infinity, // Repeats infinitely
+    //         repeatType: "loop", // Smooth looping
+    //       },
+    //     }}
+    //     className="text-center text-white flex m-auto flex-col absolute "
+    //   >
+    //     <Image src="/arrow.png" width={200} height={200} alt="arrow"></Image>
+    //   </motion.div>
+    // </motion.div>
   );
 }

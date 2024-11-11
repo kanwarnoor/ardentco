@@ -80,7 +80,7 @@ export default function Footer({ theme }: FooterProps) {
                 x="px"
                 y="px"
                 viewBox="0 0 56.7 56.7"
-                enable-background="new 0 0 56.7 56.7"
+                enableBackground="new 0 0 56.7 56.7"
                 xmlSpace="preserve"
                 className="size-8"
                 fill="white"
@@ -106,7 +106,7 @@ export default function Footer({ theme }: FooterProps) {
               target="_blank"
             >
               <svg
-                enable-background="new 0 0 56.693 56.693"
+                enableBackground="new 0 0 56.693 56.693"
                 height="56.693px"
                 id="Layer_1"
                 version="1.1"
