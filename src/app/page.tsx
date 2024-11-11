@@ -64,7 +64,7 @@ export default function Home() {
           className="relative object-cover inset-0 w-full h-full scale-90 rounded-2xl opacity-100"
         >
           <Image
-            src="/Athens.jpeg"
+            src="/frontpage.jpg"
             height={0}
             width={0}
             sizes="100% 100%"
@@ -83,13 +83,13 @@ export default function Home() {
           transition={{
             duration: 2,
           }}
-          className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_50%)]"
+          className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(circle,white_10%,transparent_50%)]"
         ></motion.div>
         <div className="absolute">
           <FlipWords
             words={avail}
             duration={3000}
-            className="text-9xl text-black font-bold text-center"
+            className="text-9xl text-white font-bold text-center"
           />
           <motion.p
             initial={{
@@ -101,7 +101,7 @@ export default function Home() {
             transition={{
               duration: 1,
             }}
-            className="text-7xl font-bold text-black"
+            className="text-7xl font-bold text-white"
           >
             Status Quo
           </motion.p>
@@ -121,7 +121,7 @@ export default function Home() {
           >
             <Link
               href="#about"
-              className="text-xl border-2 font-bold text-black border-black px-5 py-2 rounded-full"
+              className="text-xl border-2 font-bold text-white bg-none border-white px-5 py-2 rounded-full"
             >
               Know more
             </Link>
