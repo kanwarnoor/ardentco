@@ -10,7 +10,7 @@ import Footer from "./components/ui/Footer";
 import Enable from "./components/ui/Enable";
 import Contact from "./components/ui/Contact";
 import About from "./components/ui/TempAbout";
-// import Wake from "./components/ui/Wake";
+import Wake from "./components/ui/Wake";
 
 export default function Home() {
   const avail: string[] = [
@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       {/* <Counter /> */}
-      {/* <Wake /> */}
+      <Wake />
       <Navbar />
       <section
         id="home"
