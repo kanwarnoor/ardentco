@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`w-full h-16 flex fixed z-30 duration-300 ${
+        className={`h-16 flex w-full flex-row ml-auto fixed z-30 duration-300 ${
           scrolled ? "text-black" : "text-white"
         }`}
       >
@@ -41,7 +41,7 @@ export default function Navbar() {
           transition={{
             duration: 0.5,
           }}
-          className={`flex justify-center items-center pl-10`}
+          className={`flex justify-center items-center md:pl-10 pl-5`}
         >
           <Link className="text-xl font-bold cursor-pointer " href="/">
             Ardent Co.
@@ -58,7 +58,7 @@ export default function Navbar() {
           transition={{
             delay: 0.3,
           }}
-          className={`flex ml-auto text-center text-black justify-center items-center mr-10 duration-300 transition-all`}
+          className={`flex ml-auto text-center text-black justify-center items-center md:mr-10 mr-5 duration-300 transition-all`}
         >
           <Link
             href="/#contact"

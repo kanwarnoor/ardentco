@@ -23,9 +23,11 @@ export default function About() {
   }, [para]);
 
   return (
-    <div className="flex h-screen z-10">
-      <div className="w-fit h-fit flex m-auto ">
+    <div className="flex w-full h-screen z-10 ">
+      <div className=" w-fit h-fit flex m-auto">
+        {/* compass */}
         <motion.div
+          className="relative z-10 mr-10 md:w-[400px] w-[300px] h-screen flex justify-center items-center"
           initial={{
             opacity: 0,
             x: -50,
@@ -40,7 +42,6 @@ export default function About() {
           viewport={{
             amount: 0.3,
           }}
-          className="relative z-10 mr-10 w-[400px] h-screen flex justify-center items-center"
         >
           <Image
             src="/compass.png"
@@ -56,7 +57,7 @@ export default function About() {
             animate={{
               rotate: compass,
             }}
-            className="absolute w-[400px] h-[400px]  rounded-full"
+            className="absolute md:w-[400px] md:h-[400px] w-[300px] h-[300px]  rounded-full"
           >
             <Image
               src="/compassPointer.png"
@@ -69,7 +70,8 @@ export default function About() {
           </motion.div>
         </motion.div>
 
-        <div className="w-[700px] h-fit flex flex-col justify-center my-auto">
+        {/* paras */}
+        <div className="md:w-[700px] md:p-0 p-10 text-center md:text-left h-fit flex flex-col justify-center my-auto">
           {para == 0 && (
             <div>
               <motion.p
@@ -88,7 +90,7 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="text-5xl font-black mb-5"
+                className="md:text-5xl text-3xl font-black mb-5"
               >
                 About us
               </motion.p>
@@ -108,7 +110,7 @@ export default function About() {
                   viewport={{
                     amount: 0.5,
                   }}
-                  className="mr-10 text-xl"
+                  className="md:mr-10 md:text-xl text-base"
                 >
                   Ardent Co. is a dynamic communications, research, and public
                   policy advisory firm dedicated to crafting purpose-driven
@@ -143,7 +145,7 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="text-5xl font-black mb-5"
+                className="md:text-5xl text-3xl font-black mb-5"
               >
                 The Ideology
               </motion.p>
@@ -163,23 +165,18 @@ export default function About() {
                   viewport={{
                     amount: 0.5,
                   }}
-                  className="mr-10 text-xl"
+                  className="md:mr-10 md:text-xl text-base"
                 >
-                  Ardent Co, in its shape today is a company. In its soul,{" "}
-                  {"it’s"}a vision. In its intentions {"it’s"} journeying to
-                  become an institution.In our experience of working in the
-                  fields of communications, public policy, research, and brand
-                  advisory, we developed aspirations of how the work, teams, and
-                  our role in the ecosystem should be.But aspirations are only
-                  dreams. Until, there is the madness (read: courage) to throw
-                  your hands in the sand, and depart from the safety of
-                  conventionality. That is what we did, and that is what we
-                  attract. In 2018, Ardent Co. was envisioned as an unnamed
-                  fictional entity. In the next three and a half years it was
-                  shaped into the idea of a company. In late 2022, it was born.
-                  As founders, to stay honest to the vision of Ardent Co, we
-                  have written this manifesto to engrave our commitments to our
-                  stakeholders, of what Ardent Co will always be.
+                  Ardent Co. is more than a company; it embodies a vision and
+                  aspires to become an institution. Our journey through
+                  communications, public policy, research, and brand advisory
+                  shaped our aspirations for our work, teams, and ecosystem
+                  role. Realizing these aspirations required courage to break
+                  from convention, which is central to who we are and what we
+                  attract. Envisioned in 2018 as a fictional entity, Ardent Co.
+                  evolved into a tangible idea and became reality in late 2022.
+                  This manifesto reflects our commitment to staying true to our
+                  vision and our stakeholders.
                 </motion.p>
               </div>
             </div>
@@ -203,10 +200,11 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="text-5xl font-black mb-5"
+                className="md:text-5xl text-3xl  font-black mb-5"
               >
                 “To our people, who work, trust and are on this journey with us”{" "}
-                <br /> <p className="font-bold text-3xl italic"> - Team </p>
+                <br />{" "}
+                <p className="font-bold md:text-3xl text-xl italic"> - Team </p>
               </motion.p>
               <div className="">
                 <motion.p
@@ -224,7 +222,7 @@ export default function About() {
                   viewport={{
                     amount: 0.5,
                   }}
-                  className="mr-10 text-xl"
+                  className="md:mr-10 md:text-xl text-base"
                 >
                   Ardent Co. will always be a sandbox for inspired, driven
                   professionals Ardent Co. will never limit itself by any
@@ -254,11 +252,15 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="text-5xl font-black mb-5"
+                className="md:text-5xl text-3xl font-black mb-5"
               >
                 “To the brands, institutions and leaders who are with us on this
                 journey”
-                <br /> <p className="font-bold text-3xl italic"> - Partners </p>
+                <br />{" "}
+                <p className="font-bold md:text-3xl text-xl italic">
+                  {" "}
+                  - Partners{" "}
+                </p>
               </motion.p>
               <div className="">
                 <motion.p
@@ -276,7 +278,7 @@ export default function About() {
                   viewport={{
                     amount: 0.5,
                   }}
-                  className="mr-10 text-xl"
+                  className="md:mr-10 md:text-xl text-base"
                 >
                   Ardent Co. will always work as partners with you, harmonized
                   with an in-depth appreciation of your goals, targets, and
@@ -308,11 +310,14 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="text-5xl font-black mb-5"
+                className="md:text-5xl text-3xl font-black mb-5"
               >
                 “To the industry, nation, and the world we live in”
                 <br />{" "}
-                <p className="font-bold text-3xl italic"> - Ecosystem </p>
+                <p className="font-bold md:text-3xl text-xl italic">
+                  {" "}
+                  - Ecosystem{" "}
+                </p>
               </motion.p>
               <div className="">
                 <motion.p
@@ -330,26 +335,17 @@ export default function About() {
                   viewport={{
                     amount: 0.5,
                   }}
-                  className="mr-10 text-xl"
+                  className="md:mr-10 md:text-xl text-base"
                 >
-                  Ardent Co. will always strive towards developing fresh
-                  perspectives and novel approaches in all the verticals we
-                  operate in. Ardent Co. will seek to support the nation’s
-                  growth and priorities, by leveraging its capacities and
-                  expertise for researching, developing, and recommending
-                  innovative solutions and interventions. Ardent Co. will seek
-                  to positively contribute to the planet’s metamorphosis,
-                  standing at the cusp of a technological transformation,
-                  environmental transition, and societal evolution As founders,
-                  we are committed to the vision of creating a legacy, achieved
-                  in collaboration with a cohort of right individuals.In a world
-                  of billions of human beings, it takes a committed, driven, and
-                  resolute human to leave a mark. A mark which survives through
-                  generations.Inspired by the great artists, leaders, scientists
-                  who shaped the world we live in today, we are on a journey to
-                  incubate the touch of excellence in all of our work and
-                  actions.That is who we are. What we believe in, and what we
-                  will always attract.
+                  Ardent Co. is dedicated to developing fresh perspectives and
+                  innovative approaches across all its operations. We aim to
+                  support national growth by leveraging our expertise to
+                  research, develop, and propose impactful solutions. Committed
+                  to contributing positively to technological, environmental,
+                  and societal transformations, we strive to leave a lasting
+                  legacy in collaboration with like-minded individuals. Inspired
+                  by history&apos;s greats—artists, leaders, scientists—our
+                  journey centers on excellence in every endeavor.
                 </motion.p>
               </div>
             </div>

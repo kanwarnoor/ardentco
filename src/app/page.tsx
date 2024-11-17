@@ -89,7 +89,7 @@ export default function Home() {
           <FlipWords
             words={avail}
             duration={3000}
-            className="text-9xl text-white font-bold text-center"
+            className="md:text-9xl text-6xl text-white font-bold text-center"
           />
           <motion.p
             initial={{
@@ -101,13 +101,13 @@ export default function Home() {
             transition={{
               duration: 1,
             }}
-            className="text-7xl font-bold text-white"
+            className="md:text-7xl text-4xl font-bold text-white mb-0 pb-0"
           >
             Status Quo
           </motion.p>
           <br />
           <motion.div
-            className="w-fit flex mx-auto absolute justify-center text-center left-0 right-0"
+            className="w-fit md:flex mx-auto absolute justify-center text-center left-0 right-0"
             whileHover={{
               scale: 1.1,
               transition: { duration: 0.1 },
@@ -121,7 +121,7 @@ export default function Home() {
           >
             <Link
               href="#about"
-              className="text-xl border-2 font-bold text-white bg-none border-white px-5 py-2 rounded-full"
+              className="md:text-xl border-2 font-bold text-white bg-none border-white px-5 py-2 rounded-full"
             >
               Know more
             </Link>
@@ -142,7 +142,7 @@ export default function Home() {
         id="enable"
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div>
-        <Enable />
+        <Enable/>
       </section>
 
       <section className="relative bg-white flex w-full h-screen" id="contact">
