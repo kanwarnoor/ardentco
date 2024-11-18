@@ -34,9 +34,17 @@ export default function Arrow() {
       transform="scale(1.18,1.18)"
     >
       {/* Motion Path */}
+      {/* round path */}
+      {/* <path
+        id="motionPath_old"
+        d="m 0 0 c 0 0 0 500 500 200 c 0 0 350 -200 500 360"
+        stroke="none"
+        fill="transparent"
+      /> */}
+      {/* straight path */}
       <path
         id="motionPath"
-        d="m 0 0 c 0 0 0 500 500 200 c 0 0 350 -200 500 360"
+        d="m 0 281.25 l 1000 0"
         stroke="none"
         fill="transparent"
       />

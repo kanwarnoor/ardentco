@@ -75,7 +75,7 @@ function Arrow({ setActive }: ArrowProps) {
       if (arrow && motionPath) {
         // Use GSAP's motionPath plugin with correct type assertion
         gsap.to(arrow, {
-          duration: 3, // Total animation time in seconds
+          duration: 1, // Total animation time in seconds
           repeat: 0, // No repeat
           ease: "power1.inOut", // Smooth easing
           motionPath: {
@@ -94,7 +94,7 @@ function Arrow({ setActive }: ArrowProps) {
     animateArrow();
 
     // Play sound when the animation starts
-    const soundEffect = new Audio("/sound-effect.mp3"); // Replace with your actual sound file path
+    const soundEffect = new Audio("/arrowSound.mp3"); // Replace with your actual sound file path
     soundEffect.play().catch((error) => {
       console.error("Error playing sound:", error);
     });
@@ -119,8 +119,14 @@ function Arrow({ setActive }: ArrowProps) {
     >
       {/* Motion Path */}
       <path
-        id="motionPath"
+        id="motionPath_old"
         d="m 0 0 c 0 0 0 500 500 200 c 0 0 350 -200 500 360"
+        stroke="none"
+        fill="transparent"
+      />
+       <path
+        id="motionPath"
+        d="m 0 281.25 l 1200 0"
         stroke="none"
         fill="transparent"
       />
@@ -132,6 +138,7 @@ function Arrow({ setActive }: ArrowProps) {
         y="0" // Initial position
         width="100"
         height="100"
+        className="shadow-2xl shadow-white"
       />
     </svg>
   );
