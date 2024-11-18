@@ -23,11 +23,11 @@ export default function About() {
   }, [para]);
 
   return (
-    <div className="flex w-full h-screen z-10 ">
+    <div className="flex w-full h-fit min-h-screen z-10 ">
       <div className=" w-fit h-fit flex m-auto">
         {/* compass */}
         <motion.div
-          className="relative z-10 mr-10 md:w-[400px] w-[300px] h-screen flex justify-center items-center"
+          className="relative z-10 mr-10 md:w-[400px] w-[300px] h-fit min-h-screen flex justify-center items-center"
           initial={{
             opacity: 0,
             x: -50,

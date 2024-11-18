@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       <section
-        className="relative bg-white bg-dot-black/[0.5] w-full h-screen "
+        className="relative bg-white bg-dot-black/[0.5] w-full h-fit min-h-full"
         id="about"
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div>
