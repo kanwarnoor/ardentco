@@ -23,7 +23,9 @@ export default function Home() {
   return (
     <>
       {/* <Counter /> */}
-      <Wake />
+      <div className="hidden md:block">
+        <Wake />
+      </div>
       <Navbar />
       <section
         id="home"
@@ -142,7 +144,7 @@ export default function Home() {
         id="enable"
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div>
-        <Enable/>
+        <Enable />
       </section>
 
       <section className="relative bg-white flex w-full h-screen" id="contact">

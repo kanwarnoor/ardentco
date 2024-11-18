@@ -141,7 +141,7 @@ function Arrow({ setActive }: ArrowProps) {
       {/* Arrow */}
       <image
         id="arrow"
-        href="/arrow.png"
+        href="/arrow1.png"
         x="0" // Initial position
         y="0" // Initial position
         width="100"
