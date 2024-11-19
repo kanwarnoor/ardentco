@@ -50,6 +50,7 @@ export default function About() {
             className="absolute rounded-full"
             alt="compass "
           ></Image>
+          {/* compass needle */}
           <motion.div
             initial={{
               rotate: 0,
@@ -68,6 +69,15 @@ export default function About() {
               alt="compass"
             ></Image>
           </motion.div>
+          <div className="absolute md:w-[365px] md:h-[365px] w-[265px] h-[265px]  rounded-full opacity-0">
+            <div
+              className="w-full h-1/3 bg-blue-500 absolute top-0 cursor-pointer"
+              onClick={() => setPara(0)}
+            ></div>
+            <div className="w-1/2 h-1/3 bg-green-500 absolute left-0 top-1/3 cursor-pointer" onClick={() => setPara(3)}></div>
+            <div className="w-1/2 h-1/3 bg-red-500 absolute right-0 bottom-1/3 cursor-pointer" onClick={() => setPara(1)}></div>
+            <div className="w-full h-1/3 bg-yellow-500 absolute bottom-0 cursor-pointer" onClick={() => setPara(2)}></div>
+          </div>
         </motion.div>
 
         {/* paras */}

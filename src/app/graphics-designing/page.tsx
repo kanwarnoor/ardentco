@@ -3,71 +3,14 @@
 import React from "react";
 import Navbar from "../components/ui/Navbar";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Footer from "../components/ui/Footer";
+import Lander from "../components/ui/Lander";
 
 export default function page() {
   return (
     <>
       <Navbar />
-      <section
-        id="home"
-        className="relative w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-opacity-100 bg-white"
-      >
-        <motion.div
-          initial={{
-            scale: 0.8,
-            borderRadius: "1rem",
-          }}
-          animate={{
-            scale: 1,
-            borderRadius: "0px",
-          }}
-          transition={{
-            duration: 0.3,
-          }}
-          className="relative object-cover inset-0 w-full h-full scale-90 rounded-2xl opacity-100"
-        >
-          <Image
-            src="/graphics.jpg"
-            height={0}
-            width={0}
-            sizes="100% 100%"
-            className="absolute object-cover inset-0 w-full h-full scale-100 opacity-100"
-            alt="athens"
-            no-select="true"
-          ></Image>
-        </motion.div>
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 0.7,
-          }}
-          transition={{
-            duration: 2,
-          }}
-          className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_50%)]"
-        ></motion.div>
-        <div className="absolute">
-          <motion.span
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-            }}
-            transition={{
-              duration: 1,
-            }}
-            className="text-7xl font-black text-black bg-yellow-400"
-          >
-            Graphics Designing
-          </motion.span>
-          <br />
-        </div>
-      </section>
+      <Lander image="/graphics.jpg" heading1="Graphics" heading2="Designing"/>
 
       <section
         className="relative bg-white bg-dot-black/[0.5] w-full h-auto min-h-screen"

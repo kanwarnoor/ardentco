@@ -23,7 +23,7 @@ export default function ParentComponent() {
         // Only set active if the document is not hidden
         setActive(true);
       }
-    }, 5000); // 5 seconds of inactivity
+    }, 30000); // 5 seconds of inactivity
   };
 
   useEffect(() => {
