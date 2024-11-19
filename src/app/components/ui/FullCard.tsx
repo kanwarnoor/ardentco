@@ -1,13 +1,12 @@
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface props {
   title: string;
-  image: string;
+  image?: string;
 }
 
-export default function FullCard({ title, image }: props) {
+export default function FullCard({ title }: props) {
   return (
     <div className="bg-yellow-100 w-full h-full">
       
