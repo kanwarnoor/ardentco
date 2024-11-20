@@ -1,81 +1,229 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import FullCard from "./FullCard";
+import { motion } from "framer-motion";
 
 export default function Enable() {
-  const [next, setNext] = useState(false);
+  const [nav, setNav] = useState(0);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setNext((prev) => !prev);
-  //   }, 5000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (nav == 2) {
+        setNav(0);
+      } else {
+        setNav((prev) => prev + 1);
+      }
+    }, 5000);
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, [nav]);
 
   return (
     <div className="flex w-full h-full z-10">
-      {!next && (
-        <div className=" w-full h-full grid grid-cols-2 grid-rows-2">
-          <FullCard
-            title="Strategic Communication & Public Relations"
-            image="/publicRelations.jpg"
-          />
-          <FullCard
-            title="Public Policy & Regulatory Affairs"
-            image="/publicRelations.jpg"
-          />
-          <FullCard
-            title="Research & Collateral Development"
-            image="/publicRelations.jpg"
-          />
-          <FullCard
-            title="Digital Communications"
-            image="/publicRelations.jpg"
-          />
-        </div>
+      {nav == 0 && (
+        <>
+          <div className="w-full h-full grid grid-cols-2">
+            <div className="relative grid grid-rows-5">
+              <FullCard
+                title="Strategic Communication & Public Relations"
+                image="/publicRelations.jpg"
+                theme="light"
+              />
+              {[50, 100, 200, 300, 400].map((shade, index) => {
+                return (
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      delay: index * 0.1,
+                      duration: 0.5,
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    className={`bg-yellow-${shade}`}
+                    key={index}
+                  ></motion.div>
+                );
+              })}
+            </div>
+            <div className="grid grid-rows-5 relative">
+              <FullCard
+                title="Public Policy & Regulatory Affairs"
+                image="/publicRelations.jpg"
+                theme="dark"
+              />
+              {[500, 600, 700, 800, 900].map((shade, index) => {
+                return (
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      delay: index * 0.1,
+                      duration: 0.5,
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    className={`bg-neutral-${shade}`}
+                    key={index}
+                  ></motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </>
       )}
-      {next && (
-        <div className=" w-full h-full grid grid-cols-2">
-        <FullCard
-          title="Talent Nexus Solutions"
-          image="/publicRelations.jpg"
-        />
-        <FullCard
-          title="Graphics Designing"
-          image="/publicRelations.jpg"
-        />
+
+      {nav == 1 && (
+        <div className="w-full h-full grid grid-cols-2">
+          <div className="relative grid grid-rows-5">
+            <FullCard
+              title="Research & Collateral Development"
+              image="/publicRelations.jpg"
+              theme="light"
+            />
+            {[50, 100, 200, 300, 400].map((shade, index) => {
+              return (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: index * 0.1,
+                    duration: 0.5,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  className={`bg-yellow-${shade}`}
+                  key={index}
+                ></motion.div>
+              );
+            })}
+          </div>
+
+          <div className="grid grid-rows-5 relative">
+            <FullCard
+              title="Digital Communications"
+              image="/publicRelations.jpg"
+              theme="dark"
+            />
+            {[500, 600, 700, 800, 900].map((shade, index) => {
+              return (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: index * 0.1,
+                    duration: 0.5,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  className={`bg-neutral-${shade}`}
+                  key={index}
+                ></motion.div>
+              );
+            })}
+          </div>
         </div>
       )}
 
-      <div className="absolute bottom-0 mb-10 w-full h-fit flex m-auto text-center justify-center items-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="size-12 cursor-pointer hover:scale-105 duration-200"
-          onClick={() => setNext(false)}
-        >
-          <path
-            fillRule="evenodd"
-            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-4.28 9.22a.75.75 0 0 0 0 1.06l3 3a.75.75 0 1 0 1.06-1.06l-1.72-1.72h5.69a.75.75 0 0 0 0-1.5h-5.69l1.72-1.72a.75.75 0 0 0-1.06-1.06l-3 3Z"
-            clipRule="evenodd"
-          />
-        </svg>
+      {nav == 2 && (
+        <div className="w-full h-full grid grid-cols-2">
+          <div className="relative grid grid-rows-5">
+            <FullCard
+              title="Talent Nexus Solutions"
+              image="/publicRelations.jpg"
+              theme="light"
+            />
+            {[50, 100, 200, 300, 400].map((shade, index) => {
+              return (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: index * 0.1,
+                    duration: 0.5,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  className={`bg-yellow-${shade}`}
+                  key={index}
+                ></motion.div>
+              );
+            })}
+          </div>
 
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="size-12 cursor-pointer hover:scale-105 duration-200"
-          onClick={() => setNext(true)}
-        >
-          <path
-            fillRule="evenodd"
-            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
-            clipRule="evenodd"
-          />
-        </svg>
+          <div className="grid grid-rows-5 relative">
+            <FullCard
+              title="Graphics Designing"
+              image="/publicRelations.jpg"
+              theme="dark"
+            />
+            {[500, 600, 700, 800, 900].map((shade, index) => {
+              return (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: index * 0.1,
+                    duration: 0.5,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  className={`bg-neutral-${shade}`}
+                  key={index}
+                ></motion.div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      <div className="absolute w-screen bottom-0 text-center flex justify-center z-20">
+        <div className="absolute bottom-0 w-[50%] h-10 flex items-center justify-center space-x-2">
+          {[0, 1, 2].map((loc, index) => {
+            const isHighLoc = loc >= 10; // Determine if loc is 3 or higher
+            return (
+              <div
+                key={index}
+                className={`w-4 h-4 rounded-full border-2 cursor-pointer hover:scale-110 duration-300 ${
+                  isHighLoc
+                    ? `border-white ${nav === loc ? "bg-white" : "bg-black"}`
+                    : `border-black ${nav === loc ? "bg-black" : "bg-white"}`
+                }`}
+                onClick={() => setNav(loc)}
+              ></div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
