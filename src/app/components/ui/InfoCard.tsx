@@ -10,6 +10,7 @@ interface InfoCardProps {
   description: string;
   image: string;
   link?: string;
+  animation: "left" | "center" | "right";
 }
 
 export default function InfoCard({
@@ -18,6 +19,7 @@ export default function InfoCard({
   image,
   imageDescription,
   description,
+  animation,
   link,
 }: InfoCardProps) {
   const [clicked, setClicked] = useState(false);
@@ -26,7 +28,8 @@ export default function InfoCard({
     <motion.div
       initial={{
         opacity: 0,
-        x: "-10%",
+        x: animation == "left" ? "-10%" : animation === "center" ? "0" : "10%",
+        y: animation == "center" ? "10%" : "0%",
       }}
       animate={{
         transition: {
@@ -39,6 +42,7 @@ export default function InfoCard({
       whileInView={{
         opacity: 1,
         x: 0,
+        y: 0,
         transition: {
           duration: 0.5,
         },
