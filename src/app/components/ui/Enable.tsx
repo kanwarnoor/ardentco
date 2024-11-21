@@ -26,7 +26,10 @@ export default function Enable() {
           <div className="w-full h-full grid grid-cols-2">
             <div className="relative grid grid-rows-5">
               <FullCard
-                title="Strategic Communication & Public Relations"
+                title1="Strategic Communication &"
+                title2="Public Relations"
+                description="Our expertise in policy affairs and comprehensive research equips our communications interventions with a holistic 360-degree perspective, ensuring consistently impactful outputs for your organization and its leadership."
+                link="/public-relations"
                 image="/publicRelations.jpg"
                 theme="light"
               />
@@ -34,8 +37,11 @@ export default function Enable() {
             </div>
             <div className="grid grid-rows-5 relative">
               <FullCard
-                title="Public Policy & Regulatory Affairs"
-                image="/publicRelations.jpg"
+                title1="Public Policy &"
+                title2=" Regulatory Affairs"
+                description="Ardent Co. helps your organization in defining and engaging with its public policy priorities through a unique understanding of the stakeholder ecosystem and powered by in-depth research driven policy insights."
+                link="/public-policy"
+                image="/publicPolicy.jpg"
                 theme="dark"
               />
               <BabyKeem theme="dark" />
@@ -71,8 +77,11 @@ export default function Enable() {
         <div className="w-full h-full grid grid-cols-2">
           <div className="relative grid grid-rows-5">
             <FullCard
-              title="Research & Collateral Development"
-              image="/publicRelations.jpg"
+              title1="Research &"
+              title2="Collateral Development"
+              description="Our experienced team of researchers and content experts deliver quality analysis and reports, providing actionable insights for our stakeholders across domains and sectors."
+              link="/research"
+              image="/research.jpg"
               theme="light"
             />
             <BabyKeem theme="yellow" />
@@ -103,8 +112,11 @@ export default function Enable() {
 
           <div className="grid grid-rows-5 relative">
             <FullCard
-              title="Digital Communications"
-              image="/publicRelations.jpg"
+              title1="Digital"
+              title2="Communications"
+              description="Ardent Co manages social media properties end-to-end, crafting tailored strategies across platforms. We align content with business goals, delivering platform-centric, perspective-driven solutions."
+              link="/digital-comms"
+              image="/digitalComms.png"
               theme="dark"
             />
             <BabyKeem theme="dark" />
@@ -139,8 +151,11 @@ export default function Enable() {
         <div className="w-full h-full grid grid-cols-2">
           <div className="relative grid grid-rows-5">
             <FullCard
-              title="Talent Nexus Solutions"
-              image="/publicRelations.jpg"
+              title1="Talent"
+              title2="Nexus Solutions"
+              description="Building upon our extensive experience as a dynamic young advisory, we have now decided to leverage our expertise to address challenges faced by other agencies when it comes to manpower management through our latest initiative, “Talent Nexus Solutions”"
+              link="/talent-nexus"
+              image="/nexus.jpg"
               theme="light"
             />
             <BabyKeem theme="yellow" />
@@ -171,8 +186,11 @@ export default function Enable() {
 
           <div className="grid grid-rows-5 relative">
             <FullCard
-              title="Graphics Designing"
-              image="/publicRelations.jpg"
+              title1="Graphics"
+              title2="Designing"
+              description="Ardent Co creates impactful graphic design solutions, enhancing your brand’s identity with precision-crafted visuals and content. Our team develops brand-centric designs that align with communication goals, bringing ideas to life and driving strong audience engagement."
+              link="/graphics-designing"
+              image="/graphics.jpg"
               theme="dark"
             />
             <BabyKeem theme="dark" />
