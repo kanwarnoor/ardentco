@@ -34,7 +34,20 @@ export default function FullCard({
       }}
       className="absolute w-full h-full z-10 flex flex-col group"
     >
-      <div className="flex flex-col m-auto">
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 50,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.5
+        }}
+        className="flex flex-col m-auto"
+      >
         <Link
           href={link}
           className={`relative w-[300px] h-[100px] m-auto mb-10 text-center items-center justify-center hover:w-[500px] group-hover:w-[500px] duration-50 rounded-full duration-500  cursor-pointer group/link ${
@@ -88,7 +101,7 @@ export default function FullCard({
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
