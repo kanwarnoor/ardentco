@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import FullCard from "./FullCard";
 import { motion } from "framer-motion";
+import BabyKeem from "./BabyKeem";
 
 export default function Enable() {
   const [nav, setNav] = useState(0);
@@ -13,7 +14,7 @@ export default function Enable() {
       } else {
         setNav((prev) => prev + 1);
       }
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [nav]);
@@ -29,27 +30,7 @@ export default function Enable() {
                 image="/publicRelations.jpg"
                 theme="light"
               />
-              {[50, 100, 200, 300, 400].map((shade, index) => {
-                return (
-                  <motion.div
-                    initial={{
-                      opacity: 0,
-                    }}
-                    animate={{
-                      opacity: 1,
-                    }}
-                    transition={{
-                      delay: index * 0.1,
-                      duration: 0.5,
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    className={`bg-yellow-${shade}`}
-                    key={index}
-                  ></motion.div>
-                );
-              })}
+              <BabyKeem theme="yellow" />
             </div>
             <div className="grid grid-rows-5 relative">
               <FullCard
@@ -57,27 +38,30 @@ export default function Enable() {
                 image="/publicRelations.jpg"
                 theme="dark"
               />
-              {[500, 600, 700, 800, 900].map((shade, index) => {
-                return (
-                  <motion.div
-                    initial={{
-                      opacity: 0,
-                    }}
-                    animate={{
-                      opacity: 1,
-                    }}
-                    transition={{
-                      delay: index * 0.1,
-                      duration: 0.5,
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    className={`bg-neutral-${shade}`}
-                    key={index}
-                  ></motion.div>
-                );
-              })}
+              <BabyKeem theme="dark" />
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.5,
+                }}
+                className="m-10  absolute right-0 bottom-0 hover:scale-110 cursor-pointer z-10 duration-100"
+                onClick={() => setNav((prev) => prev + 1)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                  className="size-10"
+                >
+                  <path d="M5.055 7.06C3.805 6.347 2.25 7.25 2.25 8.69v8.122c0 1.44 1.555 2.343 2.805 1.628L12 14.471v2.34c0 1.44 1.555 2.343 2.805 1.628l7.108-4.061c1.26-.72 1.26-2.536 0-3.256l-7.108-4.061C13.555 6.346 12 7.249 12 8.689v2.34L5.055 7.061Z" />
+                </svg>
+              </motion.div>
             </div>
           </div>
         </>
@@ -91,27 +75,30 @@ export default function Enable() {
               image="/publicRelations.jpg"
               theme="light"
             />
-            {[50, 100, 200, 300, 400].map((shade, index) => {
-              return (
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: index * 0.1,
-                    duration: 0.5,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  className={`bg-yellow-${shade}`}
-                  key={index}
-                ></motion.div>
-              );
-            })}
+            <BabyKeem theme="yellow" />
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.5,
+              }}
+              className="m-10 absolute left-0 bottom-0 hover:scale-110 cursor-pointer z-10 duration-100 rotate-180"
+              onClick={() => setNav((prev) => prev - 1)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="black"
+                className="size-10"
+              >
+                <path d="M5.055 7.06C3.805 6.347 2.25 7.25 2.25 8.69v8.122c0 1.44 1.555 2.343 2.805 1.628L12 14.471v2.34c0 1.44 1.555 2.343 2.805 1.628l7.108-4.061c1.26-.72 1.26-2.536 0-3.256l-7.108-4.061C13.555 6.346 12 7.249 12 8.689v2.34L5.055 7.061Z" />
+              </svg>
+            </motion.div>
           </div>
 
           <div className="grid grid-rows-5 relative">
@@ -120,27 +107,30 @@ export default function Enable() {
               image="/publicRelations.jpg"
               theme="dark"
             />
-            {[500, 600, 700, 800, 900].map((shade, index) => {
-              return (
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: index * 0.1,
-                    duration: 0.5,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  className={`bg-neutral-${shade}`}
-                  key={index}
-                ></motion.div>
-              );
-            })}
+            <BabyKeem theme="dark" />
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.5,
+              }}
+              className="m-10  absolute right-0 bottom-0 hover:scale-110 cursor-pointer z-10 duration-100"
+              onClick={() => setNav((prev) => prev + 1)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                className="size-10"
+              >
+                <path d="M5.055 7.06C3.805 6.347 2.25 7.25 2.25 8.69v8.122c0 1.44 1.555 2.343 2.805 1.628L12 14.471v2.34c0 1.44 1.555 2.343 2.805 1.628l7.108-4.061c1.26-.72 1.26-2.536 0-3.256l-7.108-4.061C13.555 6.346 12 7.249 12 8.689v2.34L5.055 7.061Z" />
+              </svg>
+            </motion.div>
           </div>
         </div>
       )}
@@ -153,27 +143,30 @@ export default function Enable() {
               image="/publicRelations.jpg"
               theme="light"
             />
-            {[50, 100, 200, 300, 400].map((shade, index) => {
-              return (
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: index * 0.1,
-                    duration: 0.5,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  className={`bg-yellow-${shade}`}
-                  key={index}
-                ></motion.div>
-              );
-            })}
+            <BabyKeem theme="yellow" />
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.5,
+              }}
+              className="m-10 absolute left-0 bottom-0 hover:scale-110 cursor-pointer z-10 duration-100 rotate-180"
+              onClick={() => setNav((prev) => prev - 1)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="black"
+                className="size-10"
+              >
+                <path d="M5.055 7.06C3.805 6.347 2.25 7.25 2.25 8.69v8.122c0 1.44 1.555 2.343 2.805 1.628L12 14.471v2.34c0 1.44 1.555 2.343 2.805 1.628l7.108-4.061c1.26-.72 1.26-2.536 0-3.256l-7.108-4.061C13.555 6.346 12 7.249 12 8.689v2.34L5.055 7.061Z" />
+              </svg>
+            </motion.div>
           </div>
 
           <div className="grid grid-rows-5 relative">
@@ -182,49 +175,10 @@ export default function Enable() {
               image="/publicRelations.jpg"
               theme="dark"
             />
-            {[500, 600, 700, 800, 900].map((shade, index) => {
-              return (
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: index * 0.1,
-                    duration: 0.5,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  className={`bg-neutral-${shade}`}
-                  key={index}
-                ></motion.div>
-              );
-            })}
+            <BabyKeem theme="dark" />
           </div>
         </div>
       )}
-
-      <div className="absolute w-screen bottom-0 text-center flex justify-center z-20">
-        <div className="absolute bottom-0 w-[50%] h-10 flex items-center justify-center space-x-2">
-          {[0, 1, 2].map((loc, index) => {
-            const isHighLoc = loc >= 10; // Determine if loc is 3 or higher
-            return (
-              <div
-                key={index}
-                className={`w-4 h-4 rounded-full border-2 cursor-pointer hover:scale-110 duration-300 ${
-                  isHighLoc
-                    ? `border-white ${nav === loc ? "bg-white" : "bg-black"}`
-                    : `border-black ${nav === loc ? "bg-black" : "bg-white"}`
-                }`}
-                onClick={() => setNav(loc)}
-              ></div>
-            );
-          })}
-        </div>
-      </div>
     </div>
   );
 }
