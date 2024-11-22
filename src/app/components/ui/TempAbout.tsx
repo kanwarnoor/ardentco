@@ -6,13 +6,26 @@ export default function About() {
   const [compass, setCompass] = useState(0);
   const [para, setPara] = useState(0);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); 
+    };
+
+    handleResize(); // Check on mount
+    window.addEventListener("resize", handleResize); 
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     const angles = [0, 90, 180, 270, 360];
     setCompass(angles[para]);
 
     const interval = setInterval(() => {
       setPara((prev) => prev + 1);
-    }, 5000);
+    }, 10000);
 
     if (para >= angles.length) {
       setPara(0);
@@ -24,17 +37,18 @@ export default function About() {
 
   return (
     <div className="flex w-full h-fit min-h-screen z-10 ">
-      <div className=" w-fit h-fit flex m-auto">
+      <div className="w-fit h-fit flex m-auto md:flex-row flex-col">
         {/* compass */}
         <motion.div
-          className="relative z-10 mr-10 md:w-[400px] w-[300px] h-fit min-h-screen flex justify-center items-center"
+          className="flex relative z-10 md:mr-10 md:w-[400px] w-[250px] md:h-fit md:min-h-screen h-[250px] md:justify-center md:items-center m-auto "
           initial={{
             opacity: 0,
-            x: -50,
+            ...(isMobile ? { y: -50 } : { x: -50 }),
           }}
           whileInView={{
             opacity: 1,
             x: 0,
+            y: 0,
           }}
           transition={{
             duration: 0.5,
@@ -58,7 +72,7 @@ export default function About() {
             animate={{
               rotate: compass,
             }}
-            className="absolute md:w-[400px] md:h-[400px] w-[300px] h-[300px]  rounded-full"
+            className="absolute md:w-[400px] md:h-[400px] w-[250px] h-[250px]  rounded-full"
           >
             <Image
               src="/compassPointer.png"
@@ -74,9 +88,18 @@ export default function About() {
               className="w-full h-1/3 bg-blue-500 absolute top-0 cursor-pointer"
               onClick={() => setPara(0)}
             ></div>
-            <div className="w-1/2 h-1/3 bg-green-500 absolute left-0 top-1/3 cursor-pointer" onClick={() => setPara(3)}></div>
-            <div className="w-1/2 h-1/3 bg-red-500 absolute right-0 bottom-1/3 cursor-pointer" onClick={() => setPara(1)}></div>
-            <div className="w-full h-1/3 bg-yellow-500 absolute bottom-0 cursor-pointer" onClick={() => setPara(2)}></div>
+            <div
+              className="w-1/2 h-1/3 bg-green-500 absolute left-0 top-1/3 cursor-pointer"
+              onClick={() => setPara(3)}
+            ></div>
+            <div
+              className="w-1/2 h-1/3 bg-red-500 absolute right-0 bottom-1/3 cursor-pointer"
+              onClick={() => setPara(1)}
+            ></div>
+            <div
+              className="w-full h-1/3 bg-yellow-500 absolute bottom-0 cursor-pointer"
+              onClick={() => setPara(2)}
+            ></div>
           </div>
         </motion.div>
 
@@ -100,7 +123,7 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="md:text-5xl text-3xl font-black mb-5"
+                className="md:text-5xl text-2xl font-black mb-5"
               >
                 About us
               </motion.p>
@@ -120,7 +143,7 @@ export default function About() {
                   viewport={{
                     amount: 0.5,
                   }}
-                  className="md:mr-10 md:text-xl text-base"
+                  className="md:mr-10 md:text-xl text-[14px]"
                 >
                   Ardent Co. is a dynamic communications, research, and public
                   policy advisory firm dedicated to crafting purpose-driven
@@ -155,7 +178,7 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="md:text-5xl text-3xl font-black mb-5"
+                className="md:text-5xl text-2xl font-black mb-5"
               >
                 The Ideology
               </motion.p>
@@ -175,7 +198,7 @@ export default function About() {
                   viewport={{
                     amount: 0.5,
                   }}
-                  className="md:mr-10 md:text-xl text-base"
+                  className="md:mr-10 md:text-xl text-[14px]"
                 >
                   Ardent Co. is more than a company; it embodies a vision and
                   aspires to become an institution. Our journey through
@@ -210,11 +233,11 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="md:text-5xl text-3xl  font-black mb-5"
+                className="md:text-5xl text-2xl font-black mb-5"
               >
                 “To our people, who work, trust and are on this journey with us”{" "}
                 <br />{" "}
-                <p className="font-bold md:text-3xl text-xl italic"> - Team </p>
+                <p className="font-bold md:text-3xl text-lg italic"> - Team </p>
               </motion.p>
               <div className="">
                 <motion.p
@@ -232,7 +255,7 @@ export default function About() {
                   viewport={{
                     amount: 0.5,
                   }}
-                  className="md:mr-10 md:text-xl text-base"
+                  className="md:mr-10 md:text-xl text-[14px]"
                 >
                   Ardent Co. will always be a sandbox for inspired, driven
                   professionals Ardent Co. will never limit itself by any
@@ -262,12 +285,12 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="md:text-5xl text-3xl font-black mb-5"
+                className="md:text-5xl text-2xl font-black mb-5"
               >
                 “To the brands, institutions and leaders who are with us on this
                 journey”
                 <br />{" "}
-                <p className="font-bold md:text-3xl text-xl italic">
+                <p className="font-bold md:text-3xl text-lg italic">
                   {" "}
                   - Partners{" "}
                 </p>
@@ -288,7 +311,7 @@ export default function About() {
                   viewport={{
                     amount: 0.5,
                   }}
-                  className="md:mr-10 md:text-xl text-base"
+                  className="md:mr-10 md:text-xl text-[14px]"
                 >
                   Ardent Co. will always work as partners with you, harmonized
                   with an in-depth appreciation of your goals, targets, and
@@ -320,11 +343,11 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="md:text-5xl text-3xl font-black mb-5"
+                className="md:text-5xl text-2xl font-black mb-5"
               >
                 “To the industry, nation, and the world we live in”
                 <br />{" "}
-                <p className="font-bold md:text-3xl text-xl italic">
+                <p className="font-bold md:text-3xl text-lg italic">
                   {" "}
                   - Ecosystem{" "}
                 </p>
@@ -345,7 +368,7 @@ export default function About() {
                   viewport={{
                     amount: 0.5,
                   }}
-                  className="md:mr-10 md:text-xl text-base"
+                  className="md:mr-10 md:text-xl text-[14px]"
                 >
                   Ardent Co. is dedicated to developing fresh perspectives and
                   innovative approaches across all its operations. We aim to
@@ -364,7 +387,7 @@ export default function About() {
       </div>
 
       <div className="absolute w-screen bottom-0 text-center flex justify-center">
-        <div className="absolute bottom-0 w-[50%] h-10 flex items-center justify-center space-x-2">
+        <div className="mb-5 absolute bottom-0 w-[50%] h-10 flex items-center justify-center space-x-2">
           <div
             className={`w-4 h-4 rounded-full border-2 border-black cursor-pointer hover:scale-110 ${
               para == 0 ? "bg-black" : "bg-white"
@@ -399,7 +422,7 @@ export default function About() {
       </div>
 
       <div
-        className="absolute w-20 h-screen left-0 text-center mb-5 flex justify-center items-center cursor-pointer hover:scale-110 z-10"
+        className="absolute md:w-20 w-10 h-screen left-0 text-center mb-5 flex justify-center items-center cursor-pointer hover:scale-110 z-10"
         onClick={() => setPara((prev) => (prev != 0 ? prev - 1 : prev))}
       >
         <div className="absolute left-0 w-full flex items-center justify-center">
@@ -421,7 +444,7 @@ export default function About() {
       </div>
 
       <div
-        className="absolute w-20 h-screen right-0 text-center mb-5 flex justify-center items-center cursor-pointer hover:scale-110"
+        className="absolute md:w-20 w-10 h-screen right-0 text-center mb-5 flex justify-center items-center cursor-pointer hover:scale-110"
         onClick={() => setPara((prev) => (prev != 4 ? prev + 1 : prev))}
       >
         <div className="absolute w-full flex items-center justify-center ">
