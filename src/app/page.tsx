@@ -149,7 +149,7 @@ export default function Home() {
         <Enable />
       </section>
 
-      <section className="relative bg-white flex w-full h-screen" id="contact">
+      <section className="relative bg-white flex w-full min-h-screen h-fit" id="contact">
         <Contact />
       </section>
       <Footer theme="dark" />

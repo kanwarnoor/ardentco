@@ -43,12 +43,15 @@ export default function Navbar() {
           }}
           className={`flex justify-center items-center md:pl-10 pl-5`}
         >
+
           <Link
-            className="md:text-xl text-lg font-bold cursor-pointer "
+            className="md:text-xl text-lg font-bold cursor-pointer mix-blend-difference"
             href="/"
           >
             Ardent Co.
+           
           </Link>
+
         </motion.div>
 
         <motion.div

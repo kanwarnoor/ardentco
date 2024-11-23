@@ -22,10 +22,10 @@ export default function Contact() {
   }, [clicked1]);
 
   return (
-    <div className="flex flex-row w-[100%]">
+    <div className="w-[100%] grid md:grid-cols-2 grid-cols-1">
       {/* left option */}
-      <div className="w-[50%] h-screen">
-        <div className="flex flex-col absolute w-[50%] h-screen bg-yellow-200">
+      <div className="md:w-[50%] w-screen h-screen">
+        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-yellow-200">
           <motion.svg
             initial={{
               opacity: 0,
@@ -41,7 +41,7 @@ export default function Contact() {
             viewBox="0 0 24 24"
             fill="black"
             onClick={() => setClicked(false)}
-            className={`flex size-10 mt-5 ml-auto mr-5 hover:scale-110 transition hover:transition cursor-pointer z-50`}
+            className={`absolute right-0 size-10 md:m-5 m-5  hover:scale-110 transition hover:transition cursor-pointer md:z-50`}
           >
             <path
               fillRule="evenodd"
@@ -50,11 +50,11 @@ export default function Contact() {
             />
           </motion.svg>
           <div
-            className={`flex flex-col items-center p-8 w-fit h-fit max-w-md m-auto `}
+            className={`flex flex-col items-center p-8 w-screen h-fit max-w-md m-auto `}
           >
             <form action="" className="space-y-4 w-full">
               <div className="flex justify-between space-x-2">
-                <div className="flex flex-col w-1/2">
+                <div className="flex flex-col w-[49%]">
                   <label
                     htmlFor="firstName"
                     className="text-black font-bold mb-1"
@@ -68,7 +68,7 @@ export default function Contact() {
                     className="px-4 py-2 border-black border-2 rounded focus:outline-none "
                   />
                 </div>
-                <div className="flex flex-col w-1/2">
+                <div className="flex flex-col w-[49%]">
                   <label
                     htmlFor="lastName"
                     className="text-black font-bold mb-1"
@@ -101,7 +101,7 @@ export default function Contact() {
                   Phone number
                 </label>
                 <div className="flex space-x-2">
-                  <select className="px-4 py-2 border-black border-2 rounded bg-yellow-400 text-black font-bold">
+                  <select className="px-4 py-2 border-black border-2 rounded bg-black text-white font-bold">
                     <option>IND</option>
                   </select>
                   <input
@@ -126,9 +126,9 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="flex  mx-auto mt-4 bg-black text-white font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300"
+                className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300"
               >
-                BOOK A CALL WITH US
+                Book a call with us
               </button>
             </form>
           </div>
@@ -150,11 +150,11 @@ export default function Contact() {
             ease: easeInOut,
           }}
           onClick={() => setClicked(true)}
-          className={`absolute w-[50%] h-screen bg-[url('/handshake.jpg')] bg-center bg-cover bg-no-repeat ${
+          className={`absolute md:w-[50%] w-screen h-screen bg-[url('/handshake.jpg')] bg-center bg-cover bg-no-repeat bg-yellow-400 ${
             clicked ? "z-20 cursor-auto" : "z-10 cursor-pointer"
           }`}
         >
-          <div className="flex flex-col w-fit h-fit m-auto pt-5 mt-10">
+          <div className="flex flex-col w-fit h-fit m-auto pt-5 md:mt-10 mt-24">
             <motion.p
               initial={{
                 opacity: 0,
@@ -170,7 +170,7 @@ export default function Contact() {
               viewport={{
                 amount: 0.3,
               }}
-              className="text-black text-5xl font-bold text-center"
+              className="text-black md:text-5xl text-4xl font-bold text-center"
             >
               i am a <br />
             </motion.p>
@@ -189,7 +189,7 @@ export default function Contact() {
               viewport={{
                 amount: 0.3,
               }}
-              className="text-black text-9xl font-black"
+              className="text-black md:text-9xl text-8xl font-black"
             >
               CLIENT
             </motion.p>
@@ -198,8 +198,8 @@ export default function Contact() {
       </div>
 
       {/* right option */}
-      <div className="flex w-[50%] h-screen bg-neutral-300">
-        <div className="flex flex-col absolute w-[50%] h-screen">
+      <div className="flex w-screen h-screen bg-neutral-300">
+        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen">
           <motion.svg
             initial={{
               opacity: 0,
@@ -224,7 +224,7 @@ export default function Contact() {
             />
           </motion.svg>
           <div
-            className={`flex flex-col items-center p-8 w-fit h-fit max-w-md m-auto `}
+            className={`flex flex-col items-center p-8 md:w-fit w-screen h-fit max-w-md m-auto `}
           >
             <form action="" className="space-y-4 w-full">
               <div className="flex justify-between space-x-2">
@@ -275,7 +275,7 @@ export default function Contact() {
                   Phone number
                 </label>
                 <div className="flex space-x-2">
-                  <select className="px-4 py-2 border-black border-2 rounded bg-yellow-400 text-black font-bold">
+                  <select className="px-4 py-2 border-black border-2 rounded bg-black text-white font-bold">
                     <option>IND</option>
                   </select>
                   <input
@@ -302,7 +302,7 @@ export default function Contact() {
                 type="submit"
                 className="flex  mx-auto mt-4 bg-black text-white font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300"
               >
-                BOOK A CALL WITH US
+                Book a call with us
               </button>
             </form>
           </div>
@@ -317,7 +317,7 @@ export default function Contact() {
             ease: easeInOut,
           }}
           onClick={() => setClicked1(true)}
-          className={`flex absolute w-[50%] h-screen bg-neutral-900 ${zindex} ${
+          className={`flex absolute md:w-[50%] w-screen h-screen bg-neutral-900 ${zindex} ${
             clicked1 ? "cursor-auto" : "cursor-pointer"
           }`}
         >
@@ -337,7 +337,7 @@ export default function Contact() {
               viewport={{
                 amount: 0.3,
               }}
-              className="text-white text-5xl font-bold top-5 "
+              className="text-white md:text-5xl text-4xl font-bold top-5 "
             >
               i wanna <br />
               work with <br />
@@ -357,7 +357,7 @@ export default function Contact() {
               viewport={{
                 amount: 0.3,
               }}
-              className="text-white text-9xl font-black underline"
+              className="text-white md:text-9xl text-8xl font-black underline"
             >
               YOU
             </motion.p>
