@@ -44,7 +44,7 @@ export default function ParentComponent() {
       events.forEach((event) => window.removeEventListener(event, resetTimer));
       if (timer) clearTimeout(timer); // Cleanup timer
     };
-  }, []);
+  });
 
   return (
     active && (
