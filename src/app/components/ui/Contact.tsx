@@ -41,7 +41,7 @@ export default function Contact() {
             viewBox="0 0 24 24"
             fill="black"
             onClick={() => setClicked(false)}
-            className={`absolute right-0 size-10 md:m-5 m-5  hover:scale-110 transition hover:transition cursor-pointer md:z-50`}
+            className={`absolute  right-0   md:-translate-x-0 size-10 md:m-5 m-5  hover:scale-110 transition hover:transition cursor-pointer md:z-50 `}
           >
             <path
               fillRule="evenodd"
@@ -49,6 +49,7 @@ export default function Contact() {
               clipRule="evenodd"
             />
           </motion.svg>
+
           <div
             className={`flex flex-col items-center p-8 w-screen h-fit max-w-md m-auto `}
           >
