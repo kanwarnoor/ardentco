@@ -1,5 +1,6 @@
 import React, { FormEvent, useEffect, useState } from "react";
 import { easeInOut, motion } from "framer-motion";
+import axios from "axios";
 
 interface FormData {
   firstName: string;
@@ -15,7 +16,9 @@ export default function Contact() {
   const [zindex, setZindex] = useState("z-10");
 
   const [status, setStatus] = useState<string>("");
+  const [status1, setStatus1] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [isSubmitting1, setIsSubmitting1] = useState<boolean>(false);
 
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
@@ -32,23 +35,15 @@ export default function Contact() {
     // Validate input and update errors
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleClientSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("");
     setIsSubmitting(true);
 
-    try {
-      const response = await fetch("/api/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
+    axios
+      .post("/api/ClientSubmit", formData)
+      // eslint-disable-next-line no-use-before-define, @typescript-eslint/no-unused-vars
+      .then((response) => {
         setStatus("Email sent successfully!");
         // Reset form
         setFormData({
@@ -58,15 +53,42 @@ export default function Contact() {
           email: "",
           message: "",
         });
-      } else {
-        setStatus(result.error || "Failed to send email");
-      }
-    } catch (error) {
-      setStatus("Network error. Please try again.");
-      console.error("Submission error:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
+      })
+      .catch((error) => {
+        setStatus("Network error. Please try again.");
+        console.error("Submission error:", error);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
+  };
+
+  const handleJobSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus1("");
+    setIsSubmitting1(true);
+
+    axios
+      .post("/api/JobSubmit", formData)
+      // eslint-disable-next-line no-use-before-define, @typescript-eslint/no-unused-vars
+      .then((response) => {
+        setStatus1("Email sent successfully!");
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        setStatus1("Network error. Please try again.");
+        console.error("Submission error:", error);
+      })
+      .finally(() => {
+        setIsSubmitting1(false);
+      });
   };
 
   useEffect(() => {
@@ -119,7 +141,7 @@ export default function Contact() {
             <form
               name="Clients"
               className="space-y-4 w-full"
-              onSubmit={handleSubmit}
+              onSubmit={handleClientSubmit}
             >
               <div className="flex justify-between space-x-2">
                 <div className="flex flex-col w-[49%]">
@@ -209,12 +231,53 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              <button
-                type="submit"
-                className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-blue-400 hover:text-black duration-300 w-40 text-center justify-center"
-              >
-                {isSubmitting ? "Sending..." : "Book a call with us"}
-              </button>
+              {isSubmitting ? (
+                <div className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300 w-40 text-center justify-center items-center cursor-pointer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="xMidYMid"
+                    width="25px"
+                    height="25px"
+                    style={{
+                      shapeRendering: "auto",
+                      display: "block",
+                      background: "transparent",
+                    }}
+                    className="mr-1"
+                  >
+                    <g>
+                      <circle
+                        strokeDasharray="164.93361431346415 56.97787143782138"
+                        r="35"
+                        strokeWidth="10"
+                        stroke="#ffffff"
+                        fill="none"
+                        cy="50"
+                        cx="50"
+                      >
+                        <animateTransform
+                          keyTimes="0;1"
+                          values="0 50 50;360 50 50"
+                          dur="1s"
+                          repeatCount="indefinite"
+                          type="rotate"
+                          attributeName="transform"
+                        />
+                      </circle>
+                    </g>
+                  </svg>
+                  Sending...
+                </div>
+              ) : (
+                <button
+                  type="submit"
+                  className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300 w-40 text-center justify-center"
+                >
+                  {isSubmitting ? "Sending..." : "Book a call with us"}
+                </button>
+              )}
+
               {status && (
                 <p
                   className={`mt-2 text-sm text-center font-bold ${
@@ -323,12 +386,12 @@ export default function Contact() {
             className={`flex flex-col items-center p-8 md:w-fit w-screen h-fit max-w-md m-auto `}
           >
             <form
-              name="Job Applications"
+              name="Job Application"
               className="space-y-4 w-full"
-              data-netlify="true"
+              onSubmit={handleJobSubmit}
             >
               <div className="flex justify-between space-x-2">
-                <div className="flex flex-col w-1/2">
+                <div className="flex flex-col w-[49%]">
                   <label
                     htmlFor="firstName"
                     className="text-black font-bold mb-1"
@@ -339,7 +402,12 @@ export default function Contact() {
                     type="text"
                     id="firstName"
                     placeholder="First name"
-                    className="px-4 py-2 border-black border-2 rounded focus:outline-none "
+                    value={formData.firstName}
+                    onChange={(e) =>
+                      handleInputChange("firstName", e.target.value)
+                    }
+                    className={`px-4 py-2 border-black border-2 rounded focus:outline-none`}
+                    required
                   />
                 </div>
                 <div className="flex flex-col w-[49%]">
@@ -353,6 +421,10 @@ export default function Contact() {
                     type="text"
                     id="lastName"
                     placeholder="Last name"
+                    value={formData.lastName}
+                    onChange={(e) =>
+                      handleInputChange("lastName", e.target.value)
+                    }
                     className="px-4 py-2 border-black border-2 rounded"
                   />
                 </div>
@@ -366,7 +438,10 @@ export default function Contact() {
                   type="email"
                   id="email"
                   placeholder="you@company.com"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange("email", e.target.value)}
                   className="px-4 py-2 border-black border-2 rounded"
+                  required
                 />
               </div>
 
@@ -379,10 +454,13 @@ export default function Contact() {
                     <option>IND</option>
                   </select>
                   <input
-                    type="tel"
+                    type="number"
                     id="phone"
                     placeholder="+91xxxxxxxxxx"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange("phone", e.target.value)}
                     className="px-4 py-2 border-black border-2 rounded flex-grow w-full"
+                    required
                   />
                 </div>
               </div>
@@ -394,16 +472,69 @@ export default function Contact() {
                 <textarea
                   id="message"
                   placeholder="Leave us Message"
+                  value={formData.message}
+                  onChange={(e) => handleInputChange("message", e.target.value)}
                   className="px-4 py-2 border-black border-2 rounded resize-none"
                 ></textarea>
               </div>
 
-              <button
-                type="submit"
-                className="flex  mx-auto mt-4 bg-black text-white font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300"
-              >
-                Book a call with us
-              </button>
+              {isSubmitting1 ? (
+                <div className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300 w-40 text-center justify-center items-center cursor-pointer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="xMidYMid"
+                    width="25px"
+                    height="25px"
+                    style={{
+                      shapeRendering: "auto",
+                      display: "block",
+                      background: "transparent",
+                    }}
+                    className="mr-1"
+                  >
+                    <g>
+                      <circle
+                        strokeDasharray="164.93361431346415 56.97787143782138"
+                        r="35"
+                        strokeWidth="10"
+                        stroke="#ffffff"
+                        fill="none"
+                        cy="50"
+                        cx="50"
+                      >
+                        <animateTransform
+                          keyTimes="0;1"
+                          values="0 50 50;360 50 50"
+                          dur="1s"
+                          repeatCount="indefinite"
+                          type="rotate"
+                          attributeName="transform"
+                        />
+                      </circle>
+                    </g>
+                  </svg>
+                  Sending...
+                </div>
+              ) : (
+                <button
+                  type="submit"
+                  className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300 w-40 text-center justify-center"
+                >
+                  {isSubmitting1 ? "Sending..." : "Book a call with us"}
+                </button>
+              )}
+              {status1 && (
+                <p
+                  className={`mt-2 text-sm text-center font-bold ${
+                    status1.includes("successfully")
+                      ? "text-black"
+                      : "text-black"
+                  }`}
+                >
+                  {status1}
+                </p>
+              )}
             </form>
           </div>
         </div>
