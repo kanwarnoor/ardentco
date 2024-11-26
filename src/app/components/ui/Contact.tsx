@@ -54,10 +54,12 @@ export default function Contact() {
             className={`flex flex-col items-center p-8 w-screen h-fit max-w-md m-auto `}
           >
             <form
+              method="POST"
               name="Clients"
               className="space-y-4 w-full"
               data-netlify="true"
             >
+              <input type="hidden" name="Clients" value="Clients" />
               <div className="flex justify-between space-x-2">
                 <div className="flex flex-col w-[49%]">
                   <label
