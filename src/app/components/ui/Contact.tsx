@@ -1,10 +1,73 @@
-import React, { useEffect, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import { easeInOut, motion } from "framer-motion";
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
+  message: string;
+}
 
 export default function Contact() {
   const [clicked, setClicked] = useState(false);
   const [clicked1, setClicked1] = useState(false);
   const [zindex, setZindex] = useState("z-10");
+
+  const [status, setStatus] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+
+  const [formData, setFormData] = useState<FormData>({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const handleInputChange = (field: keyof typeof formData, value: string) => {
+    // Update form data
+    setFormData((prev) => ({ ...prev, [field]: value }));
+
+    // Validate input and update errors
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatus("Email sent successfully!");
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        setStatus(result.error || "Failed to send email");
+      }
+    } catch (error) {
+      setStatus("Network error. Please try again.");
+      console.error("Submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -25,7 +88,7 @@ export default function Contact() {
     <div className="w-[100%] grid md:grid-cols-2 grid-cols-1">
       {/* left option */}
       <div className="md:w-[50%] w-screen h-screen">
-        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-yellow-200">
+        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-yellow-200 ">
           <motion.svg
             initial={{
               opacity: 0,
@@ -54,12 +117,10 @@ export default function Contact() {
             className={`flex flex-col items-center p-8 w-screen h-fit max-w-md m-auto `}
           >
             <form
-              method="POST"
               name="Clients"
               className="space-y-4 w-full"
-              data-netlify="true"
+              onSubmit={handleSubmit}
             >
-              <input type="hidden" name="Clients" value="Clients" />
               <div className="flex justify-between space-x-2">
                 <div className="flex flex-col w-[49%]">
                   <label
@@ -72,7 +133,12 @@ export default function Contact() {
                     type="text"
                     id="firstName"
                     placeholder="First name"
-                    className="px-4 py-2 border-black border-2 rounded focus:outline-none "
+                    value={formData.firstName}
+                    onChange={(e) =>
+                      handleInputChange("firstName", e.target.value)
+                    }
+                    className={`px-4 py-2 border-black border-2 rounded focus:outline-none`}
+                    required
                   />
                 </div>
                 <div className="flex flex-col w-[49%]">
@@ -86,6 +152,10 @@ export default function Contact() {
                     type="text"
                     id="lastName"
                     placeholder="Last name"
+                    value={formData.lastName}
+                    onChange={(e) =>
+                      handleInputChange("lastName", e.target.value)
+                    }
                     className="px-4 py-2 border-black border-2 rounded"
                   />
                 </div>
@@ -99,7 +169,10 @@ export default function Contact() {
                   type="email"
                   id="email"
                   placeholder="you@company.com"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange("email", e.target.value)}
                   className="px-4 py-2 border-black border-2 rounded"
+                  required
                 />
               </div>
 
@@ -112,10 +185,13 @@ export default function Contact() {
                     <option>IND</option>
                   </select>
                   <input
-                    type="tel"
+                    type="number"
                     id="phone"
                     placeholder="+91xxxxxxxxxx"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange("phone", e.target.value)}
                     className="px-4 py-2 border-black border-2 rounded flex-grow w-full"
+                    required
                   />
                 </div>
               </div>
@@ -127,16 +203,29 @@ export default function Contact() {
                 <textarea
                   id="message"
                   placeholder="Leave us Message"
+                  value={formData.message}
+                  onChange={(e) => handleInputChange("message", e.target.value)}
                   className="px-4 py-2 border-black border-2 rounded resize-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300"
+                className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-blue-400 hover:text-black duration-300 w-40 text-center justify-center"
               >
-                Book a call with us
+                {isSubmitting ? "Sending..." : "Book a call with us"}
               </button>
+              {status && (
+                <p
+                  className={`mt-2 text-sm text-center font-bold ${
+                    status.includes("successfully")
+                      ? "text-black"
+                      : "text-black"
+                  }`}
+                >
+                  {status}
+                </p>
+              )}
             </form>
           </div>
         </div>
