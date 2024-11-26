@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`h-16 flex w-full flex-row ml-auto fixed z-30 duration-300 ${
+        className={`h-16 flex w-full flex-row ml-auto fixed z-30 duration-300 bg-blend-difference ${
           scrolled ? "text-black" : "text-white"
         }`}
       >
@@ -43,15 +43,12 @@ export default function Navbar() {
           }}
           className={`flex justify-center items-center md:pl-10 pl-5`}
         >
-
           <Link
             className="md:text-xl text-lg font-bold cursor-pointer mix-blend-difference"
             href="/"
           >
             Ardent Co.
-           
           </Link>
-
         </motion.div>
 
         <motion.div
@@ -68,7 +65,7 @@ export default function Navbar() {
         >
           <Link
             href="/#contact"
-            className="flex justify-center items-center md:w-32 md:h-10 w-28 h-9 bg-yellow-400 rounded-full font-medium duration-300 md:text-base text-sm"
+            className="flex justify-center items-center md:w-32 md:h-10 w-28 h-9 bg-ardent rounded-full font-medium duration-300 md:text-base text-sm text-white"
           >
             {"Let's Connect"}
           </Link>

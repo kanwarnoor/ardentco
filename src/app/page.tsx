@@ -139,17 +139,18 @@ export default function Home() {
         <About />
       </section>
 
-      
-
       <section
-        className="relative bg-white bg-dot-black/[0.5] flex w-full h-screen"
+        className="relative bg-white bg-dot-black/[0.5] flex w-full min-h-screen h-fit"
         id="enable"
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div>
         <Enable />
       </section>
 
-      <section className="relative bg-white flex w-full min-h-screen h-fit" id="contact">
+      <section
+        className="relative bg-white flex w-full min-h-screen h-fit"
+        id="contact"
+      >
         <Contact />
       </section>
       <Footer theme="dark" />

@@ -178,7 +178,7 @@ export default function Contact() {
                     onChange={(e) =>
                       handleInputChange("lastName", e.target.value)
                     }
-                    className="px-4 py-2 border-black border-2 rounded"
+                    className="px-4 py-2 border-black border-2 rounded focus:outline-none"
                   />
                 </div>
               </div>
@@ -193,7 +193,7 @@ export default function Contact() {
                   placeholder="you@company.com"
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
-                  className="px-4 py-2 border-black border-2 rounded"
+                  className="px-4 py-2 border-black border-2 rounded focus:outline-none"
                   required
                 />
               </div>
@@ -212,7 +212,7 @@ export default function Contact() {
                     placeholder="+91xxxxxxxxxx"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
-                    className="px-4 py-2 border-black border-2 rounded flex-grow w-full"
+                    className="px-4 py-2 border-black border-2 rounded flex-grow w-full focus:outline-none"
                     required
                   />
                 </div>
@@ -227,7 +227,7 @@ export default function Contact() {
                   placeholder="Leave us Message"
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
-                  className="px-4 py-2 border-black border-2 rounded resize-none"
+                  className="px-4 py-2 border-black border-2 rounded resize-none focus:outline-none"
                 ></textarea>
               </div>
 
@@ -440,7 +440,7 @@ export default function Contact() {
                   placeholder="you@company.com"
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
-                  className="px-4 py-2 border-black border-2 rounded"
+                  className="px-4 py-2 border-black border-2 rounded focus:outline-none"
                   required
                 />
               </div>
@@ -459,7 +459,7 @@ export default function Contact() {
                     placeholder="+91xxxxxxxxxx"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
-                    className="px-4 py-2 border-black border-2 rounded flex-grow w-full"
+                    className="px-4 py-2 border-black border-2 rounded flex-grow w-full focus:outline-none"
                     required
                   />
                 </div>
@@ -474,7 +474,7 @@ export default function Contact() {
                   placeholder="Leave us Message"
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
-                  className="px-4 py-2 border-black border-2 rounded resize-none"
+                  className="px-4 py-2 border-black border-2 rounded resize-none focus:outline-none"
                 ></textarea>
               </div>
 

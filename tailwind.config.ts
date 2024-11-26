@@ -24,6 +24,11 @@ module.exports = {
           },
         },
       },
+      colors: {
+        "ardent": "#002463",
+        "ardentLight": "#BAD2FF",
+        "ardentLighter": "#FCDE9C",
+      },
     },
   },
   plugins: [addVariablesForColors, bgGrid],
@@ -35,14 +40,14 @@ function addVariablesForColors({ addBase, theme }: any) {
   const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
 }
 
 // eslint-disable-next-line
-function bgGrid ({ matchUtilities, theme }: any) {
+function bgGrid({ matchUtilities, theme }: any) {
   matchUtilities(
     {
       "bg-grid": (value: number) => ({
