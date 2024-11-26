@@ -53,7 +53,11 @@ export default function Contact() {
           <div
             className={`flex flex-col items-center p-8 w-screen h-fit max-w-md m-auto `}
           >
-            <form action="" className="space-y-4 w-full">
+            <form
+              name="Clients"
+              className="space-y-4 w-full"
+              data-netlify="true"
+            >
               <div className="flex justify-between space-x-2">
                 <div className="flex flex-col w-[49%]">
                   <label
@@ -109,7 +113,7 @@ export default function Contact() {
                     type="tel"
                     id="phone"
                     placeholder="+91xxxxxxxxxx"
-                    className="px-4 py-2 border-black border-2 rounded flex-grow"
+                    className="px-4 py-2 border-black border-2 rounded flex-grow w-full"
                   />
                 </div>
               </div>
@@ -227,7 +231,11 @@ export default function Contact() {
           <div
             className={`flex flex-col items-center p-8 md:w-fit w-screen h-fit max-w-md m-auto `}
           >
-            <form action="" className="space-y-4 w-full">
+            <form
+              name="Job Applications"
+              className="space-y-4 w-full"
+              data-netlify="true"
+            >
               <div className="flex justify-between space-x-2">
                 <div className="flex flex-col w-1/2">
                   <label
@@ -243,7 +251,7 @@ export default function Contact() {
                     className="px-4 py-2 border-black border-2 rounded focus:outline-none "
                   />
                 </div>
-                <div className="flex flex-col w-1/2">
+                <div className="flex flex-col w-[49%]">
                   <label
                     htmlFor="lastName"
                     className="text-black font-bold mb-1"
@@ -283,7 +291,7 @@ export default function Contact() {
                     type="tel"
                     id="phone"
                     placeholder="+91xxxxxxxxxx"
-                    className="px-4 py-2 border-black border-2 rounded flex-grow"
+                    className="px-4 py-2 border-black border-2 rounded flex-grow w-full"
                   />
                 </div>
               </div>
