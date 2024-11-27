@@ -95,12 +95,12 @@ export default function Enable() {
                 </div>
                 <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-ardent rounded-xl  z-0 flex">
                   <Image
-                    src="/publicRelations.jpg"
+                    src="/publicPolicy.jpg"
                     height={0}
                     width={0}
                     sizes="100% 100%"
                     alt=""
-                    className="w-[90%] h-[90%] rounded-xl shadow-2xl justify-center m-auto flex"
+                    className="w-[90%] h-[90%] rounded-xl shadow-2xl justify-center m-auto flex object-cover object-left"
                   ></Image>
                 </div>
 

@@ -11,8 +11,42 @@ import Enable from "./components/ui/Enable";
 import Contact from "./components/ui/Contact";
 import About from "./components/ui/TempAbout";
 import Wake from "./components/ui/Wake";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const { ref: aboutRef, inView: aboutInView } = useInView({
+    threshold: [0.05, 0.5], // Fully visible
+    rootMargin: "0px 0px -89% 0px",
+  });
+  const { ref: enableRef, inView: enableInView } = useInView({
+    threshold: [0.05, 0.5], // Fully visible
+    rootMargin: "0px 0px -89% 0px",
+  });
+  const { ref: contactRef, inView: contactInView } = useInView({
+    threshold: [0.05, 0.5], // Fully visible
+    rootMargin: "0px 0px -89% 0px",
+  });
+
+  const [intersecting, setIntersecting] = useState(false);
+
+  useEffect(() => {
+    if (aboutInView) {
+      setIntersecting(true);
+    } else if (enableInView) {
+      setIntersecting(false);
+    } else if (contactInView) {
+      setIntersecting(true);
+    } else {
+      setIntersecting(false);
+    }
+    // console.log("Home: " + enableInView);
+
+    // console.log("enable: " + enableInView);
+    console.log("About: " + aboutInView);
+    console.log("Enable: " + enableInView);
+  }, [aboutInView, enableInView, contactInView]);
+
   const avail: string[] = [
     "Rewiring",
     "Transforming",
@@ -26,10 +60,11 @@ export default function Home() {
       <div className="hidden md:block">
         <Wake />
       </div>
-      <Navbar />
+      <Navbar intersecting={intersecting} />
+
       <section
         id="home"
-        className="relative w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-opacity-100 bg-white"
+        className="relative w-full h-[100vh] m-auto text-center flex flex-col justify-center items-center bg-opacity-100 bg-white"
       >
         {/* <motion.video
           initial={{
@@ -134,6 +169,7 @@ export default function Home() {
       <section
         className="relative bg-white bg-dot-black/[0.5] w-full h-fit min-h-full"
         id="about"
+        ref={aboutRef}
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div>
         <About />
@@ -142,6 +178,7 @@ export default function Home() {
       <section
         className="relative bg-white bg-dot-black/[0.5] flex w-full min-h-screen h-fit"
         id="enable"
+        ref={enableRef}
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div>
         <Enable />
@@ -150,6 +187,7 @@ export default function Home() {
       <section
         className="relative bg-white flex w-full min-h-screen h-fit"
         id="contact"
+        ref={contactRef}
       >
         <Contact />
       </section>

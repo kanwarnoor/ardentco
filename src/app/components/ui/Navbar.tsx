@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function Navbar() {
+export default function Navbar({intersecting}) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Navbar() {
     <>
       <div
         className={`h-16 flex w-full flex-row ml-auto fixed z-30 duration-300 bg-blend-difference ${
-          scrolled ? "text-black" : "text-white"
+          intersecting ? "text-black" : "text-white"
         }`}
       >
         <motion.div
