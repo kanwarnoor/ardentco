@@ -5,24 +5,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Navbar({intersecting}) {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scroll = window.scrollY;
-
-      if (scroll >= 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <>
