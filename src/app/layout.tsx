@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Rethink_Sans } from "next/font/google";
 
-const rethink = Rethink_Sans({ subsets: ["latin"] });
+const rethink = Rethink_Sans({ subsets: ["latin"], display: 'swap', adjustFontFallback: false });
 
 export const metadata: Metadata = {
   title: "Ardent Co",

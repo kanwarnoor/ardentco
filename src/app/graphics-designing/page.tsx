@@ -1,20 +1,39 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/ui/Navbar";
 import { motion } from "framer-motion";
 import Footer from "../components/ui/Footer";
 import Lander from "../components/ui/Lander";
+import { useInView } from "react-intersection-observer";
 
-export default function page() {
+export default function Page() {
+  const { ref: ref, inView: refInView } = useInView({
+    threshold: [0.05, 0.5],
+    rootMargin: "0px 0px -89% 0px",
+  });
+
+  const [intersecting, setIntersecting] = useState(false);
+
+  useEffect(() => {
+    if (refInView) {
+      setIntersecting(true);
+    } else {
+      setIntersecting(false);
+    }
+    // console.log("Home: " + enableInView);
+
+    // console.log("enable: " + enableInView);
+  }, [refInView]);
   return (
     <>
-      <Navbar />
-      <Lander image="/graphics.jpg" heading1="Graphics" heading2="Designing"/>
+      <Navbar intersecting={intersecting}/>
+      <Lander image="/graphics.jpg" heading1="Graphics" heading2="Designing" />
 
       <section
         className="relative bg-white bg-dot-black/[0.5] w-full h-auto min-h-screen"
         id="about"
+        ref={ref}
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)] z-0"></div>
 
@@ -50,9 +69,7 @@ export default function page() {
                   />
                 </svg>
 
-                <p className="text-black text-4xl font-bold m-auto">
-                  Untitled
-                </p>
+                <p className="text-black text-4xl font-bold m-auto">Untitled</p>
                 <p className="text-black text-sm px-10 mt-5">
                   nothing to see here
                 </p>
@@ -74,7 +91,7 @@ export default function page() {
               className="flex flex-col w-[400px] h-[400px] border-2 border-black border-dashed rounded-2xl  items-center"
             >
               <div className="flex flex-col h-fit  m-auto justify-center items-center">
-              <svg
+                <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -89,9 +106,7 @@ export default function page() {
                   />
                 </svg>
 
-                <p className="text-black text-4xl font-bold m-auto">
-                  Untitled
-                </p>
+                <p className="text-black text-4xl font-bold m-auto">Untitled</p>
                 <p className="text-black text-sm px-10 mt-5">
                   Nothing to see here
                 </p>
@@ -113,7 +128,7 @@ export default function page() {
               className="flex flex-col w-[400px] h-[400px] border-2 border-black border-dashed rounded-2xl  items-center"
             >
               <div className="flex flex-col h-fit  m-auto justify-center items-center">
-              <svg
+                <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -128,9 +143,7 @@ export default function page() {
                   />
                 </svg>
 
-                <p className="text-black text-4xl font-bold m-auto">
-                  Untitled
-                </p>
+                <p className="text-black text-4xl font-bold m-auto">Untitled</p>
                 <p className="text-black text-sm px-10 mt-5">
                   Nothing to see here
                 </p>

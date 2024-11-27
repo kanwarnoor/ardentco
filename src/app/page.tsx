@@ -40,11 +40,7 @@ export default function Home() {
     } else {
       setIntersecting(false);
     }
-    // console.log("Home: " + enableInView);
 
-    // console.log("enable: " + enableInView);
-    console.log("About: " + aboutInView);
-    console.log("Enable: " + enableInView);
   }, [aboutInView, enableInView, contactInView]);
 
   const avail: string[] = [

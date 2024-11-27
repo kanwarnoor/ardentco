@@ -1,20 +1,41 @@
 "use client";
 
 import React from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/ui/Navbar";
 import { motion } from "framer-motion";
 import Footer from "../components/ui/Footer";
 import Lander from "../components/ui/Lander";
+import { useInView } from "react-intersection-observer";
 
-export default function page() {
+export default function Page() {
+  const { ref: ref, inView: refInView } = useInView({
+    threshold: [0.05, 0.5],
+    rootMargin: "0px 0px -89% 0px",
+  });
+
+  const [intersecting, setIntersecting] = useState(false);
+
+  useEffect(() => {
+    if (refInView) {
+      setIntersecting(true);
+    } else {
+      setIntersecting(false);
+    }
+    // console.log("Home: " + enableInView);
+
+    // console.log("enable: " + enableInView);
+  }, [refInView]);
+
   return (
     <>
-      <Navbar />
+      <Navbar intersecting={intersecting} />
       <Lander image="/nexus.jpg" heading1="Talent Nexus" heading2="Solutions" />
 
       <section
         className="relative bg-white bg-dot-black/[0.5] w-full h-auto min-h-screen"
         id="about"
+        ref={ref}
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)] z-0"></div>
 

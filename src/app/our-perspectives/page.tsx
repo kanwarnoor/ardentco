@@ -1,21 +1,39 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
 import Lander from "../components/ui/Lander";
 import InfoCard from "../components/ui/InfoCard";
+import { useInView } from "react-intersection-observer";
 
-export default function page() {
+export default function Page() {
+  const { ref: ref, inView: refInView } = useInView({
+    threshold: [0.05, 0.5],
+    rootMargin: "0px 0px -89% 0px",
+  });
+
+  const [intersecting, setIntersecting] = useState(false);
+
+  useEffect(() => {
+    if (refInView) {
+      setIntersecting(true);
+    } else {
+      setIntersecting(false);
+    }
+    // console.log("Home: " + enableInView);
+
+    // console.log("enable: " + enableInView);
+  }, [refInView]);
   return (
     <>
-      <Navbar />
+      <Navbar intersecting={intersecting}/>
       <Lander
         image={"/perspective.jpg"}
         heading1={"Our"}
         heading2="Perspectives"
       />
-      <section className=" w-full h-screen bg-white bg-dot-black/[0.5] flex">
+      <section className=" w-full h-screen bg-white bg-dot-black/[0.5] flex" ref={ref}>
         <div className="flex flex-row gap-10 m-auto">
           <InfoCard
             title1={"Making Sense of"}
