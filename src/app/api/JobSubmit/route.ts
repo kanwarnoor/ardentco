@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
         `,
       html: `
           <h1>Job Application Form</h1>
-          <p><strong>Name:</strong> ${firstName}</p>
+          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
           <p><strong>Phone:</strong> ${phone}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Message:</strong> ${message}</p>

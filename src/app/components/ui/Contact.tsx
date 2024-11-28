@@ -110,7 +110,7 @@ export default function Contact() {
     <div className="w-[100%] grid md:grid-cols-2 grid-cols-1">
       {/* left option */}
       <div className="md:w-[50%] w-screen h-screen">
-        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-yellow-200 ">
+        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-neutral-300">
           <motion.svg
             initial={{
               opacity: 0,
@@ -232,7 +232,7 @@ export default function Contact() {
               </div>
 
               {isSubmitting ? (
-                <div className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300 w-40 text-center justify-center items-center cursor-pointer">
+                <div className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg duration-300 w-40 text-center justify-center items-center cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 100 100"
@@ -272,7 +272,7 @@ export default function Contact() {
               ) : (
                 <button
                   type="submit"
-                  className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300 w-40 text-center justify-center"
+                  className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg duration-300 w-40 text-center justify-center"
                 >
                   {isSubmitting ? "Sending..." : "Book a call with us"}
                 </button>
@@ -309,7 +309,7 @@ export default function Contact() {
             ease: easeInOut,
           }}
           onClick={() => setClicked(true)}
-          className={`absolute md:w-[50%] w-screen h-screen bg-[url('/handshake.jpg')] bg-center bg-cover bg-no-repeat bg-yellow-400 ${
+          className={`absolute md:w-[50%] w-screen h-screen bg-[url('/handshake.png')] bg-center bg-cover bg-no-repeat bg-white ${
             clicked ? "z-20 cursor-auto" : "z-10 cursor-pointer"
           }`}
         >
@@ -479,7 +479,7 @@ export default function Contact() {
               </div>
 
               {isSubmitting1 ? (
-                <div className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300 w-40 text-center justify-center items-center cursor-pointer">
+                <div className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg duration-300 w-40 text-center justify-center items-center cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 100 100"
@@ -519,7 +519,7 @@ export default function Contact() {
               ) : (
                 <button
                   type="submit"
-                  className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-black duration-300 w-40 text-center justify-center"
+                  className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg duration-300 w-40 text-center justify-center"
                 >
                   {isSubmitting1 ? "Sending..." : "Book a call with us"}
                 </button>
@@ -548,7 +548,7 @@ export default function Contact() {
             ease: easeInOut,
           }}
           onClick={() => setClicked1(true)}
-          className={`flex absolute md:w-[50%] w-screen h-screen bg-neutral-900 ${zindex} ${
+          className={`flex absolute md:w-[50%] w-screen h-screen bg-black ${zindex} ${
             clicked1 ? "cursor-auto" : "cursor-pointer"
           }`}
         >
