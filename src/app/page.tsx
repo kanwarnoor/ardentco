@@ -13,6 +13,7 @@ import About from "./components/ui/TempAbout";
 import Wake from "./components/ui/Wake";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import frontpage from "../../public/frontpage.jpg"
 
 export default function Home() {
   const { ref: aboutRef, inView: aboutInView } = useInView({
@@ -97,9 +98,10 @@ export default function Home() {
           className="relative object-cover inset-0 w-full h-full scale-90 rounded-2xl opacity-100"
         >
           <Image
-            src="/frontpage.jpg"
+            src={frontpage}
             height={0}
             width={0}
+            placeholder="blur"
             sizes="100% 100%"
             className="absolute object-cover inset-0 w-full h-full scale-100 opacity-100"
             alt="athens"
