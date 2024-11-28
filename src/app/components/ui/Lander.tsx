@@ -61,7 +61,7 @@ export default function Lander({image, heading1, heading2}: landerProps) {
         transition={{
           duration: 1,
         }}
-        className="text-7xl font-black text-black"
+        className="md:text-7xl text-5xl font-black text-black"
       >
         {heading1} 
         {heading2 && (

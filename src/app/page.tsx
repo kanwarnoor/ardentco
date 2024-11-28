@@ -60,7 +60,7 @@ export default function Home() {
 
       <section
         id="home"
-        className="relative w-full h-[100vh] m-auto text-center flex flex-col justify-center items-center bg-opacity-100 bg-white"
+        className="select-none relative w-full h-[100vh] m-auto text-center flex flex-col justify-center items-center bg-opacity-100 bg-white"
       >
         {/* <motion.video
           initial={{

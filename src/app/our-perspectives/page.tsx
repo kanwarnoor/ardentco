@@ -33,8 +33,8 @@ export default function Page() {
         heading1={"Our"}
         heading2="Perspectives"
       />
-      <section className=" w-full h-screen bg-white bg-dot-black/[0.5] flex" ref={ref}>
-        <div className="flex flex-row gap-10 m-auto">
+      <section className=" w-full min-h-screen h-fit bg-white bg-dot-black/[0.5] flex" ref={ref}>
+        <div className="flex md:flex-row flex-col gap-10 m-auto py-20">
           <InfoCard
             title1={"Making Sense of"}
             title2="Union Budget"

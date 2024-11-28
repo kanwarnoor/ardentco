@@ -54,7 +54,7 @@ export default function InfoCard({
         amount: 0.3,
       }}
       // onClick={() => setClicked1((clicked1) => !clicked1)}
-      className="flex flex-col cursor-pointer w-[400px] h-[450px] bg-black rounded-2xl"
+      className="flex flex-col cursor-pointer md:w-[400px] md:h-[450px] w-[300px] h-[350px] bg-black rounded-2xl"
     >
       {!clicked && (
         <div
@@ -71,7 +71,7 @@ export default function InfoCard({
             transition={{
               duration: 0.5,
             }}
-            className={`relative w-full duration-300 rounded-t-2xl h-[276.5px]`}
+            className={`relative w-full duration-300 rounded-t-2xl md:h-[276.5px]`}
           >
             <Image
               src={image}
@@ -99,9 +99,9 @@ export default function InfoCard({
             transition={{
               duration: 0.5,
             }}
-            className={`w-fit h-fit m-auto transition`}
+            className={`w-fit h-fit m-auto transition px-5`}
           >
-            <p className="text-white font-bold text-xl text-center">
+            <p className="text-white font-bold md:text-xl text-lg  text-center">
               {title1}
               {title2 && (
                 <>
@@ -137,7 +137,7 @@ export default function InfoCard({
               />
             </motion.svg>
           </div>
-          <div className="relative h-full p-10 text-white text-center cursor-default">
+          <div className="relative h-full md:p-10 px-10 md:text-base text-white text-center cursor-default">
             <motion.p
               initial={{
                 opacity: 0,
@@ -148,6 +148,7 @@ export default function InfoCard({
               transition={{
                 duration: 0.5,
               }}
+              className="md:text-base text-sm"
             >
               {description}
             </motion.p>
@@ -169,7 +170,7 @@ export default function InfoCard({
                   href={link}
                   className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
                 >
-                  Know more
+                  Read more
                 </Link>
               </motion.div>
             )}
