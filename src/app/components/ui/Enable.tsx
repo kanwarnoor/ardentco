@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {  } from "react";
 import { useState } from "react";
 import FullCard from "./FullCard";
 import { motion } from "framer-motion";
@@ -7,17 +7,17 @@ import BabyKeem from "./BabyKeem";
 export default function Enable() {
   const [nav, setNav] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (nav == 2) {
-        setNav(0);
-      } else {
-        setNav((prev) => prev + 1);
-      }
-    }, 10000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (nav == 2) {
+  //       setNav(0);
+  //     } else {
+  //       setNav((prev) => prev + 1);
+  //     }
+  //   }, 10000);
 
-    return () => clearInterval(interval);
-  }, [nav]);
+  //   return () => clearInterval(interval);
+  // }, [nav]);
 
   return (
     <div className="flex w-full h-full z-10">
