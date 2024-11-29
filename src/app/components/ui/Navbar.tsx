@@ -6,10 +6,11 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 interface Props {
-  intersecting: boolean;
+  left: boolean;
+  right: boolean;
 }
 
-export default function Navbar({ intersecting }: Props) {
+export default function Navbar({ left, right }: Props) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -45,7 +46,7 @@ export default function Navbar({ intersecting }: Props) {
     <>
       <div
         className={`h-16 flex w-full flex-row ml-auto fixed z-30 duration-300 bg-blend-difference select-none ${
-          intersecting && !open ? "text-black" : "text-white"
+          left && !open ? "text-black" : "text-white"
         }`}
       >
         <motion.div
@@ -110,7 +111,7 @@ export default function Navbar({ intersecting }: Props) {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="2"
-              stroke={`${intersecting ? "black" : "white"}`}
+              stroke={`${right ? "black" : "white"}`}
               className="size-10 cursor-pointer ml-[0.625rem] duration-300"
               onClick={() => setOpen(true)}
             >

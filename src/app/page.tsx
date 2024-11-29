@@ -13,7 +13,7 @@ import About from "./components/ui/TempAbout";
 import Wake from "./components/ui/Wake";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
-import frontpage from "../../public/frontpage.jpg"
+import frontpage from "../../public/frontpage.jpg";
 
 export default function Home() {
   const { ref: aboutRef, inView: aboutInView } = useInView({
@@ -29,19 +29,23 @@ export default function Home() {
     rootMargin: "0px 0px -89% 0px",
   });
 
-  const [intersecting, setIntersecting] = useState(false);
+  const [left, setLeft] = useState(false);
+  const [right, setRight] = useState(false);
 
   useEffect(() => {
     if (aboutInView) {
-      setIntersecting(true);
+      setLeft(true);
+      setRight(true);
     } else if (enableInView) {
-      setIntersecting(false);
+      setLeft(false);
+      setRight(true);
     } else if (contactInView) {
-      setIntersecting(true);
+      setLeft(true);
+      setRight(false);
     } else {
-      setIntersecting(false);
+      setLeft(false);
+      setRight(false);
     }
-
   }, [aboutInView, enableInView, contactInView]);
 
   const avail: string[] = [
@@ -57,7 +61,7 @@ export default function Home() {
       <div className="hidden md:block">
         <Wake />
       </div>
-      <Navbar intersecting={intersecting} />
+      <Navbar left={left} right={right} />
 
       <section
         id="home"
