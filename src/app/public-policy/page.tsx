@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/ui/Navbar";
 import { motion } from "framer-motion";
 import Footer from "../components/ui/Footer";
@@ -25,7 +25,7 @@ export default function Page() {
 
   return (
     <>
-      <Navbar intersecting={intersecting}/>
+      <Navbar left={intersecting} right={intersecting} />
       <Lander
         image="/publicPolicy.jpg"
         heading1="Public Policy &"

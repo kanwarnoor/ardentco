@@ -24,7 +24,7 @@ export default function Page() {
   }, [refInView]);
   return (
     <>
-      <Navbar intersecting={intersecting}/>
+      <Navbar left={intersecting} right={intersecting} />
       <Lander
         image="/digitalComms.png"
         heading1="Digital"

@@ -27,7 +27,7 @@ export default function Page() {
   }, [refInView]);
   return (
     <>
-      <Navbar intersecting={intersecting}/>
+      <Navbar left={intersecting} right={intersecting} />
       <Lander image="/graphics.jpg" heading1="Graphics" heading2="Designing" />
 
       <section

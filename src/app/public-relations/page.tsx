@@ -28,7 +28,7 @@ export default function Page() {
 
   return (
     <>
-      <Navbar intersecting={intersecting}/>
+      <Navbar left={intersecting} right={intersecting} />
       <Lander
         image="/publicRelations.jpg"
         heading1="Strategic Communication"

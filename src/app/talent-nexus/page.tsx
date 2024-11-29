@@ -29,7 +29,7 @@ export default function Page() {
 
   return (
     <>
-      <Navbar intersecting={intersecting} />
+      <Navbar left={intersecting} right={intersecting} />
       <Lander image="/nexus.jpg" heading1="Talent Nexus" heading2="Solutions" />
 
       <section

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Page() {
   return (
     <>
-      <Navbar intersecting={false} />
+      <Navbar left={intersecting} right={intersecting} />
       <section
         id="home"
         className="relative w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-opacity-100 "
