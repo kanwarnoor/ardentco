@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface Props {
   intersecting: boolean;
@@ -10,27 +11,33 @@ interface Props {
 
 export default function Navbar({ intersecting }: Props) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   const pages = [
     {
       name: "Services",
       link: "/#enable",
+      inside: true,
     },
     {
       name: "Our Manifesto",
       link: "/manifesto",
+      inside: false,
     },
     {
       name: "Views in Media",
       link: "/media",
+      inside: false,
     },
     {
       name: "Our Perspectives",
       link: "/our-perspectives",
+      inside: false,
     },
     {
       name: "Our Team",
       link: "/team",
+      inside: false,
     },
   ];
 
@@ -86,14 +93,14 @@ export default function Navbar({ intersecting }: Props) {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="2"
+              strokeWidth="2"
               stroke={`white`}
               className="size-10 cursor-pointer ml-[0.625rem]"
               onClick={() => setOpen(false)}
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M6 18 18 6M6 6l12 12"
               />
             </svg>
@@ -102,14 +109,14 @@ export default function Navbar({ intersecting }: Props) {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="2"
+              strokeWidth="2"
               stroke={`${intersecting ? "black" : "white"}`}
               className="size-10 cursor-pointer ml-[0.625rem] duration-300"
               onClick={() => setOpen(true)}
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
             </svg>
@@ -151,11 +158,22 @@ export default function Navbar({ intersecting }: Props) {
                               duration: 0.2 * (index + 1),
                             }}
                             key={index}
+                            onClick={() =>
+                              item.inside || pathname == item.link
+                                ? setOpen(false)
+                                : {}
+                            }
                             className="text-center flex justify-center items-center text-ardentLighter group md:text-2xl text-xl font-bold cursor-pointer select-none "
                           >
-                            <p className="group-hover:opacity-100 opacity-0 no-underline duration-300">
-                              {">"}
-                            </p>
+                            {pathname == item.link ? (
+                              <p className=" no-underline duration-300">
+                                {">"}
+                              </p>
+                            ) : (
+                              <p className="group-hover:opacity-100 opacity-0 no-underline duration-300">
+                                {">"}
+                              </p>
+                            )}
                             <p className="hover:underline">{item.name}</p>
                           </motion.li>
                         </Link>
@@ -177,7 +195,8 @@ export default function Navbar({ intersecting }: Props) {
                   }}
                   className="absolute flex bottom-0 w-full h-16 md:mb-0 mb-10 text-center justify-center md:items-center text-ardentLighter md:text-sm text-[10px] select-none"
                 >
-                  Copyright © 2024 Apple Inc. All rights reserved.
+                  Copyright © {new Date().getFullYear()} ArdnetCo. All rights
+                  reserved.
                 </motion.div>
               </div>
               {/* <div className="w-full h-full"></div> */}
