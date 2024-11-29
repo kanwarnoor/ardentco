@@ -58,11 +58,11 @@ export default function Enable() {
             />
             <ScreenCard
               css={"bg-ardentLighter text-black flex-col-reverse"}
-              heading1="Public Policy &"
-              heading2="Regulatory Affairs"
-              image="/publicPolicy.jpg"
+              heading1="Research &"
+              heading2="Collateral Development"
+              image="/research.jpg"
               position="top"
-              link="/public-policy"
+              link="/research"
               buttonCss="text-black bg-ardentLighter border-2 hover:bg-black hover:text-white border-black"
             />
           </>
@@ -94,7 +94,7 @@ export default function Enable() {
 
       <div
         className="absolute h-screen w-fit z-10 justify-center items-center flex group cursor-pointer"
-        onClick={() => setNav((prev) => prev - 1)}
+        onClick={() => setNav((prev) => prev !=0 ? prev - 1 : prev)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -106,8 +106,8 @@ export default function Enable() {
         </svg>
       </div>
       <div
-        className="absolute h-screen right-0 w-fit z-10 justify-center items-center flex group group cursor-pointer"
-        onClick={() => setNav((prev) => prev + 1)}
+        className="absolute h-screen right-0 w-36 z-10 justify-center items-center flex group group cursor-pointer"
+        onClick={() => setNav((prev) => prev !=3 ? prev + 1 : prev)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
