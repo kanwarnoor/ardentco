@@ -1,21 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import ScreenCard from "./ScreenCard";
 
 export default function Enable() {
   const [nav, setNav] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (nav == 2) {
-        setNav(0);
-      } else {
-        setNav((prev) => prev + 1);
-      }
-    }, 100000000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (nav == 2) {
+  //       setNav(0);
+  //     } else {
+  //       setNav((prev) => prev + 1);
+  //     }
+  //   }, 100000000);
 
-    return () => clearInterval(interval);
-  }, [nav]);
+  //   return () => clearInterval(interval);
+  // }, [nav]);
 
   return (
     <>
@@ -49,20 +49,20 @@ export default function Enable() {
           <>
             <ScreenCard
               css={"bg-ardent text-white"}
-              heading1="Strategic Communications &"
-              heading2="Public Relations"
-              image="/publicRelations.jpg"
-              position="top"
-              link="/public-relations"
-              buttonCss="text-white bg-ardent border-2 hover:bg-black hover:text-white hover:border-black border-white"
-            />
-            <ScreenCard
-              css={"bg-ardentLighter text-black flex-col-reverse"}
               heading1="Research &"
               heading2="Collateral Development"
               image="/research.jpg"
               position="top"
               link="/research"
+              buttonCss="text-white bg-ardent border-2 hover:bg-black hover:text-white hover:border-black border-white"
+            />
+            <ScreenCard
+              css={"bg-ardentLighter text-black flex-col-reverse"}
+              heading1="Digital"
+              heading2="Communications"
+              image="/digitalComms.png"
+              position="top"
+              link="/digital-comms"
               buttonCss="text-black bg-ardentLighter border-2 hover:bg-black hover:text-white border-black"
             />
           </>
@@ -72,20 +72,20 @@ export default function Enable() {
           <>
             <ScreenCard
               css={"bg-ardent text-white"}
-              heading1="Strategic Communications &"
-              heading2="Public Relations"
-              image="/publicRelations.jpg"
+              heading1="Talent Nexus"
+              heading2="Solutions"
+              image="/nexus.jpg"
               position="top"
-              link="/public-relations"
+              link="/talent-nexus"
               buttonCss="text-white bg-ardent border-2 hover:bg-black hover:text-white hover:border-black border-white"
             />
             <ScreenCard
               css={"bg-ardentLighter text-black flex-col-reverse"}
-              heading1="Public Policy &"
-              heading2="Regulatory Affairs"
-              image="/publicPolicy.jpg"
+              heading1="Graphics"
+              heading2="Designing"
+              image="/graphics.jpg"
               position="top"
-              link="/public-policy"
+              link="/graphics-designing"
               buttonCss="text-black bg-ardentLighter border-2 hover:bg-black hover:text-white border-black"
             />
           </>
@@ -94,7 +94,7 @@ export default function Enable() {
 
       <div
         className="absolute h-screen w-fit z-10 justify-center items-center flex group cursor-pointer"
-        onClick={() => setNav((prev) => prev !=0 ? prev - 1 : prev)}
+        onClick={() => setNav((prev) => (prev != 0 ? prev - 1 : prev))}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ export default function Enable() {
       </div>
       <div
         className="absolute h-screen right-0 w-36 z-10 justify-center items-center flex group group cursor-pointer"
-        onClick={() => setNav((prev) => prev !=3 ? prev + 1 : prev)}
+        onClick={() => setNav((prev) => (prev != 2 ? prev + 1 : prev))}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
