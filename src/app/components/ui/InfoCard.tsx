@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Image from "next/image";
@@ -6,8 +8,8 @@ import Link from "next/link";
 interface InfoCardProps {
   title1: string;
   title2?: string;
-  imageDescription?: string;
-  description: string;
+  des?: string;
+  description?: string;
   image: string;
   link?: string;
   animation: "left" | "center" | "right";
@@ -17,7 +19,7 @@ export default function InfoCard({
   title1,
   title2,
   image,
-  imageDescription,
+  des,
   description,
   animation,
   link,
@@ -59,7 +61,7 @@ export default function InfoCard({
       {!clicked && (
         <div
           className="flex flex-col bg-black h-full rounded-2xl"
-          onClick={() => setClicked((clicked) => !clicked)}
+          onClick={() => description ? setClicked((clicked) => !clicked) : window.open(link, '_ blank')}
         >
           <motion.div
             initial={{
@@ -86,7 +88,7 @@ export default function InfoCard({
                 clicked ? "hidden" : "block"
               }`}
             >
-              {imageDescription}
+              {des}
             </p>
           </motion.div>
           <motion.div
@@ -114,7 +116,7 @@ export default function InfoCard({
         </div>
       )}
 
-      {clicked && (
+      {clicked && description && (
         <>
           <div className="flex justify-end p-5 cursor-default">
             <motion.svg

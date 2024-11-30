@@ -27,7 +27,7 @@ export default function Navbar({ left, right }: Props) {
     },
     {
       name: "Views in Media",
-      link: "/media",
+      link: "/views-in-media",
       inside: false,
     },
     {

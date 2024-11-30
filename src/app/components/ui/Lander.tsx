@@ -1,14 +1,15 @@
-"use client"
+"use client";
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface landerProps {
-  image: string;
+  image?: string;
   heading1: string;
   heading2?: string;
   blurdata?: string;
+  css?: string;
 }
 
 export default function Lander({
@@ -16,14 +17,14 @@ export default function Lander({
   heading1,
   heading2,
   blurdata,
+  css,
 }: landerProps) {
-
   const [loaded, setLoaded] = useState(false);
-  
+
   return (
     <section
       id="home"
-      className="relative w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-opacity-100 bg-white"
+      className={` relative w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-opacity-100 ${css}`}
     >
       <motion.div
         initial={{
@@ -37,32 +38,41 @@ export default function Lander({
         transition={{
           duration: 0.3,
         }}
-        className="relative object-cover inset-0 w-full h-full scale-90 rounded-2xl opacity-100"
+        className={`relative object-cover inset-0 w-full h-full scale-90 rounded-2xl opacity-100`}
       >
-        <Image
-          src={image}
-          height={0}
-          width={0}
-          sizes="100% 100%"
-          className={`absolute object-cover inset-0 w-full h-full scale-100 opacity-100 ${loaded ? "" : "blur"} duration-100`}
-          alt=""
-          {...(blurdata ? { blurDataURL: blurdata, placeholder: "blur" } : {})}
-          no-select="true"
-          onLoad={() => setLoaded(true)}
-        ></Image>
+        {image && (
+          <Image
+            src={image}
+            height={0}
+            width={0}
+            sizes="100% 100%"
+            className={`absolute object-cover inset-0 w-full h-full scale-100 opacity-100 ${
+              loaded ? "" : "blur"
+            } duration-100`}
+            alt=""
+            {...(blurdata
+              ? { blurDataURL: blurdata, placeholder: "blur" }
+              : {})}
+            no-select="true"
+            onLoad={() => setLoaded(true)}
+          ></Image>
+        )}
       </motion.div>
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 0.7,
-        }}
-        transition={{
-          duration: 2,
-        }}
-        className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_50%)]"
-      ></motion.div>
+      {image && (
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 0.7,
+          }}
+          transition={{
+            duration: 2,
+          }}
+          className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_50%)]"
+        ></motion.div>
+      )}
+
       <div className="absolute">
         <motion.span
           initial={{
