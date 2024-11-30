@@ -52,9 +52,9 @@ export default function InfoCard({
       transition={{
         duration: 0.1,
       }}
-      viewport={{
-        amount: 0.3,
-      }}
+      // viewport={{
+      //   amount: 0.3,
+      // }}
       // onClick={() => setClicked1((clicked1) => !clicked1)}
       className="flex flex-col cursor-pointer md:w-[400px] md:h-[450px] w-[300px] h-[350px] bg-black rounded-2xl"
     >
