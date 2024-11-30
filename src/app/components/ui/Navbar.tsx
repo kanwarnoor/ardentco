@@ -45,7 +45,7 @@ export default function Navbar({ left, right }: Props) {
   return (
     <>
       <div
-        className={`h-16 flex w-full flex-row ml-auto fixed z-30 duration-300 bg-blend-difference select-none ${
+        className={`h-16 overflow-hidden flex w-full max-w-full flex-row ml-auto fixed z-30 duration-300 bg-blend-difference select-none ${
           left && !open ? "text-black" : "text-white"
         }`}
       >
