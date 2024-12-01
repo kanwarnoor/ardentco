@@ -24,7 +24,7 @@ export default function Lander({
   return (
     <section
       id="home"
-      className={` relative w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-opacity-100 ${css}`}
+      className={` relative w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-opacity-100  ${css} `}
     >
       <motion.div
         initial={{
@@ -84,7 +84,7 @@ export default function Lander({
           transition={{
             duration: 1,
           }}
-          className="md:text-7xl text-5xl font-black text-black"
+          className="md:text-7xl text-5xl font-black"
         >
           {heading1}
           {heading2 && (
