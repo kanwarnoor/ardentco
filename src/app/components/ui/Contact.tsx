@@ -110,7 +110,7 @@ export default function Contact() {
     <div className="w-[100%] grid md:grid-cols-2 grid-cols-1">
       {/* left option */}
       <div className="md:w-[50%] w-screen h-screen">
-        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-neutral-300">
+        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-white">
           <motion.svg
             initial={{
               opacity: 0,
@@ -309,7 +309,7 @@ export default function Contact() {
             ease: easeInOut,
           }}
           onClick={() => setClicked(true)}
-          className={`absolute md:w-[50%] w-screen h-screen bg-[url('/handshake.png')] bg-center bg-cover bg-no-repeat bg-white ${
+          className={`absolute md:w-[50%] w-screen h-screen bg-[url('/handshake.png')] bg-center bg-cover bg-no-repeat bg-ardentLighter ${
             clicked ? "z-20 cursor-auto" : "z-10 cursor-pointer"
           }`}
         >
@@ -548,7 +548,7 @@ export default function Contact() {
             ease: easeInOut,
           }}
           onClick={() => setClicked1(true)}
-          className={`flex absolute md:w-[50%] w-screen h-screen bg-black ${zindex} ${
+          className={`flex absolute md:w-[50%] w-screen h-screen bg-ardent ${zindex} ${
             clicked1 ? "cursor-auto" : "cursor-pointer"
           }`}
         >

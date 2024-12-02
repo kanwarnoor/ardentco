@@ -19,10 +19,8 @@ export default function page() {
           />
 
           <InfoCard
-            title1={
-              "Sristi Rai, Senior Associate Public Relation at Ardent Co."
-            }
-            des="आत्मनिर्भर भारत, सशक्त अर्थव्यवस्था"
+            title1={"आत्मनिर्भर भारत, सशक्त अर्थव्यवस्था"}
+            des="Sristi Rai, Senior Associate Public Relation at Ardent Co."
             animation="center"
             image={"/climate.png"}
             link="https://theyoungistaan.com/aatmanirbhar-bharat-strong-economy/"

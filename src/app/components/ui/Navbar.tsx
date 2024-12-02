@@ -196,7 +196,7 @@ export default function Navbar({ left, right }: Props) {
                   }}
                   className="absolute flex bottom-0 w-full h-16 md:mb-0 mb-10 text-center justify-center md:items-center text-ardentLighter md:text-sm text-[10px] select-none"
                 >
-                  Copyright © {new Date().getFullYear()} ArdnetCo. All rights
+                  Copyright © {new Date().getFullYear()} Ardent Co. All rights
                   reserved.
                 </motion.div>
               </div>
