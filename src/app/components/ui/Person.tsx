@@ -35,7 +35,7 @@ export default function Person({
         }`}
       >
         <div
-          className="md:w-32 md:h-32 w-20 h-20 rounded-full bg-black flex cursor-pointer hover:opacity-50 duration-300 select-none"
+          className="md:w-32 md:h-32 w-28 h-28 rounded-full bg-black flex cursor-pointer hover:opacity-50 duration-300 select-none"
           onClick={() => setClicked(true)}
         >
           <Image
@@ -50,10 +50,10 @@ export default function Person({
             className="w-full h-full rounded-full object-cover select-none"
           ></Image>
         </div>
-        <p className="md:text-xl text-lg font-black text-center leading-3 mt-2">
+        <p className="md:text-xl md:h-fit min-h-[30px] h-fit  text-lg font-black text-center leading-4 mt-2">
           {name}
         </p>
-        <p className="md:text-base text-base font-bold opacity-80 text-center">
+        <p className="md:text-base text-sm md:h-[50px] leading-4 h-[70px]  font-bold opacity-80 text-center">
           {role}
         </p>
       </div>
@@ -61,7 +61,7 @@ export default function Person({
       <AnimatePresence>
         {clicked && (
           <>
-            <div className=" absolute top-0 left-0 w-full h-full bg-black">
+            <div className="absolute top-0 left-0 w-full h-full bg-black">
               <motion.div
                 initial={{
                   opacity: 0,
@@ -90,9 +90,22 @@ export default function Person({
                 transition={{
                   duration: 0.3,
                 }}
-                className={`fixed w-[1000px] h-fit bottom-0 top-1/2 -translate-y-1/2 left-1/2 transform -translate-x-1/2 z-10 p-5 rounded-xl bg-ardent text-white flex flex-col shadow-2xl`}
+                className={`fixed md:w-[1000px] w-[300px] h-fit bottom-0 top-1/2 -translate-y-1/2 left-1/2 transform -translate-x-1/2 z-10 p-5 rounded-xl bg-ardent text-white flex flex-col shadow-2xl`}
               >
-                <div className="flex flex-row">
+                <div className="grid md:grid-cols-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                    className="md:hidden absolute right-0 size-10 mr-6 mt-1 cursor-pointer hover:scale-105 duration-100"
+                    onClick={() => setClicked(false)}
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
                   <motion.div
                     initial={{
                       opacity: 0,
@@ -103,7 +116,7 @@ export default function Person({
                     transition={{
                       delay: 0.5,
                     }}
-                    className="w-[1000px] h-[300px] bg-black rounded-lg"
+                    className="w-full md:h-[300px] h-[150px] bg-black rounded-lg"
                   >
                     <Image
                       src={image}
@@ -117,10 +130,14 @@ export default function Person({
                       className={`w-full rounded-lg h-full object-cover`}
                       style={{ objectPosition: position }}
                     ></Image>
-                    <p className="text-xl font-bold mt-2">{name}</p>
-                    <p className="text-sm font-bold">{role}</p>
+            
+                      <p className="text-xl font-bold mt-2 md:leading-none leading-4">
+                        {name}
+                      </p>
+                      <p className="md:text-sm text-xs font-bold">{role}</p>
+    
                   </motion.div>
-                  <div className="w-full h-[300px] bg-opacity-20 flex m-auto">
+                  <div className="w-full md:h-[300px] md:mt-0 mt-10 bg-opacity-20 flex ">
                     <motion.p
                       initial={{
                         opacity: 0,
@@ -132,7 +149,7 @@ export default function Person({
                         delay: 1,
                         duration: 0.5,
                       }}
-                      className="pl-5 w-[90%]"
+                      className="md:pl-5 md:text-sm text-xs mt-5 md:w-[90%]"
                     >
                       {des1}
                     </motion.p>
@@ -140,7 +157,7 @@ export default function Person({
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="white"
-                      className="size-10 flex ml-auto cursor-pointer hover:scale-105 duration-100"
+                      className="md:block hidden size-10 flex ml-auto cursor-pointer hover:scale-105 duration-100"
                       onClick={() => setClicked(false)}
                     >
                       <path
@@ -152,7 +169,7 @@ export default function Person({
                   </div>
                 </div>
 
-                <div className="w-full h-fit flex flex-col mt-16 m-auto">
+                <div className="w-full h-fit flex flex-col md:mt-16  md:m-auto ">
                   <motion.p
                     initial={{
                       opacity: 0,
@@ -164,7 +181,7 @@ export default function Person({
                       delay: 1,
                       duration: 0.5,
                     }}
-                    className="pt-2 w-[90%]"
+                    className="pt-2 md:w-[90%] md:text-sm text-xs"
                   >
                     {des2}
                   </motion.p>
@@ -196,7 +213,7 @@ export default function Person({
                           xmlns="http://www.w3.org/2000/svg"
                           xmlnsXlink="http://www.w3.org/1999/xlink"
                           fill="white"
-                          className="md:size-10 size-6"
+                          className="md:size-10 size-8"
                         >
                           <g>
                             <path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z" />
