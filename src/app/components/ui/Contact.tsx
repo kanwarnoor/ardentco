@@ -13,7 +13,7 @@ interface FormData {
 export default function Contact() {
   const [clicked, setClicked] = useState(false);
   const [clicked1, setClicked1] = useState(false);
-  const [zindex, setZindex] = useState("z-10");
+  const [zindex, setZindex] = useState("z-0");
 
   const [status, setStatus] = useState<string>("");
   const [status1, setStatus1] = useState<string>("");
@@ -98,7 +98,7 @@ export default function Contact() {
         setZindex("z-0");
       }, 500);
     } else {
-      setZindex("z-20");
+      setZindex("z-10");
     }
 
     return () => {
@@ -126,7 +126,7 @@ export default function Contact() {
             viewBox="0 0 24 24"
             fill="black"
             onClick={() => setClicked(false)}
-            className={`absolute  right-0   md:-translate-x-0 size-10 md:m-5 m-5  hover:scale-110 transition hover:transition cursor-pointer md:z-50 `}
+            className={`absolute right-0  md:-translate-x-0 size-10 md:m-5 m-5  hover:scale-110 transition hover:transition cursor-pointer`}
           >
             <path
               fillRule="evenodd"
@@ -310,7 +310,7 @@ export default function Contact() {
           }}
           onClick={() => setClicked(true)}
           className={`absolute md:w-[50%] w-screen h-screen bg-[url('/handshake.png')] bg-center bg-cover bg-no-repeat bg-ardentLighter ${
-            clicked ? "z-20 cursor-auto" : "z-10 cursor-pointer"
+            clicked ? "z-10 cursor-auto" : "z-10 cursor-pointer"
           }`}
         >
           <div className="flex flex-col w-fit h-fit m-auto pt-5 md:mt-10 mt-24">
@@ -374,7 +374,7 @@ export default function Contact() {
             viewBox="0 0 24 24"
             fill="black"
             onClick={() => setClicked1(false)}
-            className={`flex size-10 mt-5 mr-auto ml-5 hover:scale-110 transition hover:transition cursor-pointer z-50 `}
+            className={`flex size-10 mt-5 mr-auto ml-5 hover:scale-110 transition hover:transition cursor-pointer`}
           >
             <path
               fillRule="evenodd"

@@ -8,9 +8,10 @@ import { usePathname } from "next/navigation";
 interface Props {
   left: boolean;
   right: boolean;
+  button?: boolean;
 }
 
-export default function Navbar({ left, right }: Props) {
+export default function Navbar({ left, right, button }: Props) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -45,7 +46,7 @@ export default function Navbar({ left, right }: Props) {
   return (
     <>
       <div
-        className={`h-16 overflow-hidden flex w-full max-w-full flex-row ml-auto fixed z-30 duration-300 bg-blend-difference select-none ${
+        className={`h-16 w-fit z-50 fixed select-none flex duration-300 ${
           left && !open ? "text-black" : "text-white"
         }`}
       >
@@ -68,7 +69,12 @@ export default function Navbar({ left, right }: Props) {
             Ardent Co.
           </Link>
         </motion.div>
-
+      </div>
+      <div
+        className={`h-16 w-fit z-50 fixed select-none flex right-0 duration-300 ${
+          left && !open ? "text-black" : "text-white"
+        }`}
+      >
         <motion.div
           initial={{
             opacity: 0,
@@ -84,7 +90,7 @@ export default function Navbar({ left, right }: Props) {
           <Link
             href="/#contact"
             className={`flex justify-center items-center md:w-32 md:h-10 w-28 h-9 rounded-full font-medium duration-300 md:text-base text-sm select-none ${
-              open ? "bg-white text-black" : " bg-ardent text-white"
+              open || button ? "bg-white text-black" : " bg-ardent text-white"
             }`}
           >
             {"Let's Connect"}
@@ -124,6 +130,7 @@ export default function Navbar({ left, right }: Props) {
           )}
         </motion.div>
       </div>
+
       <AnimatePresence>
         {open && (
           <motion.div
