@@ -110,7 +110,7 @@ export default function Contact() {
     <div className="w-[100%] grid md:grid-cols-2 grid-cols-1">
       {/* left option */}
       <div className="md:w-[50%] w-screen h-screen">
-        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-white">
+        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-ardentLighter bg-opacity-50">
           <motion.svg
             initial={{
               opacity: 0,
@@ -357,7 +357,7 @@ export default function Contact() {
       </div>
 
       {/* right option */}
-      <div className="flex w-screen h-screen bg-neutral-300">
+      <div className="flex w-screen h-screen bg-ardentLight">
         <div className="flex flex-col absolute md:w-[50%] w-screen h-screen">
           <motion.svg
             initial={{
