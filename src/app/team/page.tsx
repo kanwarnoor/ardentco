@@ -10,15 +10,14 @@ import { useInView } from "react-intersection-observer";
 
 export default function Page() {
   const { ref: consultantRef, inView: consultantRefInView } = useInView({
-    threshold: 0.1, // Fully visible
-    rootMargin: "0px 0px -75% 0px",
+    threshold: 0.3, // Fully visible
+    rootMargin: "0px 0px 0px 0px",
   });
 
   const [left, setLeft] = useState(false);
   const [right, setRight] = useState(false);
-  console.log(consultantRefInView)
+  console.log(consultantRefInView);
   useEffect(() => {
-
     if (consultantRefInView) {
       setLeft(true);
       setRight(true);
@@ -171,6 +170,91 @@ Sarthak discovered his calling in communications through a complex non-tradition
             link="https://www.linkedin.com/in/vaishnavichauhan7/"
             position="50% 45%"
             des1="Vaishnavi Chauhan is working with us as a Senior Research Associate with 2 years of xperience. At Ardent Co., she plays a pivotal role in shaping our public policy andcommunications initiatives by conducting in-depth research and advocating for issues that lie at the core of our clients’ mission. Vaishnavi Chauhan comes with experience in management consulting at Ernst and Young. She has worked extensively on projects across Biopharma, energy and utilities, and the digi-tech sectors. In her free time she likes to read about philosophy, brands, marketing, basically everything under the sun."
+          />
+        </div>
+
+        <div className="flex w-full h-fit text-center justify-center my-20">
+          <p className="md:text-6xl text-5xl text-center font-black">
+            Advisors
+          </p>
+        </div>
+        <div className="w-[70%] h-full grid md:grid-cols-3 grid-cols-2 gap-10 mb-10">
+          <Person
+            name="Kazim Rizvi"
+            image="/team/advisors/1.jpeg"
+            position="50% 20%"
+            role="Advisor, Technology Policy
+Founding Director, The Dialogue"
+            theme="dark"
+          />
+          <Person
+            name="Proful Lall"
+            image="/team/person.jpg"
+            position="50% 50%"
+            role="Advisor, Corporate Affairs"
+            theme="dark"
+          />
+          <Person
+            name="Deepak Kumar Sahu"
+            image="/team/advisors/3.jpeg"
+            position="50% 20%"
+            role="Advisor, Media and Communications"
+            theme="dark"
+          />
+          <Person
+            name="Deeksha Goel"
+            image="/team/advisors/4.jpg"
+            position="50% 20%"
+            role="Advisor, Strategic Affairs
+Deputy Director and Senior Research Fellow, India Foundation"
+            theme="dark"
+          />
+          <Person
+            name="Dr. Sabine Kapasi"
+            image="/team/advisors/5.png"
+            position="50% 20%"
+            role="Advisor, Industry and Economy
+President, India SME Forum"
+            theme="dark"
+          />
+          <Person
+            name="Vinod Kumar"
+            image="/team/advisors/6.jpg"
+            position="50% 20%"
+            role="Advisor, Strategic Affairs
+Deputy Director and Senior Research Fellow, India Foundation"
+            theme="dark"
+          />
+          <Person
+            name="Mr.Jai Prakash"
+            image="/team/advisors/7.png"
+            position="50% 20%"
+            role="Advisor, Government Affairs.
+Former OSD to Hon’ble Minister of Niti Aayog"
+            theme="dark"
+          />
+          <Person
+            name="Bhavani Giddu"
+            image="/team/advisors/8.jpg"
+            position="50% 20%"
+            role="Advisor, Social Development and Education.
+CEO, Footprint Global Communications"
+            theme="dark"
+          />
+          <Person
+            name="Varda Taneja"
+            image="/team/advisors/9.jpg"
+            position="50% 20%"
+            role="Advisor, FDI & Market Entry
+Founder, Inara Advisors & FDI Advisor to Sweden India Business Council"
+            theme="dark"
+          />
+          <Person
+            name="Saptarshi Sanyal"
+            image="/team/advisors/10.png"
+            position="50% 50%"
+            role="Advisor, Media and Communications"
+            theme="dark"
           />
         </div>
       </div>

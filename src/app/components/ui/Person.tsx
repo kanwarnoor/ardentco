@@ -13,12 +13,14 @@ interface Props {
   des1?: string;
   des2?: string;
   link?: string;
+  role2?: string;
 }
 
 export default function Person({
   name,
   image,
   role,
+  role2,
   blurdata,
   theme,
   position,
@@ -54,7 +56,13 @@ export default function Person({
           {name}
         </p>
         <p className="md:text-base text-sm md:h-[50px] leading-4 h-[70px]  font-bold opacity-80 text-center">
-          {role}
+          {role2 ? (
+            <>
+              {role} <br /> {role2}
+            </>
+          ) : (
+            role
+          )}
         </p>
       </div>
 
@@ -130,12 +138,11 @@ export default function Person({
                       className={`w-full rounded-lg h-full object-cover`}
                       style={{ objectPosition: position }}
                     ></Image>
-            
-                      <p className="text-xl font-bold mt-2 md:leading-none leading-4">
-                        {name}
-                      </p>
-                      <p className="md:text-sm text-xs font-bold">{role}</p>
-    
+
+                    <p className="text-xl font-bold mt-2 md:leading-none leading-4">
+                      {name}
+                    </p>
+                    <p className="md:text-sm text-xs font-bold mt-1">{role}</p>
                   </motion.div>
                   <div className="w-full md:h-[300px] md:mt-0 mt-10 bg-opacity-20 flex ">
                     <motion.p
