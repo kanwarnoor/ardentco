@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function Page() {
   const { ref: consultantRef, inView: consultantRefInView } = useInView({
-    threshold: 0.3, // Fully visible
+    threshold: 0.25, // Fully visible
     rootMargin: "0px 0px 0px 0px",
   });
 

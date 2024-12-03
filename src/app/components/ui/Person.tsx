@@ -156,7 +156,7 @@ export default function Person({
                         delay: 1,
                         duration: 0.5,
                       }}
-                      className="md:pl-5 md:text-sm text-xs mt-5 md:w-[90%]"
+                      className="md:pl-5 md:text-sm text-xs md:mt-0 mt-5 md:w-[90%]"
                     >
                       {des1}
                     </motion.p>
