@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 interface Props {
@@ -11,9 +11,27 @@ interface Props {
   button?: boolean;
 }
 
-export default function Navbar({ left, right, button }: Props) {
+export default function Navbar({}: Props) {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const pages = [
     {
@@ -46,9 +64,10 @@ export default function Navbar({ left, right, button }: Props) {
   return (
     <>
       <div
-        className={`h-16 w-fit z-50 fixed select-none flex duration-300 ${
-          left && !open ? "text-black" : "text-white"
-        }`}
+        className={`h-16 w-screen z-50 fixed select-none flex text-white duration-300 ${
+          open ? "bg-ardenet" : scrolled ? "bg-black" : "bg-none"
+
+        } `}
       >
         <motion.div
           initial={{
@@ -63,7 +82,7 @@ export default function Navbar({ left, right, button }: Props) {
           className={`flex justify-center items-center md:pl-10 pl-5`}
         >
           <Link
-            className="md:text-xl text-lg font-bold cursor-pointer mix-blend-difference"
+            className="md:text-xl text-lg font-bold cursor-pointer"
             href="/"
           >
             Ardent Co.
@@ -72,7 +91,7 @@ export default function Navbar({ left, right, button }: Props) {
       </div>
       <div
         className={`h-16 w-fit z-50 fixed select-none flex right-0 duration-300 ${
-          left && !open ? "text-black" : "text-white"
+          !open ? "text-black" : "text-white"
         }`}
       >
         <motion.div
@@ -90,7 +109,7 @@ export default function Navbar({ left, right, button }: Props) {
           <Link
             href="/#contact"
             className={`flex justify-center items-center md:w-32 md:h-10 w-28 h-9 rounded-full font-medium duration-300 md:text-base text-sm select-none ${
-              open || button ? "bg-white text-black" : " bg-ardent text-white"
+              scrolled || open ? "bg-white text-black" : " bg-ardent text-white"
             }`}
           >
             {"Let's Connect"}
@@ -117,7 +136,8 @@ export default function Navbar({ left, right, button }: Props) {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="2"
-              stroke={`${right ? "black" : "white"}`}
+              // stroke={`${scrolled ? "black" : "white"}`}
+              stroke="white"
               className="size-10 cursor-pointer ml-[0.625rem] duration-300"
               onClick={() => setOpen(true)}
             >

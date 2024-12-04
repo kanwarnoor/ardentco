@@ -272,8 +272,8 @@ Mr. Jai Prakash is an MBA from IIM Lucknow, and had a strong career in the priva
             link="https://www.linkedin.com/in/bhavanigiddu"
             role="Advisor, Social Development and Education.
 CEO, Footprint Global Communications"
-des1="Bhavani Giddu is a seasoned professional with over 13 years of experience as the CEO of Footprint Global Communications based in New Delhi, India. In this role, she specializes in strategic communications encompassing internal and external branding, crisis communications, issue management, and communications training workshops. Her expertise extends to strategic media advisory, reputation management, and market research. Prior to leading Footprint Global Communications, Bhavani served as the Head of Office and General Manager at IPAN Hill & Knowlton, overseeing operations in Delhi and Kolkata. "
-des2="She also held the position of Manager - Communications at GE Industrial and Senior Consultant & Head of Office at Ogilvy & Mather, where she played a key role in heading offices in Hyderabad, Bangalore, and briefly in New Delhi. Bhavani’s educational background includes attending P.S. Senior Secondary School and completing her studies at the University of Madras."
+            des1="Bhavani Giddu is a seasoned professional with over 13 years of experience as the CEO of Footprint Global Communications based in New Delhi, India. In this role, she specializes in strategic communications encompassing internal and external branding, crisis communications, issue management, and communications training workshops. Her expertise extends to strategic media advisory, reputation management, and market research. Prior to leading Footprint Global Communications, Bhavani served as the Head of Office and General Manager at IPAN Hill & Knowlton, overseeing operations in Delhi and Kolkata. "
+            des2="She also held the position of Manager - Communications at GE Industrial and Senior Consultant & Head of Office at Ogilvy & Mather, where she played a key role in heading offices in Hyderabad, Bangalore, and briefly in New Delhi. Bhavani’s educational background includes attending P.S. Senior Secondary School and completing her studies at the University of Madras."
             theme="dark"
           />
           <Person
@@ -282,10 +282,10 @@ des2="She also held the position of Manager - Communications at GE Industrial an
             position="50% 20%"
             role="Advisor, FDI & Market Entry
 Founder, Inara Advisors & FDI Advisor to Sweden India Business Council"
-des1="Varda Taneja is the Founder of a boutique advisory firm, Inara Advisors – focusing on India market entry and regulatory advisory. During her previous role as Vice President, Invest India, Government of India, she led investment promotion in the Europe region and successfully supported European companies in their expansion strategy for India. In addition, she has worked on driving policy initiatives for many companies to support their India investment.
+            des1="Varda Taneja is the Founder of a boutique advisory firm, Inara Advisors – focusing on India market entry and regulatory advisory. During her previous role as Vice President, Invest India, Government of India, she led investment promotion in the Europe region and successfully supported European companies in their expansion strategy for India. In addition, she has worked on driving policy initiatives for many companies to support their India investment.
 
 During her decade long experience, Varda has worked in close capacity with the Office of the Prime Minister of India and with senior officials from Federal Ministries and StateGovernments to work on key policy initiatives. She has also led multiple public–private engagements at global platforms and represented India across global platforms such as, World Economic Forum, Davos and others, for policy and business panel discussions."
-des2="Varda is an FDI Advisor with Sweden India Business Council, Swiss Global Enterprise and The Modern India, Norway.
+            des2="Varda is an FDI Advisor with Sweden India Business Council, Swiss Global Enterprise and The Modern India, Norway.
 
 Her passion and efforts have won her the recognition of BusinessWorld Disrupt 30 under 30 and EuropeIndia40 leaders.
 
