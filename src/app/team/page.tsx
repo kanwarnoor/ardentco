@@ -31,7 +31,7 @@ export default function Page() {
       <Navbar left={left} right={right} />
       <Lander heading1={"Meet Our Team"} css="bg-black text-white"></Lander>
       <div
-        className="w-screen min-h-screen h-fit items-center justify-center flex flex-col "
+        className="w-screen min-h-screen h-fit items-center justify-center flex flex-col bg-white"
         ref={consultantRef}
       >
         <div className="flex w-full h-fit text-center justify-center my-20">

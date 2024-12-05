@@ -164,7 +164,7 @@ export default function Navbar({}: Props) {
             exit={{
               opacity: 0,
             }}
-            className={`w-screen h-screen bg-ardent fixed z-20`}
+            className={`w-screen h-dvh bg-ardent fixed z-20`}
           >
             <div className="w-full h-screen grid grid-cols-1">
               <div className="w-full h-screen flex ">
@@ -221,7 +221,7 @@ export default function Navbar({}: Props) {
                     duration: 0.5,
                     delay: 1,
                   }}
-                  className="absolute flex bottom-0 w-full h-16 md:mb-0 mb-10 text-center justify-center md:items-center text-ardentLighter md:text-sm text-[10px] select-none"
+                  className="absolute flex bottom-0 mb-5 w-full h-fit  text-center justify-center md:items-center text-ardentLighter md:text-sm text-[10px] select-none items-end"
                 >
                   Copyright © {new Date().getFullYear()} Ardent Co. All rights
                   reserved.
