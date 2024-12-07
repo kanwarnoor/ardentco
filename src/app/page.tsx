@@ -124,47 +124,52 @@ export default function Home() {
           }}
           className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(circle,white_10%,transparent_50%)]"
         ></motion.div>
-        <div className="absolute">
+        <div className="absolute flex lg:flex-row flex-col">
           <FlipWords
             words={avail}
             duration={3000}
-            className="md:text-9xl text-6xl text-white font-bold text-center"
+            className="md:text-9xl text-6xl text-white font-bold lg:text-left text-center  w-[800px] flex-wrap"
           />
-          <motion.p
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-            }}
-            transition={{
-              duration: 1,
-            }}
-            className="md:text-7xl text-4xl font-bold text-white mb-0 pb-0"
-          >
-            Status Quo
-          </motion.p>
-          <br />
-          <motion.div
-            className="w-fit md:flex mx-auto absolute justify-center text-center left-0 right-0"
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 0.1 },
-            }}
-            whileTap={{
-              scale: 1,
-              transition: { duration: 0.1 },
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 1, delay: 0.9 } }}
-          >
-            <Link
-              href="#about"
-              className="md:text-xl border-2 font-bold text-white bg-none border-white px-5 py-2 rounded-full"
+          <div className="w-1 bg-white flex-wrap rounded-full">
+            
+          </div>
+          <div className="lg:pl-10 flex-wrap">
+            <motion.p
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              className="md:text-7xl text-4xl font-bold text-white mb-0 pb-0 w-full"
             >
-              Know more
-            </Link>
-          </motion.div>
+              Status Quo
+            </motion.p>
+            <br />
+            <motion.div
+              className="w-fit md:flex mx-auto justify-center text-center left-0 right-0"
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.1 },
+              }}
+              whileTap={{
+                scale: 1,
+                transition: { duration: 0.1 },
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { duration: 1, delay: 0.9 } }}
+            >
+              <Link
+                href="#about"
+                className="md:text-xl border-2 font-bold text-white bg-none border-white px-5 py-2 rounded-full"
+              >
+                Know more
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
 
