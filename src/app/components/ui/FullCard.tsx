@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 interface props {
   title1: string;
@@ -50,7 +49,7 @@ export default function FullCard({
         }}
         className="flex flex-col m-auto"
       >
-        <Link
+        <a
           href={link}
           className={`relative w-[300px] h-[100px] m-auto mb-10 text-center items-center justify-center hover:w-[500px] group-hover:w-[500px] duration-50 rounded-full duration-500  cursor-pointer group/link ${
             theme == "light" ? "bg-black" : "bg-white"
@@ -75,7 +74,7 @@ export default function FullCard({
               Read more
             </p>
           </div>
-        </Link>
+        </a>
 
         <div className="flex flex-col m-auto">
           <div className="flex flex-col">

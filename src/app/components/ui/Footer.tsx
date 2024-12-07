@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 interface FooterProps {
   theme: "dark" | "light";
 }
@@ -46,12 +44,23 @@ export default function Footer({ theme }: FooterProps) {
               Quick Links
             </p>
             <div className="flex flex-col gap-4 text-neutral-400 md:text-base text-sm">
-              <p className="font-bold ml-2 cursor-pointer">Privacy Policy</p>
-              <p className="font-bold ml-2 cursor-pointer">
-                Terms & Conditions
-              </p>
-              <p className="font-bold ml-2 cursor-pointer">Support</p>
-              <p className="font-bold ml-2 cursor-pointer">Contact us</p>
+              <a href="/#services">
+                <p className="font-bold ml-2 cursor-pointer">Services</p>
+              </a>
+              <a href="/menifesto">
+                <p className="font-bold ml-2 cursor-pointer">Our Manifesto</p>
+              </a>
+              <a href="/our-perspectives">
+                <p className="font-bold ml-2 cursor-pointer">
+                  Our Perspectives
+                </p>
+              </a>
+              <a href="/team">
+                <p className="font-bold ml-2 cursor-pointer">Our Team</p>
+              </a>
+              <a href="/#contact">
+                <p className="font-bold ml-2 cursor-pointer">Contact us</p>
+              </a>
             </div>
           </div>
 
@@ -60,12 +69,12 @@ export default function Footer({ theme }: FooterProps) {
               Information
             </p>
             <div className="flex flex-col gap-4 text-neutral-400 md:text-base text-sm">
-              <p className="font-bold ml-2 cursor-pointer">About us</p>
-              <p className="font-bold ml-2 cursor-pointer">Customer</p>
-              <p className="font-bold ml-2 cursor-pointer">Service</p>
-              <p className="font-bold ml-2 cursor-pointer">Collection</p>
-              <p className="font-bold ml-2 cursor-pointer">Blog</p>
-              <p className="font-bold ml-2 cursor-pointer">Best Sellers</p>
+              <a href="#about">
+                <p className="font-bold ml-2 cursor-pointer">About us</p>
+              </a>
+              <a href="#">
+                <p className="font-bold ml-2 cursor-pointer">Privacy Policy</p>
+              </a>
             </div>
           </div>
 
@@ -75,7 +84,7 @@ export default function Footer({ theme }: FooterProps) {
             </p>
 
             <div className="w-full h-fit ml-2 mb-4 flex space-x-2">
-              <Link
+              <a
                 href="https://www.instagram.com/_ardentco._/"
                 target="_blank"
               >
@@ -106,9 +115,9 @@ export default function Footer({ theme }: FooterProps) {
                     />
                   </g>
                 </svg>
-              </Link>
+              </a>
 
-              <Link
+              <a
                 href="https://www.linkedin.com/company/ardentco"
                 target="_blank"
               >
@@ -130,9 +139,9 @@ export default function Footer({ theme }: FooterProps) {
                     <path d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12   c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z    M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88   C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078   c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179   c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z" />
                   </g>
                 </svg>
-              </Link>
+              </a>
 
-              <Link href="https://www.facebook.com/ardentco.in" target="_blank">
+              <a href="https://www.facebook.com/ardentco.in" target="_blank">
                 <svg
                   fill="white"
                   height="17"
@@ -146,9 +155,9 @@ export default function Footer({ theme }: FooterProps) {
                     fill="white"
                   />
                 </svg>
-              </Link>
+              </a>
 
-              <Link href="https://x.com/_ardent_co_" target="_blank">
+              <a href="https://x.com/_ardent_co_" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1200"
@@ -169,7 +178,7 @@ export default function Footer({ theme }: FooterProps) {
                     </clipPath>
                   </defs>
                 </svg>
-              </Link>
+              </a>
             </div>
 
             <div className="flex flex-col gap-4 text-neutral-400">

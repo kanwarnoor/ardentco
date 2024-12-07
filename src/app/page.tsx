@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { FlipWords } from "./components/ui/flip-words";
-import Link from "next/link";
 import Image from "next/image";
 import Navbar from "./components/ui/Navbar";
 import Footer from "./components/ui/Footer";
@@ -162,12 +161,12 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition: { duration: 1, delay: 0.9 } }}
             >
-              <Link
+              <a
                 href="#about"
                 className="md:text-xl border-2 font-bold text-white bg-none border-white px-5 py-2 rounded-full"
               >
                 Know more
-              </Link>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -184,7 +183,7 @@ export default function Home() {
 
       <section
         className="relative bg-white bg-dot-black/[0.5] flex w-full min-h-screen h-fit"
-        id="enable"
+        id="services"
         ref={enableRef}
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div>

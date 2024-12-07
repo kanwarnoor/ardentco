@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { useState } from "react";
 import ScreenCard from "./ScreenCard";
@@ -19,7 +21,7 @@ export default function Enable() {
 
   return (
     <>
-      <div className="w-screen h-screen z-10  grid grid-cols-2">
+      <div className="w-screen h-screen z-10 grid grid-cols-2">
         {nav == 0 && (
           <>
             <ScreenCard

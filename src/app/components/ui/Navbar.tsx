@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -36,17 +35,12 @@ export default function Navbar({}: Props) {
   const pages = [
     {
       name: "Services",
-      link: "/#enable",
+      link: "/services",
       inside: true,
     },
     {
       name: "Our Manifesto",
       link: "/manifesto",
-      inside: false,
-    },
-    {
-      name: "Views in Media",
-      link: "/views-in-media",
       inside: false,
     },
     {
@@ -64,8 +58,8 @@ export default function Navbar({}: Props) {
   return (
     <>
       <div
-        className={`h-16 w-screen z-50 fixed select-none flex text-white duration-300 ${
-          open ? "bg-ardenet" : scrolled ? "bg-black" : "bg-none"
+        className={`h-16 w-screen fixed select-none flex text-white duration-300 ${
+          open ? "bg-ardenet z-50" : scrolled ? "bg-black z-30" : "bg-none z-30"
 
         } `}
       >
@@ -81,12 +75,12 @@ export default function Navbar({}: Props) {
           }}
           className={`flex justify-center items-center md:pl-10 pl-5`}
         >
-          <Link
+          <a
             className="md:text-xl text-lg font-bold cursor-pointer"
             href="/"
           >
             Ardent Co.
-          </Link>
+          </a>
         </motion.div>
       </div>
       <div
@@ -106,14 +100,14 @@ export default function Navbar({}: Props) {
           }}
           className={`flex ml-auto text-center text-black justify-center items-center md:mr-10 mr-5 duration-300 transition-all`}
         >
-          <Link
+          <a
             href="/#contact"
             className={`flex justify-center items-center md:w-32 md:h-10 w-28 h-9 rounded-full font-medium duration-300 md:text-base text-sm select-none ${
               scrolled || open ? "bg-white text-black" : " bg-ardent text-white"
             }`}
           >
             {"Let's Connect"}
-          </Link>
+          </a>
           {open ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +158,7 @@ export default function Navbar({}: Props) {
             exit={{
               opacity: 0,
             }}
-            className={`w-screen h-dvh bg-ardent fixed z-20`}
+            className={`w-screen h-dvh bg-ardent fixed z-40`}
           >
             <div className="w-full h-screen grid grid-cols-1">
               <div className="w-full h-screen flex ">
@@ -172,7 +166,7 @@ export default function Navbar({}: Props) {
                   {pages.map((item, index) => {
                     return (
                       <>
-                        <Link href={item.link}>
+                        <a href={item.link}>
                           <motion.li
                             initial={{
                               opacity: 0,
@@ -204,7 +198,7 @@ export default function Navbar({}: Props) {
                             )}
                             <p className="hover:underline">{item.name}</p>
                           </motion.li>
-                        </Link>
+                        </a>
                       </>
                     );
                   })}

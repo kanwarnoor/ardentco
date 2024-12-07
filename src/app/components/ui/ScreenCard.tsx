@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface Props {
@@ -79,12 +78,12 @@ export default function ScreenCard({
         }}
         className="absolute w-1/2 h-10 top-1/2 -translate-y-5 justify-center items-center flex"
       >
-        <Link
+        <a
           href={link}
           className={`px-9 py-4 rounded-full text-xl font-black duration-300 ${buttonCss}`}
         >
           Read more
-        </Link>
+        </a>
       </motion.div>
     </div>
   );

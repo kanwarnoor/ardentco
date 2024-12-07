@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 interface InfoCardProps {
   title1: string;
@@ -168,12 +167,12 @@ export default function InfoCard({
                 }}
                 className="absolute bottom-0 flex justify-center m-auto left-0 right-0 pb-10 rounded-b-2xl"
               >
-                <Link
+                <a
                   href={link}
                   className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
                 >
                   Read more
-                </Link>
+                </a>
               </motion.div>
             )}
           </div>
