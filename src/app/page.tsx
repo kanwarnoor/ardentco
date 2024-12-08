@@ -13,6 +13,7 @@ import Wake from "./components/ui/Wake";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import frontpage from "../../public/frontpage.jpg";
+import Inactive from "./components/ui/Inactive";
 
 export default function Home() {
   const { ref: aboutRef, inView: aboutInView } = useInView({
@@ -60,6 +61,7 @@ export default function Home() {
       <div className="hidden md:block">
         <Wake />
       </div>
+      <Inactive/>
       <Navbar left={left} right={right} />
 
       <section
