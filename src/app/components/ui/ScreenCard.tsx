@@ -46,7 +46,7 @@ export default function ScreenCard({
       >
         <div className="flex w-full ">
           {heading2 ? (
-            <p className="text-4xl font-bold text-center m-auto">
+            <p className="md:text-4xl text-2xl font-bold text-center m-auto">
               {heading1} <br /> {heading2}
             </p>
           ) : (
@@ -80,7 +80,7 @@ export default function ScreenCard({
       >
         <a
           href={link}
-          className={`px-9 py-4 rounded-full text-xl font-black duration-300 ${buttonCss}`}
+          className={`md:px-9 md:py-4 px-3 py-2 rounded-full md:text-xl font-black duration-300 ${buttonCss}`}
         >
           Read more
         </a>
