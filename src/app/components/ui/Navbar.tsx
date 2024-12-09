@@ -58,8 +58,8 @@ export default function Navbar({}: Props) {
   return (
     <>
       <div
-        className={`h-16 w-screen fixed select-none flex text-white duration-500 ${
-          open ? "bg-ardenet z-50" : scrolled ? "bg-black z-30" : "bg-none z-30"
+        className={`h-16 w-screen fixed select-none flex  text-white ${
+          open ? "bg-ardenet z-50 duration-0 " : scrolled ? "bg-black/80 backdrop-blur-md z-30 duration-500 " : "bg-none z-30 duration-500 "
 
         } `}
       >
