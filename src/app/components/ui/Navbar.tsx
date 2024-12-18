@@ -1,8 +1,9 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 interface Props {
   left: boolean;
@@ -10,27 +11,27 @@ interface Props {
   button?: boolean;
 }
 
-export default function Navbar({}: Props) {
+export default function Navbar({ right, button }: Props) {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 100) {
+  //       setScrolled(true);
+  //     } else {
+  //       setScrolled(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener on unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   // Cleanup the event listener on unmount
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   const pages = [
     {
@@ -57,36 +58,25 @@ export default function Navbar({}: Props) {
 
   return (
     <>
-      <div
-        className={`h-16 w-screen fixed select-none flex  text-white ${
-          open ? "bg-ardenet z-50 duration-0 " : scrolled ? "bg-black/80 backdrop-blur-md z-30 duration-500 " : "bg-none z-30 duration-500 "
-
-        } `}
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        className={`flex w-fit fixed z-50 justify-left items-center md:pl-10 pl-5 `}
       >
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 0.5,
-          }}
-          className={`flex justify-center items-center md:pl-10 pl-5`}
-        >
-          <a
-            className="md:text-xl text-lg font-bold cursor-pointer"
-            href="/"
-          >
-            Ardent Co.
-          </a>
-        </motion.div>
-      </div>
+        <a className="md:text-xl text-lg font-bold cursor-pointer" href="/">
+          <Image src={"/logo.png"} width={100} height={100} alt={""}></Image>
+        </a>
+      </motion.div>
+
       <div
-        className={`h-16 w-fit z-50 fixed select-none flex right-0 duration-300 ${
-          !open ? "text-black" : "text-white"
-        }`}
+        className={`h-[98px] w-fit z-50 fixed select-none flex right-0 duration-300`}
       >
         <motion.div
           initial={{
@@ -103,7 +93,11 @@ export default function Navbar({}: Props) {
           <a
             href="/#contact"
             className={`flex justify-center items-center md:w-32 md:h-10 w-28 h-9 rounded-full font-medium duration-300 md:text-base text-sm select-none ${
-              scrolled || open ? "bg-white text-black" : " bg-ardent text-white"
+              open
+                ? "bg-ardent text-black"
+                : button
+                ? "bg-black text-white"
+                : "bg-ardent text-black"
             }`}
           >
             {"Let's Connect"}
@@ -130,8 +124,7 @@ export default function Navbar({}: Props) {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="2"
-              // stroke={`${scrolled ? "black" : "white"}`}
-              stroke="white"
+              stroke={`${right ? "black" : "white"}`}
               className="size-10 cursor-pointer ml-[0.625rem] duration-300"
               onClick={() => setOpen(true)}
             >
@@ -158,7 +151,7 @@ export default function Navbar({}: Props) {
             exit={{
               opacity: 0,
             }}
-            className={`w-screen h-dvh bg-ardent fixed z-40`}
+            className={`w-screen h-dvh bg-neutral-950 fixed z-40`}
           >
             <div className="w-full h-screen grid grid-cols-1">
               <div className="w-full h-screen flex ">
@@ -188,15 +181,24 @@ export default function Navbar({}: Props) {
                             className="text-center flex justify-center items-center text-ardentLighter group md:text-2xl text-xl font-bold cursor-pointer select-none "
                           >
                             {pathname == item.link ? (
-                              <p className=" no-underline duration-300">
-                                {">"}
-                              </p>
+                              <>
+                                <p className=" no-underline duration-300 text-ardentLighter">
+                                  {">"}
+                                </p>
+                                <p className=" text-ardentLighter hover:underline">
+                                  {item.name}
+                                </p>
+                              </>
                             ) : (
-                              <p className="group-hover:opacity-100 opacity-0 no-underline duration-300">
-                                {">"}
-                              </p>
+                              <>
+                                <p className="group-hover:opacity-100 text-ardentLighter opacity-0 no-underline duration-300">
+                                  {">"}
+                                </p>
+                                <p className="hover:underline">
+                                  {item.name}
+                                </p>
+                              </>
                             )}
-                            <p className="hover:underline">{item.name}</p>
                           </motion.li>
                         </a>
                       </>

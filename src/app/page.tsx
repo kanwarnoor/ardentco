@@ -62,7 +62,7 @@ export default function Home() {
         <Wake />
       </div>
       <Inactive/>
-      <Navbar left={left} right={right} />
+      <Navbar left={left} right={right} button={right}/>
 
       <section
         id="home"
