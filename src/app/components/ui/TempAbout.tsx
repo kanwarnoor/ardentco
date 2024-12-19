@@ -123,7 +123,7 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="md:text-5xl text-2xl font-black mb-5"
+                className="md:text-5xl text-2xl font-black mb-5 text-ardent"
               >
                 About us
               </motion.p>
@@ -178,7 +178,7 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="md:text-5xl text-2xl font-black mb-5"
+                className="md:text-5xl text-2xl font-black mb-5 text-ardent"
               >
                 The Ideology
               </motion.p>
@@ -233,7 +233,7 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="md:text-5xl text-2xl font-black mb-5"
+                className="md:text-5xl text-2xl font-black mb-5 text-ardent"
               >
                 “To our people, who work, trust and are on this journey with us”{" "}
                 <br />{" "}
@@ -285,7 +285,7 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="md:text-5xl text-2xl font-black mb-5"
+                className="md:text-5xl text-2xl font-black mb-5 text-ardent"
               >
                 “To the brands, institutions and leaders who are with us on this
                 journey”
@@ -343,7 +343,7 @@ export default function About() {
                   duration: 0.5,
                   ease: easeInOut,
                 }}
-                className="md:text-5xl text-2xl font-black mb-5"
+                className="md:text-5xl text-2xl font-black mb-5 text-ardent"
               >
                 “To the industry, nation, and the world we live in”
                 <br />{" "}
@@ -389,32 +389,32 @@ export default function About() {
       <div className="absolute w-screen bottom-0 text-center flex justify-center">
         <div className="mb-5 absolute bottom-0 w-[50%] h-10 flex items-center justify-center space-x-2">
           <div
-            className={`w-4 h-4 rounded-full border-2 border-black cursor-pointer hover:scale-110 ${
-              para == 0 ? "bg-black" : "bg-white"
+            className={`w-4 h-4 rounded-full cursor-pointer hover:scale-110 ${
+              para == 0 ? "bg-neutral-200" : "bg-neutral-500"
             } duration-300`}
             onClick={() => setPara(0)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full border-2 border-black cursor-pointer hover:scale-110 ${
-              para == 1 ? "bg-black" : "bg-white"
+            className={`w-4 h-4 rounded-full cursor-pointer hover:scale-110 ${
+              para == 1 ? "bg-neutral-200" : "bg-neutral-500"
             } duration-300`}
             onClick={() => setPara(1)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full border-2 border-black cursor-pointer hover:scale-110 ${
-              para == 2 ? "bg-black" : "bg-white"
+            className={`w-4 h-4 rounded-full cursor-pointer hover:scale-110 ${
+              para == 2 ? "bg-neutral-200" : "bg-neutral-500"
             } duration-300`}
             onClick={() => setPara(2)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full border-2 border-black cursor-pointer hover:scale-110 ${
-              para == 3 ? "bg-black" : "bg-white"
+            className={`w-4 h-4 rounded-full  cursor-pointer hover:scale-110 ${
+              para == 3 ? "bg-neutral-200" : "bg-neutral-500"
             } duration-300`}
             onClick={() => setPara(3)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full border-2 border-black cursor-pointer hover:scale-110 ${
-              para == 4 ? "bg-black" : "bg-white"
+            className={`w-4 h-4 rounded-full  cursor-pointer hover:scale-110 ${
+              para == 4 ? "bg-neutral-100" : "bg-neutral-500"
             } duration-300`}
             onClick={() => setPara(4)}
           ></div>
@@ -431,7 +431,7 @@ export default function About() {
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="2"
-            stroke="currentColor"
+            stroke="white"
             className="size-10"
           >
             <path
@@ -453,7 +453,7 @@ export default function About() {
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="2"
-            stroke="currentColor"
+            stroke="white"
             className="size-10"
           >
             <path

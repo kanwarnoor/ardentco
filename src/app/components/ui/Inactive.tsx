@@ -59,7 +59,7 @@ export default function Inactive() {
               opacity: 0,
             }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 w-full h-full bg-white bg-opacity-50 z-30"
+            className="fixed top-0 left-0 w-full h-full bg-none bg-opacity-50 z-30"
           >
             <motion.div
               initial={{
@@ -75,7 +75,7 @@ export default function Inactive() {
                 delay: 0.5,
                 duration: 0.5,
               }}
-              className={`w-[60%] h-[80%] fixed  left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  z-40 p-4 rounded-lg shadow-2xl backdrop-blur-sm bg-black/80`}
+              className={`w-[60%] h-[80%] fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  z-40 p-4 rounded-lg shadow-2xl backdrop-blur-sm bg-white/80`}
             >
               <div
                 className="flex w-fit ml-auto cursor-pointer hover:scale-105"
@@ -84,7 +84,7 @@ export default function Inactive() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  fill="white"
+                  fill="black"
                   className="size-10"
                 >
                   <path
@@ -95,7 +95,7 @@ export default function Inactive() {
                 </svg>
               </div>
 
-              <p className="text-center text-white text-sm font-medium">
+              <p className="text-center text-black text-sm font-medium">
                 you were inactive for {time / 1000} seconds
               </p>
             </motion.div>

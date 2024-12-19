@@ -34,8 +34,8 @@ export default function Home() {
 
   useEffect(() => {
     if (aboutInView) {
-      setLeft(true);
-      setRight(true);
+      setLeft(false);
+      setRight(false);
     } else if (enableInView) {
       setLeft(false);
       setRight(true);
@@ -66,7 +66,7 @@ export default function Home() {
 
       <section
         id="home"
-        className="select-none relative w-full h-[100vh] m-auto text-center flex flex-col justify-center items-center bg-opacity-100 bg-white"
+        className="select-none relative w-full h-[100vh] m-auto text-center flex flex-col justify-center items-center bg-opacity-100 bg-black"
       >
         <motion.video
           initial={{
@@ -85,7 +85,7 @@ export default function Home() {
           loop
           playsInline
           muted
-          className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-100"
+          className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-100 "
         >
           Your browser does not support the video tag.
         </motion.video>
@@ -114,7 +114,7 @@ export default function Home() {
             no-select="true"
           ></Image>
         </motion.div> */}
-        <motion.div
+        {/* <motion.div
           initial={{
             opacity: 0,
           }}
@@ -125,7 +125,7 @@ export default function Home() {
             duration: 2,
           }}
           className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(circle,white_10%,transparent_50%)]"
-        ></motion.div>
+        ></motion.div> */}
         <div className="absolute flex lg:flex-row flex-col">
           <FlipWords
             words={avail}
@@ -170,11 +170,11 @@ export default function Home() {
       </section>
 
       <section
-        className="relative bg-white bg-dot-black/[0.5] w-full h-fit min-h-full"
+        className="relative bg-neutral-950 bg-dot-black/[0.5] w-full h-fit min-h-full text-white"
         id="about"
         ref={aboutRef}
       >
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div>
+        {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div> */}
         <About />
       </section>
 
