@@ -61,8 +61,8 @@ export default function Home() {
       {/* <div className="hidden md:block">
         <Wake />
       </div> */}
-      <Inactive/>
-      <Navbar left={left} right={right} button={right}/>
+      <Inactive />
+      <Navbar left={left} right={right} button={right} />
 
       <section
         id="home"
@@ -83,6 +83,7 @@ export default function Home() {
           src="/bannerVideo.mp4"
           autoPlay
           loop
+          playsinline
           muted
           className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-100"
         >
@@ -131,9 +132,7 @@ export default function Home() {
             duration={3000}
             className="md:text-9xl text-6xl text-white font-bold lg:text-left text-center  w-[800px] flex-wrap"
           />
-          <div className="w-1 bg-white flex-wrap rounded-full">
-            
-          </div>
+          <div className="w-1 bg-white flex-wrap rounded-full"></div>
           <div className="lg:pl-10 flex-wrap">
             <motion.p
               initial={{
@@ -152,7 +151,6 @@ export default function Home() {
             <br />
             <motion.div
               className="w-fit md:flex mx-auto justify-center text-center left-0 right-0"
-              
               whileTap={{
                 scale: 1.1,
                 transition: { duration: 0.1 },
