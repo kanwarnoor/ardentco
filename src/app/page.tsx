@@ -83,7 +83,7 @@ export default function Home() {
           src="/bannerVideo.mp4"
           autoPlay
           loop
-          playsinline
+          playsInline
           muted
           className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-100"
         >
