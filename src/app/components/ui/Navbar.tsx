@@ -71,7 +71,15 @@ export default function Navbar({ right, button }: Props) {
         className={`flex w-fit fixed z-50 justify-left items-center md:pl-10 pl-5 `}
       >
         <a className="md:text-xl text-lg font-bold cursor-pointer " href="/">
-          <Image src={"/logo.png"} width={100} height={100} sizes="100px 100px" className="w-[100px] h-[100px]" alt={""}></Image>
+          <Image
+            src={"/logo.png"}
+            width={100}
+            height={100}
+            sizes="100px 100px"
+            className="w-[100px] h-[100px]"
+            alt={""}
+            priority
+          ></Image>
         </a>
       </motion.div>
 
@@ -194,9 +202,7 @@ export default function Navbar({ right, button }: Props) {
                                 <p className="group-hover:opacity-100 text-ardentLighter opacity-0 no-underline duration-300">
                                   {">"}
                                 </p>
-                                <p className="hover:underline">
-                                  {item.name}
-                                </p>
+                                <p className="hover:underline">{item.name}</p>
                               </>
                             )}
                           </motion.li>
