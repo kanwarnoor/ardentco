@@ -174,7 +174,7 @@ export default function Home() {
         id="about"
         ref={aboutRef}
       >
-        {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div> */}
+        {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-ardent [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div> */}
         <About />
       </section>
 

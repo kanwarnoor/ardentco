@@ -39,8 +39,9 @@ export default function About() {
     <div className="flex w-full h-fit min-h-screen z-10 ">
       <div className="w-fit h-fit flex m-auto md:flex-row flex-col">
         {/* compass */}
+
         <motion.div
-          className="flex relative z-10 md:mr-10 md:w-[400px] w-[250px] md:h-fit md:min-h-screen h-[250px] md:justify-center md:items-center m-auto "
+          className="flex relative  z-10 md:mr-20 md:w-[400px] w-[250px] md:h-fit md:min-h-screen h-[250px] md:justify-center md:items-center m-auto"
           initial={{
             opacity: 0,
             ...(isMobile ? { y: -50 } : { x: -50 }),
@@ -57,6 +58,7 @@ export default function About() {
             amount: 0.3,
           }}
         >
+          {/* <div className="flex absolute z-0 md:w-[500px] w-[250px] md:h-fit md:min-h-screen h-[250px] md:justify-center md:items-center m-auto bg-ardent [mask-image:radial-gradient(circle,white_0%,transparent_50%)] md:block "></div> */}
           <Image
             src="/compass.png"
             height={400}
@@ -102,7 +104,6 @@ export default function About() {
             ></div>
           </div>
         </motion.div>
-
         {/* paras */}
         <div className="md:w-[700px] md:p-0 p-10 text-center md:text-left h-fit flex flex-col justify-center my-auto">
           {para == 0 && (
