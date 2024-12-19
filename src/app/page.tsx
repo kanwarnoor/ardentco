@@ -2,17 +2,17 @@
 
 import { motion } from "framer-motion";
 import { FlipWords } from "./components/ui/flip-words";
-import Image from "next/image";
+// import Image from "next/image";
 import Navbar from "./components/ui/Navbar";
 import Footer from "./components/ui/Footer";
 // import Counter from "./components/ui/Counter";
 import Enable from "./components/ui/Enable";
 import Contact from "./components/ui/Contact";
 import About from "./components/ui/TempAbout";
-import Wake from "./components/ui/Wake";
+// import Wake from "./components/ui/Wake";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
-import frontpage from "../../public/frontpage.jpg";
+// import frontpage from "../../public/frontpage.jpg";
 import Inactive from "./components/ui/Inactive";
 
 export default function Home() {
@@ -58,9 +58,9 @@ export default function Home() {
   return (
     <>
       {/* <Counter /> */}
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <Wake />
-      </div>
+      </div> */}
       <Inactive/>
       <Navbar left={left} right={right} button={right}/>
 
@@ -68,7 +68,7 @@ export default function Home() {
         id="home"
         className="select-none relative w-full h-[100vh] m-auto text-center flex flex-col justify-center items-center bg-opacity-100 bg-white"
       >
-        {/* <motion.video
+        <motion.video
           initial={{
             scale: 0.8,
             borderRadius: "1rem",
@@ -80,15 +80,15 @@ export default function Home() {
           transition={{
             duration: 0.3,
           }}
-          src="/street.mp4"
+          src="/bannerVideo.mp4"
           autoPlay
           loop
           muted
           className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-100"
         >
           Your browser does not support the video tag.
-        </motion.video> */}
-        <motion.div
+        </motion.video>
+        {/* <motion.div
           initial={{
             scale: 0.8,
             borderRadius: "1rem",
@@ -112,7 +112,7 @@ export default function Home() {
             alt="athens"
             no-select="true"
           ></Image>
-        </motion.div>
+        </motion.div> */}
         <motion.div
           initial={{
             opacity: 0,
@@ -152,12 +152,9 @@ export default function Home() {
             <br />
             <motion.div
               className="w-fit md:flex mx-auto justify-center text-center left-0 right-0"
-              whileHover={{
-                scale: 1.1,
-                transition: { duration: 0.1 },
-              }}
+              
               whileTap={{
-                scale: 1,
+                scale: 1.1,
                 transition: { duration: 0.1 },
               }}
               initial={{ opacity: 0 }}
@@ -165,7 +162,7 @@ export default function Home() {
             >
               <a
                 href="#about"
-                className="md:text-xl border-2 font-bold text-white bg-none border-white px-5 py-2 rounded-full"
+                className="md:text-xl border-2 font-bold text-ardent bg-none border-ardent px-5 py-2 rounded-full hover:bg-ardent hover:text-black duration-300"
               >
                 Know more
               </a>

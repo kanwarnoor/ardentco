@@ -10,37 +10,36 @@ import { useInView } from "react-intersection-observer";
 
 export default function Page() {
   const { ref: consultantRef, inView: consultantRefInView } = useInView({
-    threshold: 0.25, // Fully visible
+    threshold: 0.1, // Fully visible
     rootMargin: "0px 0px 0px 0px",
   });
 
   const [left, setLeft] = useState(false);
   const [right, setRight] = useState(false);
-  console.log(consultantRefInView);
   useEffect(() => {
     if (consultantRefInView) {
-      setLeft(true);
-      setRight(true);
-    } else {
       setLeft(false);
       setRight(false);
+    } else {
+      setLeft(true);
+      setRight(true);
     }
   }, [consultantRefInView]);
   return (
     <>
       <Navbar left={left} right={right} />
-      <Lander heading1={"Meet Our Team"} css="bg-black text-white"></Lander>
-      <div
-        className="w-screen min-h-screen h-fit items-center justify-center flex flex-col bg-white"
-        ref={consultantRef}
-      >
+      <div ref={consultantRef}>
+        <Lander heading1={"Meet Our Team"} css="bg-black text-white"></Lander>
+      </div>
+
+      <div className="w-screen min-h-screen h-fit items-center justify-center flex flex-col bg-white">
         <div className="flex w-full h-fit text-center justify-center my-20">
           <p className="md:text-6xl text-5xl text-center font-black">
             Consultants
           </p>
         </div>
 
-        <div className="w-[70%] h-full grid md:grid-cols-3 grid-cols-2 gap-10 mb-10">
+        <div className="w-[70%] h-full grid md:grid-cols-3 grid-cols-2 gap-10 mb-10 ">
           <Person
             name="Aditya Charan"
             image="/team/consultants/cofounder1.jpg"
@@ -173,12 +172,12 @@ Sarthak discovered his calling in communications through a complex non-tradition
           />
         </div>
 
-        <div className="flex w-full h-fit text-center justify-center my-20">
+        <div className="flex w-full h-fit text-center justify-center my-20 ">
           <p className="md:text-6xl text-5xl text-center font-black">
             Advisors
           </p>
         </div>
-        <div className="w-[70%] h-full grid md:grid-cols-3 grid-cols-2 gap-10 mb-10">
+        <div className="w-[70%] h-full grid md:grid-cols-3 grid-cols-2 gap-10 mb-10 bg-red-200">
           <Person
             name="Kazim Rizvi"
             image="/team/advisors/1.jpeg"
@@ -302,7 +301,6 @@ Varda holds a Bachelor’s degree in Economics from the University of Delhi, Ind
           />
         </div>
       </div>
-
       <Footer theme={"dark"} />
     </>
   );
