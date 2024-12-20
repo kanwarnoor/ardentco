@@ -27,9 +27,10 @@ export default function Page() {
     <>
       <Navbar left={intersecting} right={intersecting} />
       <Lander
-        image="/publicPolicy.jpg"
+        image="/banner/publicPolicyAndRegulatoryAffairs.png"
         heading1="Public Policy &"
         heading2="Regulatory Affairs"
+        css="text-white"
       />
 
       <section

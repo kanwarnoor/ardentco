@@ -9,11 +9,11 @@ import Footer from "./components/ui/Footer";
 import Enable from "./components/ui/Enable";
 import Contact from "./components/ui/Contact";
 import About from "./components/ui/TempAbout";
-// import Wake from "./components/ui/Wake";
+import Wake from "./components/ui/Wake";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 // import frontpage from "../../public/frontpage.jpg";
-import Inactive from "./components/ui/Inactive";
+// import Inactive from "./components/ui/Inactive";
 
 export default function Home() {
   const { ref: aboutRef, inView: aboutInView } = useInView({
@@ -40,8 +40,8 @@ export default function Home() {
       setLeft(false);
       setRight(true);
     } else if (contactInView) {
-      setLeft(true);
-      setRight(false);
+      setLeft(false);
+      setRight(true);
     } else {
       setLeft(false);
       setRight(false);
@@ -58,10 +58,10 @@ export default function Home() {
   return (
     <>
       {/* <Counter /> */}
-      {/* <div className="hidden md:block">
+      <div className="hidden md:block">
         <Wake />
-      </div> */}
-      <Inactive />
+      </div>
+      {/* <Inactive /> */}
       <Navbar left={left} right={right} button={right} />
 
       <section

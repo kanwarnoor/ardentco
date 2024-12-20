@@ -28,7 +28,12 @@ export default function Page() {
   return (
     <>
       <Navbar left={intersecting} right={intersecting} />
-      <Lander image="/graphics.jpg" heading1="Graphics" heading2="Designing" />
+      <Lander
+        image="/banner/graphics.png"
+        heading1="Graphics"
+        heading2="Designing"
+        css="text-white"
+      />
 
       <section
         className="relative bg-white bg-dot-black/[0.5] w-full h-auto min-h-screen"

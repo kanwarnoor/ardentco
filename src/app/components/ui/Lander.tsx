@@ -24,7 +24,7 @@ export default function Lander({
   return (
     <section
       id="home"
-      className={` relative w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-opacity-100  ${css} `}
+      className={` relative w-full h-screen m-auto text-center flex flex-col justify-center items-center bg-opacity-100 bg-black  ${css} `}
     >
       <motion.div
         initial={{
@@ -69,7 +69,7 @@ export default function Lander({
           transition={{
             duration: 2,
           }}
-          className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_50%)]"
+          className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(circle,white_10%,transparent_50%)]"
         ></motion.div>
       )}
 

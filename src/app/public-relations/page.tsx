@@ -30,9 +30,10 @@ export default function Page() {
     <>
       <Navbar left={intersecting} right={intersecting} />
       <Lander
-        image="/publicRelations.jpg"
+        image="/banner/publicRelations.png"
         heading1="Strategic Communication"
         heading2="Public Relations"
+        css="text-white"
       />
 
       <section
@@ -43,7 +44,7 @@ export default function Page() {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)] z-0"></div>
 
         <div className="relative m-auto flex flex-col w-full h-auto py-20 z-10 justify-center items-center min-h-screen gap-5">
-          <div className="flex flex-wrap justify-center w-full h-fit text-center gap-5 mx-auto">
+          <div className="flex flex-wrap justify-center w-full h-fit text-center  gap-5 mx-auto">
             <motion.div
               initial={{
                 opacity: 0,

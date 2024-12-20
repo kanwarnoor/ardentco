@@ -26,9 +26,10 @@ export default function Page() {
     <>
       <Navbar left={intersecting} right={intersecting} />
       <Lander
-        image="/digitalComms.png"
+        image="/banner/digitalComms.png"
         heading1="Digital"
         heading2="Communications"
+        css="text-white"
       />
 
       <section

@@ -110,7 +110,7 @@ export default function Contact() {
     <div className="w-[100%] grid md:grid-cols-2 grid-cols-1">
       {/* left option */}
       <div className="md:w-[50%] w-screen h-screen">
-        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-ardentLighter bg-opacity-50">
+        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-gradient-to-r bg-opacity-100">
           <motion.svg
             initial={{
               opacity: 0,
@@ -126,7 +126,7 @@ export default function Contact() {
             viewBox="0 0 24 24"
             fill="black"
             onClick={() => setClicked(false)}
-            className={`absolute right-0  md:-translate-x-0 size-10 md:m-5 m-5  hover:scale-110 transition hover:transition cursor-pointer`}
+            className={`absolute right-0   md:-translate-x-0 size-10 md:m-5 m-5  hover:scale-110 transition hover:transition cursor-pointer`}
           >
             <path
               fillRule="evenodd"
@@ -136,7 +136,7 @@ export default function Contact() {
           </motion.svg>
 
           <div
-            className={`flex flex-col items-center p-8 w-screen h-fit max-w-md m-auto `}
+            className={`flex flex-col items-center p-8 w-screen h-fit max-w-md m-auto`}
           >
             <form
               name="Clients"
@@ -309,11 +309,11 @@ export default function Contact() {
             ease: easeInOut,
           }}
           onClick={() => setClicked(true)}
-          className={`absolute md:w-[50%] w-screen h-screen bg-[url('/handshake.png')] bg-center bg-cover bg-no-repeat bg-ardentLighter ${
+          className={`absolute md:w-[50%] w-screen h-screen bg-[url('/handshake.png')] bg-center bg-cover   bg-no-repeat bg-gradient-to-r from-100% to-90% from-neutral-950   ${
             clicked ? "z-10 cursor-auto" : "z-10 cursor-pointer"
           }`}
         >
-          <div className="flex flex-col w-fit h-fit m-auto pt-5 md:mt-10 mt-24">
+          <div className="absolute top-0 left-0 right-0 bottom-0 flex-col w-fit h-fit m-auto  mx-auto">
             <motion.p
               initial={{
                 opacity: 0,
@@ -329,7 +329,7 @@ export default function Contact() {
               viewport={{
                 amount: 0.3,
               }}
-              className="text-black md:text-5xl text-4xl font-bold text-center"
+              className="text-ardent md:text-5xl text-4xl font-bold"
             >
               i am a <br />
             </motion.p>
@@ -348,7 +348,7 @@ export default function Contact() {
               viewport={{
                 amount: 0.3,
               }}
-              className="text-black md:text-9xl text-8xl font-black"
+              className="text-ardent md:text-9xl text-8xl font-black"
             >
               CLIENT
             </motion.p>
@@ -357,7 +357,7 @@ export default function Contact() {
       </div>
 
       {/* right option */}
-      <div className="flex w-screen h-screen bg-ardentLight">
+      <div className="flex w-screen h-screen bg-white">
         <div className="flex flex-col absolute md:w-[50%] w-screen h-screen">
           <motion.svg
             initial={{
@@ -548,10 +548,15 @@ export default function Contact() {
             ease: easeInOut,
           }}
           onClick={() => setClicked1(true)}
-          className={`flex absolute md:w-[50%] w-screen h-screen bg-ardent ${zindex} ${
+          className={`flex absolute md:w-[50%] w-screen h-screen bg-gradient-to-l from-ardent to-neutral-950  ${zindex} ${
             clicked1 ? "cursor-auto" : "cursor-pointer"
           }`}
         >
+          {/* <div
+            className={`absolute h-1/2 w-[1px] flex my-auto top-0 bottom-0 ${
+              clicked1 ? "bg-none" : "bg-white"
+            }`}
+          ></div> */}
           <div className={`h-fit w-fit m-auto pt-5`}>
             <motion.p
               initial={{

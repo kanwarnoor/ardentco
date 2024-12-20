@@ -74,7 +74,7 @@ export default function About() {
             animate={{
               rotate: compass,
             }}
-            className="absolute md:w-[400px] md:h-[400px] w-[250px] h-[250px]  rounded-full"
+            className="absolute md:w-[400px] md:h-[400px] w-[250px] h-[250px]  rounded-full "
           >
             <Image
               src="/compassPointer.png"

@@ -29,9 +29,10 @@ export default function Page() {
     <>
       <Navbar left={intersecting} right={intersecting} />
       <Lander
-        image="/research.jpg"
+        image="/banner/research.png"
         heading1="Research &"
         heading2="Collateral Development"
+        css="text-white"
       />
 
       <section

@@ -30,7 +30,12 @@ export default function Page() {
   return (
     <>
       <Navbar left={intersecting} right={intersecting} />
-      <Lander image="/nexus.jpg" heading1="Talent Nexus" heading2="Solutions" />
+      <Lander
+        image="/banner/nexus.png"
+        heading1="Talent Nexus"
+        heading2="Solutions"
+        css="text-white"
+      />
 
       <section
         className="relative bg-white bg-dot-black/[0.5] w-full h-auto min-h-screen"
