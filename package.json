@@ -11,10 +11,14 @@
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.8.1",
     "@radix-ui/react-label": "^2.1.0",
+    "@react-three/drei": "^9.120.4",
+    "@react-three/fiber": "^8.17.10",
     "@tabler/icons-react": "^3.19.0",
+    "@types/three": "^0.171.0",
     "axios": "^1.7.8",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.11",
+    "framer-motion-3d": "^11.15.0",
     "gasp": "^0.0.2",
     "gsap": "^3.12.5",
     "mini-svg-data-uri": "^1.4.4",
@@ -23,7 +27,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-intersection-observer": "^9.13.1",
-    "tailwind-merge": "^2.5.4"
+    "tailwind-merge": "^2.5.4",
+    "three": "^0.171.0"
   },
   "devDependencies": {
     "@types/node": "^20",
