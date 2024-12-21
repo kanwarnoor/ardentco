@@ -37,9 +37,11 @@ export default function Queen({ angle }: { angle: number }) {
   const targetAngle = useMemo(() => setAngle(angle), [setAngle, angle]);
 
   return (
-    <Canvas>
-      <Environment preset="studio" />
-      <RotatingMesh targetAngle={targetAngle} />
-    </Canvas>
+    <div className="w-full h-full">
+      <Canvas>
+        <Environment preset="sunset" />
+        <RotatingMesh targetAngle={targetAngle} />
+      </Canvas>
+    </div>
   );
 }

@@ -1,10 +1,10 @@
-import Image from "next/image";
 import { easeInOut, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Queen from "@/app/components/ui/Queen";
 
 export default function About() {
-  const [compass, setCompass] = useState(0);
   const [para, setPara] = useState(0);
+  const [angle, setAngle] = useState(0);
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -21,7 +21,8 @@ export default function About() {
 
   useEffect(() => {
     const angles = [0, 90, 180, 270, 360];
-    setCompass(angles[para]);
+    // setCompass(angles[para]);
+    setAngle(angles[para]);
 
     const interval = setInterval(() => {
       setPara((prev) => prev + 1);
@@ -41,7 +42,7 @@ export default function About() {
         {/* compass */}
 
         <motion.div
-          className="flex relative z-10 md:mr-20 md:w-[400px] w-[250px] md:h-fit md:min-h-screen h-[250px] md:justify-center md:items-center m-auto"
+          className="flex relative z-10 md:mr-20 md:w-[400px] w-[250px] md:h-[700px] h-[500px] md:justify-center md:items-center m-auto"
           initial={{
             opacity: 0,
             ...(isMobile ? { y: -50 } : { x: -50 }),
@@ -58,52 +59,11 @@ export default function About() {
             amount: 0.3,
           }}
         >
-          {/* <div className="flex absolute z-0 md:w-[500px] w-[250px] md:h-fit md:min-h-screen h-[250px] md:justify-center md:items-center m-auto bg-ardent [mask-image:radial-gradient(circle,white_0%,transparent_50%)] md:block "></div> */}
-          <Image
-            src="/compass.png"
-            height={400}
-            width={400}
-            className="absolute rounded-full"
-            alt="compass "
-          ></Image>
-          {/* compass needle */}
-          <motion.div
-            initial={{
-              rotate: 0,
-            }}
-            animate={{
-              rotate: compass,
-            }}
-            className="absolute md:w-[400px] md:h-[400px] w-[250px] h-[250px]  rounded-full "
-          >
-            <Image
-              src="/compassPointer.png"
-              height={0}
-              width={0}
-              sizes="100% 100%"
-              className="absolute w-full h-full"
-              alt="compass"
-            ></Image>
-          </motion.div>
-          <div className="absolute md:w-[365px] md:h-[365px] w-[265px] h-[265px]  rounded-full opacity-0">
-            <div
-              className="w-full h-1/3 bg-blue-500 absolute top-0 cursor-pointer"
-              onClick={() => setPara(0)}
-            ></div>
-            <div
-              className="w-1/2 h-1/3 bg-green-500 absolute left-0 top-1/3 cursor-pointer"
-              onClick={() => setPara(3)}
-            ></div>
-            <div
-              className="w-1/2 h-1/3 bg-red-500 absolute right-0 bottom-1/3 cursor-pointer"
-              onClick={() => setPara(1)}
-            ></div>
-            <div
-              className="w-full h-1/3 bg-yellow-500 absolute bottom-0 cursor-pointer"
-              onClick={() => setPara(2)}
-            ></div>
-          </div>
+          <Queen angle={angle}/>
         </motion.div>
+        {/* <div className="h-fit">
+          <Queen angle={0} />
+        </div> */}
         {/* paras */}
         <div className="md:w-[700px] md:p-0 p-10 text-center md:text-left h-fit flex flex-col justify-center my-auto">
           {para == 0 && (
