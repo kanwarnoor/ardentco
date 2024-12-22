@@ -42,7 +42,7 @@ export default function About() {
         {/* compass */}
 
         <motion.div
-          className="flex relative z-10 md:mr-20 md:w-[400px] w-fit  md:h-[700px] h-[250px] md:justify-center md:items-center m-auto"
+          className="flex relative z-10 md:mr-20 md:w-[400px] w-fit md:h-[700px] h-[250px] md:justify-center md:items-center m-auto"
           initial={{
             opacity: 0,
             ...(isMobile ? { y: -50 } : { x: -50 }),
