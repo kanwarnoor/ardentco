@@ -22,12 +22,11 @@ export default function About() {
   useEffect(() => {
     const angles = [0, 90, 180, 270, 360];
     // setCompass(angles[para]);
-    setAngle(para*90);
-    
+    setAngle(para * 90);
 
     const interval = setInterval(() => {
       setPara((prev) => prev + 1);
-    }, 2000);
+    }, 10000);
 
     if (para >= angles.length) {
       setPara((prev) => prev - angles.length);
