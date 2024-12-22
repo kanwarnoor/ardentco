@@ -30,6 +30,9 @@ function RotatingMesh({ targetAngle }: { targetAngle: number }) {
 }
 
 export default function Queen({ angle }: { angle: number }) {
+
+  
+
   const setAngle = useCallback(
     (degrees: number) => (degrees * Math.PI) / 180,
     []

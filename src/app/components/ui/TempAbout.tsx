@@ -22,14 +22,15 @@ export default function About() {
   useEffect(() => {
     const angles = [0, 90, 180, 270, 360];
     // setCompass(angles[para]);
-    setAngle(angles[para]);
+    setAngle(para*90);
+    
 
     const interval = setInterval(() => {
       setPara((prev) => prev + 1);
-    }, 10000);
+    }, 2000);
 
     if (para >= angles.length) {
-      setPara(0);
+      setPara((prev) => prev - angles.length);
     }
 
     // Cleanup function to clear the interval
@@ -59,7 +60,7 @@ export default function About() {
             amount: 0.3,
           }}
         >
-          <Queen angle={angle}/>
+          <Queen angle={angle} />
         </motion.div>
         {/* <div className="h-fit">
           <Queen angle={0} />
@@ -178,7 +179,7 @@ export default function About() {
 
           {para == 2 && (
             <div>
-              <motion.p
+              <motion.div
                 initial={{
                   opacity: 0,
                   transform: "translateY(-50%)",
@@ -197,9 +198,9 @@ export default function About() {
                 className="md:text-5xl text-2xl font-black mb-5 text-ardent"
               >
                 “To our people, who work, trust and are on this journey with us”{" "}
-                <br />{" "}
                 <p className="font-bold md:text-3xl text-lg italic"> - Team </p>
-              </motion.p>
+              </motion.div>
+
               <div className="">
                 <motion.p
                   initial={{
@@ -230,7 +231,7 @@ export default function About() {
 
           {para == 3 && (
             <div>
-              <motion.p
+              <motion.div
                 initial={{
                   opacity: 0,
                   transform: "translateY(-50%)",
@@ -255,7 +256,7 @@ export default function About() {
                   {" "}
                   - Partners{" "}
                 </p>
-              </motion.p>
+              </motion.div>
               <div className="">
                 <motion.p
                   initial={{
@@ -288,7 +289,7 @@ export default function About() {
 
           {para == 4 && (
             <div>
-              <motion.p
+              <motion.div
                 initial={{
                   opacity: 0,
                   transform: "translateY(-50%)",
@@ -312,7 +313,7 @@ export default function About() {
                   {" "}
                   - Ecosystem{" "}
                 </p>
-              </motion.p>
+              </motion.div>
               <div className="">
                 <motion.p
                   initial={{

@@ -85,7 +85,8 @@ export default function Home() {
           loop
           playsInline
           muted
-          className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-100 "
+          crossOrigin="anonymous"
+          className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-100"
         >
           Your browser does not support the video tag.
         </motion.video>
