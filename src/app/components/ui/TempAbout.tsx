@@ -60,7 +60,6 @@ export default function About() {
           }}
         >
           <Queen angle={angle} />
-
         </motion.div>
         {/* <div className="h-fit">
           <Queen angle={0} />
