@@ -37,12 +37,12 @@ export default function About() {
   }, [para]);
 
   return (
-    <div className="flex w-full h-fit min-h-screen z-10 ">
-      <div className="w-fit h-fit flex m-auto md:flex-row flex-col">
+    <div className="flex w-full h-[120vh] min-h-screen z-10 ">
+      <div className="w-fit flex m-auto md:flex-row flex-col">
         {/* compass */}
 
         <motion.div
-          className="flex relative z-10 md:mr-20 md:w-[400px] w-[250px] md:h-[700px] h-[500px] md:justify-center md:items-center m-auto"
+          className="flex relative z-10 md:mr-20 md:w-[400px] w-fit  md:h-[700px] h-[250px] md:justify-center md:items-center m-auto"
           initial={{
             opacity: 0,
             ...(isMobile ? { y: -50 } : { x: -50 }),
@@ -60,6 +60,7 @@ export default function About() {
           }}
         >
           <Queen angle={angle} />
+
         </motion.div>
         {/* <div className="h-fit">
           <Queen angle={0} />
