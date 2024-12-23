@@ -38,6 +38,7 @@ export default function Page() {
       <section
         className="w-full h-fit bg-white bg-dot-black/[0.5] flex flex-col m-auto"
         ref={ref}
+        id="more"
       >
         <div className="flex w-fit m-auto mt-20 mb-0">
           <p className="md:text-6xl text-4xl font-black text-center">

@@ -29,6 +29,7 @@ export default function Home() {
       <Navbar left={false} right={false} />
       <Lander heading1={`Our Manifesto`} css="text-white" />
       <motion.div
+        id="more"
         initial={{
           scale: 0.8,
           borderRadius: "1rem",

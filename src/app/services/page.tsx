@@ -10,7 +10,7 @@ export default function page() {
     <Navbar left={false} right={false}/>
     <Lander heading1={'Services'} css="text-white"/>
 
-    <div className='relative flex w-full  h-full'>
+    <div className='relative flex w-full  h-full' id="more">
       <Enable/>
     </div>
     <Footer theme='dark'/>

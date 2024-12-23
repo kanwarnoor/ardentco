@@ -8,7 +8,7 @@ export default function page() {
     <>
       <Navbar left={true} right={true} />
       <Lander image={""} heading1={"Our Views"} heading2="In Media" css="" />
-      <div className="flex flex-col bg-white">
+      <div className="flex flex-col bg-white" id="more">
         <div className="flex md:flex-row flex-col gap-10 m-auto pt-20">
           <InfoCard
             title1={"Navigating Climate Financing"}

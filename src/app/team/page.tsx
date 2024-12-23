@@ -32,7 +32,7 @@ export default function Page() {
         <Lander heading1={"Meet Our Team"} css="bg-black text-white"></Lander>
       </div>
 
-      <div className="w-screen min-h-screen h-fit items-center justify-center flex flex-col bg-white">
+      <div className="w-screen min-h-screen h-fit items-center justify-center flex flex-col bg-white" id="more">
         <div className="flex w-full h-fit text-center justify-center my-20">
           <p className="md:text-6xl text-5xl text-center font-black">
             Consultants
@@ -177,7 +177,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             Advisors
           </p>
         </div>
-        <div className="w-[70%] h-full grid md:grid-cols-3 grid-cols-2 gap-10 mb-10 bg-red-200">
+        <div className="w-[70%] h-full grid md:grid-cols-3 grid-cols-2 gap-10 mb-10">
           <Person
             name="Kazim Rizvi"
             image="/team/advisors/1.jpeg"

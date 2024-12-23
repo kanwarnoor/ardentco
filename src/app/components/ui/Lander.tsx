@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Button from "./button";
 
 interface landerProps {
   image?: string;
@@ -94,6 +95,22 @@ export default function Lander({
             </>
           )}
         </motion.span>
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 1,
+          }}
+          className="mt-5"
+        >
+          <Button link="#more" />
+        </motion.div>
+
         <br />
       </div>
     </section>

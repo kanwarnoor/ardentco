@@ -34,7 +34,7 @@ export default function Page() {
 
       <section
         className="relative bg-white bg-dot-black/[0.5] w-full h-auto min-h-screen"
-        id="about"
+        id="more"
         ref={ref}
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)] z-0"></div>

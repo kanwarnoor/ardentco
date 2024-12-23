@@ -97,7 +97,7 @@ export default function Person({
                 transition={{
                   duration: 0.3,
                 }}
-                className={`fixed md:w-[1000px] w-[80%] h-fit bottom-0 top-1/2 -translate-y-1/2 left-1/2 transform -translate-x-1/2 z-30 p-5 rounded-xl bg-ardent text-white flex flex-col shadow-2xl`}
+                className={`fixed md:w-[1000px] w-[80%] h-fit bottom-0 top-1/2 -translate-y-1/2 left-1/2 transform -translate-x-1/2 z-30 p-5 rounded-xl bg-black/90 backdrop-blur-sm text-white flex flex-col shadow-2xl`}
               >
                 <div className="grid md:grid-cols-2">
                   <svg
