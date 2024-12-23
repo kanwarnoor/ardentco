@@ -19,7 +19,6 @@ export default function Navbar({ right, button }: Props) {
     {
       name: "Home",
       link: "/",
-
     },
     {
       name: "Services",
@@ -198,7 +197,7 @@ export default function Navbar({ right, button }: Props) {
                     );
                   })}
                 </ul>
-                {/* 
+
                 <motion.div
                   initial={{
                     opacity: 0,
@@ -214,7 +213,7 @@ export default function Navbar({ right, button }: Props) {
                 >
                   Copyright © {new Date().getFullYear()} Ardent Co. All rights
                   reserved.
-                </motion.div> */}
+                </motion.div>
 
                 {/* line art svg here */}
                 <motion.div
@@ -228,7 +227,7 @@ export default function Navbar({ right, button }: Props) {
                     duration: 0.5,
                     // delay: 1,
                   }}
-                  className="absolute flex md:bottom-0 w-full  -z-10  text-center justify-center md:items-center text-ardentLighter md:text-sm text-[10px] select-none items-end  md:scale-100 scale-150 bottom-8"
+                  className="absolute flex md:bottom-0 w-full -z-10 text-center justify-center md:items-center text-ardentLighter md:text-sm text-[10px] select-none items-end md:scale-100 scale-[2] bottom-10"
                 >
                   <svg
                     version="1.1"
@@ -241,6 +240,7 @@ export default function Navbar({ right, button }: Props) {
                     viewBox="0 0 1582 360"
                     enableBackground="new 0 0 1582 360"
                     xmlSpace="preserve"
+                    className="w-full h-full"
                   >
                     <path
                       id="chessLineArt"
