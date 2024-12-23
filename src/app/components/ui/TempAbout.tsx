@@ -37,7 +37,7 @@ export default function About() {
   }, [para]);
 
   return (
-    <div className="flex w-full h-[120vh] min-h-screen z-10 ">
+    <div className="flex w-full md:h-[100vh] h-[120vh] min-h-screen z-10 ">
       <div className="w-fit flex m-auto md:flex-row flex-col">
         {/* compass */}
 
