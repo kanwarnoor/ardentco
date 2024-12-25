@@ -24,6 +24,40 @@ export default function Home() {
       who: "Ecosystem",
     },
   ];
+  const team = [
+    {
+      message:
+        "To our people, who work, trust and dare on this journey with us.",
+      who: "Team",
+    },
+    {
+      message:
+        "To our people, who work, trust and dare on this journey with us. ",
+      who: "Team",
+    },
+  ];
+  const partners = [
+    {
+      message:
+        "To the brands, institutions and leaders who are with us on this journey.",
+      who: "Partners",
+    },
+    {
+      message:
+        "To the brands, institutions and leaders who are with us on this journey. ",
+      who: "Partners",
+    },
+  ];
+  const ecosystems = [
+    {
+      message: "To the industry, nation, and the world we live in.",
+      who: "Ecosystem",
+    },
+    {
+      message: "To the industry, nation, and the world we live in. ",
+      who: "Ecosystem",
+    },
+  ];
   return (
     <>
       <Navbar left={false} right={false} />
@@ -122,15 +156,68 @@ export default function Home() {
             className=" w-[70%] md:w-1/3 h-[200px] max-w-full mt-10"
           >
             <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
+              <FlipWords words={team.map((item) => item.who)} duration={5000} />{" "}
+              :
+            </div>
+            <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center">
               <FlipWords
-                words={messages.map((item) => item.who)}
+                words={team.map((item) => item.message)}
+                duration={5000}
+              />
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="w-[70%] md:w-1/3 h-[200px] max-w-full mt-10"
+          >
+            <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
+              <FlipWords
+                words={partners.map((item) => item.who)}
                 duration={5000}
               />{" "}
               :
             </div>
             <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center">
               <FlipWords
-                words={messages.map((item) => item.message)}
+                words={partners.map((item) => item.message)}
+                duration={5000}
+              />
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className=" w-[70%] md:w-1/3 h-[200px] max-w-full mt-10"
+          >
+            <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
+              <FlipWords
+                words={ecosystems.map((item) => item.who)}
+                duration={5000}
+              />{" "}
+              :
+            </div>
+            <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center">
+              <FlipWords
+                words={ecosystems.map((item) => item.message)}
                 duration={5000}
               />
             </div>
