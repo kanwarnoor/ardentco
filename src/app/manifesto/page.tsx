@@ -80,7 +80,7 @@ export default function Home() {
             transition={{
               duration: 0.5,
             }}
-            className="text-3xl w-fit md:text-6xl m-auto font-black text-black bg-ardentLighter px-4 py-2"
+            className="text-3xl w-fit md:text-6xl m-auto font-black text-white  px-4 py-2"
           >
             THE IDEOLOGY
           </motion.p>
@@ -127,7 +127,7 @@ export default function Home() {
             transition={{
               duration: 0.5,
             }}
-            className="flex text-3xl md:text-5xl w-fit text-white font-black mt-20 bg-ardent px-4 py-2"
+            className="flex text-3xl md:text-5xl w-fit text-white font-black mt-20 px-4 py-2"
           >
             OUR MANIFESTO <br /> OF COMMITMENTS
           </motion.p>
