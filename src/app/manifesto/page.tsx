@@ -6,24 +6,25 @@ import { FlipWords } from "../components/ui/flip-words";
 import Footer from "../components/ui/Footer";
 import { motion } from "framer-motion";
 import Lander from "../components/ui/Lander";
+import Image from "next/image";
 
 export default function Home() {
-  const messages = [
-    {
-      message:
-        "To our people, who work, trust and dare on this journey with us.",
-      who: "Team",
-    },
-    {
-      message:
-        "To the brands, institutions and leaders who are with us on this journey.",
-      who: "Partners",
-    },
-    {
-      message: "To the industry, nation, and the world we live in.",
-      who: "Ecosystem",
-    },
-  ];
+  // const messages = [
+  //   {
+  //     message:
+  //       "To our people, who work, trust and dare on this journey with us.",
+  //     who: "Team",
+  //   },
+  //   {
+  //     message:
+  //       "To the brands, institutions and leaders who are with us on this journey.",
+  //     who: "Partners",
+  //   },
+  //   {
+  //     message: "To the industry, nation, and the world we live in.",
+  //     who: "Ecosystem",
+  //   },
+  // ];
   const team = [
     {
       message:
@@ -62,22 +63,11 @@ export default function Home() {
     <>
       <Navbar left={false} right={false} />
       <Lander heading1={`Our Manifesto`} css="text-white" />
-      <motion.div
+      <div
         id="more"
-        initial={{
-          scale: 0.8,
-          borderRadius: "1rem",
-        }}
-        animate={{
-          scale: 1,
-          borderRadius: "0px",
-        }}
-        transition={{
-          duration: 0.3,
-        }}
         className="flex flex-col w-full min-h-screen h-fit bg-black bg-grid-white/[0.2] text-center"
       >
-        <div className="flex flex-col w-fit h-fit m-auto md:pt-32 md:pb-32 pt-16 pb-16 text-center justify-center items-center">
+        <div className="flex flex-col w-fit h-fit m-auto md:pt-32 md:pb-32 pt-16 pb-16 text-center justify-center items-center ">
           <motion.p
             initial={{
               opacity: 0,
@@ -153,7 +143,7 @@ export default function Home() {
             transition={{
               duration: 0.5,
             }}
-            className=" w-[70%] md:w-1/3 h-[200px] max-w-full mt-10"
+            className=" w-[70%] md:w-1/3 h-fit max-w-full mt-10"
           >
             <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
               <FlipWords words={team.map((item) => item.who)} duration={5000} />{" "}
@@ -165,7 +155,18 @@ export default function Home() {
                 duration={5000}
               />
             </div>
+
+            <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-center justify-center">
+              Ardent Co. will always be a sandbox for inspired, driven
+              professionals <br />
+              Ardent Co. will never limit itself by any notions and perceptions{" "}
+              <br />
+              Ardent Co. will encourage, both, thinkers, and doers, and serve as
+              an ecosystem for unleashing inhibited potential
+            </div>
+            <hr className="mt-10 w-1/2 flex m-auto" />
           </motion.div>
+
           <motion.div
             initial={{
               opacity: 0,
@@ -178,7 +179,7 @@ export default function Home() {
             transition={{
               duration: 0.5,
             }}
-            className="w-[70%] md:w-1/3 h-[200px] max-w-full mt-10"
+            className="w-[70%] md:w-1/3 h-fit max-w-full mt-10"
           >
             <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
               <FlipWords
@@ -193,6 +194,18 @@ export default function Home() {
                 duration={5000}
               />
             </div>
+
+            <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-center justify-center">
+              Ardent Co. will always work as partners with you, harmonized with
+              an in-depth appreciation of your goals, targets, and vision.{" "}
+              <br />
+              Ardent Co.’s strategy and work will always be intellectually
+              sound, driven by our principles of research, coherence, and cogent
+              interventions. <br />
+              Ardent Co. will always maintain a solution-oriented mindset,
+              regardless of the onerosity of the mandate
+            </div>
+            <hr className="mt-10 w-1/2 flex m-auto" />
           </motion.div>
           <motion.div
             initial={{
@@ -206,7 +219,7 @@ export default function Home() {
             transition={{
               duration: 0.5,
             }}
-            className=" w-[70%] md:w-1/3 h-[200px] max-w-full mt-10"
+            className=" w-[70%] md:w-1/3 h-fit max-w-full mt-10"
           >
             <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
               <FlipWords
@@ -221,63 +234,70 @@ export default function Home() {
                 duration={5000}
               />
             </div>
+
+            <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-center justify-center">
+              Ardent Co. will always strive towards developing fresh
+              perspectives and novel approaches in all the verticals we operate
+              in. <br />
+              Ardent Co. will seek to support the nation’s growth and
+              priorities, by leveraging its capacities and expertise for
+              researching, developing, and recommending innovative solutions and
+              interventions. <br />
+              Ardent Co. will seek to positively contribute to the planet’s
+              metamorphosis, standing at the cusp of a technological
+              transformation, environmental transition, and societal evolution
+            </div>
+            <hr className="mt-10 w-1/2 flex m-auto" />
           </motion.div>
-          {/* <Image src={"/signature.png"} height={100} width={100} alt={"signature"} ></Image> */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="text-white md:w-1/2 w-[80%] mt-20 md:text-xl text-sm"
+          >
+            As founders, we are committed to the vision of creating a legacy,
+            achieved in collaboration with a cohort of right individuals.In a
+            world of billions of human beings, it takes a committed, driven, and
+            resolute human to leave a mark. A mark which survives through
+            generations.Inspired by the great artists, leaders, scientists who
+            shaped the world we live in today, we are on a journey to incubate
+            the touch of excellence in all of our work and actions.That is who
+            we are. What we believe in, and what we will always attract.
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="mt-10 md:w-[500px]"
+          >
+            <Image
+              src={"/signature.png"}
+              height={0}
+              width={0}
+              sizes="100% 100%"
+              className="w-full h-full rounded-xl shadow-xl drop-shadow-xl shadow-white/50"
+              alt={"signature"}
+            ></Image>
+          </motion.div>
         </div>
-      </motion.div>
-
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{
-          delay: 1,
-          duration: 1,
-        }}
-        className="hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[70%] md:w-1/3 h-[200px] max-w-full"
-      >
-        <span className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
-          <FlipWords words={messages.map((item) => item.who)} duration={5000} />{" "}
-          :
-        </span>
-        <span className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center">
-          <FlipWords
-            words={messages.map((item) => item.message)}
-            duration={5000}
-          />
-        </span>
-      </motion.div>
-
-      {/* Description */}
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{
-          delay: 1.5,
-          duration: 1,
-        }}
-      >
-        <p className="hidden absolute bottom-10 left-1/2 transform -translate-x-1/2 text-neutral-300 text-xs md:text-base font-medium w-[80%]">
-          Ardent Co. will always be a sandbox for inspired, driven
-          professionals. <br />
-          Ardent Co. will never limit itself by any notions and perceptions.{" "}
-          <br /> Ardent Co. will encourage both thinkers and doers, and serve as
-          an ecosystem for unleashing untapped potential.
-        </p>
-        <p className="md:hidden block absolute bottom-32 left-1/2 transform -translate-x-1/2 text-neutral-300 text-[12px] md:text-base font-medium w-[80%]">
-          Ardent Co. will always be a sandbox for inspired, driven
-          professionals. Ardent Co. will never limit itself by any notions and
-          perceptions. Ardent Co. will encourage both thinkers and doers, and
-          serve as an ecosystem for unleashing untapped potential.
-        </p>
-      </motion.div>
+      </div>
 
       <Footer theme="dark" />
     </>
