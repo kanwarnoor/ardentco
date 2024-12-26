@@ -285,16 +285,28 @@ export default function Home() {
             transition={{
               duration: 0.5,
             }}
-            className="mt-10 md:w-[500px]"
+            className="mt-10 flex flex-row"
           >
-            <Image
-              src={"/signature.png"}
-              height={0}
-              width={0}
-              sizes="100% 100%"
-              className="w-full h-full rounded-xl shadow-xl drop-shadow-xl shadow-white/50"
-              alt={"signature"}
-            ></Image>
+            <div className="md:w-[300px] md:h-[300px] w-[150px] h-[150px]">
+              <Image
+                src={"/sign2.png"}
+                height={0}
+                width={0}
+                sizes="100% 100%"
+                className="w-full h-full rounded-xl"
+                alt={"signature"}
+              ></Image>
+            </div>
+            <div className="md:ml-20 ml-10 md:w-[300px] md:h-[300px] w-[150px] h-[150px]">
+              <Image
+                src={"/sign1.png"}
+                height={0}
+                width={0}
+                sizes="100% 100%"
+                className="w-full h-full rounded-xl "
+                alt={"signature"}
+              ></Image>
+            </div>
           </motion.div>
         </div>
       </div>
