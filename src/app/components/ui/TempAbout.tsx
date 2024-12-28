@@ -60,9 +60,7 @@ export default function About() {
           }}
         >
           <div className="md:hidden flex flex-col m-auto mr-10 text-center">
-            <p className="text-3xl font-black  text-white">
-              Welcome to  
-            </p>
+            <p className="text-3xl font-black  text-white">Welcome to</p>
             <p className="text-3xl font-black  text-ardentLighter">
               Ardent Co.
             </p>
@@ -73,7 +71,7 @@ export default function About() {
         </motion.div>
 
         {/* paras */}
-        <div className="md:w-[700px] min-h-[50%] md:p-0 px-10 text-center md:text-left h-fit flex flex-col  mb-10 md:my-auto my-0">
+        <div className="md:w-[700px] min-h-[50%] md:p-0 px-10 text-center md:text-left h-fit flex flex-col  mb-16 md:my-auto my-0">
           {para == 0 && (
             <div>
               <motion.p
