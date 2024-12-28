@@ -37,12 +37,12 @@ export default function About() {
   }, [para]);
 
   return (
-    <div className="flex w-full md:h-[100vh] h-[120vh] min-h-screen z-10 ">
-      <div className="w-fit flex m-auto md:flex-row flex-col">
+    <div className="flex w-full md:h-[100vh] h-[100vh] min-h-screen z-10">
+      <div className="w-fit flex m-auto md:flex-row flex-col h-full">
         {/* compass */}
 
         <motion.div
-          className="flex relative z-10 md:mr-20 md:w-[400px] w-fit md:h-[700px] h-[250px] md:justify-center md:items-center m-auto"
+          className="flex relative z-10 md:mr-20 md:w-[400px] w-fit md:h-[80%] h-[30%]  md:justify-center md:items-center m-auto"
           initial={{
             opacity: 0,
             ...(isMobile ? { y: -50 } : { x: -50 }),
@@ -59,13 +59,21 @@ export default function About() {
             amount: 0.3,
           }}
         >
-          <Queen angle={angle} />
+          <div className="md:hidden flex flex-col m-auto mr-10 text-center">
+            <p className="text-3xl font-black  text-white">
+              Welcome to  
+            </p>
+            <p className="text-3xl font-black  text-ardentLighter">
+              Ardent Co.
+            </p>
+          </div>
+          <div className="md:flex md:relative md:w-[400px] w-[25%] md:h-[80%] h-auto">
+            <Queen angle={angle} />
+          </div>
         </motion.div>
-        {/* <div className="h-fit">
-          <Queen angle={0} />
-        </div> */}
+
         {/* paras */}
-        <div className="md:w-[700px] md:p-0 p-10 text-center md:text-left h-fit flex flex-col justify-center my-auto">
+        <div className="md:w-[700px] min-h-[50%] md:p-0 px-10 text-center md:text-left h-fit flex flex-col  mb-10 md:my-auto my-0">
           {para == 0 && (
             <div>
               <motion.p
