@@ -180,11 +180,10 @@ export default function Home() {
       </section>
 
       <section
-        className="relative bg-white bg-dot-black/[0.5] flex w-full min-h-screen h-fit"
+        className="relative bg-neutral-950 flex w-full min-h-screen h-fit"
         id="services"
         ref={enableRef}
       >
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)]"></div>
         <Enable />
       </section>
 
