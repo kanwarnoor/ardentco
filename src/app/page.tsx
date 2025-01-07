@@ -5,7 +5,6 @@ import { FlipWords } from "./components/ui/flip-words";
 // import Image from "next/image";
 import Navbar from "./components/ui/Navbar";
 import Footer from "./components/ui/Footer";
-// import Counter from "./components/ui/Counter";
 import Enable from "./components/ui/Enable";
 import Contact from "./components/ui/Contact";
 import About from "./components/ui/TempAbout";
@@ -57,7 +56,9 @@ export default function Home() {
   ];
   return (
     <>
-      {/* <Counter /> */}
+      {/* <div className="fixed bottom-0 right-0 z-50 text-xl font-bold m-2 cursor-pointer text-white">
+        Developer not paid yet!
+      </div> */}
       <div className="hidden md:block">
         <Wake />
       </div>
