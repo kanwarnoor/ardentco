@@ -37,7 +37,7 @@ export default function Home() {
       setRight(false);
     } else if (enableInView) {
       setLeft(false);
-      setRight(true);
+      setRight(false);
     } else if (contactInView) {
       setLeft(false);
       setRight(true);
