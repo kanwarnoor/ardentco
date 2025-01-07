@@ -26,7 +26,7 @@ export default function Enable() {
           <>
             <ScreenCard
               // css={"bg-ardent text-black"}
-              heading1="Strategic Communications &"
+              heading1="Strategic Comms &"
               heading2="Public Relations"
               image="/chess/pawns/11.png"
               position="left"
@@ -47,7 +47,7 @@ export default function Enable() {
           <>
             <ScreenCard
               heading1="Research &"
-              heading2="Collateral Development"
+              heading2="Development"
               image="/chess/pawns/9.png"
               position="left"
               link="/research"
@@ -71,13 +71,11 @@ export default function Enable() {
               link="/talent-nexus"
             />
             <ScreenCard
-
               heading1="Graphics"
               heading2="Designing"
-             image="/chess/pawns/13.png"
+              image="/chess/pawns/13.png"
               position="top"
               link="/graphics-designing"
-             
             />
           </>
         )}
