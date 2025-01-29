@@ -128,14 +128,14 @@ export default function Home() {
           }}
           className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(circle,white_10%,transparent_50%)]"
         ></motion.div> */}
-        <div className="absolute flex lg:flex-row flex-col">
+        <div className="flex lg:flex-row flex-col z-10">
           <FlipWords
             words={avail}
             duration={3000}
-            className="md:text-9xl text-6xl text-white font-bold lg:text-left text-center  w-[800px] flex-wrap"
+            className="md:text-9xl text-6xl text-white font-bold lg:text-left text-center  flex-wrap"
           />
           <div className="w-1 bg-white flex-wrap rounded-full"></div>
-          <div className="lg:pl-10 flex-wrap">
+          <div className="lg:pl-10 flex-wrap flex justify-center items-center m-auto">
             <motion.p
               initial={{
                 opacity: 0,
@@ -151,8 +151,11 @@ export default function Home() {
               Status Quo
             </motion.p>
             <br />
-            <motion.div
-              className="w-fit md:flex mx-auto justify-center text-center left-0 right-0"
+            
+          </div>
+        </div>
+        <motion.div
+              className="w-fit md:flex mx-auto justify-center text-center left-0 right-0 z-10 mt-5"
               whileTap={{
                 scale: 1.1,
                 transition: { duration: 0.1 },
@@ -167,8 +170,6 @@ export default function Home() {
                 Know more
               </a>
             </motion.div>
-          </div>
-        </div>
       </section>
 
       <section
