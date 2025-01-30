@@ -43,6 +43,19 @@ export default function Page() {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)] z-0"></div>
 
         <div className="relative m-auto flex flex-col w-full h-auto py-20 z-10 justify-center items-center min-h-screen gap-5">
+          <p className="md:text-5xl text-3xl font-black px-20 pb-10 text-center">
+            Research & Collateral Development
+          </p>
+          <p className="md:px-32 px-20 md:text-2xl text-xl text-center pb-20">
+            Our Research and Collateral Development service line helps the
+            clients develop a rich understanding of their field through white
+            papers, policy and market analysis reports focused on the challenges
+            faced by the sector and the growth opportunities ahead. We provide
+            tailored market-entry strategies, practical intelligence, and
+            data-driven annual reports to enhance translational impact,
+            strengthen stakeholder relationships, and enable better
+            decision-making and thought leadership.
+          </p>
           <div className="flex flex-wrap justify-center w-full h-fit text-center gap-5 mx-auto ">
             <motion.div
               initial={{
@@ -77,13 +90,15 @@ export default function Page() {
                   Write-Papers & <br /> Policy Briefs
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Ardent Co. offers thorough preparation of white papers and
-                  policy briefs that delve deep into the intricacies of complex
-                  issues. By identifying and analyzing the fundamental drivers
-                  and challenges at the core of both policy and industry
-                  landscapes, we enable our clients in acquiring a deeper
-                  understanding of their issues of interest, while harnessing
-                  insights and evidence which can complement their discussions.
+                  Ardent Co. leverages specialized knowledge in the preparation
+                  of white papers and policy briefs to make sense of the
+                  intricacies of complex sectoral issues. We assist our clients
+                  to develop a more detailed understanding of their industry,
+                  potential growth contributors and challenges from a policy and
+                  industry perspective. We also enable them in acquiring a
+                  deeper understanding of their issues of interest, while
+                  harnessing insights and evidence which can complement their
+                  discussions and drive a narrative.
                 </p>
               </div>
             </motion.div>
@@ -122,14 +137,12 @@ export default function Page() {
                   Market Identification <br /> & Analysis
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Ardent Co specializes in assisting companies with market
-                  identification and analysis to design effective market-entry
-                  strategies. We provide comprehensive insights into market
-                  dynamics, including sector drivers, key market players,
-                  non-market influencers, and regulatory landscape. By aligning
-                  with the future trajectory of the market, we equip
-                  organizations with in-depth understanding and offer strategic
-                  guidance for their “India Journey”
+                  Ardent Co. provides custom market-entry solutions based on
+                  detailed analysis of industry dynamics, competitive
+                  positioning, and regulatory environment. Based on analysis of
+                  leading industry players and promising market trends, we
+                  present actionable intelligence that enables companies to take
+                  strategic, forward-looking actions in a competitive landscape.
                 </p>
               </div>
             </motion.div>
@@ -168,14 +181,13 @@ export default function Page() {
                   Annual Reports & <br /> Corporate Collaterals
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Ardent Co is enhancing the concept of Organizational Impact
-                  Reports, providing a fresh perspective to how organizations
-                  define and quantify their market operations’ impact. We
-                  collaborate closely with clients to design parameters for
-                  measuring impact of their operations, develop data collection
-                  methodologies, and create compelling “impact reports” which
-                  can underline the organization’s significance within their
-                  regions and sectors.
+                  Ardent Co. presents a new definition of reporting
+                  organizational impact by way of data-driven annual reports and
+                  organization impact reports. We are closely involved with
+                  clients in mapping out impact measurement parameters, planning
+                  data collection strategies and building &quot;impact reports&quot; that
+                  help advance an organization&apos;s visibility in the areas and
+                  industries it works in.
                 </p>
               </div>
             </motion.div>

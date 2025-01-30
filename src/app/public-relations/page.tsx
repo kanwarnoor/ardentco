@@ -45,6 +45,16 @@ export default function Page() {
 
         <div className="relative m-auto flex flex-col w-full h-auto py-20 z-10 justify-center items-center min-h-screen gap-5">
           <div className="flex flex-wrap justify-center w-full h-fit text-center  gap-5 mx-auto">
+            <p className="md:text-5xl text-3xl font-black px-20 pb-10 text-center">
+              Strategic Communication Public Relations
+            </p>
+            <p className="md:px-32 px-20 md:text-2xl text-xl text-center pb-20">
+              At the heart of strategic communications, we focus on shaping your
+              brand image and reinforcing your industry presence. Our
+              comprehensive suite of services builds and refines your corporate
+              affairs from the ground up, aligning internal capabilities with
+              leadership vision to ensure impactful communication strategies.
+            </p>
             <motion.div
               initial={{
                 opacity: 0,
@@ -78,14 +88,12 @@ export default function Page() {
                   Brand Image Development
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Ardent Co. leverages its robust methodologies and
-                  communications expertise in defining and executing ground-up
-                  image-development strategies for organizations cutting across
-                  scales and sectors. We deploy a systematic approach in
-                  acquiring a robust understanding of the core-business and
-                  organizational journey, and translating those into strategies
-                  which deliver balanced conversations on both, the heritage and
-                  the future
+                  We collaborate with you to create your corporate affairs
+                  vertical from the ground up, by unifying internal capability
+                  with leadership intent. Our customized strategies link you
+                  with your community, build your relationships with
+                  journalists, get you maximum media coverage, and create a
+                  strong base for your public image.
                 </p>
               </div>
             </motion.div>
@@ -124,14 +132,10 @@ export default function Page() {
                   Corporate Communications
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Ardent Co is appreciated for bringing fresh-perspectives to
-                  the Corporate Affairs function, enabling leaders in leveraging
-                  communications as a business-aligned tool, while sustaining
-                  its effort in ensuring awareness and consistency in
-                  organizational media communications. Our cross-functional team
-                  enables organizations in reimagining the horizons of Corporate
-                  Communications and how it can align more closely with the
-                  core-business.
+                  We work jointly with your corporate communications department
+                  to produce multi-faceted, thematically structured
+                  communications, on products, finance and socio-economic and
+                  sustainability communications.
                 </p>
               </div>
             </motion.div>
@@ -161,17 +165,18 @@ export default function Page() {
                 </svg>
 
                 <p className="text-black text-4xl font-bold m-auto">
-                  Startup <br /> Advisory
+                  Startup Comms
+                  <br /> Advisory
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  At Ardent, we design and execute strategies that strike a
-                  balance between the founders’ vision, business fundamentals,
-                  and product nuances. We deeply understand the passion and
-                  persistence of entrepreneurs, delivering tailored solutions
-                  with relentless determination. Our approach combines strategic
-                  insight with a keen eye on the unique demands of each business
-                  journey, driving impactful outcomes that align legacy and
-                  growth aspirations.
+                  We are experienced in working there in close collaboration
+                  with new founders, entrepreneurs, and young teams in various
+                  fields to establish their unique and effective public image.
+                  We help them achieve visibility and build audience perception
+                  and voice that plays to their strengths and value proposition.
+                  Our methodology guarantees their story appeals to the right
+                  stakeholders, enhances their brand, and pushes their
+                  endeavours to encourage market growth and acknowledgement.
                 </p>
               </div>
             </motion.div>
@@ -212,14 +217,11 @@ export default function Page() {
                   Workshops
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  At Ardent Co, we understand the fast-paced business
-                  environment and the importance of effective communication with
-                  the media for senior executives. Our tailored Communications
-                  Training and Workshops equip leaders with essential skills to
-                  engage with journalists and handle media interactions.
-                  Combining academic insights and practical exercises, we help
-                  leaders understand the nuances of media engagement while
-                  aligning messages on key issues.
+                  We collaborate with subject matter experts to equip senior key
+                  opinion leaders and company spokespersons with essential media
+                  preparedness skills. Based on our deep industry experience, we
+                  ensure that they are equipped to deal with crises and
+                  articulate the brand story and vision effectively.
                 </p>
               </div>
             </motion.div>
@@ -258,14 +260,12 @@ export default function Page() {
                   Leadership Comms Advisory
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Ardent Co’s Leadership Communications Advisory helps
-                  organizations foster impactful and meaningful conversations
-                  led by their executives. We specialize in defining strategic
-                  topics for leaders to engage with, both within and outside
-                  their sector, while guiding them in driving discussions
-                  through media and public engagements. Our approach ensures
-                  leaders shape key narratives that align with their
-                  organization&apos;s goals.
+                  Our policy and research team works with your leadership on
+                  important strategic issues and messaging to address topics
+                  that reach beyond the usual industry storyline. We help shape
+                  the image of the executives and position leaders as experts
+                  and empower them to articulate macro issues and wider industry
+                  trends with authority and engagement.
                 </p>
               </div>
             </motion.div>

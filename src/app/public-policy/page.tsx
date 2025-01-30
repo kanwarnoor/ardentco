@@ -41,6 +41,10 @@ export default function Page() {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)] z-0"></div>
 
         <div className="relative m-auto flex flex-col w-full h-auto py-20 z-10 justify-center items-center min-h-screen gap-5">
+          <p className="md:text-5xl text-3xl font-black px-20 pb-10 text-center">Public Policy & Regulatory Affairs</p>
+          <p className="md:px-32 px-20 md:text-2xl text-xl text-center pb-20">
+          Our Public Policy and Regulatory Affairs service line helps businesses navigate complex policy landscapes and regulatory environments. We provide strategic guidance in policy advisory, communication, parliamentary engagement, and advocacy to drive growth and positive policy outcomes. Through tailored regulatory solutions and continuous monitoring, we ensure compliance and equip organizations to leverage public policy for financial and operational success.
+          </p>
           <div className="flex flex-wrap justify-center w-full h-fit text-center gap-5 mx-auto ">
             <motion.div
               initial={{
@@ -74,14 +78,14 @@ export default function Page() {
                   Public Policy <br /> Advisory
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Ardent Co assists organizations in crafting and executing
-                  comprehensive public policy strategies, shaping their public
-                  policy landscape, and building robust policy infrastructure.
-                  From identifying regulatory frameworks that impact operations
-                  to formulating positions and advising on engagement with
-                  decision-makers, industry bodies, advocacy groups, and thought
-                  leaders, our consultants will guide your team through the
-                  entire process.
+                  We assist businesses in understanding existing policies and
+                  regulations that impact their operations while also
+                  identifying policies that can act as growth enablers in the
+                  short to medium term. By defining organizational priorities
+                  across key areas, we demonstrate how public policy can drive
+                  topline and financial value for organizations at various
+                  scales. Our experts guide management in building the expertise
+                  needed to navigate this landscape effectively.
                 </p>
               </div>
             </motion.div>
@@ -115,14 +119,13 @@ export default function Page() {
                   Policy <br /> Communication
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Ardent Co supports organizations in developing
-                  stakeholder-driven communications on policy matters, building
-                  ecosystem support for complex issues. We assist in crafting
-                  clear messages and lead 360-degree campaigns in collaboration
-                  with key sectoral thought leaders, industry bodies, advocacy
-                  groups, and think tanks. Our approach boosts stakeholder
-                  engagement, driving positive transformation in the policy
-                  landscape.
+                  With our PR and communications expertise, we help clients
+                  craft compelling messages and execute 360-degree campaigns.
+                  Through continuous consultations, government meetings, and
+                  strategic use of media and digital platforms, we drive
+                  impactful narratives. Collaborating with thought leaders,
+                  industry bodies, advocacy groups, and think tanks, we enhance
+                  ecosystem engagement and foster positive policy outcomes.
                 </p>
               </div>
             </motion.div>
@@ -152,17 +155,15 @@ export default function Page() {
                 </svg>
 
                 <p className="text-black text-4xl font-bold m-auto">
-                  Parliamentary <br /> Engagement
+                  Parliamentary <br /> Services
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Our consultants possess a comprehensive understanding of
-                  parliamentary processes and play a crucial role in helping
-                  clients navigate complex legislative landscapes. We equip our
-                  clients with the essential knowledge and strategic tools to
-                  effectively interpret parliamentary developments, while also
-                  providing guidance on how to engage proactively with
-                  decision-making bodies and legislative processes as they
-                  evolve.
+                  Our consultants bring in-depth knowledge of parliamentary
+                  processes, equipping clients to engage effectively with
+                  parliamentarians, committees, and legislative developments. We
+                  enable stakeholders to leverage parliamentary systems for
+                  advocacy priorities, providing academic insights and practical
+                  tools to drive meaningful engagement.
                 </p>
               </div>
             </motion.div>
@@ -202,13 +203,12 @@ export default function Page() {
                   Advocacy and <br /> Legislative Campaign
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Our consultants assist organizations in defining and executing
-                  impactful advocacy and legislative campaigns to enable
-                  creation of public-policy solutions to sectoral and
-                  operational challenges. We provide support in developing draft
-                  bills and policy positions, ensuring alignment with
-                  organizational objectives, and strategic guidance on effective
-                  percolation of policy initiatives to key stakeholders.
+                  We support clients in defining legislative priorities from the
+                  ground up. From understanding key stakeholders to drafting
+                  bills and shaping policy positions, we ensure alignment with
+                  organizational objectives. Our strategic guidance facilitates
+                  the effective dissemination of policy initiatives to critical
+                  stakeholders.
                 </p>
               </div>
             </motion.div>
@@ -242,13 +242,11 @@ export default function Page() {
                   Regulatory <br /> Affairs
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Ardent Co. provides specialized services to effectively
-                  address regulatory affairs challenges. We focus on developing
-                  comprehensive regulatory affairs Standard Operating Procedures
-                  (SOPs), helping organizations ensure compliance with relevant
-                  laws and regulations. Our expertise also includes guiding
-                  clients through regulatory changes, ensuring seamless
-                  integration and smooth adaptation to new requirements.
+                  Our specialized services address regulatory challenges by
+                  developing tailored Standard Operating Procedures (SOPs) to
+                  ensure compliance with laws and regulations. We empower
+                  organizations to navigate complex regulatory environments by
+                  offering tailored compliance solutions and expert guidance.
                 </p>
               </div>
             </motion.div>
@@ -286,13 +284,12 @@ export default function Page() {
                   Policy Sensing & Tracking
                 </p>
                 <p className="text-black text-sm px-10 mt-5">
-                  Ardent Co specializes in helping organizations identify
-                  critical regulations and upcoming regulatory developments that
-                  directly impact their business operations. Through regular
-                  monitoring, comprehensive tracking, and detailed analyses, we
-                  provide timely updates to clients, ensuring they are
-                  well-informed. This proactive approach helps them stay ahead
-                  of changes and strategically plan effective interventions.
+                  We help clients stay updated on policy and regulatory
+                  developments by monitoring public sources, leveraging
+                  stakeholder networks, and providing timely updates. Our
+                  routine tracking and in-depth analyses enable organizations to
+                  gauge policy shifts and plan strategic interventions
+                  effectively.
                 </p>
               </div>
             </motion.div>

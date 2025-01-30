@@ -46,6 +46,15 @@ export default function Page() {
 
         <div className="relative m-auto flex flex-col w-full h-auto py-20 z-10 justify-center items-center min-h-screen gap-5">
           <div className="flex flex-wrap justify-center w-full h-fit text-center gap-5 mx-auto ">
+            <p className="md:text-5xl text-3xl font-black px-20 pb-10 text-center">
+              Talent Nexus Solutions
+            </p>
+            <p className="md:px-32 px-20 md:text-2xl text-xl text-center pb-20">
+              Our talent-focused vertical is designed to help organizations
+              build and optimize their workforce to align with strategic goals.
+              From creating new teams to nurturing leadership capabilities, we
+              provide end-to-end solutions that drive organizational success.
+            </p>
             <motion.div
               initial={{
                 opacity: 0,
