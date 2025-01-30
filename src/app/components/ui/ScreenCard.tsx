@@ -31,7 +31,21 @@ export default function ScreenCard({
       className={`w-full md:h-screen h-fit ${css} flex flex-col m-auto`}
       // style={{ backgroundImage: `url(${image})` }}
     >
-      <div className="w-fit md:h-[70%] h-fit mx-auto ">
+      <motion.div
+      initial={{
+        opacity: 0,
+
+      }}
+      whileInView={{
+        opacity: 1,
+        
+      }}
+      transition={{
+        duration: 5,
+      }}
+       
+        className="w-fit md:h-[70%] mx-auto"
+      >
         {position == "left" ? (
           <div className="absolute -translate-x-[125%] -translate-y-[25%]  inset-0 w-[20%] h-[40%] m-auto rounded-full bg-gradient-radial from-teal-500 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none bg-ardent bg-opacity-80 -z-10"></div>
         ) : (
@@ -49,7 +63,7 @@ export default function ScreenCard({
             position == "left" ? "rotate-12" : "rotate-0"
           }`}
         />
-      </div>
+      </motion.div>
 
       <motion.div
         initial={{
