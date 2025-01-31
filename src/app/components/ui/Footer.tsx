@@ -84,10 +84,7 @@ export default function Footer({ theme }: FooterProps) {
             </p>
 
             <div className="w-full h-fit ml-2 mb-4 flex space-x-2">
-              <a
-                href="https://www.instagram.com/_ardentco._/"
-                target="_blank"
-              >
+              <a href="https://www.instagram.com/_ardentco._/" target="_blank">
                 <svg
                   version="1.1"
                   id="Layer_1"
@@ -217,9 +214,13 @@ export default function Footer({ theme }: FooterProps) {
                   />
                 </svg>
 
-                <p className="font-bold ml-2 cursor-pointer md:text-base text-xs">
+                <a
+                  href="mailto:contactus@ardentco.in"
+                  target="_blank"
+                  className="font-bold ml-2 cursor-pointer md:text-base text-xs"
+                >
                   contactus@ardentco.in
-                </p>
+                </a>
               </div>
             </div>
           </div>
