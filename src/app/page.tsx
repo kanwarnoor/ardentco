@@ -79,7 +79,7 @@ export default function Home() {
             borderRadius: "0px",
           }}
           transition={{
-            duration: 0.3,
+            duration: 0.5,
           }}
           src="/bannerVideo.mp4"
           autoPlay
