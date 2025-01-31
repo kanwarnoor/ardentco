@@ -48,7 +48,7 @@ export default function Person({
               : {})}
             alt={""}
             sizes="100% 100%"
-            className="w-full h-full rounded-full object-cover select-none"
+            className="w-full h-full rounded-full object-cover select-none grayscale"
           ></Image>
         </div>
         <p className="md:text-xl md:h-fit min-h-[30px] h-fit  text-lg font-black text-center leading-4 mt-2">
@@ -134,7 +134,7 @@ export default function Person({
                         : {})}
                       alt={""}
                       sizes="100% 100%"
-                      className={`w-full rounded-lg h-full object-cover`}
+                      className={`w-full rounded-lg h-full object-cover grayscale`}
                       style={{ objectPosition: position }}
                     ></Image>
 

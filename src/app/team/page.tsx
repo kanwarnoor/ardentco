@@ -86,16 +86,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             des1="Tanush is working with us as an Assistant Manager - Public Policy at Ardent Co. is a public policy professional with more than 2 years of experience in the realm of policy & politics. As a public policy consultant, his primary role is to provide specialized advice and analysis regarding a broad spectrum of policy matters. He works closely alongside government agencies, non-profit organizations, and various stakeholders to identify and tackle societal challenges effectively. "
             des2="In the past, he has worked closely with the Govt. of Andhra Pradesh among a string of other politico-administrative entities in India on subject matters of development & public welfare, wherein he engaged with a multitude of key stakeholders. Tanush is high on sports and likes his coffee dark and bitter."
           />
-          <Person
-            name="Aradhna Anand"
-            image="/team/consultants/assistantManager2.jpg"
-            role="Assistant Manager, Human Resources"
-            theme="dark"
-            link="https://www.linkedin.com/in/aradhnaanand/"
-            position="50% 60%"
-            des1="Aradhna Anand is working with us as an Assistant Manager, Human Resources with 3 years of experience. At Ardent Co. she oversees people & culture and end to end recruitment. She brings a wealth of knowledge and expertise to her role, enabling her to effectively manage various HR functions within the company. What sets her apart is her genuine dedication to cultivating a positive work environment that goes beyond the ordinary corporate setting. Aradhna actively strives to incorporate a human touch into Ardent Co.’s culture, emphasizing open communication, empathy, and teamwork."
-            des2="She has spent a career in human resources where she took care of various HR and Administrative functions. In her free time, Aradhna likes crocheting and baking, finding them to be outlets for relaxation and self-expression."
-          />
+          
           <Person
             name="Sristi Rai"
             image="/team/consultants/seniorAssociate1.jpg"
@@ -114,15 +105,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             position="50% 10%"
             des1="Ekta Sharma is a seasoned professional, skilled in crafting cross-channel branding strategies that deeply resonate with audiences. Her journey artfully blends creativity with strategic prowess, amplifying brand visibility and consistency through dynamic marketing campaigns and media relations. Beyond the boardroom, Ekta is a music maker and an Indian hip-hop culture enthusiast, adding rhythm to both her professional and personal pursuits."
           />
-          <Person
-            name="Ishan Jain"
-            image="/team/consultants/associate1.jpeg"
-            role="Associate, Research and Content"
-            theme="dark"
-            link="https://www.linkedin.com/in/ishan-jain-7a8a58236/"
-            position="50% 20%"
-            des1="Ishan Jain is an avid researcher, debater and keeps an active interest in Political and Geopolitical landscape.With an Honours degree at both graduate and post-graduate levels in Political Science , from the Hindu College, Delhi University, Ishan is adamant to work in the space of policy and politics. With a previous experience of working with Members of Parliament as Political Consultant and with political parties across the spectrum , he loves to research and draft campaigns. A swimmer and a hobbyist cook, Ishan can be found munching on dark chocolate watching Modern Family reruns."
-          />
+         
 
           <Person
             name="Manya Singh"
