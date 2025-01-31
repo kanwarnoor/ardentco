@@ -31,39 +31,42 @@ export default function ScreenCard({
       className={`w-full md:h-screen h-fit ${css} flex flex-col m-auto`}
       // style={{ backgroundImage: `url(${image})` }}
     >
-      <motion.div
-      initial={{
-        opacity: 0,
-
-      }}
-      whileInView={{
-        opacity: 1,
-        
-      }}
-      transition={{
-        duration: 5,
-      }}
-       
-        className="w-fit md:h-[70%] mx-auto"
-      >
+      <div className="w-fit md:h-[70%] mx-auto mt-10">
         {position == "left" ? (
           <div className="absolute -translate-x-[125%] -translate-y-[25%]  inset-0 w-[20%] h-[40%] m-auto rounded-full bg-gradient-radial from-teal-500 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none bg-ardent bg-opacity-80 -z-10"></div>
         ) : (
           <div className="absolute translate-x-[125%] -translate-y-[25%]  inset-0 w-[20%] h-[40%] m-auto rounded-full bg-gradient-radial from-teal-500 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none bg-ardent bg-opacity-80 -z-10"></div>
         )}
 
-        <Image
-          src={image}
-          width={0}
-          height={0}
-          sizes="100% 100%"
-          alt={""}
-          {...(blurData ? { blurDataURL: blurData, placeholder: "blur" } : {})}
-          className={`w-full h-full object-top ${
-            position == "left" ? "rotate-12" : "rotate-0"
-          }`}
-        />
-      </motion.div>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          className="w-fit md:h-[100%] "
+        >
+          <Image
+            src={image}
+            width={0}
+            height={0}
+            sizes="100% 100%"
+            alt={""}
+            {...(blurData
+              ? { blurDataURL: blurData, placeholder: "blur" }
+              : {})}
+            className={`w-full h-full object-top ${
+              position == "left" ? "rotate-12" : "rotate-0"
+            }`}
+          />
+        </motion.div>
+      </div>
 
       <motion.div
         initial={{
@@ -77,7 +80,7 @@ export default function ScreenCard({
         transition={{
           duration: 0.5,
         }}
-        className="w-full h-[30%] flex flex-col justify-center md:mt-0 mt-10"
+        className="w-full h-[50%] flex flex-col  md:mt-0 mt-10 "
       >
         <div className="flex w-full">
           {heading2 ? (
