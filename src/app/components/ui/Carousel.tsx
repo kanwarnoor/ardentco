@@ -44,7 +44,7 @@ export default function About({ content }: Props) {
   }, [content.length, para]);
 
   return (
-    <div className="relative flex w-full md:h-[100vh] h-[100vh] min-h-screen z-10 bg-black text-white">
+    <div className="relative flex w-full md:h-[100vh] h-[100vh] min-h-screen z-10  text-white">
       <div className=" w-fit flex m-auto md:flex-row flex-col h-full">
         {/* compass */}
 
@@ -66,7 +66,7 @@ export default function About({ content }: Props) {
             amount: 0.3,
           }}
         >
-          <div className="md:flex md:relative md:w-[400px] w-[25%] md:h-[80%] h-auto flex m-auto justify-center items-center">
+          <div className="md:flex md:relative lg:ml-0 lg:w-[400px] md:w-[200px] w-[100px]  md:ml-20 md:h-[80%] h-auto flex m-auto justify-center items-center">
             {/* <Queen angle={angle} /> */}
             {content.map((item, index) => (
               <>{para === index && item.svg}</>
@@ -75,7 +75,8 @@ export default function About({ content }: Props) {
         </motion.div>
 
         {/* paras */}
-        <div className="md:w-[700px] md:min-h-fit min-h-[50%] md:p-0 px-10 text-center md:text-left h-fit flex flex-col mb-16 md:my-auto my-auto">
+
+        <div className=" lg:w-[700px] lg:max-w-[600px] lg:mr-0  md:mr-20  md:h-screen md:justify-center min-h-[50%] md:p-0 px-10 text-center  h-fit flex flex-col mb-16 my-auto max-w-[400px]">
           {content.map((item, index) => (
             <div key={index}>
               {para === index && ( // Conditionally render based on para value
@@ -96,7 +97,7 @@ export default function About({ content }: Props) {
                       duration: 0.5,
                       ease: easeInOut,
                     }}
-                    className="md:text-5xl text-2xl font-black mb-5 text-ardent text-center"
+                    className="lg:text-5xl md:text-3xl overflow-hidden text-2xl font-black mb-5 text-ardent text-center "
                   >
                     {item.title} {/* Dynamically rendering the title */}
                   </motion.p>
@@ -116,7 +117,7 @@ export default function About({ content }: Props) {
                       viewport={{
                         amount: 0.5,
                       }}
-                      className=" md:text-xl text-[14px] text-center"
+                      className="lg:text-xl md:text-base text-[14px] text-center"
                     >
                       {item.description}{" "}
                       {/* Dynamically rendering the description */}

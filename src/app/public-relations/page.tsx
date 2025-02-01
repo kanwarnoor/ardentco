@@ -6,6 +6,7 @@ import Footer from "../components/ui/Footer";
 import Lander from "../components/ui/Lander";
 import { useInView } from "react-intersection-observer";
 import Carousel from "@/app/components/ui/Carousel";
+import { motion } from "framer-motion";
 
 export default function Page() {
   const content = [
@@ -112,7 +113,7 @@ export default function Page() {
 
   useEffect(() => {
     if (refInView) {
-      setIntersecting(true);
+      setIntersecting(false);
     } else {
       setIntersecting(false);
     }
@@ -132,24 +133,42 @@ export default function Page() {
       />
 
       <section
-        className="relative bg-white bg-dot-black/[0.5] w-full h-auto min-h-screen"
+        className="relative bg-neutral-950 bg-dot-black/[0.5] w-full h-auto min-h-screen"
         id="more"
         ref={ref}
       >
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)] z-0"></div>
+        {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)] z-0"></div> */}
 
-        <div className="relative m-auto flex flex-col w-full h-auto pt-20 z-10 justify-center items-center min-h-screen gap-5">
-          <div className="flex flex-wrap justify-center w-full h-fit text-center  gap-5 mx-auto">
-            <p className="md:text-5xl text-3xl font-black px-20 pb-10 text-center">
-              Strategic Communication Public Relations
-            </p>
-            <p className="md:px-32 px-20 md:text-2xl text-xl text-center pb-20">
-              At the heart of strategic communications, we focus on shaping your
-              brand image and reinforcing your industry presence. Our
-              comprehensive suite of services builds and refines your corporate
-              affairs from the ground up, aligning internal capabilities with
-              leadership vision to ensure impactful communication strategies.
-            </p>
+        <div className="relative m-auto flex flex-col w-full h-auto z-10 justify-center items-center min-h-screen gap-5">
+          <div className="flex flex-wrap justify-center w-full h-fit text-center  gap-5 mx-auto text-white">
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: -50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.5,
+              }}
+              className=" flex flex-col m-auto mt-20 justify-center items-center"
+            >
+              <p className="md:text-5xl text-2xl font-black px-20 pb-10 text-center">
+                Strategic Communication Public Relations
+              </p>
+              <p className="md:px-32 px-20 md:text-2xl text-base text-center opac">
+                At the heart of strategic communications, we focus on shaping
+                your brand image and reinforcing your industry presence. Our
+                comprehensive suite of services builds and refines your
+                corporate affairs from the ground up, aligning internal
+                capabilities with leadership vision to ensure impactful
+                communication strategies.
+              </p>
+              
+            </motion.div>
+            <div className="w-1/3 h-1 bg-white/20 rounded-full mt-20"></div>
             <Carousel content={content} />
           </div>
         </div>
