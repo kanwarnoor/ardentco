@@ -149,7 +149,7 @@ export default function Navbar({ right, button }: Props) {
           >
             <div className="w-full h-screen grid grid-cols-1">
               <div className="w-full h-screen flex ">
-                <ul className="absolute flex my-auto md:ml-40 ml-20  flex-col md:gap-3 gap-2 top-56">
+                <ul className="absolute flex my-auto md:ml-40 ml-20  flex-col md:gap-3 gap-2 top-56 md:top-32">
                   {pages.map((item, index) => {
                     return (
                       <>
