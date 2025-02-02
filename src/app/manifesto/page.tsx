@@ -184,14 +184,14 @@ export default function Home() {
             <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
               <FlipWords
                 words={partners.map((item) => item.who)}
-                duration={5000}
+                duration={7000}
               />{" "}
               :
             </div>
             <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center">
               <FlipWords
                 words={partners.map((item) => item.message)}
-                duration={5000}
+                duration={7000}
               />
             </div>
 
@@ -224,14 +224,14 @@ export default function Home() {
             <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
               <FlipWords
                 words={ecosystems.map((item) => item.who)}
-                duration={5000}
+                duration={10000}
               />{" "}
               :
             </div>
             <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center">
               <FlipWords
                 words={ecosystems.map((item) => item.message)}
-                duration={5000}
+                duration={10000}
               />
             </div>
 
