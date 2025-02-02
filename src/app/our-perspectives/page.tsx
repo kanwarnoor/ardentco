@@ -8,9 +8,15 @@ import InfoCard from "../components/ui/InfoCard";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Button from "../components/ui/button";
+import { useRouter } from "next/navigation";
 // import { motion } from "framer-motion";
 
 export default function Page() {
+  const [research, setResearch] = useState(false);
+  const [media, setMedia] = useState(false);
+
+  const router = useRouter();
+
   const { ref: ref, inView: refInView } = useInView({
     threshold: [0.05, 0.5],
     rootMargin: "0px 0px -89% 0px",
@@ -52,7 +58,6 @@ export default function Page() {
         />
       </div>
 
-      {/* edit here */}
       <section id="more" ref={select}>
         <div className="w-full h-screen md:grid-cols-2 md:grid-rows-1 grid-cols-1 grid-rows-2 grid ">
           <div className="flex bg-black w-full h-full">
@@ -111,7 +116,7 @@ export default function Page() {
                 }}
                 className="mt-5"
               >
-                <Button link={"#research"} />
+                <Button link={"#research"} onclick={() => setResearch(true)} />
               </motion.div>
             </div>
           </div>
@@ -171,122 +176,186 @@ export default function Page() {
                 }}
                 className="mt-5"
               >
-                <Button link={"#media"} theme="light" />
+                <Button
+                  link={"#media"}
+                  theme="light"
+                  onclick={() => setMedia(true)}
+                />
               </motion.div>
             </div>
           </div>
         </div>
       </section>
-      <section
-        className="w-full h-fit bg-white bg-dot-black/[0.5] flex flex-col m-auto"
-        ref={ref}
-        id="research"
-      >
-        <div className="flex w-fit m-auto mt-20 mb-0">
-          <p className="md:text-6xl text-4xl font-black text-center">
-            Our Research
-          </p>
-        </div>
-        <div className="flex md:flex-row flex-col gap-10 mx-auto pt-10">
-          <InfoCard
-            title1={"Making Sense of"}
-            title2="Union Budget"
-            description={
-              "As echoed by one of the most respected Secretaries to have led the Department of Economic Affairs, the Union-Budget assumes an unparalleled significance for our country."
-            }
-            animation="left"
-            image={"/budget.png"}
-            link="/budget.pdf"
-          />
-
-          <InfoCard
-            title1={"Strengthening India’s Focus on"}
-            title2="Investments in Climate Adaptation"
-            description={
-              "The world experienced its hottest day ever on Tuesday, July 4, breaking a record set just the day before. Last week, China experienced its highest-ever temperature"
-            }
-            animation="center"
-            image={"/climate.png"}
-            link="/climate.pdf"
-          />
-
-          <InfoCard
-            title1={"Brief On Strengthening Quantum "}
-            title2="Applications Ecosystem in India"
-            description={
-              "The Department of Science & Technology (DST), which operates under the Ministry of Science & Technology, will be responsible for implementing the National Mission for Quantum Technologies and Applications (NM-QTA) between 2023-24 and 2030-31."
-            }
-            animation="right"
-            image={"/NQM.png"}
-            link="/NQM.pdf"
-          />
-        </div>
-      </section>
-      <section
-        className="w-full flex-col h-fit bg-white pt-20 bg-dot-black/[0.5] flex"
-        id="media"
-        ref={ref2}
-      >
-        <div className="w-fit m-auto ">
-          <p className="md:text-6xl text-4xl font-black text-center">
-            Our Views in Media
-          </p>
-        </div>
-        <div className="flex flex-col ">
+      {research && (
+        <section
+          className="w-full h-fit bg-white bg-dot-black/[0.5] flex flex-col m-auto pb-20"
+          ref={ref}
+          id="research"
+        >
+          <div className="flex w-fit m-auto mt-20 mb-0 justify-center items-center">
+            <p className="md:text-6xl text-4xl font-black text-center">
+              Our Research
+            </p>
+            <motion.svg
+              initial={{
+                scale: 1,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-12 ml-1 cursor-pointer select-none"
+              onClick={() => {
+                setResearch(false);
+                router.push("/our-perspectives#more");
+              }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </motion.svg>
+          </div>
           <div className="flex md:flex-row flex-col gap-10 mx-auto pt-10">
             <InfoCard
-              title1={"Navigating Climate Financing"}
-              des="Shivi Singh, Senior Research Associate at Ardent Co."
-              animation="left"
-              image={"/budget.png"}
-              link="https://pynr.in/navigating-climate-financing/#:~:text=India%20is%20estimated%20to%20need,agreed%20climate%20objectives%20by%202030"
-            />
-
-            <InfoCard
-              title1={"आत्मनिर्भर भारत, सशक्त अर्थव्यवस्था"}
-              des="Sristi Rai, Senior Associate Public Relation at Ardent Co."
-              animation="center"
-              image={"/climate.png"}
-              link="https://theyoungistaan.com/aatmanirbhar-bharat-strong-economy/"
-            />
-
-            <InfoCard
-              title1={
-                "With UPI’s global buzz, India proves that it can be a digital trailblazer"
+              title1={"Making Sense of"}
+              title2="Union Budget"
+              description={
+                "As echoed by one of the most respected Secretaries to have led the Department of Economic Affairs, the Union-Budget assumes an unparalleled significance for our country."
               }
-              des="Tanush Handa, Assistant Manager at Ardent Co."
-              animation="right"
-              image={"/NQM.png"}
-              link="https://www.moneycontrol.com/news/opinion/with-upis-global-buzz-india-proves-that-it-can-be-a-digital-trailblazer-11254981.html"
-            />
-          </div>
-          <div className="flex md:flex-row flex-col gap-10 m-auto mt-10 pb-20">
-            <InfoCard
-              title1={"Embracing empathy in the workplace landscape"}
-              des="Aradhna Anand, HR Manager at Ardent Co."
               animation="left"
               image={"/budget.png"}
-              link="https://www.peoplematters.in/article/culture/embracing-empathy-in-the-workplace-landscape-39637"
+              link="/budget.pdf"
             />
 
             <InfoCard
-              title1={"India’s neonatal burden and the challenges ahead"}
-              des="Shubhangi Misra, Associate Research and Content at Ardent Co."
+              title1={"Strengthening India’s Focus on"}
+              title2="Investments in Climate Adaptation"
+              description={
+                "The world experienced its hottest day ever on Tuesday, July 4, breaking a record set just the day before. Last week, China experienced its highest-ever temperature"
+              }
               animation="center"
               image={"/climate.png"}
-              link="https://www.hindustantimes.com/ht-insight/public-health/indias-neonatal-burden-and-the-challenges-ahead-101714975069752.html"
+              link="/climate.pdf"
             />
 
             <InfoCard
-              title1={"Making India the Clean Durable Metals Hub"}
-              des="Shivi Singh, Senior Research Associate at Ardent Co."
+              title1={"Brief On Strengthening Quantum "}
+              title2="Applications Ecosystem in India"
+              description={
+                "The Department of Science & Technology (DST), which operates under the Ministry of Science & Technology, will be responsible for implementing the National Mission for Quantum Technologies and Applications (NM-QTA) between 2023-24 and 2030-31."
+              }
               animation="right"
               image={"/NQM.png"}
-              link="https://energy.economictimes.indiatimes.com/news/renewable/making-india-the-clean-durable-metals-hub-is-stainless-steel-the-option/101569608"
+              link="/NQM.pdf"
             />
           </div>
-        </div>
-      </section>
+        </section>
+      )}
+
+      {media && (
+        <section
+          className="w-full flex-col h-fit bg-white pt-20 bg-dot-black/[0.5] flex"
+          id="media"
+          ref={ref2}
+        >
+          <div className="w-fit m-auto flex justify-center items-center">
+            <p className="md:text-6xl text-4xl font-black text-center">
+              Our Views in Media
+            </p>
+            <motion.svg
+              initial={{
+                scale: 1,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className=" md:size-12 size-8 ml-1 cursor-pointer select-none"
+              onClick={() => {
+                setMedia(false);
+                router.push("/our-perspectives#more");
+              }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </motion.svg>
+          </div>
+          <div className="flex flex-col ">
+            <div className="flex md:flex-row flex-col gap-10 mx-auto pt-10">
+              <InfoCard
+                title1={"Navigating Climate Financing"}
+                des="Shivi Singh, Senior Research Associate at Ardent Co."
+                animation="left"
+                image={"/budget.png"}
+                link="https://pynr.in/navigating-climate-financing/#:~:text=India%20is%20estimated%20to%20need,agreed%20climate%20objectives%20by%202030"
+              />
+
+              <InfoCard
+                title1={"आत्मनिर्भर भारत, सशक्त अर्थव्यवस्था"}
+                des="Sristi Rai, Senior Associate Public Relation at Ardent Co."
+                animation="center"
+                image={"/climate.png"}
+                link="https://theyoungistaan.com/aatmanirbhar-bharat-strong-economy/"
+              />
+
+              <InfoCard
+                title1={
+                  "With UPI’s global buzz, India proves that it can be a digital trailblazer"
+                }
+                des="Tanush Handa, Assistant Manager at Ardent Co."
+                animation="right"
+                image={"/NQM.png"}
+                link="https://www.moneycontrol.com/news/opinion/with-upis-global-buzz-india-proves-that-it-can-be-a-digital-trailblazer-11254981.html"
+              />
+            </div>
+            <div className="flex md:flex-row flex-col gap-10 m-auto mt-10 pb-20">
+              <InfoCard
+                title1={"Embracing empathy in the workplace landscape"}
+                des="Aradhna Anand, HR Manager at Ardent Co."
+                animation="left"
+                image={"/budget.png"}
+                link="https://www.peoplematters.in/article/culture/embracing-empathy-in-the-workplace-landscape-39637"
+              />
+
+              <InfoCard
+                title1={"India’s neonatal burden and the challenges ahead"}
+                des="Shubhangi Misra, Associate Research and Content at Ardent Co."
+                animation="center"
+                image={"/climate.png"}
+                link="https://www.hindustantimes.com/ht-insight/public-health/indias-neonatal-burden-and-the-challenges-ahead-101714975069752.html"
+              />
+
+              <InfoCard
+                title1={"Making India the Clean Durable Metals Hub"}
+                des="Shivi Singh, Senior Research Associate at Ardent Co."
+                animation="right"
+                image={"/NQM.png"}
+                link="https://energy.economictimes.indiatimes.com/news/renewable/making-india-the-clean-durable-metals-hub-is-stainless-steel-the-option/101569608"
+              />
+            </div>
+          </div>
+        </section>
+      )}
+
       <Footer theme="dark" />
     </>
   );

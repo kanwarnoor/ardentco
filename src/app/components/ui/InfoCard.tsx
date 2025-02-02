@@ -55,24 +55,19 @@ export default function InfoCard({
       //   amount: 0.3,
       // }}
       // onClick={() => setClicked1((clicked1) => !clicked1)}
-      className="flex flex-col cursor-pointer md:w-[400px] md:h-[450px] w-[300px] h-[350px] bg-black rounded-2xl"
+      className="flex flex-col cursor-pointer md:w-[400px] md:h-[450px] w-[300px] h-[350px] bg-black/50 backdrop-blur-xl rounded-2xl"
     >
       {!clicked && (
         <div
-          className="flex flex-col bg-black h-full rounded-2xl"
-          onClick={() => description ? setClicked((clicked) => !clicked) : window.open(link, '_ blank')}
+          className="flex flex-col bg-black/50 backdrop-blur-xl h-full rounded-2xl"
+          onClick={() =>
+            description
+              ? setClicked((clicked) => !clicked)
+              : window.open(link, "_ blank")
+          }
         >
-          <motion.div
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-            }}
-            transition={{
-              duration: 0.5,
-            }}
-            className={`relative w-full duration-300 rounded-t-2xl md:h-[276.5px]`}
+          <div
+            className={`relative w-full duration-300 rounded-t-2xl h-full`}
           >
             <Image
               src={image}
@@ -80,8 +75,16 @@ export default function InfoCard({
               height={0}
               sizes="100% 100%"
               alt="Saturn Roman"
-              className={`w-full h-full object-cover object-center duration-300 rounded-t-2xl`}
+              className={`w-full h-full object-cover object-center duration-300 rounded-2xl `}
             ></Image>
+
+            <div
+              className="absolute bottom-0 left-0 w-full h-1/2 pointer-events-none 
+               backdrop-blur-xl
+               [mask-image:linear-gradient(to_top,black_50%,transparent)]
+               [Webkit-mask-image:linear-gradient(to_top,black_50%,transparent)] rounded-b-2xl"
+            />
+
             <p
               className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
                 clicked ? "hidden" : "block"
@@ -89,7 +92,7 @@ export default function InfoCard({
             >
               {des}
             </p>
-          </motion.div>
+          </div>
           <motion.div
             initial={{
               opacity: 0,
@@ -100,9 +103,9 @@ export default function InfoCard({
             transition={{
               duration: 0.5,
             }}
-            className={`w-fit h-fit m-auto transition px-5`}
+            className={` w-full h-1/3 transition px-5 absolute flex m-auto justify-center items-center  left-0 right-0 bottom-0 rounded-b-2xl `}
           >
-            <p className="text-white font-bold md:text-xl text-lg  text-center">
+            <p className="text-white font-bold md:text-xl text-lg text-center">
               {title1}
               {title2 && (
                 <>
@@ -117,6 +120,24 @@ export default function InfoCard({
 
       {clicked && description && (
         <>
+          <div
+            className={`absolute w-full h-full duration-300 rounded-t-2xl md:h-full -z-10`}
+          >
+            <Image
+              src={image}
+              width={0}
+              height={0}
+              sizes="100% 100%"
+              alt="Saturn Roman"
+              className={`w-full h-full object-cover object-center duration-300 rounded-2xl `}
+            ></Image>
+          </div>
+          <div
+            className="absolute bottom-0 left-0 w-full h-full pointer-events-none 
+               backdrop-blur-xl
+               [mask-image:linear-gradient(to_top,black_100%,transparent)]
+               [Webkit-mask-image:linear-gradient(to_top,black_100%,transparent)] rounded-2xl -z-10"
+          />
           <div className="flex justify-end p-5 cursor-default">
             <motion.svg
               initial={{
@@ -138,6 +159,7 @@ export default function InfoCard({
               />
             </motion.svg>
           </div>
+
           <div className="relative h-full md:p-10 px-10 md:text-base text-white text-center cursor-default">
             <motion.p
               initial={{
