@@ -15,7 +15,7 @@ export default function Wake() {
         setActive(true);
         playSound();
       }
-    }, 5000);
+    }, 10000);
   };
 
   const playSound = () => {
