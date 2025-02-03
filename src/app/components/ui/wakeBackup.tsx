@@ -19,8 +19,11 @@ export default function ParentComponent() {
 
     // Set a new timer
     timer = setTimeout(() => {
-      setActive(true); // Show the arrow after 5 seconds of inactivity
-    }, 5000); // 5 seconds of inactivity
+      if (!document.hidden) {
+        // Only set active if the document is not hidden
+        setActive(true);
+      }
+    }, 30000); // 5 seconds of inactivity
   };
 
   useEffect(() => {
@@ -66,38 +69,43 @@ interface ArrowProps {
 
 function Arrow({ setActive }: ArrowProps) {
   useEffect(() => {
-    // GSAP animation for the arrow
+    // Function to animate the arrow if the window is active
     const animateArrow = () => {
-      const arrow = document.getElementById("arrow");
-      const motionPath = document.getElementById("motionPath");
+      if (!document.hidden) {
+        const arrow = document.getElementById("arrow");
+        const motionPath = document.getElementById("motionPath");
 
-      // Check if the elements exist before applying GSAP animation
-      if (arrow && motionPath) {
-        // Use GSAP's motionPath plugin with correct type assertion
-        gsap.to(arrow, {
-          duration: 3, // Total animation time in seconds
-          repeat: 0, // No repeat
-          ease: "power1.inOut", // Smooth easing
-          motionPath: {
-            path: motionPath, // Reference to the path
-            align: motionPath, // Align arrow to the path
-            autoRotate: true, // Make arrow rotate along path direction
-            alignOrigin: [0.5, 0.5], // Adjust alignment point of the arrow
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          } as any, // Type assertion to avoid TS error
+        // Check if the elements exist before applying GSAP animation
+        if (arrow && motionPath) {
+          gsap.to(arrow, {
+            duration: 1, // Total animation time in seconds
+            repeat: 0, // No repeat
+            ease: "power1.inOut", // Smooth easing
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            motionPath: {
+              path: motionPath, // Reference to the path
+              align: motionPath, // Align arrow to the path
+              autoRotate: true, // Make arrow rotate along path direction
+              alignOrigin: [0.5, 0.5], // Adjust alignment point of the arrow
+            },
+          });
+        } else {
+          console.error("Arrow or motionPath element not found.");
+        }
+
+        // Play sound when the animation starts
+        const soundEffect = new Audio("/arrowSound.mp3"); // Replace with your actual sound file path
+        soundEffect.play().catch((error) => {
+          console.error("Error playing sound:", error);
         });
-      } else {
-        console.error("Arrow or motionPath element not found.");
       }
     };
 
-    animateArrow();
-
-    // Play sound when the animation starts
-    const soundEffect = new Audio("/sound-effect.mp3"); // Replace with your actual sound file path
-    soundEffect.play().catch((error) => {
-      console.error("Error playing sound:", error);
-    });
+    // Check window visibility and run the animation
+    if (!document.hidden) {
+      animateArrow();
+    }
 
     // Set a timeout for 3 seconds to unmount the component
     const timeout = setTimeout(() => {
@@ -119,19 +127,26 @@ function Arrow({ setActive }: ArrowProps) {
     >
       {/* Motion Path */}
       <path
-        id="motionPath"
+        id="motionPath_old"
         d="m 0 0 c 0 0 0 500 500 200 c 0 0 350 -200 500 360"
+        stroke="none"
+        fill="transparent"
+      />
+      <path
+        id="motionPath"
+        d="m 0 281.25 l 1200 0"
         stroke="none"
         fill="transparent"
       />
       {/* Arrow */}
       <image
         id="arrow"
-        href="/arrow.png"
+        href="/arrowStroke.png"
         x="0" // Initial position
         y="0" // Initial position
         width="100"
         height="100"
+        className="shadow-2xl shadow-white"
       />
     </svg>
   );
