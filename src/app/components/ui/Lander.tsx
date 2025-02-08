@@ -106,7 +106,7 @@ export default function Lander({
             duration: 0.5,
             delay: 1,
           }}
-          className="mt-5"
+          className="mt-7"
         >
           <Button link="#more" />
         </motion.div>

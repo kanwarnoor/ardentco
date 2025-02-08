@@ -327,7 +327,7 @@ export default function Page() {
                 link="https://www.moneycontrol.com/news/opinion/with-upis-global-buzz-india-proves-that-it-can-be-a-digital-trailblazer-11254981.html"
               />
             </div>
-            <div className="flex md:flex-row flex-col gap-10 m-auto mt-10 pb-20">
+            <div className="flex md:flex-row flex-col gap-10 m-auto mt-10">
               <InfoCard
                 title1={"Embracing empathy in the workplace landscape"}
                 des="Aradhna Anand, HR Manager at Ardent Co."
@@ -351,6 +351,10 @@ export default function Page() {
                 image={"/NQM.png"}
                 link="https://energy.economictimes.indiatimes.com/news/renewable/making-india-the-clean-durable-metals-hub-is-stainless-steel-the-option/101569608"
               />
+  
+            </div>
+            <div className="flex md:flex-row flex-col gap-10 m-auto mt-10 pb-20">
+              <InfoCard title1={"The guardians of earth"} title2={"& local forest lands"} image={"/NQM.png"} animation={"center"} link="https://government.economictimes.indiatimes.com/blog/the-guardians-of-earth-local-forest-lands-indigenous-communities-in-decision-making/116156284"/>
             </div>
           </div>
         </section>
