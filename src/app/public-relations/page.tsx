@@ -5,8 +5,8 @@ import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
 import Lander from "../components/ui/Lander";
 import { useInView } from "react-intersection-observer";
-import Carousel from "@/app/components/ui/Carousel";
 import { motion } from "framer-motion";
+import Options from "../components/ui/Options";
 
 export default function Page() {
   const content = [
@@ -18,7 +18,7 @@ export default function Page() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          className="size-56 hover:fill-ardentLighter duration-300 fill-white cursor-pointer"
+          className="duration-300 fill-black  cursor-pointer"
         >
           <path d="M12 .75a8.25 8.25 0 0 0-4.135 15.39c.686.398 1.115 1.008 1.134 1.623a.75.75 0 0 0 .577.706c.352.083.71.148 1.074.195.323.041.6-.218.6-.544v-4.661a6.714 6.714 0 0 1-.937-.171.75.75 0 1 1 .374-1.453 5.261 5.261 0 0 0 2.626 0 .75.75 0 1 1 .374 1.452 6.712 6.712 0 0 1-.937.172v4.66c0 .327.277.586.6.545.364-.047.722-.112 1.074-.195a.75.75 0 0 0 .577-.706c.02-.615.448-1.225 1.134-1.623A8.25 8.25 0 0 0 12 .75Z" />
           <path
@@ -39,7 +39,7 @@ export default function Page() {
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          className="size-56 hover:stroke-ardentLighter duration-300 stroke-white cursor-pointer"
+          className="duration-300 cursor-pointer stroke-black "
         >
           <path
             stroke-linecap="round"
@@ -50,28 +50,28 @@ export default function Page() {
       ),
     },
     {
-      title: "Startup Comms Advisory",
+      title: "Startup Communications Advisory",
       description:
         "We are experienced in working there in close collaboration with new founders, entrepreneurs, and young teams in various fields to establish their unique and effective public image. We help them achieve visibility and build audience perception and voice that plays to their strengths and value proposition. Our methodology guarantees their story appeals to the right stakeholders, enhances their brand, and pushes their endeavours to encourage market growth and acknowledgement.",
       svg: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          className="size-56 hover:fill-ardentLighter duration-300 fill-white cursor-pointer"
+          className="  duration-300  cursor-pointer fill-black "
         >
           <path d="M6 12a.75.75 0 0 1-.75-.75v-7.5a.75.75 0 1 1 1.5 0v7.5A.75.75 0 0 1 6 12ZM18 12a.75.75 0 0 1-.75-.75v-7.5a.75.75 0 0 1 1.5 0v7.5A.75.75 0 0 1 18 12ZM6.75 20.25v-1.5a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0ZM18.75 18.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 1.5 0ZM12.75 5.25v-1.5a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0ZM12 21a.75.75 0 0 1-.75-.75v-7.5a.75.75 0 0 1 1.5 0v7.5A.75.75 0 0 1 12 21ZM3.75 15a2.25 2.25 0 1 0 4.5 0 2.25 2.25 0 0 0-4.5 0ZM12 11.25a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5ZM15.75 15a2.25 2.25 0 1 0 4.5 0 2.25 2.25 0 0 0-4.5 0Z" />
         </svg>
       ),
     },
     {
-      title: "Comms Training & Workshops",
+      title: "Communications Training & Workshops",
       description:
         "We collaborate with subject matter experts to equip senior key opinion leaders and company spokespersons with essential media preparedness skills. Based on our deep industry experience, we ensure that they are equipped to deal with crises and articulate the brand story and vision effectively.",
       svg: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          className="size-56 hover:fill-ardentLighter duration-300 fill-white cursor-pointer"
+          className="  duration-300  cursor-pointer fill-black "
         >
           <path
             fillRule="evenodd"
@@ -83,7 +83,7 @@ export default function Page() {
       ),
     },
     {
-      title: "Leadership Comms Advisory",
+      title: "Leadership Communications Advisory",
       description:
         "Our policy and research team works with your leadership on important strategic issues and messaging to address topics that reach beyond the usual industry storyline. We help shape the image of the executives and position leaders as experts and empower them to articulate macro issues and wider industry trends with authority and engagement.",
       svg: (
@@ -92,7 +92,7 @@ export default function Page() {
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          className="size-56 hover:stroke-ardentLighter duration-300 stroke-white cursor-pointer"
+          className="  duration-300  cursor-pointer stroke-black"
         >
           <path
             stroke-linecap="round"
@@ -166,10 +166,9 @@ export default function Page() {
                 capabilities with leadership vision to ensure impactful
                 communication strategies.
               </p>
-              
             </motion.div>
-            <div className="w-1/3 h-1 bg-white/20 rounded-full mt-20"></div>
-            <Carousel content={content} />
+            <div className="w-1/3 h-1 bg-white/20 rounded-full mt-10 mb-5"></div>
+            <Options content={content} />
           </div>
         </div>
       </section>
