@@ -35,7 +35,7 @@ export default function Wake() {
       events.forEach((event) => window.removeEventListener(event, resetTimer));
       if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, []);
+  });
 
   return (
     active && (

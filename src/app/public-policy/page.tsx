@@ -5,7 +5,7 @@ import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
 import Lander from "../components/ui/Lander";
 import { useInView } from "react-intersection-observer";
-import Carousel from "@/app/components/ui/Carousel";
+import Options from "../components/ui/Options";
 import { motion } from "framer-motion";
 
 export default function Page() {
@@ -19,7 +19,7 @@ export default function Page() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-56 hover:fill-ardentLighter duration-300 fill-white cursor-pointer"
+          className="  duration-300 fill-white cursor-pointer"
         >
           <path
             fillRule="evenodd"
@@ -38,7 +38,7 @@ export default function Page() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-56 hover:fill-ardentLighter duration-300 fill-white cursor-pointer"
+          className="  duration-300 fill-white cursor-pointer"
         >
           <path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
           <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
@@ -54,7 +54,7 @@ export default function Page() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-56 hover:fill-ardentLighter duration-300 fill-white cursor-pointer"
+          className="  duration-300 fill-white cursor-pointer"
         >
           <path d="M10.5 1.875a1.125 1.125 0 0 1 2.25 0v8.219c.517.162 1.02.382 1.5.659V3.375a1.125 1.125 0 0 1 2.25 0v10.937a4.505 4.505 0 0 0-3.25 2.373 8.963 8.963 0 0 1 4-.935A.75.75 0 0 0 18 15v-2.266a3.368 3.368 0 0 1 .988-2.37 1.125 1.125 0 0 1 1.591 1.59 1.118 1.118 0 0 0-.329.79v3.006h-.005a6 6 0 0 1-1.752 4.007l-1.736 1.736a6 6 0 0 1-4.242 1.757H10.5a7.5 7.5 0 0 1-7.5-7.5V6.375a1.125 1.125 0 0 1 2.25 0v5.519c.46-.452.965-.832 1.5-1.141V3.375a1.125 1.125 0 0 1 2.25 0v6.526c.495-.1.997-.151 1.5-.151V1.875Z" />
         </svg>
@@ -69,7 +69,7 @@ export default function Page() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-56 hover:fill-ardentLighter duration-300 fill-white cursor-pointer"
+          className="  duration-300 fill-white cursor-pointer"
         >
           <path
             fill-rule="evenodd"
@@ -89,7 +89,7 @@ export default function Page() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-56 hover:fill-ardentLighter duration-300 fill-white cursor-pointer"
+          className=" duration-300 fill-white cursor-pointer"
         >
           <path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
           <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
@@ -105,7 +105,7 @@ export default function Page() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-56 hover:fill-ardentLighter duration-300 fill-white cursor-pointer"
+          className=" duration-300 fill-white cursor-pointer"
         >
           <path d="M17.004 10.407c.138.435-.216.842-.672.842h-3.465a.75.75 0 0 1-.65-.375l-1.732-3c-.229-.396-.053-.907.393-1.004a5.252 5.252 0 0 1 6.126 3.537ZM8.12 8.464c.307-.338.838-.235 1.066.16l1.732 3a.75.75 0 0 1 0 .75l-1.732 3c-.229.397-.76.5-1.067.161A5.23 5.23 0 0 1 6.75 12a5.23 5.23 0 0 1 1.37-3.536ZM10.878 17.13c-.447-.098-.623-.608-.394-1.004l1.733-3.002a.75.75 0 0 1 .65-.375h3.465c.457 0 .81.407.672.842a5.252 5.252 0 0 1-6.126 3.539Z" />
           <path
@@ -127,7 +127,7 @@ export default function Page() {
 
   useEffect(() => {
     if (refInView) {
-      setIntersecting(true);
+      setIntersecting(false);
     } else {
       setIntersecting(false);
     }
@@ -144,7 +144,7 @@ export default function Page() {
       />
 
       <section
-        className="relative bg-neutral-950 bg-dot-black/[0.5] w-full h-auto min-h-screen text-white"
+        className="relative flex bg-neutral-950 w-full h-auto min-h-screen text-white"
         id="more"
         ref={ref}
       >
@@ -179,10 +179,10 @@ export default function Page() {
               operational success.
             </p>
           </motion.div>
-          <div className="w-1/3 h-1 bg-white/20 rounded-full mt-20"></div>
+          <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
 
-          <div className="flex flex-wrap justify-center w-full h-fit text-center gap-5 mx-auto ">
-            <Carousel content={content} />
+          <div className="flex flex-wrap justify-center w-full h-fit text-center gap-5 mx-auto mb-20">
+            <Options content={content} />
           </div>
         </div>
       </section>

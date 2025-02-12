@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import React, { ReactNode, useState } from "react";
 
 interface Props {
@@ -37,32 +37,37 @@ export default function Options({ content }: Props) {
           </p>
         </div>
       ))}
-      {clicked.clicked && (
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          className="absolute top-0 left-0 w-full h-full bg-white z-50 flex justify-center items-center"
-        >
-          <div className="bg-white p-5 rounded-xl flex flex-col items-center justify-center">
-            <p className="text-black md:text-6xl text-3xl font-black ">
-              {content[clicked.index].title}
-            </p>
-            <p className="text-black md:text-2xl w-[70%] text-center flex mt-5">
-              {content[clicked.index].description}
-            </p>
-            <button
-              onClick={() => setClicked({ clicked: false, index: 0 })}
-              className="bg-black text-white px-4 py-2 rounded-xl mt-5 md:text-xl font-bold"
-            >
-              Close
-            </button>
-          </div>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {clicked.clicked && (
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            className="absolute top-0 left-0 w-full h-full bg-neutral-950 z-50 flex justify-center items-center"
+          >
+            <div className="bg-neutral-950 p-5 rounded-xl flex flex-col items-center justify-center">
+              <p className="text-white md:text-6xl text-3xl font-black ">
+                {content[clicked.index].title}
+              </p>
+              <p className="text-white md:text-2xl w-[70%] text-center flex mt-5">
+                {content[clicked.index].description}
+              </p>
+              <button
+                onClick={() => setClicked({ clicked: false, index: 0 })}
+                className="bg-white text-black px-4 py-2 rounded-xl mt-5 md:text-xl font-bold"
+              >
+                Close
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

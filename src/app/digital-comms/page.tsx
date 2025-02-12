@@ -7,6 +7,7 @@ import Lander from "../components/ui/Lander";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Carousel from "../components/ui/Carousel";
+import Options from "../components/ui/Options";
 
 export default function Page() {
   const content = [
@@ -21,7 +22,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-56 hover:stroke-ardentLighter duration-300 stroke-white cursor-pointer"
+          className="duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -42,7 +43,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-56 hover:stroke-ardentLighter duration-300 stroke-white cursor-pointer"
+          className="  duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -63,7 +64,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-56 hover:stroke-ardentLighter duration-300 stroke-white cursor-pointer"
+          className="  duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -84,7 +85,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-56 hover:stroke-ardentLighter duration-300 stroke-white cursor-pointer"
+          className="  duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -105,7 +106,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-56 hover:stroke-ardentLighter duration-300 stroke-white cursor-pointer"
+          className="  duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -126,7 +127,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-56 hover:stroke-ardentLighter duration-300 stroke-white cursor-pointer"
+          className="  duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -199,8 +200,9 @@ export default function Page() {
                 measurable success.
               </p>
             </motion.div>
-            <div className="w-1/3 h-1 bg-white/20 rounded-full mt-20"></div>
-            <Carousel content={content} />
+            <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
+            <Options content={content} />
+            <div className="mb-20"></div>
           </div>
         </div>
       </section>

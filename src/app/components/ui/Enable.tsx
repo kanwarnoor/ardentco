@@ -26,8 +26,8 @@ export default function Enable() {
           <>
             <ScreenCard
               // css={"bg-ardent text-black"}
-              heading1="Strategic Comms &"
-              heading2="Public Relations"
+              heading1="Strategic Communications"
+              heading2="& Public Relations"
               image="/chess/pawns/11.png"
               position="left"
               // position="top"
@@ -82,8 +82,8 @@ export default function Enable() {
       </div>
 
       <div
-        className="absolute top-1/2 bottom-1/2 -translate-y-1/2 h-fit w-fit z-10 justify-center items-center flex hover:scale-105 cursor-pointer bg-black p-2 rounded-full md:ml-5 ml-1"
-        onClick={() => setNav((prev) => (prev != 0 ? prev - 1 : prev))}
+        className="absolute top-1/2 bottom-1/2 -translate-y-1/2 h-fit w-fit z-10 justify-center items-center flex hover:scale-105 cursor-pointer  p-2 rounded-full md:ml-5 ml-1"
+        onClick={() => setNav((prev) => (prev != 0 ? prev - 1 : 2))}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -95,8 +95,8 @@ export default function Enable() {
         </svg>
       </div>
       <div
-        className="absolute top-1/2 bottom-1/2 -translate-y-1/2 h-fit right-0 w-fit z-10 justify-center items-center flex hover:scale-105 cursor-pointer md:mr-5 mr-1 bg-black rounded-full p-2"
-        onClick={() => setNav((prev) => (prev != 2 ? prev + 1 : prev))}
+        className="absolute top-1/2 bottom-1/2 -translate-y-1/2 h-fit right-0 w-fit z-10 justify-center items-center flex hover:scale-105 cursor-pointer md:mr-5 mr-1  rounded-full p-2"
+        onClick={() => setNav((prev) => (prev != 2 ? prev + 1 : 0))}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

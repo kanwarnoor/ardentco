@@ -172,7 +172,7 @@ export default function Navbar({ right, button }: Props) {
                                 ? setOpen(false)
                                 : {}
                             }
-                            className="flex text-ardentLighter group md:text-4xl text-xl font-bold cursor-pointer select-none "
+                            className="flex text-white group md:text-4xl text-xl font-bold cursor-pointer select-none "
                           >
                             {pathname == item.link ? (
                               <>
@@ -185,7 +185,7 @@ export default function Navbar({ right, button }: Props) {
                               </>
                             ) : (
                               <>
-                                <p className="group-hover:opacity-100 text-ardentLighter opacity-0 no-underline duration-300">
+                                <p className="group-hover:opacity-100 text-white opacity-0 no-underline duration-300">
                                   {">"}
                                 </p>
                                 <p className="">{item.name}</p>
@@ -209,10 +209,12 @@ export default function Navbar({ right, button }: Props) {
                     duration: 0.5,
                     delay: 1,
                   }}
-                  className="absolute flex bottom-0 mb-5 w-full h-fit  text-center justify-center md:items-center text-ardentLighter md:text-sm text-[10px] select-none items-end"
+                  className="absolute flex bottom-0 mb-5 w-full h-fit  text-center justify-center md:items-center text-white md:text-sm text-[10px] select-none items-end "
                 >
-                  Copyright © {new Date().getFullYear()} Ardent Co. All rights
-                  reserved.
+                  <p className="bg-black">
+                    Copyright © {new Date().getFullYear()} Ardent Co. All rights
+                    reserved.
+                  </p>
                 </motion.div>
 
                 {/* line art svg here */}
@@ -227,7 +229,7 @@ export default function Navbar({ right, button }: Props) {
                     duration: 0.5,
                     // delay: 1,
                   }}
-                  className="absolute flex md:bottom-0 w-full -z-10 text-center justify-center md:items-center text-ardentLighter md:text-sm text-[10px] select-none items-end md:scale-100 scale-[2] bottom-10"
+                  className="absolute flex md:bottom-0 w-full -z-10 text-center justify-center md:items-center text-white md:text-sm text-[10px] select-none items-end md:scale-100 scale-[2] bottom-10"
                 >
                   <svg
                     version="1.1"

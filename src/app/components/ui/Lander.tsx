@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Button from "./button";
+import { FlipWords } from "./flip-words";
 
 interface landerProps {
   image?: string;
@@ -87,11 +88,13 @@ export default function Lander({
           }}
           className="md:text-7xl text-5xl font-black"
         >
-          {heading1}
+          <FlipWords words={[heading1]}/>
+        
           {heading2 && (
             <>
-              <br />
-              {heading2}
+   
+              <FlipWords words={[heading2]}/>
+    
             </>
           )}
         </motion.span>

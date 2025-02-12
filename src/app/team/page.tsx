@@ -30,7 +30,7 @@ export default function Page() {
       <Navbar left={left} right={right} />
       <div ref={consultantRef}>
         <Lander
-          heading1={"Minds Behind the Mission"}
+          heading1={"Minds Behind"}
           css="bg-black text-white"
         ></Lander>
       </div>

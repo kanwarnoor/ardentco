@@ -3,12 +3,10 @@ interface FooterProps {
 }
 
 export default function Footer({ theme }: FooterProps) {
-  const phone = 9599735184;
-
   return (
     theme == "dark" && (
       <>
-        <div className="flex-row w-full md:h-[400px] mid:min-h-fit h-fit bg-black grid md:grid-rows-1 grid-rows-2 md:grid-cols-4 grid-cols-2">
+        <div className="flex-row w-full md:min-h-fit h-fit bg-black grid md:grid-rows-1 grid-rows-2 md:grid-cols-4 grid-cols-2">
           <div className="w-full h-fit p-10">
             <p className="text-2xl font-black text-white">Ardent Co.</p>
             <p className="md:text-sm text-xs font-medium text-white">
@@ -21,21 +19,16 @@ export default function Footer({ theme }: FooterProps) {
               engagements.
             </p>
 
-            <div className="flex flex-row mt-10">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="white"
-                className="size-7 md:translate-y-1"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-
-              <p className="md:text-2xl font-bold text-white ml-2">{phone}</p>
+            <div className=" mt-10">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.512930891619!2d77.1998253!3d28.6443566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfde9a0f0e685%3A0x2c0278051c29f4bf!2sArdent%20Co.!5e0!3m2!1sen!2sin!4v1739340394466!5m2!1sen!2sin"
+                width={0}
+                height={0}
+                className="border:0 w-full h-full rounded-xl"
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
 

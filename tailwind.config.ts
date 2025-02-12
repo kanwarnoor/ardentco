@@ -27,7 +27,8 @@ module.exports = {
       colors: {
         "ardent": "#00d8d6",
         "ardentLight": "#BAD2FF",
-        "ardentLighter": "#FCDE9C",
+        "ardentLighter": "white",
+        "ardentLighterReal": "#FCDE9C",
       },
     },
   },

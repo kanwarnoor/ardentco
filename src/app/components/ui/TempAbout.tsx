@@ -390,7 +390,7 @@ export default function About() {
 
       <div
         className="absolute md:w-20 w-10 h-screen left-0 text-center mb-5 flex justify-center items-center cursor-pointer hover:scale-110 z-10"
-        onClick={() => setPara((prev) => (prev != 0 ? prev - 1 : prev))}
+        onClick={() => setPara((prev) => (prev != 0 ? prev - 1 : 4))}
       >
         <div className="absolute left-0 w-full flex items-center justify-center">
           <svg
@@ -412,7 +412,7 @@ export default function About() {
 
       <div
         className="absolute md:w-20 w-10 h-screen right-0 text-center mb-5 flex justify-center items-center cursor-pointer hover:scale-110"
-        onClick={() => setPara((prev) => (prev != 4 ? prev + 1 : prev))}
+        onClick={() => setPara((prev) => (prev != 4 ? prev + 1 : 0))}
       >
         <div className="absolute w-full flex items-center justify-center ">
           <svg
