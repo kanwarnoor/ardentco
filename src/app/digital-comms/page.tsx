@@ -6,7 +6,6 @@ import Footer from "../components/ui/Footer";
 import Lander from "../components/ui/Lander";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import Carousel from "../components/ui/Carousel";
 import Options from "../components/ui/Options";
 
 export default function Page() {
