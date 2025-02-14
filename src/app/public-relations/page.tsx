@@ -129,6 +129,8 @@ export default function Page() {
         image="/banner/publicRelations.png"
         heading1="Strategic Communication"
         heading2="Public Relations"
+        description="A study of 30 listed companies over 40 years found that crises caused an average 19% drop in share prices, took 147 days to recover, and led to lost deals, customers, and funding, affecting unlisted firms too.
+"
         css="text-white"
       />
 

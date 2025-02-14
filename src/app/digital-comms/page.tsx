@@ -159,6 +159,7 @@ export default function Page() {
         image="/banner/digitalComms.png"
         heading1="Digital"
         heading2="Communications"
+        description="A series of impersonation posts by parody accounts on a popular social media platform in 2022 resulted in $15 billion worth of losses in market value."
         css="text-white"
       />
 

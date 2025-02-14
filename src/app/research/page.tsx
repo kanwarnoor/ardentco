@@ -97,6 +97,7 @@ export default function Page() {
         image="/banner/research.png"
         heading1="Research &"
         heading2="Collateral Development"
+        description="A longitudinal study has found that firms with the right maturity level of corporate foresight practices and high future preparedness can expect an average 33% higher profitability and a 200% higher market capitalisation growth compared to the average."
         css="text-white"
       />
 
@@ -140,7 +141,6 @@ export default function Page() {
           <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
           <Options content={content} />
           <div className="mb-20"></div>
-          
         </div>
       </section>
 

@@ -10,6 +10,7 @@ interface landerProps {
   image?: string;
   heading1: string;
   heading2?: string;
+  description?: string;
   blurdata?: string;
   css?: string;
 }
@@ -18,6 +19,7 @@ export default function Lander({
   image,
   heading1,
   heading2,
+  description,
   blurdata,
   css,
 }: landerProps) {
@@ -88,14 +90,29 @@ export default function Lander({
           }}
           className="md:text-7xl text-5xl font-black"
         >
-          <FlipWords words={[heading1]}/>
-        
+          <FlipWords words={[heading1]} />
+
           {heading2 && (
             <>
-   
-              <FlipWords words={[heading2]}/>
-    
+              <FlipWords words={[heading2]} />
             </>
+          )}
+
+          {description && (
+            <motion.p
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              className="md:text-lg text-sm font-bold mt-5 w-[50%] m-auto text-white/70"
+            >
+              {description}
+            </motion.p>
           )}
         </motion.span>
         <motion.div
@@ -109,7 +126,7 @@ export default function Lander({
             duration: 0.5,
             delay: 1,
           }}
-          className="mt-7"
+          className="mt-10"
         >
           <Button link="#more" />
         </motion.div>

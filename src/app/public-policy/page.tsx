@@ -140,6 +140,7 @@ export default function Page() {
         image="/banner/publicPolicyAndRegulatoryAffairs.png"
         heading1="Public Policy &"
         heading2="Regulatory Affairs"
+        description="Studies suggest that companies across industries risk losing up to 30% of their earnings due to policy changes, while in the banking sector, this figure exceeds 50%"
         css="text-white"
       />
 
