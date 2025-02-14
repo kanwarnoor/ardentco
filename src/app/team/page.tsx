@@ -29,10 +29,7 @@ export default function Page() {
     <>
       <Navbar left={left} right={right} />
       <div ref={consultantRef}>
-        <Lander
-          heading1={"Minds Behind"}
-          css="bg-black text-white"
-        ></Lander>
+        <Lander heading1={"Minds Behind"} css="bg-black text-white"></Lander>
       </div>
 
       <div
@@ -177,6 +174,83 @@ Sarthak discovered his calling in communications through a complex non-tradition
         </div>
         <div className="w-[70%] h-full grid md:grid-cols-3 grid-cols-2 gap-10 mb-10">
           <Person
+            name="Mr.Jai Prakash"
+            image="/team/advisors/7.png"
+            position="50% 20%"
+            link="https://www.linkedin.com/in/jaip100/"
+            role="Advisor, Government Affairs.
+Former OSD to Hon’ble Minister of Niti Aayog"
+            des1="Mr. Jai Prakash is a multi-faceted public policy professional with an in-depth understanding of federal government processes, and priority development at the intersection of economic, strategic and societal priorities.
+
+Mr. Jai Prakash spent more than six-years working across key Ministries in the Central Government between 2015 to 2021 as the Official on Special Duty to the Hon’ble Minister Rao Inderjit Singh. During his journey as the OSD to the Hon’ble Minister, Mr. Jai Prakash supported the Hon’ble MInister’s engagements across departments including NITI Aayog, Ministry of Defense, Ministry of Housing and Urban Affairs, and Ministry of Chemicals, Pharmaceuticals & Fertilizers etc. 
+
+Mr. Jai Prakash is an MBA from IIM Lucknow, and had a strong career in the private sector sector with various technology companies prior to working with the Government"
+            theme="dark"
+          />
+          <Person
+            name="Saptarshi Sanyal"
+            image="/team/advisors/10.png"
+            position="50% 50%"
+            role="Advisor, Media and Communications"
+            des1="Aptarshi Sanyal is a journalist and communicator with 26 years of experience with leading brands like NDTV, CNN-IBN, GMR and JSW. He spent a decade in journalism becoming Executive Editor of NDTV Profit before changing tracks. In a 15-year career in communications, policy and government relations, he has worked for leading corporates along with a six-year stint as an independent consultant. He is currently Director of Uncommon Factor Media Pvt Ltd and works in the areas of corporate communication, reputation management, crisis communications and policy. A background in journalism gives him a wide canvas, however, he has deep domain knowledge in aviation, urban transportation, hospitality and automobile sectors. He has worked across the country but professes a weakness for Mumbai and the Eastern states of India."
+            theme="dark"
+          />
+          <Person
+            name="Vinod Kumar"
+            image="/team/advisors/6.jpg"
+            position="50% 20%"
+            link="https://www.linkedin.com/in/vkwuthoo/"
+            role="Advisor, Strategic Affairs
+Deputy Director and Senior Research Fellow, India Foundation"
+            des1="Mr. Vinod Kumar is a senior public policy leader and the president of India’s apex industry chamber for the MSME ecosystem, India SME Forum.
+
+As the President of India SME Forum, Mr. Kumar has defined and driven diverse meaningful engagements with Government institutions advocating for the growth and development of small and medium-sized enterprises in India.
+
+His expertise and deep understanding of the industry has invited his participation to a wide-array of high-impact engagements including as a member of the RBI’s Standing Advisory Committee on Flow of Institutional Credit to the MSME sector, as a member of the Ministry of MSMEs, High Powered Monitoring Committee of the National SC/ST Hub of StandUp India and Advisory Committee,demonstrating his expertise and commitment to the development of the MSME sector."
+            des2="Among diverse areas, Mr. Vinod Kumar has been contributing significantly to enhancing the capabilities of MSMEs on achieving greater realization from exports, leveraging-technology, regulatory understanding etc."
+            theme="dark"
+          />
+           <Person
+            name="Deeksha Goel"
+            image="/team/advisors/4.jpg"
+            position="50% 20%"
+            link="https://www.linkedin.com/in/deeksha-goel-50a10b96/"
+            role="Advisor, Strategic Affairs
+Deputy Director and Senior Research Fellow, India Foundation"
+            des1="Deeksha Goel is a management consultant and policy researcher by training, and has developed a distinguishable record of research and engagements in regional and geopolitical affairs.
+
+Ms. Goel is a Senior Research Fellow and Deputy Director at the India Foundation, wherein Ms. Goel has contributed to a wide-array of informed perspectives and engagements."
+            des2="Ms. Goel’s primary focus as a researcher lies in studying the geopolitics of the Indian Ocean Region (IOR) and the impact of development finance on economic sustainability, particularly in IOR countries. With her cross-sectoral experience, Deeksha has worked extensively in various fields including infrastructure, technology, energy security, and food and agriculture sustainability."
+            theme="dark"
+          />
+          <Person
+            name="Bhavani Giddu"
+            image="/team/advisors/8.jpg"
+            position="50% 20%"
+            link="https://www.linkedin.com/in/bhavanigiddu"
+            role="Advisor, Social Development and Education.
+CEO, Footprint Global Communications"
+            des1="Bhavani Giddu is a seasoned professional with over 13 years of experience as the CEO of Footprint Global Communications based in New Delhi, India. In this role, she specializes in strategic communications encompassing internal and external branding, crisis communications, issue management, and communications training workshops. Her expertise extends to strategic media advisory, reputation management, and market research. Prior to leading Footprint Global Communications, Bhavani served as the Head of Office and General Manager at IPAN Hill & Knowlton, overseeing operations in Delhi and Kolkata. "
+            des2="She also held the position of Manager - Communications at GE Industrial and Senior Consultant & Head of Office at Ogilvy & Mather, where she played a key role in heading offices in Hyderabad, Bangalore, and briefly in New Delhi. Bhavani’s educational background includes attending P.S. Senior Secondary School and completing her studies at the University of Madras."
+            theme="dark"
+          />
+           <Person
+            name="Varda Taneja"
+            image="/team/advisors/9.jpg"
+            position="50% 20%"
+            role="Advisor, FDI & Market Entry
+Founder, Inara Advisors & FDI Advisor to Sweden India Business Council"
+            des1="Varda Taneja is the Founder of a boutique advisory firm, Inara Advisors – focusing on India market entry and regulatory advisory. During her previous role as Vice President, Invest India, Government of India, she led investment promotion in the Europe region and successfully supported European companies in their expansion strategy for India. In addition, she has worked on driving policy initiatives for many companies to support their India investment.
+
+During her decade long experience, Varda has worked in close capacity with the Office of the Prime Minister of India and with senior officials from Federal Ministries and StateGovernments to work on key policy initiatives. She has also led multiple public–private engagements at global platforms and represented India across global platforms such as, World Economic Forum, Davos and others, for policy and business panel discussions."
+            des2="Varda is an FDI Advisor with Sweden India Business Council, Swiss Global Enterprise and The Modern India, Norway.
+
+Her passion and efforts have won her the recognition of BusinessWorld Disrupt 30 under 30 and EuropeIndia40 leaders.
+
+Varda holds a Bachelor’s degree in Economics from the University of Delhi, India and a M.Sc. Management & Strategy from the London School of Economics, UK."
+            theme="dark"
+          />
+          <Person
             name="Kazim Rizvi"
             image="/team/advisors/1.jpeg"
             position="50% 20%"
@@ -207,19 +281,7 @@ He is the founding director of The Dialogue think tank, which was established in
             role="Advisor, Media and Communications"
             theme="dark"
           />
-          <Person
-            name="Deeksha Goel"
-            image="/team/advisors/4.jpg"
-            position="50% 20%"
-            link="https://www.linkedin.com/in/deeksha-goel-50a10b96/"
-            role="Advisor, Strategic Affairs
-Deputy Director and Senior Research Fellow, India Foundation"
-            des1="Deeksha Goel is a management consultant and policy researcher by training, and has developed a distinguishable record of research and engagements in regional and geopolitical affairs.
-
-Ms. Goel is a Senior Research Fellow and Deputy Director at the India Foundation, wherein Ms. Goel has contributed to a wide-array of informed perspectives and engagements."
-            des2="Ms. Goel’s primary focus as a researcher lies in studying the geopolitics of the Indian Ocean Region (IOR) and the impact of development finance on economic sustainability, particularly in IOR countries. With her cross-sectoral experience, Deeksha has worked extensively in various fields including infrastructure, technology, energy security, and food and agriculture sustainability."
-            theme="dark"
-          />
+         
           <Person
             name="Dr. Sabine Kapasi"
             image="/team/advisors/5.png"
@@ -233,70 +295,9 @@ Dr. Kapasi has specialized in In-Vitro Fertilization (IVF) and has gained recogn
             des2="Dr. Kapasi has also been actively engaged with governments, including her role as a research analyst for the Delhi government’s Mohalla clinic program. She has provided valuable guidance to multiple governments on pandemic management strategies, particularly in socio-politically fragile areas."
             theme="dark"
           />
-          <Person
-            name="Vinod Kumar"
-            image="/team/advisors/6.jpg"
-            position="50% 20%"
-            link="https://www.linkedin.com/in/vkwuthoo/"
-            role="Advisor, Strategic Affairs
-Deputy Director and Senior Research Fellow, India Foundation"
-            des1="Mr. Vinod Kumar is a senior public policy leader and the president of India’s apex industry chamber for the MSME ecosystem, India SME Forum.
 
-As the President of India SME Forum, Mr. Kumar has defined and driven diverse meaningful engagements with Government institutions advocating for the growth and development of small and medium-sized enterprises in India.
-
-His expertise and deep understanding of the industry has invited his participation to a wide-array of high-impact engagements including as a member of the RBI’s Standing Advisory Committee on Flow of Institutional Credit to the MSME sector, as a member of the Ministry of MSMEs, High Powered Monitoring Committee of the National SC/ST Hub of StandUp India and Advisory Committee,demonstrating his expertise and commitment to the development of the MSME sector."
-            des2="Among diverse areas, Mr. Vinod Kumar has been contributing significantly to enhancing the capabilities of MSMEs on achieving greater realization from exports, leveraging-technology, regulatory understanding etc."
-            theme="dark"
-          />
-          <Person
-            name="Mr.Jai Prakash"
-            image="/team/advisors/7.png"
-            position="50% 20%"
-            link="https://www.linkedin.com/in/jaip100/"
-            role="Advisor, Government Affairs.
-Former OSD to Hon’ble Minister of Niti Aayog"
-            des1="Mr. Jai Prakash is a multi-faceted public policy professional with an in-depth understanding of federal government processes, and priority development at the intersection of economic, strategic and societal priorities.
-
-Mr. Jai Prakash spent more than six-years working across key Ministries in the Central Government between 2015 to 2021 as the Official on Special Duty to the Hon’ble Minister Rao Inderjit Singh. During his journey as the OSD to the Hon’ble Minister, Mr. Jai Prakash supported the Hon’ble MInister’s engagements across departments including NITI Aayog, Ministry of Defense, Ministry of Housing and Urban Affairs, and Ministry of Chemicals, Pharmaceuticals & Fertilizers etc. 
-
-Mr. Jai Prakash is an MBA from IIM Lucknow, and had a strong career in the private sector sector with various technology companies prior to working with the Government"
-            theme="dark"
-          />
-          <Person
-            name="Bhavani Giddu"
-            image="/team/advisors/8.jpg"
-            position="50% 20%"
-            link="https://www.linkedin.com/in/bhavanigiddu"
-            role="Advisor, Social Development and Education.
-CEO, Footprint Global Communications"
-            des1="Bhavani Giddu is a seasoned professional with over 13 years of experience as the CEO of Footprint Global Communications based in New Delhi, India. In this role, she specializes in strategic communications encompassing internal and external branding, crisis communications, issue management, and communications training workshops. Her expertise extends to strategic media advisory, reputation management, and market research. Prior to leading Footprint Global Communications, Bhavani served as the Head of Office and General Manager at IPAN Hill & Knowlton, overseeing operations in Delhi and Kolkata. "
-            des2="She also held the position of Manager - Communications at GE Industrial and Senior Consultant & Head of Office at Ogilvy & Mather, where she played a key role in heading offices in Hyderabad, Bangalore, and briefly in New Delhi. Bhavani’s educational background includes attending P.S. Senior Secondary School and completing her studies at the University of Madras."
-            theme="dark"
-          />
-          <Person
-            name="Varda Taneja"
-            image="/team/advisors/9.jpg"
-            position="50% 20%"
-            role="Advisor, FDI & Market Entry
-Founder, Inara Advisors & FDI Advisor to Sweden India Business Council"
-            des1="Varda Taneja is the Founder of a boutique advisory firm, Inara Advisors – focusing on India market entry and regulatory advisory. During her previous role as Vice President, Invest India, Government of India, she led investment promotion in the Europe region and successfully supported European companies in their expansion strategy for India. In addition, she has worked on driving policy initiatives for many companies to support their India investment.
-
-During her decade long experience, Varda has worked in close capacity with the Office of the Prime Minister of India and with senior officials from Federal Ministries and StateGovernments to work on key policy initiatives. She has also led multiple public–private engagements at global platforms and represented India across global platforms such as, World Economic Forum, Davos and others, for policy and business panel discussions."
-            des2="Varda is an FDI Advisor with Sweden India Business Council, Swiss Global Enterprise and The Modern India, Norway.
-
-Her passion and efforts have won her the recognition of BusinessWorld Disrupt 30 under 30 and EuropeIndia40 leaders.
-
-Varda holds a Bachelor’s degree in Economics from the University of Delhi, India and a M.Sc. Management & Strategy from the London School of Economics, UK."
-            theme="dark"
-          />
-          <Person
-            name="Saptarshi Sanyal"
-            image="/team/advisors/10.png"
-            position="50% 50%"
-            role="Advisor, Media and Communications"
-            des1="Aptarshi Sanyal is a journalist and communicator with 26 years of experience with leading brands like NDTV, CNN-IBN, GMR and JSW. He spent a decade in journalism becoming Executive Editor of NDTV Profit before changing tracks. In a 15-year career in communications, policy and government relations, he has worked for leading corporates along with a six-year stint as an independent consultant. He is currently Director of Uncommon Factor Media Pvt Ltd and works in the areas of corporate communication, reputation management, crisis communications and policy. A background in journalism gives him a wide canvas, however, he has deep domain knowledge in aviation, urban transportation, hospitality and automobile sectors. He has worked across the country but professes a weakness for Mumbai and the Eastern states of India."
-            theme="dark"
-          />
+          
+         
         </div>
       </div>
       <Footer theme={"dark"} />
