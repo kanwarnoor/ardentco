@@ -5,6 +5,7 @@ import Queen from "@/app/components/ui/Queen";
 export default function About() {
   const [para, setPara] = useState(0);
   const [angle, setAngle] = useState(0);
+  const [right, setRight] = useState(true);
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -77,7 +78,7 @@ export default function About() {
               <motion.p
                 initial={{
                   opacity: 0,
-                  transform: "translateY(-50%)",
+                  transform: right ? "translateX(5%)" : "translateX(-5%)",
                 }}
                 whileInView={{
                   opacity: 1,
@@ -98,7 +99,7 @@ export default function About() {
                 <motion.p
                   initial={{
                     opacity: 0,
-                    transform: "translateY(10%)",
+                    transform: right ? "translateX(5%)" : "translateX(-5%)",
                   }}
                   whileInView={{
                     opacity: 1,
@@ -132,7 +133,7 @@ export default function About() {
               <motion.p
                 initial={{
                   opacity: 0,
-                  transform: "translateY(-50%)",
+                  transform: right ? "translateX(5%)" : "translateX(-5%)",
                 }}
                 whileInView={{
                   opacity: 1,
@@ -153,7 +154,7 @@ export default function About() {
                 <motion.p
                   initial={{
                     opacity: 0,
-                    transform: "translateY(10%)",
+                    transform: right ? "translateX(5%)" : "translateX(-5%)",
                   }}
                   whileInView={{
                     opacity: 1,
@@ -187,7 +188,7 @@ export default function About() {
               <motion.div
                 initial={{
                   opacity: 0,
-                  transform: "translateY(-50%)",
+                  transform: right ? "translateX(5%)" : "translateX(-5%)",
                 }}
                 whileInView={{
                   opacity: 1,
@@ -210,7 +211,7 @@ export default function About() {
                 <motion.p
                   initial={{
                     opacity: 0,
-                    transform: "translateY(10%)",
+                    transform: right ? "translateX(5%)" : "translateX(-5%)",
                   }}
                   whileInView={{
                     opacity: 1,
@@ -239,7 +240,7 @@ export default function About() {
               <motion.div
                 initial={{
                   opacity: 0,
-                  transform: "translateY(-50%)",
+                  transform: right ? "translateX(5%)" : "translateX(-5%)",
                 }}
                 whileInView={{
                   opacity: 1,
@@ -266,7 +267,7 @@ export default function About() {
                 <motion.p
                   initial={{
                     opacity: 0,
-                    transform: "translateY(10%)",
+                    transform: right ? "translateX(5%)" : "translateX(-5%)",
                   }}
                   whileInView={{
                     opacity: 1,
@@ -297,7 +298,7 @@ export default function About() {
               <motion.div
                 initial={{
                   opacity: 0,
-                  transform: "translateY(-50%)",
+                  transform: right ? "translateX(5%)" : "translateX(-5%)",
                 }}
                 whileInView={{
                   opacity: 1,
@@ -323,7 +324,7 @@ export default function About() {
                 <motion.p
                   initial={{
                     opacity: 0,
-                    transform: "translateY(10%)",
+                    transform: right ? "translateX(5%)" : "translateX(-5%)",
                   }}
                   whileInView={{
                     opacity: 1,
@@ -390,7 +391,11 @@ export default function About() {
 
       <div
         className="absolute md:w-20 w-10 h-screen left-0 text-center mb-5 flex justify-center items-center cursor-pointer hover:scale-110 z-10"
-        onClick={() => setPara((prev) => (prev != 0 ? prev - 1 : 4))}
+        onClick={() => {
+          setPara((prev) => (prev != 0 ? prev - 1 : 4))
+    
+          setRight(false);
+        }}
       >
         <div className="absolute left-0 w-full flex items-center justify-center">
           <svg
@@ -412,7 +417,10 @@ export default function About() {
 
       <div
         className="absolute md:w-20 w-10 h-screen right-0 text-center mb-5 flex justify-center items-center cursor-pointer hover:scale-110"
-        onClick={() => setPara((prev) => (prev != 4 ? prev + 1 : 0))}
+        onClick={() => {
+          setPara((prev) => (prev != 4 ? prev + 1 : 0));
+          setRight(true);
+        }}
       >
         <div className="absolute w-full flex items-center justify-center ">
           <svg

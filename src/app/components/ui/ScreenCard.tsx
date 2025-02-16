@@ -14,6 +14,7 @@ interface Props {
   position?: string;
   buttonCss?: string;
   blurData?: string;
+  left?: boolean;
 }
 
 export default function ScreenCard({
@@ -23,7 +24,7 @@ export default function ScreenCard({
   link,
   css,
   position,
-
+  left,
   blurData,
 }: Props) {
   return (
@@ -41,14 +42,22 @@ export default function ScreenCard({
         <motion.div
           initial={{
             opacity: 0,
-            y: 50,
+            transform: left ? "translateX(-10%)" : "translateX(10%)",
           }}
           whileInView={{
             opacity: 1,
-            y: 0,
+            transform: "translateX(0%)",
           }}
           transition={{
             duration: 0.5,
+
+            // delay: left
+            //   ? position == "right"
+            //     ? 0.1
+            //     : 0
+            //   : position == "right"
+            //   ? 0
+            //   : 0.1,
           }}
           className="w-fit md:h-[100%] "
         >
@@ -71,11 +80,11 @@ export default function ScreenCard({
       <motion.div
         initial={{
           opacity: 0,
-          y: -50,
+          transform: left ? "translateX(-10%)" : "translateX(10%)",
         }}
         whileInView={{
           opacity: 1,
-          y: 0,
+          transform: "translateX(0%)",
         }}
         transition={{
           duration: 0.5,

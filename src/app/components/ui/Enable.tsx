@@ -6,6 +6,7 @@ import ScreenCard from "./ScreenCard";
 
 export default function Enable() {
   const [nav, setNav] = useState(0);
+  const [left, setLeft] = useState(false);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -32,13 +33,16 @@ export default function Enable() {
               position="left"
               // position="top"
               link="/public-relations"
+              left={left}
               // buttonCss="text-black bg-ardent border-2 border-black hover:bg-black hover:text-white hover:border-black"
             />
             <ScreenCard
               heading1="Public Policy &"
               heading2="Regulatory Affairs"
               image="/chess/pawns/8.png"
+              position="right"
               link="/public-policy"
+              left={left}
             />
           </>
         )}
@@ -51,12 +55,15 @@ export default function Enable() {
               image="/chess/pawns/9.png"
               position="left"
               link="/research"
+              left={left}
             />
             <ScreenCard
               heading1="Digital"
               heading2="Communications"
+              position="right"
               image="/chess/pawns/10.png"
               link="/digital-comms"
+              left={left}
             />
           </>
         )}
@@ -69,13 +76,15 @@ export default function Enable() {
               image="/chess/pawns/12.png"
               position="left"
               link="/talent-nexus"
+              left={left}
             />
             <ScreenCard
               heading1="Graphics"
               heading2="Designing"
               image="/chess/pawns/13.png"
-              position="top"
+              position="right"
               link="/graphics-designing"
+              left={left}
             />
           </>
         )}
@@ -83,7 +92,10 @@ export default function Enable() {
 
       <div
         className="absolute top-1/2 bottom-1/2 -translate-y-1/2 h-fit w-fit z-10 justify-center items-center flex hover:scale-105 cursor-pointer  p-2 rounded-full md:ml-5 ml-1"
-        onClick={() => setNav((prev) => (prev != 0 ? prev - 1 : 2))}
+        onClick={() => {
+          setNav((prev) => (prev != 0 ? prev - 1 : 2));
+          setLeft(true);
+        }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +108,10 @@ export default function Enable() {
       </div>
       <div
         className="absolute top-1/2 bottom-1/2 -translate-y-1/2 h-fit right-0 w-fit z-10 justify-center items-center flex hover:scale-105 cursor-pointer md:mr-5 mr-1  rounded-full p-2"
-        onClick={() => setNav((prev) => (prev != 2 ? prev + 1 : 0))}
+        onClick={() => {
+          setNav((prev) => (prev != 2 ? prev + 1 : 0));
+          setLeft(false);
+        }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
