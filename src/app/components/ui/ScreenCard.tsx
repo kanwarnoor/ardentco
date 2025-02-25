@@ -89,7 +89,7 @@ export default function ScreenCard({
         transition={{
           duration: 0.5,
         }}
-        className="w-full h-[50%] flex flex-col  md:mt-0 mt-10 "
+        className="w-full h-[50%] flex flex-col  md:mt-0  "
       >
         <div className="flex w-full">
           {heading2 ? (

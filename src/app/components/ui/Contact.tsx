@@ -1,6 +1,7 @@
 import React, { FormEvent, useEffect, useState } from "react";
 import { easeInOut, motion } from "framer-motion";
 import axios from "axios";
+import Button from "./button";
 
 interface FormData {
   firstName: string;
@@ -352,6 +353,22 @@ export default function Contact() {
             >
               CLIENT
             </motion.p>
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              whileInView={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.5,
+              }}
+              className="mt-5"
+            >
+              {" "}
+              <Button link={""} />
+            </motion.div>
           </div>
         </motion.div>
       </div>
@@ -557,7 +574,7 @@ export default function Contact() {
               clicked1 ? "bg-none" : "bg-white"
             }`}
           ></div> */}
-          <div className={`h-fit w-fit m-auto pt-5`}>
+          <div className={`h-fit w-fit m-auto `}>
             <motion.p
               initial={{
                 opacity: 0,
@@ -593,10 +610,26 @@ export default function Contact() {
               viewport={{
                 amount: 0.3,
               }}
-              className="text-white md:text-9xl text-8xl font-black underline"
+              className="text-white md:text-9xl text-8xl font-black md:underline"
             >
               YOU
             </motion.p>
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              whileInView={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.5,
+              }}
+              className="mt-5"
+            >
+              {" "}
+              <Button theme="light" />
+            </motion.div>
           </div>
         </motion.div>
       </div>

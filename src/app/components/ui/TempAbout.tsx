@@ -66,11 +66,12 @@ export default function About() {
               Ardent Co.
             </p>
           </div>
-          <div className="md:flex md:relative md:w-[400px] w-[25%] md:h-[80%] h-auto">
+          <div className="md:flex md:relative md:w-[400px] w-[30%] md:h-[80%] h-auto">
             <Queen angle={angle} />
           </div>
+         
         </motion.div>
-
+        <div className="md:hidden w-1/2 flex mx-auto h-1 bg-white rounded mb-5"></div>
         {/* paras */}
         <div className="md:w-[700px] md:min-h-fit min-h-[50%] md:p-0 px-10 text-center md:text-left h-fit flex flex-col mb-16 md:my-auto my-auto">
           {para == 0 && (
