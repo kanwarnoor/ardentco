@@ -34,9 +34,9 @@ export default function ScreenCard({
     >
       <div className="w-fit md:h-[70%] mx-auto mt-10">
         {position == "left" ? (
-          <div className="absolute -translate-x-[125%] -translate-y-[25%]  inset-0 w-[20%] h-[40%] m-auto rounded-full bg-gradient-radial from-teal-500 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none bg-ardent bg-opacity-80 -z-10"></div>
+          <div className="absolute -translate-x-[125%] -translate-y-[25%]  inset-0 w-[20%] h-[40%] m-auto rounded-full bg-gradient-radial from-teal-500 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none bg-ardent bg-opacity-80 -z-10 md:flex hidden"></div>
         ) : (
-          <div className="absolute translate-x-[125%] -translate-y-[25%]  inset-0 w-[20%] h-[40%] m-auto rounded-full bg-gradient-radial from-teal-500 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none bg-ardent bg-opacity-80 -z-10"></div>
+          <div className="absolute translate-x-[125%] -translate-y-[25%]  inset-0 w-[20%] h-[40%] m-auto rounded-full bg-gradient-radial from-teal-500 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none bg-ardent bg-opacity-80 -z-10 md:flex hidden"></div>
         )}
 
         <motion.div
@@ -59,7 +59,7 @@ export default function ScreenCard({
             //   ? 0
             //   : 0.1,
           }}
-          className="w-fit md:h-[100%] "
+          className="w-fit md:h-[100%] h-[200px]"
         >
           <Image
             src={image}
