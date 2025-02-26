@@ -59,7 +59,7 @@ export default function ScreenCard({
             //   ? 0
             //   : 0.1,
           }}
-          className="md:w-fit md:h-[100%] h-[200px] w-auto"
+          className="md:w-fit md:h-[100%] h-[200px] w-[200px]"
         >
           <Image
             src={image}
