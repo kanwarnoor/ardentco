@@ -22,7 +22,7 @@ export default function Enable() {
 
   return (
     <>
-      <div className="w-screen h-screen z-10 grid md:grid-cols-2 grid-cols-1 grid-rows-2">
+      <div className="w-screen md:h-screen h-fit z-10 grid md:grid-cols-2 grid-cols-1 grid-rows-2">
         {nav == 0 && (
           <>
             <ScreenCard
