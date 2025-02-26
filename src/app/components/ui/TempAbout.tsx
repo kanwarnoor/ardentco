@@ -358,31 +358,31 @@ export default function About() {
       <div className="absolute w-screen bottom-0 text-center flex justify-center">
         <div className="mb-5 absolute bottom-0 w-[50%] h-10 flex items-center justify-center space-x-2">
           <div
-            className={`w-4 h-4 rounded-full cursor-pointer hover:scale-110 ${
+            className={`md:w-4 md:h-4 h-3 w-3 rounded-full cursor-pointer hover:scale-110 ${
               para == 0 ? "bg-neutral-200" : "bg-neutral-500"
             } duration-300`}
             onClick={() => setPara(0)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full cursor-pointer hover:scale-110 ${
+            className={`md:w-4 md:h-4 h-3 w-3 rounded-full cursor-pointer hover:scale-110 ${
               para == 1 ? "bg-neutral-200" : "bg-neutral-500"
             } duration-300`}
             onClick={() => setPara(1)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full cursor-pointer hover:scale-110 ${
+            className={`md:w-4 md:h-4 h-3 w-3 rounded-full cursor-pointer hover:scale-110 ${
               para == 2 ? "bg-neutral-200" : "bg-neutral-500"
             } duration-300`}
             onClick={() => setPara(2)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full  cursor-pointer hover:scale-110 ${
+            className={`md:w-4 md:h-4 h-3 w-3 rounded-full  cursor-pointer hover:scale-110 ${
               para == 3 ? "bg-neutral-200" : "bg-neutral-500"
             } duration-300`}
             onClick={() => setPara(3)}
           ></div>
           <div
-            className={`w-4 h-4 rounded-full  cursor-pointer hover:scale-110 ${
+            className={`md:w-4 md:h-4 h-3 w-3 rounded-full  cursor-pointer hover:scale-110 ${
               para == 4 ? "bg-neutral-100" : "bg-neutral-500"
             } duration-300`}
             onClick={() => setPara(4)}
