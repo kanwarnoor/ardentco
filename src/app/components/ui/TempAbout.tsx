@@ -69,7 +69,6 @@ export default function About() {
           <div className="md:flex md:relative md:w-[400px] w-[30%] md:h-[80%] h-auto">
             <Queen angle={angle} />
           </div>
-         
         </motion.div>
         <div className="md:hidden w-1/2 flex mx-auto h-[1px] bg-white rounded mb-5"></div>
         {/* paras */}
@@ -393,8 +392,8 @@ export default function About() {
       <div
         className="absolute md:w-20 w-10 h-screen left-0 text-center mb-5 flex justify-center items-center cursor-pointer hover:scale-110 z-10"
         onClick={() => {
-          setPara((prev) => (prev != 0 ? prev - 1 : 4))
-    
+          setPara((prev) => (prev != 0 ? prev - 1 : 4));
+
           setRight(false);
         }}
       >
