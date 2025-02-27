@@ -71,7 +71,7 @@ export default function About() {
           </div>
          
         </motion.div>
-        <div className="md:hidden w-1/2 flex mx-auto h-1 bg-white rounded mb-5"></div>
+        <div className="md:hidden w-1/2 flex mx-auto h-[1px] bg-white rounded mb-5"></div>
         {/* paras */}
         <div className="md:w-[700px] md:min-h-fit min-h-[50%] md:p-0 px-10 text-center md:text-left h-fit flex flex-col mb-16 md:my-auto my-auto">
           {para == 0 && (
