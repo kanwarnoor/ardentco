@@ -8,7 +8,7 @@ export default function page() {
   return (
     <>
     <Navbar left={false} right={false}/>
-    <Lander heading1={'Services'} css="text-white"/>
+    <Lander image='/banner/services.png' heading1={'Services'} css="text-white"/>
 
     <div className='relative flex w-full  h-full' id="more">
       <Enable/>

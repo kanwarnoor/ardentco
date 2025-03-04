@@ -62,7 +62,7 @@ export default function Home() {
   return (
     <>
       <Navbar left={false} right={false} />
-      <Lander heading1={`The makings of our DNA`} css="text-white" />
+      <Lander image={'/banner/manifesto.png'} heading1={`The makings of our DNA`} css="text-white" />
       <div
         id="more"
         className="flex flex-col w-full min-h-screen h-fit bg-black bg-grid-white/[0.2] text-center"

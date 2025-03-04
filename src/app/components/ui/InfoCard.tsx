@@ -55,7 +55,7 @@ export default function InfoCard({
       //   amount: 0.3,
       // }}
       // onClick={() => setClicked1((clicked1) => !clicked1)}
-      className="flex flex-col cursor-pointer md:w-[400px] md:h-[450px] w-[300px] h-[350px] bg-black/50 backdrop-blur-xl rounded-2xl"
+      className="flex flex-col cursor-pointer md:w-[400px] shadow-xl md:h-[450px] w-[300px] h-[350px] bg-black/50 backdrop-blur-xl rounded-2xl"
     >
       {!clicked && (
         <div
@@ -66,9 +66,7 @@ export default function InfoCard({
               : window.open(link, "_ blank")
           }
         >
-          <div
-            className={`relative w-full duration-300 rounded-t-2xl h-full`}
-          >
+          <div className={`relative w-full duration-300 rounded-t-2xl h-full`}>
             <Image
               src={image}
               width={0}
@@ -85,13 +83,6 @@ export default function InfoCard({
                [Webkit-mask-image:linear-gradient(to_top,black_50%,transparent)] rounded-b-2xl"
             />
 
-            <p
-              className={`text-center text-white text-xs opacity-80 font-bold mt-1 transition ${
-                clicked ? "hidden" : "block"
-              }`}
-            >
-              {des}
-            </p>
           </div>
           <motion.div
             initial={{
@@ -103,7 +94,7 @@ export default function InfoCard({
             transition={{
               duration: 0.5,
             }}
-            className={` w-full h-1/3 transition px-5 absolute flex m-auto justify-center items-center  left-0 right-0 bottom-0 rounded-b-2xl `}
+            className={` w-full h-1/3 transition px-5 absolute flex flex-col m-auto justify-center items-center  left-0 right-0 bottom-0 rounded-b-2xl `}
           >
             <p className="text-white font-bold md:text-xl text-lg text-center">
               {title1}
@@ -114,6 +105,13 @@ export default function InfoCard({
                 </>
               )}
             </p>
+            {des && (
+              <p
+                className={`text-center text-white text-xs opacity-80 font-bold mt-1`}
+              >
+                {des}
+              </p>
+            )}
           </motion.div>
         </div>
       )}

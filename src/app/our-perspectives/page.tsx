@@ -50,7 +50,7 @@ export default function Page() {
       <Navbar left={intersecting} right={intersecting} />
       <div ref={lander}>
         <Lander
-          image={"/perspective.jpg"}
+          image={`/banner/perspective.png`}
           heading1={"How our experts view"}
           heading2="the evolving world"
           css="text-white"
@@ -232,7 +232,7 @@ export default function Page() {
                 "As echoed by one of the most respected Secretaries to have led the Department of Economic Affairs, the Union-Budget assumes an unparalleled significance for our country."
               }
               animation="left"
-              image={"/budget.png"}
+              image={"/research1.png"}
               link="/budget.pdf"
             />
 
@@ -243,7 +243,7 @@ export default function Page() {
                 "The world experienced its hottest day ever on Tuesday, July 4, breaking a record set just the day before. Last week, China experienced its highest-ever temperature"
               }
               animation="center"
-              image={"/climate.png"}
+              image={"/research2.png"}
               link="/climate.pdf"
             />
 
@@ -254,7 +254,7 @@ export default function Page() {
                 "The Department of Science & Technology (DST), which operates under the Ministry of Science & Technology, will be responsible for implementing the National Mission for Quantum Technologies and Applications (NM-QTA) between 2023-24 and 2030-31."
               }
               animation="right"
-              image={"/NQM.png"}
+              image={"/research3.png"}
               link="/NQM.pdf"
             />
           </div>
@@ -302,59 +302,71 @@ export default function Page() {
           <div className="flex flex-col ">
             <div className="flex md:flex-row flex-col gap-10 mx-auto pt-10">
               <InfoCard
-                title1={"Navigating Climate Financing"}
-                des="Shivi Singh, Senior Research Associate at Ardent Co."
+                // title1={"Navigating Climate Financing"}
+                title1="Shivi Singh"
+                des="Senior Research Associate"
                 animation="left"
-                image={"/budget.png"}
+                image={"/media1.png"}
                 link="https://pynr.in/navigating-climate-financing/#:~:text=India%20is%20estimated%20to%20need,agreed%20climate%20objectives%20by%202030"
               />
 
               <InfoCard
-                title1={"आत्मनिर्भर भारत, सशक्त अर्थव्यवस्था"}
-                des="Sristi Rai, Senior Associate Public Relation at Ardent Co."
+                // title1={"आत्मनिर्भर भारत, सशक्त अर्थव्यवस्था"}
+                title1="Sristi Rai"
+                des="Senior Associate Public Relation"
                 animation="center"
-                image={"/climate.png"}
+                image={"/media2.png"}
                 link="https://theyoungistaan.com/aatmanirbhar-bharat-strong-economy/"
               />
 
               <InfoCard
-                title1={
-                  "With UPI’s global buzz, India proves that it can be a digital trailblazer"
-                }
-                des="Tanush Handa, Assistant Manager at Ardent Co."
+                // title1={
+                //   "With UPI’s global buzz, India proves that it can be a digital trailblazer"
+                // }
+                title1="Tanush Handa"
+                des="Assistant Manager"
                 animation="right"
-                image={"/NQM.png"}
+                image={"/media3.png"}
                 link="https://www.moneycontrol.com/news/opinion/with-upis-global-buzz-india-proves-that-it-can-be-a-digital-trailblazer-11254981.html"
               />
             </div>
             <div className="flex md:flex-row flex-col gap-10 m-auto mt-10">
               <InfoCard
-                title1={"Embracing empathy in the workplace landscape"}
-                des="Aradhna Anand, HR Manager at Ardent Co."
+                // title1={"Embracing empathy in the workplace landscape"}
+                title1="Aradhna Anand"
+                des="HR Manager"
                 animation="left"
-                image={"/budget.png"}
+                image={"/media4.png"}
                 link="https://www.peoplematters.in/article/culture/embracing-empathy-in-the-workplace-landscape-39637"
               />
 
               <InfoCard
-                title1={"India’s neonatal burden and the challenges ahead"}
-                des="Shubhangi Misra, Associate Research and Content at Ardent Co."
+                // title1={"India’s neonatal burden and the challenges ahead"}
+                title1="Shubhangi Misra"
+                des="Associate Research and Content"
                 animation="center"
-                image={"/climate.png"}
+                image={"/media5.png"}
                 link="https://www.hindustantimes.com/ht-insight/public-health/indias-neonatal-burden-and-the-challenges-ahead-101714975069752.html"
               />
 
               <InfoCard
-                title1={"Making India the Clean Durable Metals Hub"}
-                des="Shivi Singh, Senior Research Associate at Ardent Co."
+                // title1={"Making India the Clean Durable Metals Hub"}
+                title1="Shivi Singh"
+                des="Senior Research Associate"
                 animation="right"
-                image={"/NQM.png"}
+                image={"/media6.png"}
                 link="https://energy.economictimes.indiatimes.com/news/renewable/making-india-the-clean-durable-metals-hub-is-stainless-steel-the-option/101569608"
               />
-  
             </div>
             <div className="flex md:flex-row flex-col gap-10 m-auto mt-10 pb-20">
-              <InfoCard title1={"The guardians of earth"} title2={"& local forest lands"} image={"/NQM.png"} animation={"center"} link="https://government.economictimes.indiatimes.com/blog/the-guardians-of-earth-local-forest-lands-indigenous-communities-in-decision-making/116156284"/>
+              <InfoCard
+                // title1={"The guardians of earth"}
+                // title2={"& local forest lands"}
+                title1=""
+                image={"/media7.png"}
+                animation={"center"}
+                link="https://government.economictimes.indiatimes.com/blog/the-guardians-of-earth-local-forest-lands-indigenous-communities-in-decision-making/116156284"
+              />
             </div>
           </div>
         </section>
