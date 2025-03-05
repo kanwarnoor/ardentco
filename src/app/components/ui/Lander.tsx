@@ -88,7 +88,7 @@ export default function Lander({
           transition={{
             duration: 1,
           }}
-          className="md:text-7xl text-5xl font-black"
+          className="md:text-7xl text-4xl font-black"
         >
           <FlipWords words={[heading1]} />
 

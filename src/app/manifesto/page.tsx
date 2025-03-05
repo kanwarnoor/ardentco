@@ -65,7 +65,7 @@ export default function Home() {
       <Lander image={'/banner/manifesto.png'} heading1={`The makings of our DNA`} css="text-white" />
       <div
         id="more"
-        className="flex flex-col w-full min-h-screen h-fit bg-black bg-grid-white/[0.2] text-center"
+        className="flex flex-col w-full min-h-screen h-fit bg-black bg-grid-white/[0.1] text-center"
       >
         <div className="flex flex-col w-fit h-fit m-auto md:pt-32 md:pb-32 pt-16 pb-16 text-center justify-center items-center ">
           <motion.p
@@ -156,11 +156,11 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-center justify-center">
+            <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 justify-center text-justify">
               Ardent Co. will always be a sandbox for inspired, driven
-              professionals <br />
+              professionals 
               Ardent Co. will never limit itself by any notions and perceptions{" "}
-              <br />
+              
               Ardent Co. will encourage, both, thinkers, and doers, and serve as
               an ecosystem for unleashing inhibited potential
             </div>
@@ -195,13 +195,13 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-center justify-center">
+            <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-justify justify-center">
               Ardent Co. will always work as partners with you, harmonized with
               an in-depth appreciation of your goals, targets, and vision.{" "}
-              <br />
+           
               Ardent Co.’s strategy and work will always be intellectually
               sound, driven by our principles of research, coherence, and cogent
-              interventions. <br />
+              interventions. 
               Ardent Co. will always maintain a solution-oriented mindset,
               regardless of the onerosity of the mandate
             </div>
@@ -235,14 +235,14 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-center justify-center">
+            <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-justify justify-center">
               Ardent Co. will always strive towards developing fresh
               perspectives and novel approaches in all the verticals we operate
-              in. <br />
+              in. 
               Ardent Co. will seek to support the nation’s growth and
               priorities, by leveraging its capacities and expertise for
               researching, developing, and recommending innovative solutions and
-              interventions. <br />
+              interventions. 
               Ardent Co. will seek to positively contribute to the planet’s
               metamorphosis, standing at the cusp of a technological
               transformation, environmental transition, and societal evolution

@@ -82,7 +82,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
           <Person
             name="Tanush Handa"
             image="/team/consultants/assistantManager1.jpg"
-            role="Assistant Manager, Public Policy"
+            role="Manager, Public Policy"
             theme="dark"
             link="https://www.linkedin.com/in/tanush-handa/"
             position="50% 25%"
@@ -102,7 +102,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
           <Person
             name="Ekta Sharma"
             image="/team/consultants/assistantManager3.jpg"
-            role="Assistant Manager, Digital Communications"
+            role="Manager, Digital Communications"
             theme="dark"
             link="https://www.linkedin.com/in/ekta4sure/"
             position="50% 10%"

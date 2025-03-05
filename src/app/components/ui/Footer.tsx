@@ -1,12 +1,12 @@
 interface FooterProps {
-  theme: "dark" | "light";
+  theme?: "dark" | "light";
 }
 
 export default function Footer({ theme }: FooterProps) {
   return (
     theme == "dark" && (
       <>
-        <div className="flex-row w-full md:min-h-fit h-fit bg-black grid md:grid-rows-1 grid-rows-2 md:grid-cols-4 grid-cols-2">
+        <div className="flex-row w-full md:min-h-fit h-fit bg-black grid md:grid-rows-1 grid-rows-1 md:grid-cols-4 grid-cols-2">
           <div className="w-full h-fit p-10">
             <p className="text-2xl font-black text-white">Ardent Co.</p>
             <p className="md:text-sm text-xs font-medium text-white">
@@ -24,7 +24,7 @@ export default function Footer({ theme }: FooterProps) {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.512930891619!2d77.1998253!3d28.6443566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfde9a0f0e685%3A0x2c0278051c29f4bf!2sArdent%20Co.!5e0!3m2!1sen!2sin!4v1739340394466!5m2!1sen!2sin"
                 width={0}
                 height={0}
-                className="border:0 w-full h-full rounded-xl"
+                className="border:0 w-full h-fit rounded-xl"
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -32,7 +32,7 @@ export default function Footer({ theme }: FooterProps) {
             </div>
           </div>
 
-          <div className="w-full h-fit p-10">
+          <div className="w-full h-fit p-10 ">
             <p className="text-2xl font-bold text-white ml-2 mb-10">
               Quick Links
             </p>
@@ -57,7 +57,7 @@ export default function Footer({ theme }: FooterProps) {
             </div>
           </div>
 
-          <div className="w-full h-full p-10">
+          <div className="w-full h-fit  p-10">
             <p className="text-2xl font-bold text-white ml-2 mb-10">
               Information
             </p>
@@ -71,7 +71,7 @@ export default function Footer({ theme }: FooterProps) {
             </div>
           </div>
 
-          <div className="w-full h-full p-10">
+          <div className="w-full h-fit p-10">
             <p className="text-2xl font-bold text-white ml-2 md:mb-10 mb-5">
               Get in Touch
             </p>

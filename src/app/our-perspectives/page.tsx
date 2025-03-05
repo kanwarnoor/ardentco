@@ -361,7 +361,8 @@ export default function Page() {
               <InfoCard
                 // title1={"The guardians of earth"}
                 // title2={"& local forest lands"}
-                title1=""
+                title1="Vaishnavi Chauhan"
+                des="Senior Associate - Research"
                 image={"/media7.png"}
                 animation={"center"}
                 link="https://government.economictimes.indiatimes.com/blog/the-guardians-of-earth-local-forest-lands-indigenous-communities-in-decision-making/116156284"
