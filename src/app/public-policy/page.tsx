@@ -5,7 +5,8 @@ import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
 import Lander from "../components/ui/Lander";
 import { useInView } from "react-intersection-observer";
-import Options from "../components/ui/Options";
+// import Options from "../components/ui/Options";
+import OptionsFull from "../components/ui/OptionsFull";
 import { motion } from "framer-motion";
 
 export default function Page() {
@@ -182,8 +183,8 @@ export default function Page() {
           </motion.div>
           <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
 
-          <div className="flex flex-wrap justify-center w-full h-fit text-center gap-5 mx-auto mb-20">
-            <Options content={content} />
+          <div className="flex flex-wrap justify-center w-full h-fit text-center gap-5 mx-auto">
+            <OptionsFull content={content} />
           </div>
         </div>
       </section>

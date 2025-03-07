@@ -6,7 +6,8 @@ import Footer from "../components/ui/Footer";
 import Lander from "../components/ui/Lander";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import Options from "../components/ui/Options";
+// import Options from "../components/ui/Options";
+import OptionsFull from "../components/ui/OptionsFull";
 
 export default function Page() {
   const content = [
@@ -201,8 +202,8 @@ export default function Page() {
               </p>
             </motion.div>
             <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
-            <Options content={content} />
-            <div className="mb-20"></div>
+            <OptionsFull content={content} />
+ 
           </div>
         </div>
       </section>
