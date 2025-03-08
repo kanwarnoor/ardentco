@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Props {
@@ -17,7 +17,27 @@ export default function OptionsFull({ content }: Props) {
     index: null,
   });
 
-  const item = 40;
+  const [item, setItem] = useState(40);
+
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    setItem(windowWidth <= 768 ? 25 : 40);
+    setPos(0);
+  }, [windowWidth]);
 
   return (
     <>
@@ -49,7 +69,7 @@ export default function OptionsFull({ content }: Props) {
                 index: prev.index === index ? null : index,
               }))
             }
-            className="w-[40rem] h-[30rem] p-10 flex flex-col justify-center items-center m-auto cursor-pointer"
+            className="md:w-[40rem] w-[25rem] h-[30rem] p-10 flex flex-col justify-center items-center m-auto cursor-pointer"
           >
             <AnimatePresence mode="wait">
               {clicked.clicked && clicked.index === index ? (
@@ -62,7 +82,7 @@ export default function OptionsFull({ content }: Props) {
                     transition={{ duration: 0.2 }}
                     className="w-full h-fit text-left"
                   >
-                    <p className="text-xl font-bold text-justify">
+                    <p className="md:text-xl text-sm font-bold text-justify">
                       {item.description}
                     </p>
                   </motion.div>
@@ -75,11 +95,13 @@ export default function OptionsFull({ content }: Props) {
                   exit={{ opacity: 0, x: -100 }}
                   transition={{ duration: !clicked.clicked ? 0.5 : 0.4 }}
                 >
-                  <div className="w-fit flex size-12 text-black">
+                  <div className="w-fit flex md:size-12 size-7 text-black">
                     {item.svg}
                   </div>
                   <div className="w-full h-fit text-left">
-                    <p className="text-5xl font-bold">{item.title}</p>
+                    <p className="md:text-5xl text-3xl font-bold">
+                      {item.title}
+                    </p>
                   </div>
                 </motion.div>
               )}
@@ -111,7 +133,7 @@ export default function OptionsFull({ content }: Props) {
             viewBox="0 0 24 24"
             strokeWidth="2"
             stroke="black"
-            className="size-7"
+            className="md:size-7 size-3"
           >
             <path
               strokeLinecap="round"
@@ -133,7 +155,7 @@ export default function OptionsFull({ content }: Props) {
               setClicked({ clicked: false, index: null });
             }
             setPos((prev) =>
-              prev != item * (content.length - 2) ? prev + item : prev
+              prev != item * (content.length - 1) ? prev + item : prev
             );
           }}
         >
@@ -143,7 +165,7 @@ export default function OptionsFull({ content }: Props) {
             viewBox="0 0 24 24"
             strokeWidth="2"
             stroke="black"
-            className="size-7 rotate-180"
+            className="md:size-7 size-3 rotate-180"
           >
             <path
               strokeLinecap="round"
