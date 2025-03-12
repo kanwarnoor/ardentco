@@ -48,7 +48,7 @@ export default function OptionsFull({ content }: Props) {
           duration: 1,
           type: "spring",
         }}
-        className="w-full grid grid-flow-col"
+        className="w-full grid grid-flow-col md:overflow-x-hidden overflow-x-auto"
       >
         {content.map((item, index) => (
           <motion.div
@@ -62,7 +62,7 @@ export default function OptionsFull({ content }: Props) {
             whileHover={{
               backgroundColor: `rgba(100, 216, 214, ${(index + 1) * 0.1})`,
             }}
-            whileTap={{ scale: 1.1 }}
+            // whileTap={{ scale: 1.1 }}
             onClick={() =>
               setClicked((prev) => ({
                 clicked: prev.index === index ? false : true,
@@ -111,7 +111,7 @@ export default function OptionsFull({ content }: Props) {
       </motion.div>
 
       {/* Controls */}
-      <div className="w-fit flex flex-row ml-auto mr-5 mb-10">
+      <div className="w-fit md:flex flex-row ml-auto mr-5 mb-10  hidden">
         <motion.p
           initial={{
             scale: 1,
