@@ -124,7 +124,9 @@ export default function OptionsFull({ content }: Props) {
             if (clicked.clicked) {
               setClicked({ clicked: false, index: null });
             }
-            setPos((prev) => (prev != 0 ? prev - item : prev));
+            setPos((prev) =>
+              prev != 0 ? prev - item : item * (content.length - 1)
+            );
           }}
         >
           <svg
@@ -155,7 +157,7 @@ export default function OptionsFull({ content }: Props) {
               setClicked({ clicked: false, index: null });
             }
             setPos((prev) =>
-              prev != item * (content.length - 1) ? prev + item : prev
+              prev != item * (content.length - 1) ? prev + item : 0
             );
           }}
         >
