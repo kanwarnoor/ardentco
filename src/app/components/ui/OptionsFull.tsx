@@ -48,7 +48,7 @@ export default function OptionsFull({ content }: Props) {
           duration: 1,
           type: "spring",
         }}
-        className="w-full grid grid-flow-col md:overflow-x-hidden overflow-x-auto"
+        className="w-full grid grid-flow-col md:overflow-x-visible overflow-x-auto"
       >
         {content.map((item, index) => (
           <motion.div
@@ -111,15 +111,15 @@ export default function OptionsFull({ content }: Props) {
       </motion.div>
 
       {/* Controls */}
-      <div className="w-fit md:flex flex-row ml-auto mr-5 mb-10  hidden">
-        <motion.p
+      <div className="md:flex flex-row ml-auto w-fit h-fit hidden absolute left-0 bottom-0 ">
+        <motion.div
           initial={{
             scale: 1,
           }}
           whileTap={{
             scale: 1.1,
           }}
-          className="cursor-pointer bg-white rounded-full p-5"
+          className="cursor-pointer bg-white rounded-full p-5 h-fit flex mr-auto mt-auto m-5"
           onClick={() => {
             if (clicked.clicked) {
               setClicked({ clicked: false, index: null });
@@ -135,7 +135,7 @@ export default function OptionsFull({ content }: Props) {
             viewBox="0 0 24 24"
             strokeWidth="2"
             stroke="black"
-            className="md:size-7 size-3"
+            className="md:size-7 size-3 "
           >
             <path
               strokeLinecap="round"
@@ -143,15 +143,17 @@ export default function OptionsFull({ content }: Props) {
               d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
             />
           </svg>
-        </motion.p>
-        <motion.p
+        </motion.div>
+      </div>
+      <div className="md:flex flex-row ml-auto w-fit h-[30rem] hidden absolute right-0 bottom-0 ">
+        <motion.div
           initial={{
             scale: 1,
           }}
           whileTap={{
             scale: 1.1,
           }}
-          className="cursor-pointer bg-white rounded-full p-5 ml-2"
+          className="cursor-pointer bg-white rounded-full p-5 ml-2 h-fit flex mt-auto m-5"
           onClick={() => {
             if (clicked.clicked) {
               setClicked({ clicked: false, index: null });
@@ -175,8 +177,9 @@ export default function OptionsFull({ content }: Props) {
               d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
             />
           </svg>
-        </motion.p>
+        </motion.div>
       </div>
+    
     </>
   );
 }

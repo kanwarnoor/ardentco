@@ -143,7 +143,7 @@ export default function Page() {
         {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)] z-0"></div> */}
 
         <div className="relative m-auto flex flex-col w-full h-auto z-10 justify-center items-center min-h-screen gap-5">
-          <div className="flex flex-wrap justify-center w-full h-fit text-center  gap-5 mx-auto text-white">
+          <div className="flex flex-wrap justify-center w-full h-fit text-center  gap-5 mx-auto mt-auto text-white">
             <motion.div
               initial={{
                 opacity: 0,
@@ -172,7 +172,6 @@ export default function Page() {
             </motion.div>
             <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
             <OptionsFull content={content} />
-            {/* <div className="mb-20"></div> */}
           </div>
         </div>
       </section>

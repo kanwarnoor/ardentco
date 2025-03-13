@@ -29,7 +29,11 @@ export default function Page() {
     <>
       <Navbar left={left} right={right} />
       <div ref={consultantRef}>
-        <Lander image="/banner/team.png" heading1={"Minds Behind"} css="bg-black text-white"></Lander>
+        <Lander
+          image="/banner/team.png"
+          heading1={"Minds Behind"}
+          css="bg-black text-white"
+        ></Lander>
       </div>
 
       <div
@@ -128,15 +132,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             des1="Manish is a prolific and detail-oriented graphic designer with extensive experience across various verticals, including B2B and B2C. He has developed exceptional proficiency in Adobe Creative Suite, excelling in branding, print design, and digital media. Always staying ahead of industry trends, his multifaceted and collaborative approach has earned him a reputation for perfectionism and a keen eye for detail. His work is not only strategically effective but also aesthetically captivating."
             des2="He is a fitness freak always striving to stay active and healthy, with keen interest in stock markets and investments he likes to monitor market trends. In his leisure he enjoys video games"
           />
-          <Person
-            name="Kevin Marks"
-            image="/team/consultants/associate2.jpeg"
-            role="Associate, Public Policy"
-            link="https://www.linkedin.com/in/kevinmarks15/"
-            theme="dark"
-            position="50% 30%"
-            des1="Kevin is a cross-disciplinary public policy consultant with a strong academic foundation, holding a degree in History from St. Stephen’s College, Delhi. He has diverse experience working with various government offices, bringing unique perspectives to the organization and driving positive change. He specializes in governmental operations. He enjoys the thrill of trail biking, off-roading and hiking exploring the outdoors. His artistic side is expressed through charcoal sketches and playing flute."
-          />
+
           <Person
             name="Binaira Vaishno Panwar"
             image="/team/consultants/manager.jpeg"
@@ -210,7 +206,7 @@ His expertise and deep understanding of the industry has invited his participati
             des2="Among diverse areas, Mr. Vinod Kumar has been contributing significantly to enhancing the capabilities of MSMEs on achieving greater realization from exports, leveraging-technology, regulatory understanding etc."
             theme="dark"
           />
-           <Person
+          <Person
             name="Deeksha Goel"
             image="/team/advisors/4.jpg"
             position="50% 20%"
@@ -234,7 +230,7 @@ CEO, Footprint Global Communications"
             des2="She also held the position of Manager - Communications at GE Industrial and Senior Consultant & Head of Office at Ogilvy & Mather, where she played a key role in heading offices in Hyderabad, Bangalore, and briefly in New Delhi. Bhavani’s educational background includes attending P.S. Senior Secondary School and completing her studies at the University of Madras."
             theme="dark"
           />
-           <Person
+          <Person
             name="Varda Taneja"
             image="/team/advisors/9.jpg"
             position="50% 20%"
@@ -281,7 +277,7 @@ He is the founding director of The Dialogue think tank, which was established in
             role="Advisor, Media and Communications"
             theme="dark"
           />
-         
+
           <Person
             name="Dr. Sabine Kapasi"
             image="/team/advisors/5.png"
@@ -295,9 +291,6 @@ Dr. Kapasi has specialized in In-Vitro Fertilization (IVF) and has gained recogn
             des2="Dr. Kapasi has also been actively engaged with governments, including her role as a research analyst for the Delhi government’s Mohalla clinic program. She has provided valuable guidance to multiple governments on pandemic management strategies, particularly in socio-politically fragile areas."
             theme="dark"
           />
-
-          
-         
         </div>
       </div>
       <Footer theme={"dark"} />
