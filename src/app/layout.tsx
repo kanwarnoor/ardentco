@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+      <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
       <body className={rethink.className}>{children}</body>
     </html>
   );
