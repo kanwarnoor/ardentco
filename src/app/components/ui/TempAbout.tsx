@@ -176,8 +176,6 @@ export default function About() {
                   from convention, which is central to who we are and what we
                   attract. Envisioned in 2018 as a fictional entity, Ardent Co.
                   evolved into a tangible idea and became reality in late 2022.
-                  This manifesto reflects our commitment to staying true to our
-                  vision and our stakeholders.
                 </motion.p>
               </div>
             </div>

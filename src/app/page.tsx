@@ -86,7 +86,9 @@ export default function Home() {
           loop
           playsInline
           muted
+          preload="auto"
           crossOrigin="anonymous"
+          poster="/banner/manifesto.png"
           className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-100"
         >
           Your browser does not support the video tag.
@@ -151,25 +153,24 @@ export default function Home() {
               Status Quo
             </motion.p>
             <br />
-            
           </div>
         </div>
         <motion.div
-              className="w-fit md:flex mx-auto justify-center text-center left-0 right-0 z-10 mt-5"
-              whileTap={{
-                scale: 1.1,
-                transition: { duration: 0.1 },
-              }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { duration: 1, delay: 0.9 } }}
-            >
-              <a
-                href="#about"
-                className="md:text-xl border-2 font-bold text-ardent bg-none border-ardent px-5 py-2 rounded-full hover:bg-ardent hover:text-black duration-300"
-              >
-                Know more
-              </a>
-            </motion.div>
+          className="w-fit md:flex mx-auto justify-center text-center left-0 right-0 z-10 mt-5"
+          whileTap={{
+            scale: 1.1,
+            transition: { duration: 0.1 },
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 1, delay: 0.9 } }}
+        >
+          <a
+            href="#about"
+            className="md:text-xl border-2 font-bold text-ardent bg-none border-ardent px-5 py-2 rounded-full hover:bg-ardent hover:text-black duration-300"
+          >
+            Know more
+          </a>
+        </motion.div>
       </section>
 
       <section
