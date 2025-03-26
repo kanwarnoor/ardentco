@@ -88,8 +88,8 @@ export default function Page() {
       <Navbar left={intersecting} right={intersecting} />
       <Lander
         image="/banner/graphics.png"
-        heading1="Graphics"
-        heading2="Designing"
+        heading1="Creative Design and"
+        heading2="Production"
         css="text-white"
       />
 

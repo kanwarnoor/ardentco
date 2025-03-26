@@ -79,8 +79,8 @@ export default function Enable() {
               left={left}
             />
             <ScreenCard
-              heading1="Graphics"
-              heading2="Designing"
+              heading1="Creative Design"
+              heading2="& Production"
               image="/chess/pawns/13.png"
               position="right"
               link="/graphics-designing"

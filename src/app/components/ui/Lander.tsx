@@ -109,7 +109,7 @@ export default function Lander({
               transition={{
                 duration: 1,
               }}
-              className="md:text-lg text-sm font-bold mt-5 w-[50%] m-auto text-white/70"
+              className="md:text-xl text-sm font-bold mt-5 w-[60%] m-auto text-white/100"
             >
               {description}
             </motion.p>

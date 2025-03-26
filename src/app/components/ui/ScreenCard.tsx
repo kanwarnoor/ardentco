@@ -29,14 +29,14 @@ export default function ScreenCard({
 }: Props) {
   return (
     <div
-      className={`w-full md:h-screen h-fit ${css} flex flex-col m-auto`}
+      className={`w-fit md:h-screen h-[50vh] ${css} flex items-center justify-center flex-col m-auto`}
       // style={{ backgroundImage: `url(${image})` }}
     >
-      <div className="w-fit md:h-[70%] mx-auto mt-10">
+      <div className="w-fit 2xl:h-[60%] xl:h-[50%] md:h-[40%] mx-auto ">
         {position == "left" ? (
-          <div className="absolute -translate-x-[125%] -translate-y-[25%]  inset-0 w-[20%] h-[40%] m-auto rounded-full bg-gradient-radial from-teal-500 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none bg-ardent bg-opacity-80 -z-10 md:flex hidden"></div>
+          <div className="absolute -translate-x-[120%] -translate-y-[25%]  inset-0 w-[20%] h-[40%] m-auto rounded-full bg-gradient-radial from-teal-500 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none bg-ardent bg-opacity-80 -z-10 md:flex hidden"></div>
         ) : (
-          <div className="absolute translate-x-[125%] -translate-y-[25%]  inset-0 w-[20%] h-[40%] m-auto rounded-full bg-gradient-radial from-teal-500 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none bg-ardent bg-opacity-80 -z-10 md:flex hidden"></div>
+          <div className="absolute translate-x-[120%] -translate-y-[25%]  inset-0 w-[20%] h-[40%] m-auto rounded-full bg-gradient-radial from-teal-500 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none bg-ardent bg-opacity-80 -z-10 md:flex hidden"></div>
         )}
 
         <motion.div
@@ -50,16 +50,10 @@ export default function ScreenCard({
           }}
           transition={{
             duration: 0.5,
-
-            // delay: left
-            //   ? position == "right"
-            //     ? 0.1
-            //     : 0
-            //   : position == "right"
-            //   ? 0
-            //   : 0.1,
           }}
-          className="md:w-fit md:h-[100%] h-[200px] w-[200px]"
+          className={`md:w-fit md:h-[100%] ${
+            position == "left" ? "md:ml-10 ml-5" : "md:mr-10"
+          } `}
         >
           <Image
             src={image}
@@ -70,7 +64,7 @@ export default function ScreenCard({
             {...(blurData
               ? { blurDataURL: blurData, placeholder: "blur" }
               : {})}
-            className={`w-full h-full object-top ${
+            className={`md:w-full md:h-full w-1/2 h-1/2 flex m-auto object-top ${
               position == "left" ? "rotate-12" : "rotate-0"
             }`}
           />
@@ -89,7 +83,7 @@ export default function ScreenCard({
         transition={{
           duration: 0.5,
         }}
-        className="w-full h-[50%] flex flex-col  md:mt-0  "
+        className="w-full h-fit flex flex-col  md:mt-0"
       >
         <div className="flex w-full">
           {heading2 ? (

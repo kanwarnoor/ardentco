@@ -12,7 +12,7 @@ import OptionsFull from "../components/ui/OptionsFull";
 export default function Page() {
   const content = [
     {
-      title: "Write-Papers & Policy Briefs",
+      title: "White-papers & Policy Briefs",
       description:
         "Ardent Co. leverages specialized knowledge in the preparation of white papers and policy briefs to make sense of the intricacies of complex sectoral issues. We assist our clients to develop a more detailed understanding of their industry, potential growth contributors and challenges from a policy and industry perspective. We also enable them in acquiring a deeper understanding of their issues of interest, while harnessing insights and evidence which can complement their discussions and drive a narrative.",
       svg: (
@@ -40,7 +40,7 @@ export default function Page() {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className="duration-300 stroke-white cursor-pointer"
         >
@@ -60,7 +60,7 @@ export default function Page() {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className="duration-300 stroke-white cursor-pointer"
         >
@@ -141,8 +141,7 @@ export default function Page() {
 
           <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
           {/* <Options content={content} /> */}
-          <OptionsFull content={content}/>
-     
+          <OptionsFull content={content} />
         </div>
       </section>
 
