@@ -62,7 +62,11 @@ export default function Home() {
   return (
     <>
       <Navbar left={false} right={false} />
-      <Lander image={'/banner/manifesto.png'} heading1={`The makings of our DNA`} css="text-white" />
+      <Lander
+        image={"/banner/manifesto.png"}
+        heading1={`The makings of our DNA`}
+        css="text-white"
+      />
       <div
         id="more"
         className="flex flex-col w-full min-h-screen h-fit bg-black bg-grid-white/[0.1] text-center"
@@ -145,11 +149,13 @@ export default function Home() {
             }}
             className=" w-[70%] md:w-1/3 h-fit max-w-full mt-10"
           >
-            <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
+            {/* <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
               <FlipWords words={team.map((item) => item.who)} duration={5000} />{" "}
               :
-            </div>
-            <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center">
+            </div> */}
+            <div className="flex flex-row items-center text-2xl md:text-4xl font-bold text-white rounded text-center justify-center">
+              <FlipWords words={team.map((item) => item.who)} duration={5000} />
+              :
               <FlipWords
                 words={team.map((item) => item.message)}
                 duration={5000}
@@ -158,11 +164,10 @@ export default function Home() {
 
             <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 justify-center text-justify">
               Ardent Co. will always be a sandbox for inspired, driven
-              professionals 
-              Ardent Co. will never limit itself by any notions and perceptions{" "}
-              
-              Ardent Co. will encourage, both, thinkers, and doers, and serve as
-              an ecosystem for unleashing inhibited potential
+              professionals Ardent Co. will never limit itself by any notions
+              and perceptions Ardent Co. will encourage, both, thinkers, and
+              doers, and serve as an ecosystem for unleashing inhibited
+              potential
             </div>
             <hr className="mt-10 w-1/2 flex m-auto" />
           </motion.div>
@@ -188,7 +193,12 @@ export default function Home() {
               />{" "}
               :
             </div>
-            <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center">
+            <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center items-center">
+            <FlipWords
+                words={partners.map((item) => item.who)}
+                duration={7000}
+              />{" "}
+              :
               <FlipWords
                 words={partners.map((item) => item.message)}
                 duration={7000}
@@ -198,12 +208,10 @@ export default function Home() {
             <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-justify justify-center">
               Ardent Co. will always work as partners with you, harmonized with
               an in-depth appreciation of your goals, targets, and vision.{" "}
-           
               Ardent Co.’s strategy and work will always be intellectually
               sound, driven by our principles of research, coherence, and cogent
-              interventions. 
-              Ardent Co. will always maintain a solution-oriented mindset,
-              regardless of the onerosity of the mandate
+              interventions. Ardent Co. will always maintain a solution-oriented
+              mindset, regardless of the onerosity of the mandate
             </div>
             <hr className="mt-10 w-1/2 flex m-auto" />
           </motion.div>
@@ -238,14 +246,13 @@ export default function Home() {
             <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-justify justify-center">
               Ardent Co. will always strive towards developing fresh
               perspectives and novel approaches in all the verticals we operate
-              in. 
-              Ardent Co. will seek to support the nation’s growth and
+              in. Ardent Co. will seek to support the nation’s growth and
               priorities, by leveraging its capacities and expertise for
               researching, developing, and recommending innovative solutions and
-              interventions. 
-              Ardent Co. will seek to positively contribute to the planet’s
-              metamorphosis, standing at the cusp of a technological
-              transformation, environmental transition, and societal evolution
+              interventions. Ardent Co. will seek to positively contribute to
+              the planet’s metamorphosis, standing at the cusp of a
+              technological transformation, environmental transition, and
+              societal evolution
             </div>
             <hr className="mt-10 w-1/2 flex m-auto" />
           </motion.div>
