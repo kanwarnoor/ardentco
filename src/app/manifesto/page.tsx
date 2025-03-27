@@ -186,13 +186,13 @@ export default function Home() {
             }}
             className="w-[70%] md:w-1/3 h-fit max-w-full mt-10"
           >
-            <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
+            {/* <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
               <FlipWords
                 words={partners.map((item) => item.who)}
                 duration={7000}
               />{" "}
               :
-            </div>
+            </div> */}
             <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center items-center">
             <FlipWords
                 words={partners.map((item) => item.who)}
@@ -229,14 +229,19 @@ export default function Home() {
             }}
             className=" w-[70%] md:w-1/3 h-fit max-w-full mt-10"
           >
-            <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
+            {/* <div className="flex text-2xl md:text-4xl font-black text-white rounded italic mb-5">
               <FlipWords
                 words={ecosystems.map((item) => item.who)}
                 duration={10000}
               />{" "}
               :
-            </div>
-            <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center">
+            </div> */}
+            <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center items-center">
+            <FlipWords
+                words={ecosystems.map((item) => item.who)}
+                duration={10000}
+              />{" "}
+              :
               <FlipWords
                 words={ecosystems.map((item) => item.message)}
                 duration={10000}
