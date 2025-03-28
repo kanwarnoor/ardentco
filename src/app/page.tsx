@@ -88,7 +88,7 @@ export default function Home() {
           muted
           preload="auto"
           crossOrigin="anonymous"
-          poster="/banner/manifesto.png"
+          poster="/banner-pre.png"
           className="absolute object-cover inset-0 w-full h-full scale-90 rounded-none opacity-100"
         >
           Your browser does not support the video tag.

@@ -194,7 +194,7 @@ export default function Home() {
               :
             </div> */}
             <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center items-center">
-            <FlipWords
+              <FlipWords
                 words={partners.map((item) => item.who)}
                 duration={7000}
               />{" "}
@@ -237,7 +237,7 @@ export default function Home() {
               :
             </div> */}
             <div className="flex text-2xl md:text-4xl font-bold text-white rounded text-center justify-center items-center">
-            <FlipWords
+              <FlipWords
                 words={ecosystems.map((item) => item.who)}
                 duration={10000}
               />{" "}
