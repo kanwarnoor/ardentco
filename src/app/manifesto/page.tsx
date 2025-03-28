@@ -66,6 +66,7 @@ export default function Home() {
         image={"/banner/manifesto.png"}
         heading1={`The makings of our DNA`}
         css="text-white"
+        blurdata="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAARCAYAAADKZhx3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAC3UlEQVR4nKWVz2saURDHlxyWwhLNttLU2qQWEWuWWoLFWqy1UosUS5Bai8VKUyGISSAE7C09hPRmD1LwnIOH/Bme/CfShvTifyFM+Yw/SkFSlx6G93bf2/nMfN+8WcPj8cgiZlmWLC0tiWEYfxnvWLdteyE/nokZ/4KZpqnOcZxOp6XVakm73ZZmsym5XE6i0ajuIwjGRQMwroL6fD4Jh8MKADQYDGQ0GslwOJTz8x9ycfFTLi9/Sb/fl4ODAwkEArMg/yvjSqUijUZDdnZ2dN7tdmV/f0+zDAaDsrm5KYVCQer1uqrAeir1VLO37RX3YNM0xXE2pFqtqrw4Zg5wa2tLVSAz9gEhU5/vpgbX6/WkXC7rOqq5AluWJZFIRBKJx5JIJCSfz8vx8bHs7u6p43b7m2ZK1plMRgMjGL6d1gEqcVSupV5dXZX19buTABJqhcJrabU+S6fzXQMoFt9IOv1MstmsOI4j2ewLBfv9tzUwvnENtm1b1tbWNIBpsTAns1KppMVGVmQMrFarSbn8Tmq1j7oOlLVQKDRXcuMqcCBwZ/bMGSIdKgCqVN7L9vYnKRaLqgSVDxAwQJQC6vf751a5cVXlAQLOWeIkGLynKlBMjvNAZT89PZVOpyMnJ1+18ABi7MGH17si1+0b7sBjeW+pbICwWCymRRePP9J5Pv9KgdXqB2k0aCovJ0EGNXDLWla4x13nGn+EtKlUSoHcXZ4JhjGZfKLyIzXXCJkJCIn5FsMP5gqMAQEInJFnQMlkchYEwKOjL1rNvAdOMXq9ttuWuaxmmtfU6Z8Mk9pI4vG4zsfXrKB7CIZOh+yZzPPZ3XYlNZvpSqXSWzk7O5PDw0O9r8A5X+AY+5CVgorFHmqmFGEkcl/HqdSeRcFkSiMAyk+A8yPLKXjcMLKzuz4tRAqLTKlq5tjC14mNZEvF8tehJdKHAQGPRjc0M+TlzNlHoARANQNm5CoCntc6fwOgC+ZaQMlLvwAAAABJRU5ErkJggg=="
       />
       <div
         id="more"
