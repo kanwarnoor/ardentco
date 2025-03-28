@@ -94,12 +94,13 @@ export default function OptionsFull({ content }: Props) {
                   whileInView={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}
                   transition={{ duration: !clicked.clicked ? 0.5 : 0.4 }}
+                  className="w-full "
                 >
                   <div className="w-fit flex md:size-12 size-7 text-black">
                     {item.svg}
                   </div>
-                  <div className="w-full h-fit text-left">
-                    <p className="md:text-5xl text-3xl font-bold">
+                  <div className="w-full flex h-fit text-left ">
+                    <p className="w-full md:text-5xl text-3xl font-bold">
                       {item.title}
                     </p>
                   </div>

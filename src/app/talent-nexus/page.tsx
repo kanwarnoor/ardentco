@@ -172,23 +172,18 @@ export default function Page() {
               className=" flex flex-col m-auto mt-20 justify-center items-center"
             >
               <p className="md:text-5xl text-2xl font-black px-20 pb-10 text-center">
-                Digital Communications
+                Talent Nexus Solutions
               </p>
               <p className="md:px-32 px-20 md:text-2xl text-base text-center opac">
-                Our Digital Communications vertical builds your brand&apos;s
-                online presence with targeted social media planning and
-                execution, powerful brand campaigns, and influencer work that
-                drives and lifts engagement. We leverage performance marketing
-                to maximize ROI, optimize visibility through SEO advisory, and
-                bring your vision to life with innovative creative design and
-                development. Together, we craft integrated campaigns that drive
-                measurable success.
+                Our talent-focused vertical is designed to help organizations
+                build and optimize their workforce to align with strategic
+                goals. From creating new teams to nurturing leadership
+                capabilities, we provide end-to-end solutions that drive
+                organizational success.
               </p>
             </motion.div>
             <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
             <OptionsFull content={content} />
-            
-        
           </div>
         </div>
       </section>
