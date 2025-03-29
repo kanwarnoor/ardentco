@@ -26,7 +26,13 @@ export default function Wake() {
   };
 
   useEffect(() => {
-    const events = ["mousemove", "mousedown", "keypress", "touchstart", "scroll"];
+    const events = [
+      "mousemove",
+      "mousedown",
+      "keypress",
+      "touchstart",
+      "scroll",
+    ];
 
     events.forEach((event) => window.addEventListener(event, resetTimer));
     resetTimer(); // Initialize timer on mount

@@ -152,16 +152,6 @@ Sarthak discovered his calling in communications through a complex non-tradition
             position="50% 45%"
             des1="Vaishnavi Chauhan is working with us as a Senior Research Associate with 2 years of xperience. At Ardent Co., she plays a pivotal role in shaping our public policy andcommunications initiatives by conducting in-depth research and advocating for issues that lie at the core of our clients’ mission. Vaishnavi Chauhan comes with experience in management consulting at Ernst and Young. She has worked extensively on projects across Biopharma, energy and utilities, and the digi-tech sectors. In her free time she likes to read about philosophy, brands, marketing, basically everything under the sun."
           />
-          <Person
-            name="Kartika Sharma"
-            image="/team/consultants/hr.jpg"
-            role="Senior Manager, Human Resources"
-            theme="dark"
-            link="https://www.linkedin.com/in/kartika-sharma-191b5b125"
-            position="50% 10%"
-            des1="Kartika has nine years of HR experience, including six years in the advertising industry with firms like Interactive Bees and McCann World Group. She specializes in leading HR initiatives, managing talent, and fostering positive workplace cultures."
-            des2="Known for her intuitive and people-centric approach, Kartika excels at understanding employee needs and creating environments where teams feel valued and empowered. Throughout her career, she has driven strategic HR programs and navigated complex talent challenges, consistently enhancing HR practices in meaningful ways."
-          />
         </div>
 
         <div className="flex w-full h-fit text-center justify-center my-20 ">
