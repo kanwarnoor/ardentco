@@ -94,7 +94,7 @@ export default function OptionsFull({ content }: Props) {
                   whileInView={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}
                   transition={{ duration: !clicked.clicked ? 0.5 : 0.4 }}
-                  className="w-full "
+                  className="w-full"
                 >
                   <div className="w-fit flex md:size-12 size-7 text-black">
                     {item.svg}
@@ -112,7 +112,7 @@ export default function OptionsFull({ content }: Props) {
       </motion.div>
 
       {/* Controls */}
-      <div className="md:flex flex-row ml-auto w-fit h-fit hidden absolute left-0 bottom-0 ">
+      <div className="md:flex flex-row ml-auto w-fit h-fit hidden absolute left-0 bottom-0">
         <motion.div
           initial={{
             scale: 1,
@@ -146,7 +146,7 @@ export default function OptionsFull({ content }: Props) {
           </svg>
         </motion.div>
       </div>
-      <div className="md:flex flex-row ml-auto w-fit h-[30rem] hidden absolute right-0 bottom-0 ">
+      <div className="md:flex flex-row ml-auto w-fit hidden absolute right-0 bottom-0 ">
         <motion.div
           initial={{
             scale: 1,
@@ -180,7 +180,6 @@ export default function OptionsFull({ content }: Props) {
           </svg>
         </motion.div>
       </div>
-    
     </>
   );
 }

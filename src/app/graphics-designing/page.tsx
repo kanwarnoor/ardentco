@@ -95,41 +95,42 @@ export default function Page() {
       />
 
       <section
-        className="relative bg-neutral-950 bg-dot-black/[0.5] w-full h-auto min-h-screen"
+        className="relative bg-neutral-950 bg-dot-black/[0.5] w-full h-auto min-h-screen text-white"
         id="more"
         ref={ref}
       >
         {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)] z-0"></div> */}
 
         <div className="relative m-auto flex flex-col w-full h-auto z-10 justify-center items-center min-h-screen gap-5">
-          <div className="flex flex-wrap justify-center w-full h-fit text-center  gap-5 mx-auto text-white">
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: -50,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 0.5,
-              }}
-              className=" flex flex-col m-auto mt-20 justify-center items-center"
-            >
-              <p className="md:text-5xl text-2xl font-black px-20 pb-10 text-center">
-                Graphics Designing
-              </p>
-              <p className="md:px-32 px-20 md:text-2xl text-base text-center opac">
-                laurem ipsum dolor sit amet, consectetur adipiscing elit. In
-                ultricies, nunc in euismod malesuada, magna purus maximus
-                lectus, nec facilisis eros libero ut nulla.
-              </p>
-            </motion.div>
-            <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
-            <OptionsFull content={content} />
-            {/* <div className="mb-20"></div> */}
-          </div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className=" flex flex-col m-auto mt-20 justify-center items-center"
+          >
+            <p className="md:text-5xl text-2xl font-black px-20 pb-10 text-center">
+              Creative Design and Production
+            </p>
+            <p className="md:px-32 px-20 md:text-2xl text-base text-center opac">
+              Approximately 83% of digital purchase decisions are directly
+              influenced by product images. Visuals help consumers assess
+              whether a product resonates with their preferences and emotions,
+              often overriding logical reasoning
+            </p>
+          </motion.div>
+          <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
+
+          <OptionsFull content={content} />
+
+          {/* <div className="mb-20"></div> */}
         </div>
       </section>
 
