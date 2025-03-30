@@ -9,6 +9,9 @@ interface Props {
 
 export default function OptionsFull({ content }: Props) {
   const [pos, setPos] = useState(0);
+  const [animation, setAnimation] = useState(1);
+  const [jumped, setJumped] = useState(false);
+  const [contentLength, setContentLength] = useState(content);
   const [clicked, setClicked] = useState<{
     clicked: boolean;
     index: number | null;
@@ -39,28 +42,74 @@ export default function OptionsFull({ content }: Props) {
     setPos(0);
   }, [windowWidth]);
 
+  useEffect(() => {
+    if (jumped) {
+      setAnimation(1);
+
+      setTimeout(() => {
+        setPos((prev) => prev - item);
+      }, 30);
+
+      setJumped(false); // Reset state
+    }
+  }, [jumped]);
+
+  const handleNext = () => {
+    if (clicked.clicked) {
+      setClicked({ clicked: false, index: null });
+    }
+    if (pos == item * (contentLength.length - 3)) {
+      setContentLength((prev) => [...prev, ...content]);
+    }
+
+    setPos((prev) => prev + item);
+  };
+
+  const handlePrev = () => {
+    if (clicked.clicked) {
+      setClicked({ clicked: false, index: null });
+    }
+
+    setContentLength((prev) => [...prev, ...content]);
+
+    if (pos === 0) {
+      setAnimation(0);
+      setPos((prev) => prev + item * content.length);
+      setJumped(true); // Mark that we jumped
+    } else {
+      setAnimation(1);
+      setPos((prev) => prev - item);
+    }
+  };
+
   return (
     <>
       <motion.div
         initial={{ translateX: 0 }}
         animate={{ translateX: -[pos] + "rem" }}
         transition={{
-          duration: 1,
+          duration: animation,
           type: "spring",
         }}
         className="w-full grid grid-flow-col md:overflow-x-visible overflow-x-auto"
       >
-        {content.map((item, index) => (
+        {contentLength.map((item, index) => (
           <motion.div
             key={index}
             initial={{
-              backgroundColor: `rgba(0, 216,   214, ${1 - index * 0.1})`,
+              backgroundColor: `rgba(0, 216,   214, ${
+                1 - (index % content.length) * 0.1
+              })`,
             }}
             animate={{
-              backgroundColor: `rgba(0, 216, 214, ${1 - index * 0.1})`,
+              backgroundColor: `rgba(0, 216, 214, ${
+                1 - (index % content.length) * 0.1
+              })`,
             }}
             whileHover={{
-              backgroundColor: `rgba(100, 216, 214, ${(index + 1) * 0.1})`,
+              backgroundColor: `rgba(100, 216, 214, ${
+                ((index % 10) + 1) * 0.1
+              })`,
             }}
             // whileTap={{ scale: 1.1 }}
             onClick={() =>
@@ -93,7 +142,8 @@ export default function OptionsFull({ content }: Props) {
                   initial={{ opacity: 0, x: -100 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}
-                  transition={{ duration: !clicked.clicked ? 0.5 : 0.4 }}
+                  // transition={{ duration: !clicked.clicked ? 0.5 : 0.4 }}
+                  transition={{ duration: 0 }}
                   className="w-full"
                 >
                   <div className="w-fit flex md:size-12 size-7 text-black">
@@ -121,14 +171,15 @@ export default function OptionsFull({ content }: Props) {
             scale: 1.1,
           }}
           className="cursor-pointer bg-white rounded-full p-5 h-fit flex mr-auto mt-auto m-5"
-          onClick={() => {
-            if (clicked.clicked) {
-              setClicked({ clicked: false, index: null });
-            }
-            setPos((prev) =>
-              prev != 0 ? prev - item : item * (content.length - 1)
-            );
-          }}
+          // onClick={() => {
+          //   if (clicked.clicked) {
+          //     setClicked({ clicked: false, index: null });
+          //   }
+          //   setPos((prev) =>
+          //     prev != 0 ? prev - item : item * (content.length - 1)
+          //   );
+          // }}
+          onClick={handlePrev}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -155,14 +206,18 @@ export default function OptionsFull({ content }: Props) {
             scale: 1.1,
           }}
           className="cursor-pointer bg-white rounded-full p-5 ml-2 h-fit flex mt-auto m-5"
-          onClick={() => {
-            if (clicked.clicked) {
-              setClicked({ clicked: false, index: null });
-            }
-            setPos((prev) =>
-              prev != item * (content.length - 1) ? prev + item : 0
-            );
-          }}
+          // onClick={() => {
+          //   if (clicked.clicked) {
+          //     setClicked({ clicked: false, index: null });
+          //   }
+          //   setPos(
+          //     (prev) =>
+          //       // prev != item * (content.length - 1) ? prev + item : 0
+          //       prev + item
+          //   );
+
+          // }}
+          onClick={handleNext}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
