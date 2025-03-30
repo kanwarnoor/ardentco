@@ -8,14 +8,14 @@ export default function Wake() {
 
   const resetTimer = () => {
     if (timerRef.current) clearTimeout(timerRef.current);
-    setActive(false); // Hide animation on activity
+    setActive(false); // Hide animation on user activity
 
     timerRef.current = setTimeout(() => {
       if (!document.hidden) {
         setActive(true);
         playSound();
       }
-    }, 10000);
+    }, 10000); // 10 seconds of inactivity
   };
 
   const playSound = () => {
@@ -41,7 +41,7 @@ export default function Wake() {
       events.forEach((event) => window.removeEventListener(event, resetTimer));
       if (timerRef.current) clearTimeout(timerRef.current);
     };
-  });
+  }, []); // <-- Added empty dependency array to prevent re-renders
 
   return (
     active && (
@@ -49,15 +49,15 @@ export default function Wake() {
         initial={{ x: "-100vw" }}
         animate={{ x: "90vw" }}
         transition={{ duration: 1 }}
-        className="fixed top-0 bottom-0 flex m-auto w-40 h-fit z-20"
+        className="fixed top-0 bottom-0 flex m-auto w-40 h-fit z-50"
       >
         <Image
           src="/arrow1.png"
-          height={0}
-          width={0}
-          sizes="100% 100%"
+          layout="intrinsic" // <-- Fix width/height issue
+          width={100} // <-- Set a proper width
+          height={100} // <-- Set a proper height
+          alt="Arrow"
           className="w-full h-full"
-          alt=""
         />
       </motion.div>
     )

@@ -59,9 +59,11 @@ export default function Home() {
       {/* <div className="fixed bottom-0 right-0 z-50 text-xl font-bold m-2 cursor-pointer text-white">
         Developer not paid yet!
       </div> */}
+
       <div className="hidden md:block">
         <Wake />
       </div>
+
       {/* <Inactive /> */}
       <Navbar left={left} right={right} button={right} />
 
