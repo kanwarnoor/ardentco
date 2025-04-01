@@ -40,7 +40,7 @@ export default function Footer({ theme }: FooterProps) {
               <a href="/#services">
                 <p className="font-bold ml-2 cursor-pointer">Services</p>
               </a>
-              <a href="/menifesto">
+              <a href="/manifesto">
                 <p className="font-bold ml-2 cursor-pointer">Our Manifesto</p>
               </a>
               <a href="/our-perspectives">
@@ -65,7 +65,7 @@ export default function Footer({ theme }: FooterProps) {
               <a href="#about">
                 <p className="font-bold ml-2 cursor-pointer">About us</p>
               </a>
-              <a href="#">
+              <a href="/privacy-policy">
                 <p className="font-bold ml-2 cursor-pointer">Privacy Policy</p>
               </a>
             </div>
