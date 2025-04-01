@@ -186,11 +186,11 @@ export default function Page() {
               transition={{
                 duration: 0.5,
               }}
-              className=" flex flex-col m-auto mt-20 justify-center items-center"
+              className=" flex flex-col m-auto mt-10 justify-center items-center"
             >
-              <p className="md:text-5xl text-2xl font-black px-20 pb-10 text-center">
+              {/* <p className="md:text-5xl text-2xl font-black px-20 pb-10 text-center">
                 Digital Communications
-              </p>
+              </p> */}
               <p className="md:px-32 px-20 md:text-2xl text-base text-center opac">
                 Our Digital Communications vertical builds your brand&apos;s
                 online presence with targeted social media planning and

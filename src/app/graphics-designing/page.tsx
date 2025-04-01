@@ -90,6 +90,7 @@ export default function Page() {
         image="/banner/graphics.png"
         heading1="Creative Design and"
         heading2="Production"
+        description="Approximately 83% of digital purchase decisions are directly influenced by product images."
         css="text-white"
         blurdata="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAARCAYAAADKZhx3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACpElEQVR4nK1Vv2taURh9iISX1xeDCSoqDtYqgRAkaciiYIMEwS4WIZBF5HVIRewgEgI2taTgagdX99B/IYQudkmH4B+QTg6hc5oOKZxyvvSWp/iiSIePe+97373n+3HOvZphGBg3Xdfh8/ng9wcQCoVk7XK5ZDRNc8SPNumMaaY5/fB4PFhdXcX6+jp2dnZkZDAKSAUXDAbF1x7Q3MC6rmN5eRnRaBQbGxs4PHyDRqOBer2OSCSChYUF8aPPysrK/wWOxWJIpVI4Pf2Ifv8rBoMBms0mqtWqABPIqdQMZC5g0zQRCASQyWRwdXWF+/vf6Ha7ODv7jJubH/+y4zieaTgcht/vnw5sTigRs2B/4/E4Go0j7O3tQdM0dDodXF5+E6JxzdG+h2UnKM9UoyOw1+uVSTyeEKKo/vI716a5JHOWr1Z7i5OT98jnX8KyLKTT6ZFSq/Jzrs51BE4kEqDVajWsra3B7XYLW1X07HWh8ErW9CsUCigWi0K0Xq8nc+5RZX/IcnFiGww7MJlLQLKXUaqImSEllM/ncXx8jO3tbVQqFSk3y18uW6jXj4R8CoD7Z2W3RobSGLWdlcw0Gn0q/W023wlYu90Wwl1cfMHBwYFcLtN6qVpgOLFa/WTGZHQulxNybW09h2W9FmPmDJLEo6+6zSYDLtqAl6bLiU4EpobZU4Jns1m5vSinTueT/HPKxF61x/SsjTOSfaIW2XMyPZnclAB2d1+g3+/j7u4XWq0PIqdJmdjPmxnY+EsQEi4We4ZQKCwZ84ByuYzhcIjr6+9CtAfgx3tLWTr5aOMfKBvql6RRdzGDoXRub3+i1WrNxNqprDZsVx+B1OVh1yV1XSqVcH5+Lo/EvE/hhIyfjPREvTY0Zuzz+ZFMJrG/vz/TAzAL8B/PLqcUY1IOzwAAAABJRU5ErkJggg=="
       />
@@ -116,14 +117,12 @@ export default function Page() {
             }}
             className=" flex flex-col m-auto mt-20 justify-center items-center"
           >
-            <p className="md:text-5xl text-2xl font-black px-20 pb-10 text-center">
+            {/* <p className="md:text-5xl text-2xl font-black px-20 pb-10 text-center">
               Creative Design and Production
-            </p>
+            </p> */}
             <p className="md:px-32 px-20 md:text-2xl text-base text-center opac">
-              Approximately 83% of digital purchase decisions are directly
-              influenced by product images. Visuals help consumers assess
-              whether a product resonates with their preferences and emotions,
-              often overriding logical reasoning
+              Visuals help consumers assess whether a product resonates with
+              their preferences and emotions, often overriding logical reasoning
             </p>
           </motion.div>
           <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>

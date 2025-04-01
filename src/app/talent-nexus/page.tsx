@@ -21,7 +21,7 @@ export default function Page() {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className="  duration-300 stroke-white cursor-pointer"
         >
@@ -144,6 +144,9 @@ export default function Page() {
         image="/banner/nexus.png"
         heading1="Talent Nexus"
         heading2="Solutions"
+        description="Our talent-focused vertical is designed to help organizations
+                build and optimize their workforce to align with strategic
+                goals."
         css="text-white"
         blurdata="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAARCAYAAADKZhx3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAFJ0lEQVR4nD1VbS9kZxg+srbE+0uEMKVYBCHKdBQly1IzRcgIqljKdKcUQcRLxBRFV0zpCkp8IFqEmFKECDaNlaxURkajIbZbX/wEn/dqrlv1w5Mz5znnOfd9vd2jVFZWoqTkc5SVlaOqqgo63WeIi4tDamoqiouLkZycjISEBCQkqOWakvIJkpKSEB/P3ykICQlFdHS07GVkZECn0yE/Px8VFU9RVfUl+vr6MDIyArN5GGazGRMTExgc/B5KU1MTysvLUVZWhtLSL+RwbGwscnJyUFCglwZYNCoqCnFxH8qzpKRkKazRfAy1+iO5T0tLQ3a2Fnq9Xr5VUlKCZ8+MaGxsRE1NDaqrq8FaLG42/wClp6cX7e0dcoDoYmPjEBMTA41GI9eoqGio1WoEBgbKYmEywr17ZjSaRGi1OlRUVEizdXV1qK+vR1tbGzo7O1FX9418v6mpGd3dJvT29kGpr2+Qh7W1ddBqtUInP0okLMJG7tEGBgbBz88PERERyM7ORnp6OnJycuVccHAwIiMjBd3Q0BAGBgbQ1WVCc3OzoDYYvkJ5+VMpPDY2DoU61NQY0NnZJfQQNVEkJiaKnvw4kTs5OUlBDw8P+Pr6CsKiomIYjUY0NDTImaCgINF4ZGQUz5+z+CAMBgPoI77D4tS/tbUVSltbu1DS3d2N/PwCoe+O6kTEx8fLb9JEA7EZ0s0rNS0sLBTdOjo6pAmiJls9PT3CYkdHpyBsb2+HyWQSk7W0tEgzCh/wIN1HFOHhEYiJiRVt+dvHx0e67O/vh81mQ29vrxQOCvoARUVF6OrqkqaJprBQj4CAAGFwdHRU9gmMjczMzGB1dRWbm5uyFOrR3z8gXdFQ94YJDw+Hl5cXVCqVoOZ7794Bp6enCAsLF72Li0vQ1/edaEZtBwcHBTFdPj09jfHxcczNzWF/fx9nZ3/i/PwvXFxc4PLy8q4wu8rNzYVK9b7oyEyyCW9vb6GPhrNYfsXt7a3kkLozTnQuNaaRaE5GkKZzd/eQojbbKc7Pz/8rev7/Ojs7g1JbWytBJ510MJ1Jg7FzFxdXuLi4yKJG19fXolFWVhYCAlTIy8uTAhaLRWaBq6sbQkMfwc7ODs3NLXj79h9YrVbYbGdS8OTkFEdHRzg8PLwbIJxQdCNR0kQhISEICwuDg4ODdE/NSfnqqgWVlVUSKTbj5OQs9N7c3IjZKA0ZUhRFJtebN3/j5OREilutVrx6dYSdnR3s7e3R1W1idxqCU4tOZhOlpaVwdnaGv78/lpeXRQLGhFFydHSUZyxAx5NKRs/fP0AipSh2Moap6fHxHzg+PsbBwQG2trZlbW9vQyFdHBSPH6cLvZy/U1NT4kIio6tpIL2+UCLCPHPdFy4oKBBUHCJEzMYePLAX+Wii3d1drKxYMD8/j4WFRaytrYnhFMaEi9GgvjzIwU8nu7q6yj0nD1lgEbJib28vNLMwzXR1dQWj8WuJEt+nxqR6aWkJExOTAmJ+/mcsLi5hYeEXuVe2t3eEQupMNzNGpMzT01MoZRFGjNrRPByl1J6oWZiD4/XrYywvr8h5MsHnnM8s8uLFmKzh4WGMjv4Ik+lb8P9Befnyd3mBc7WhoVH+UahvVtangpAOpm5EwriRchrt4cP34ObmLtOL0jCW9ApHKh1P6rk/OfmTAGPRO3YHJCEK87m+vo719d/EoYwHFx9yKjGnzCf1z8h4ItmlJESbnv5EGmP8uEcDkm7u0TOZmZnY2toSXTc2NuQ6Ozsro/Nf2vwjpoSnSTAAAAAASUVORK5CYII="
       />
@@ -169,11 +172,11 @@ export default function Page() {
               transition={{
                 duration: 0.5,
               }}
-              className=" flex flex-col m-auto mt-20 justify-center items-center"
+              className=" flex flex-col m-auto mt-10 justify-center items-center"
             >
-              <p className="md:text-5xl text-2xl font-black px-20 pb-10 text-center">
+              {/* <p className="md:text-5xl text-2xl font-black px-20 pb-10 text-center">
                 Talent Nexus Solutions
-              </p>
+              </p> */}
               <p className="md:px-32 px-20 md:text-2xl text-base text-center opac">
                 Our talent-focused vertical is designed to help organizations
                 build and optimize their workforce to align with strategic
