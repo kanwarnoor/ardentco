@@ -7,7 +7,7 @@ export default function page() {
     <>
       <Navbar left={false} right={false} />
 
-      <div className="text-white h-fit min-h-screen py-20 w-1/2 flex flex-col m-auto">
+      <div className="text-white h-fit min-h-screen py-20 md:w-1/2 w-[70%] flex flex-col m-auto">
         <h1 className="text-5xl font-bold text-center my-10">Privacy Policy</h1>
         <p className="text-xl text-justify tracking-tight">
           Welcome to Ardent Co. (“Company,” “we,” “our,” or “us”). We respect
