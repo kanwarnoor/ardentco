@@ -129,7 +129,7 @@ export default function Page() {
               Research & Collateral Development
             </p> */}
             <p className="md:px-32 px-20 md:text-2xl text-base text-center opac">
-              Our Research and Collateral Development service line helps the
+              Our Research and Collateral Development practice helps the
               clients develop a rich understanding of their field through white
               papers, policy and market analysis reports focused on the
               challenges faced by the sector and the growth opportunities ahead.

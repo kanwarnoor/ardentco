@@ -105,19 +105,19 @@ export default function Home() {
             className=" text-neutral-300  text-xs md:text-base font-medium w-[70%] mt-10"
           >
             Ardent Co, in its shape today is a company. In its soul, it’s a
-            vision. In its intentions it’s journeying to become an
-            institution.In our experience of working in the fields of
-            communications, public policy, research, and brand advisory, we
-            developed aspirations of how the work, teams, and our role in the
-            ecosystem should be.But aspirations are only dreams. Until, there is
-            the madness (read: courage) to throw your hands in the sand, and
-            depart from the safety of conventionality. That is what we did, and
-            that is what we attract. In 2018, Ardent Co. was envisioned as an
-            unnamed fictional entity. In the next three and a half years it was
-            shaped into the idea of a company. In late 2022, it was born. As
-            founders, to stay honest to the vision of Ardent Co, we have written
-            this manifesto to engrave our commitments to our stakeholders, of
-            what Ardent Co will always be.
+            vision. In its intentions it’s journeying to become an institution.
+            In our experience of working in the fields of communications, public
+            policy, research, and brand advisory, we developed aspirations of
+            how the work, teams, and our role in the ecosystem should be. But
+            aspirations are only dreams. Until, there is the madness (read:
+            courage) to throw your hands in the sand, and depart from the safety
+            of conventionality. That is what we did, and that is what we
+            attract. In 2018, Ardent Co. was envisioned as an unnamed fictional
+            entity. In the next three and a half years it was shaped into the
+            idea of a company. In late 2022, it was born. As founders, to stay
+            honest to the vision of Ardent Co, we have written this manifesto to
+            engrave our commitments to our stakeholders, of what Ardent Co will
+            always be.
           </motion.p>
 
           <motion.p
@@ -164,11 +164,20 @@ export default function Home() {
             </div>
 
             <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 justify-center text-justify">
-              Ardent Co. will always be a sandbox for inspired, driven
-              professionals Ardent Co. will never limit itself by any notions
-              and perceptions Ardent Co. will encourage, both, thinkers, and
-              doers, and serve as an ecosystem for unleashing inhibited
-              potential
+              <ul className="list-disc pl-4 text-left">
+                <li>
+                  Ardent Co. will always be a sandbox for inspired, driven
+                  professionals
+                </li>
+                <li>
+                  Ardent Co. will never limit itself by any notions and
+                  perceptions{" "}
+                </li>
+                <li>
+                  Ardent Co. will encourage, both, thinkers, and doers, and
+                  serve as an ecosystem for unleashing inhibited potential
+                </li>
+              </ul>
             </div>
             <hr className="mt-10 w-1/2 flex m-auto" />
           </motion.div>
@@ -207,12 +216,22 @@ export default function Home() {
             </div>
 
             <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-justify justify-center">
-              Ardent Co. will always work as partners with you, harmonized with
-              an in-depth appreciation of your goals, targets, and vision.{" "}
-              Ardent Co.’s strategy and work will always be intellectually
-              sound, driven by our principles of research, coherence, and cogent
-              interventions. Ardent Co. will always maintain a solution-oriented
-              mindset, regardless of the onerosity of the mandate
+              <ul className="list-disc pl-4 text-left">
+                <li>
+                  Ardent Co. will always work as partners with you, harmonized
+                  with an in-depth appreciation of your goals, targets, and
+                  vision.
+                </li>
+                <li>
+                  Ardent Co.’s strategy and work will always be intellectually
+                  sound, driven by our principles of research, coherence, and
+                  cogent interventions.
+                </li>
+                <li>
+                  Ardent Co. will always maintain a solution-oriented mindset,
+                  regardless of the onerosity of the mandate
+                </li>
+              </ul>
             </div>
             <hr className="mt-10 w-1/2 flex m-auto" />
           </motion.div>
@@ -250,15 +269,25 @@ export default function Home() {
             </div>
 
             <div className="flex md:w-fit h-fit file text-white/80 md:text-sm text-xs mt-5 text-justify justify-center">
-              Ardent Co. will always strive towards developing fresh
-              perspectives and novel approaches in all the verticals we operate
-              in. Ardent Co. will seek to support the nation’s growth and
-              priorities, by leveraging its capacities and expertise for
-              researching, developing, and recommending innovative solutions and
-              interventions. Ardent Co. will seek to positively contribute to
-              the planet’s metamorphosis, standing at the cusp of a
-              technological transformation, environmental transition, and
-              societal evolution
+              <ul className="list-disc pl-4 text-left">
+                <li>
+                  Ardent Co. will always strive towards developing fresh
+                  perspectives and novel approaches in all the verticals we
+                  operate in.{" "}
+                </li>
+                <li>
+                  Ardent Co. will seek to support the nation’s growth and
+                  priorities, by leveraging its capacities and expertise for
+                  researching, developing, and recommending innovative solutions
+                  and interventions.
+                </li>
+                <li>
+                  Ardent Co. will seek to positively contribute to the planet’s
+                  metamorphosis, standing at the cusp of a technological
+                  transformation, environmental transition, and societal
+                  evolution
+                </li>
+              </ul>
             </div>
             <hr className="mt-10 w-1/2 flex m-auto" />
           </motion.div>

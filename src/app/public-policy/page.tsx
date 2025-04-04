@@ -84,7 +84,7 @@ export default function Page() {
     {
       title: "Regulatory Affairs",
       description:
-        "Our specialized services address regulatory challenges by developing tailored Standard Operating Procedures (SOPs) to ensure compliance with laws and regulations. We empower organizations to navigate complex regulatory environments by offering tailored compliance solutions and expert guidance.",
+        "Our specialized practice address regulatory challenges by developing tailored Standard Operating Procedures (SOPs) to ensure compliance with laws and regulations. We empower organizations to navigate complex regulatory environments by offering tailored compliance solutions and expert guidance.",
       svg: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +172,7 @@ export default function Page() {
               Public Policy & Regulatory Affairs
             </p> */}
             <p className="md:px-32 px-20 md:text-2xl text-base text-center opac">
-              Our Public Policy and Regulatory Affairs service line helps
+              Our Public Policy and Regulatory Affairs practice helps
               businesses navigate complex policy landscapes and regulatory
               environments. We provide strategic guidance in policy advisory,
               communication, parliamentary engagement, and advocacy to drive

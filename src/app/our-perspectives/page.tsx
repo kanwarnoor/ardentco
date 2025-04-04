@@ -156,9 +156,9 @@ export default function Page() {
                 viewport={{
                   amount: 0.3,
                 }}
-                className="text-white rounded-xl px-3  md:text-8xl text-5xl font-black"
+                className="text-white rounded-xl px-3  md:text-7xl text-5xl font-black"
               >
-                VIEWS <br /> IN MEDIA
+                VIEWS  IN <br />THE MEDIA 
               </motion.p>
               <motion.div
                 initial={{
@@ -269,7 +269,7 @@ export default function Page() {
         >
           <div className="w-fit m-auto flex justify-center items-center">
             <p className="md:text-6xl text-4xl font-black text-center">
-              Our Views in Media
+              Our Views in The Media
             </p>
             <motion.svg
               initial={{

@@ -27,7 +27,7 @@ export default function About() {
 
     const interval = setInterval(() => {
       setPara((prev) => prev + 1);
-    }, 10000);
+    }, 10000000);
 
     if (para >= angles.length) {
       setPara((prev) => prev - angles.length);
@@ -166,16 +166,23 @@ export default function About() {
                   viewport={{
                     amount: 0.5,
                   }}
-                  className="md:mr-10 md:text-xl text-[14px]"
+                  className="md:mr-10 md:text-xl text-[13px]"
                 >
-                  Ardent Co. is more than a company; it embodies a vision and
-                  aspires to become an institution. Our journey through
-                  communications, public policy, research, and brand advisory
-                  shaped our aspirations for our work, teams, and ecosystem
-                  role. Realizing these aspirations required courage to break
-                  from convention, which is central to who we are and what we
-                  attract. Envisioned in 2018 as a fictional entity, Ardent Co.
-                  evolved into a tangible idea and became reality in late 2022.
+                  Ardent Co, in its shape today is a company. In its soul, it’s
+                  a vision. In its intentions it’s journeying to become an
+                  institution.In our experience of working in the fields of
+                  communications, public policy, research, and brand advisory,
+                  we developed aspirations of how the work, teams, and our role
+                  in the ecosystem should be.But aspirations are only dreams.
+                  Until, there is the madness (read: courage) to throw your
+                  hands in the sand, and depart from the safety of
+                  conventionality. That is what we did, and that is what we
+                  attract. In 2018, Ardent Co. was envisioned as an unnamed
+                  fictional entity. In the next three and a half years it was
+                  shaped into the idea of a company. In late 2022, it was born.
+                  As founders, to stay honest to the vision of Ardent Co, we
+                  have written this manifesto to engrave our commitments to our
+                  stakeholders, of what Ardent Co will always be.
                 </motion.p>
               </div>
             </div>
@@ -206,7 +213,7 @@ export default function About() {
               </motion.div>
 
               <div className="">
-                <motion.p
+                <motion.div
                   initial={{
                     opacity: 0,
                     transform: right ? "translateX(5%)" : "translateX(-5%)",
@@ -223,12 +230,21 @@ export default function About() {
                   }}
                   className="md:mr-10 md:text-xl text-[14px]"
                 >
-                  Ardent Co. will always be a sandbox for inspired, driven
-                  professionals Ardent Co. will never limit itself by any
-                  notions and perceptions Ardent Co. will encourage, both,
-                  thinkers, and doers, and serve as an ecosystem for unleashing
-                  inhibited potential
-                </motion.p>
+                  <ul className="list-disc pl-4 text-left">
+                    <li>
+                      Ardent Co. will always be a sandbox for inspired, driven
+                      professionals
+                    </li>
+                    <li>
+                      Ardent Co. will never limit itself by any notions and
+                      perceptions
+                    </li>
+                    <li>
+                      Ardent Co. will encourage, both, thinkers, and doers, and
+                      serve as an ecosystem for unleashing inhibited potential
+                    </li>
+                  </ul>
+                </motion.div>
               </div>
             </div>
           )}
@@ -262,7 +278,7 @@ export default function About() {
                 </p>
               </motion.div>
               <div className="">
-                <motion.p
+                <motion.div
                   initial={{
                     opacity: 0,
                     transform: right ? "translateX(5%)" : "translateX(-5%)",
@@ -279,14 +295,23 @@ export default function About() {
                   }}
                   className="md:mr-10 md:text-xl text-[14px]"
                 >
-                  Ardent Co. will always work as partners with you, harmonized
-                  with an in-depth appreciation of your goals, targets, and
-                  vision. Ardent Co.’s strategy and work will always be
-                  intellectually sound, driven by our principles of research,
-                  coherence, and cogent interventions. Ardent Co. will always
-                  maintain a solution-oriented mindset, regardless of the
-                  onerosity of the mandate
-                </motion.p>
+                  <ul className="list-disc pl-4 text-left">
+                    <li>
+                      Ardent Co. will always work as partners with you,
+                      harmonized with an in-depth appreciation of your goals,
+                      targets, and vision.
+                    </li>
+                    <li>
+                      Ardent Co.’s strategy and work will always be
+                      intellectually sound, driven by our principles of
+                      research, coherence, and cogent interventions.
+                    </li>
+                    <li>
+                      Ardent Co. will always maintain a solution-oriented
+                      mindset, regardless of the onerosity of the mandate
+                    </li>
+                  </ul>
+                </motion.div>
               </div>
             </div>
           )}
@@ -319,7 +344,7 @@ export default function About() {
                 </p>
               </motion.div>
               <div className="">
-                <motion.p
+                <motion.div
                   initial={{
                     opacity: 0,
                     transform: right ? "translateX(5%)" : "translateX(-5%)",
@@ -336,16 +361,26 @@ export default function About() {
                   }}
                   className="md:mr-10 md:text-xl text-[14px]"
                 >
-                  Ardent Co. is dedicated to developing fresh perspectives and
-                  innovative approaches across all its operations. We aim to
-                  support national growth by leveraging our expertise to
-                  research, develop, and propose impactful solutions. Committed
-                  to contributing positively to technological, environmental,
-                  and societal transformations, we strive to leave a lasting
-                  legacy in collaboration with like-minded individuals. Inspired
-                  by history&apos;s greats—artists, leaders, scientists—our
-                  journey centers on excellence in every endeavor.
-                </motion.p>
+                  <ul className="list-disc pl-4 text-left">
+                    <li>
+                      Ardent Co. will always strive towards developing fresh
+                      perspectives and novel approaches in all the verticals we
+                      operate in.
+                    </li>
+                    <li>
+                      Ardent Co. will seek to support the nation’s growth and
+                      priorities, by leveraging its capacities and expertise for
+                      researching, developing, and recommending innovative
+                      solutions and interventions.
+                    </li>
+                    <li>
+                      Ardent Co. will seek to positively contribute to the
+                      planet’s metamorphosis, standing at the cusp of a
+                      technological transformation, environmental transition,
+                      and societal evolution
+                    </li>
+                  </ul>
+                </motion.div>
               </div>
             </div>
           )}

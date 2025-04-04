@@ -78,7 +78,7 @@ export default function Page() {
     {
       title: "Remote HR Office",
       description:
-        "We offer a complete remote HR solution, minimizing the need for external HR support. Our services include policy development, culture-building engagement programs, psychometric assessments, strategic planning, and compliance management designed to drive organizational effectiveness.",
+        "We offer a complete remote HR solution, minimizing the need for external HR support. Our practice include policy development, culture-building engagement programs, psychometric assessments, strategic planning, and compliance management designed to drive organizational effectiveness.",
       svg: (
         <svg
           xmlns="http://www.w3.org/2000/svg"

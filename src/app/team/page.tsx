@@ -152,6 +152,15 @@ Sarthak discovered his calling in communications through a complex non-tradition
             position="50% 45%"
             des1="Vaishnavi Chauhan is working with us as a Senior Research Associate with 2 years of xperience. At Ardent Co., she plays a pivotal role in shaping our public policy andcommunications initiatives by conducting in-depth research and advocating for issues that lie at the core of our clients’ mission. Vaishnavi Chauhan comes with experience in management consulting at Ernst and Young. She has worked extensively on projects across Biopharma, energy and utilities, and the digi-tech sectors. In her free time she likes to read about philosophy, brands, marketing, basically everything under the sun."
           />
+          <Person
+            name="Rushali Kumar"
+            image="/team/consultants/hr.jpeg"
+            role="Assistant Manager - HR"
+            theme="dark"
+            link="www.linkedin.com/in/rushali-kumar-6135681a2"
+            position="50% 10%"
+            des1="Rushali is a HR professional currently serving as an Assistant Manager - HR, bringing nearly four years of experience in talent acquisition, employee relations, and workplace process optimization. She has previously sharpened her expertise at Weber Shandwick and HT Media. Outside of work, she enjoys unwinding with her dog and cherishing moments at home."
+          />
         </div>
 
         <div className="flex w-full h-fit text-center justify-center my-20 ">
