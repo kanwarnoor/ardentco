@@ -206,7 +206,7 @@ His expertise and deep understanding of the industry has invited his participati
             des2="Among diverse areas, Mr. Vinod Kumar has been contributing significantly to enhancing the capabilities of MSMEs on achieving greater realization from exports, leveraging-technology, regulatory understanding etc."
             theme="dark"
           />
-          <Person
+          {/* <Person
             name="Deeksha Goel"
             image="/team/advisors/4.jpg"
             position="50% 20%"
@@ -218,7 +218,7 @@ Deputy Director and Senior Research Fellow, India Foundation"
 Ms. Goel is a Senior Research Fellow and Deputy Director at the India Foundation, wherein Ms. Goel has contributed to a wide-array of informed perspectives and engagements."
             des2="Ms. Goel’s primary focus as a researcher lies in studying the geopolitics of the Indian Ocean Region (IOR) and the impact of development finance on economic sustainability, particularly in IOR countries. With her cross-sectoral experience, Deeksha has worked extensively in various fields including infrastructure, technology, energy security, and food and agriculture sustainability."
             theme="dark"
-          />
+          /> */}
           <Person
             name="Bhavani Giddu"
             image="/team/advisors/8.jpg"
