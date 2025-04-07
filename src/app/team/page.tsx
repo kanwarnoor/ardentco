@@ -157,7 +157,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             image="/team/consultants/hr.jpeg"
             role="Assistant Manager - HR"
             theme="dark"
-            link="www.linkedin.com/in/rushali-kumar-6135681a2"
+            link="https://www.linkedin.com/in/rushali-kumar-6135681a2"
             position="50% 10%"
             des1="Rushali is a HR professional currently serving as an Assistant Manager - HR, bringing nearly four years of experience in talent acquisition, employee relations, and workplace process optimization. She has previously sharpened her expertise at Weber Shandwick and HT Media. Outside of work, she enjoys unwinding with her dog and cherishing moments at home."
           />
