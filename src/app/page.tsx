@@ -43,7 +43,7 @@ export default function Home() {
             className=""
           /> */}
 
-          <div className="lg:pl-10 flex-wrap flex flex-col justify-center items-center m-auto">
+          <div className="flex-wrap flex flex-col justify-center items-center m-auto">
             <motion.p
               initial={{
                 opacity: 0,
@@ -69,7 +69,7 @@ export default function Home() {
                 duration: 1,
                 delay: 0.5,
               }}
-              className="md:flex hidden md:text-4xl text-xl font-bold text-white  flex-row w-screen text-center justify-center items-center "
+              className="md:hidden hidden md:text-4xl text-xl font-bold text-white  flex-row w-screen text-center justify-center items-center "
             >
               You&apos;re not wrong—something&apos;s brewing. It&apos;s
               <div className="flex  ml-3 md:w-[110px] w-[60px] ">
@@ -79,7 +79,7 @@ export default function Home() {
                   className="md:text-4xl text-xl font-bold text-white mb-0 pb-0 w-full "
                 />
               </div>
-            </motion.div> 
+            </motion.div>
             {/* phone div */}
             <motion.div
               initial={{
@@ -92,19 +92,12 @@ export default function Home() {
                 duration: 1,
                 delay: 0.5,
               }}
-              className="md:hidden  md:text-4xl text-lg font-bold text-white flex flex-col w-screen text-center justify-center items-center "
+              className="md:flex  md:text-4xl text-lg font-bold text-white flex flex-col text-center justify-center items-center "
             >
               You&apos;re not wrong—something&apos;s brewing.
-              <div className="flex  ml-3 md:w-[110px] w-[90px] ">
-              It&apos;s
-                <FlipWords
-                  words={avail}
-                  duration={1000}
-                  className="md:text-4xl text-lg font-bold text-white mb-0 pb-0 w-full "
-                />
-              </div>
-            </motion.div> 
-            <motion.p
+            </motion.div>
+
+            <motion.div
               initial={{
                 opacity: 0,
               }}
@@ -115,7 +108,52 @@ export default function Home() {
                 duration: 1,
                 delay: 1,
               }}
-              className="absolute bottom-0 mb-10 md:text-2xl text-lg font-bold text-white flex flex-col "
+              className="flex  flex justify-center "
+            >
+              <p className="md:text-6xl text-4xl font-bold text-white">
+                It&apos;s
+              </p>
+
+              <div className="flex flex-row justify-center items-center md:ml-3 ml-1  md:w-[177px] w-[107px]">
+                <FlipWords
+                  words={avail}
+                  duration={1000}
+                  className="md:text-6xl text-4xl font-bold text-ardent mb-0 pb-0 flex"
+                />
+                {/* {avail.map((word, index) => {
+                  let number = 0;
+                  return (
+                    <motion.p
+                      initial={{
+                        opacity: 0,
+                        y: -50,
+                      }}
+                      animate={{
+                        opacity: index === number++ ? 1 : 0,
+                        y: 0,
+                      }}
+                      className=""
+                      key={index}
+                    >
+                      {word}
+                    </motion.p>
+                  )
+
+                })} */}
+              </div>
+            </motion.div>
+            <motion.p
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+                delay: 1.5,
+              }}
+              className="absolute bottom-0 mb-5 md:text-2xl text-lg font-bold text-white flex flex-col "
             >
               Stick around. The reveal’s worth it.
             </motion.p>
