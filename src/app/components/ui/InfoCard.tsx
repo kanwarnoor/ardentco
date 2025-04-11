@@ -189,6 +189,7 @@ export default function InfoCard({
               >
                 <a
                   href={link}
+                  target="_blank"
                   className="px-5 py-2 border-2 border-white rounded-full hover:scale-110 duration-200"
                 >
                   Read more

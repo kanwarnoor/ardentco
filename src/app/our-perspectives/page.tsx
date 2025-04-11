@@ -158,7 +158,8 @@ export default function Page() {
                 }}
                 className="text-white rounded-xl px-3  md:text-7xl text-5xl font-black"
               >
-                VIEWS  IN <br />THE MEDIA 
+                VIEWS IN <br />
+                THE MEDIA
               </motion.p>
               <motion.div
                 initial={{
@@ -232,7 +233,9 @@ export default function Page() {
                 "As echoed by one of the most respected Secretaries to have led the Department of Economic Affairs, the Union-Budget assumes an unparalleled significance for our country."
               }
               animation="left"
-              image={"/research1.png"}
+              image={
+                "/research/images/Making Sense of Union Budget 2023-2024.png"
+              }
               link="/budget.pdf"
             />
 
@@ -243,8 +246,10 @@ export default function Page() {
                 "The world experienced its hottest day ever on Tuesday, July 4, breaking a record set just the day before. Last week, China experienced its highest-ever temperature"
               }
               animation="center"
-              image={"/research2.png"}
-              link="/climate.pdf"
+              image={
+                "/research/images/Strengthening India's Focus on Investments in Climate Adaptation.png"
+              }
+              link="/research/Strengthening India's Focus on Investments in Climate Adaptation.pdf"
             />
 
             <InfoCard
@@ -254,8 +259,73 @@ export default function Page() {
                 "The Department of Science & Technology (DST), which operates under the Ministry of Science & Technology, will be responsible for implementing the National Mission for Quantum Technologies and Applications (NM-QTA) between 2023-24 and 2030-31."
               }
               animation="right"
-              image={"/research3.png"}
-              link="/NQM.pdf"
+              image={
+                "/research/images/Brief On Strengthening Quantum Applications Ecosystem in India.png"
+              }
+              link="/research/Brief On Strengthening Quantum Applications Ecosystem in India.pdf"
+            />
+          </div>
+          <div className="flex md:flex-row flex-col gap-10 mx-auto pt-10">
+            <InfoCard
+              title1={"Indian VC Ecosystem 2024"}
+              animation="left"
+              image={"/research/images/indianVC.png"}
+              link="/research/indianVC.pdf"
+            />
+
+            <InfoCard
+              title1={"Making Sense of "}
+              title2="Interim Budget"
+              animation="center"
+              image={"/research/images/Making Sense of Interim Budget.png"}
+              link="/research/Making Sense of Interim Budget.pdf"
+            />
+            <InfoCard
+              title1={"To The Tune"}
+              title2="Of Democracy"
+              animation="right"
+              image={"/research/images/To the tune of democracy.png"}
+              link="/research/To the tune of democracy.pdf"
+            />
+          </div>
+          <div className="flex md:flex-row flex-col gap-10 mx-auto pt-10">
+            <InfoCard
+              title1={"The Indian Geopolitical "}
+              title2="Outlook March 2024"
+              animation="left"
+              image={"/research/images/Monthly Geopolitical Newsletter.png"}
+              link="/research/The Indian Geopolitical Outlook March 2024.pdf"
+            />
+            <InfoCard
+              title1={"The Indian Geopolitical "}
+              title2="Outlook April 2024"
+              animation="left"
+              image={"/research/images/Monthly Geopolitical Newsletter.png"}
+              link="/research/The Indian Geopolitical Outlook April 2024.pdf"
+            />
+
+            <InfoCard
+              title1={"The Indian Geopolitical"}
+              title2="Outlook May 2024"
+              animation="right"
+              image={"/research/images/Monthly Geopolitical Newsletter.png"}
+              link="/research/The Indian Geopolitical Outlook May 2024.pdf"
+            />
+          </div>
+          <div className="flex md:flex-row flex-col gap-10 mx-auto pt-10">
+            <InfoCard
+              title1={"The Indian Geopolitical "}
+              title2="Outlook June 2024"
+              animation="center"
+              image={"/research/images/Monthly Geopolitical Newsletter.png"}
+              link="/research/The Indian Geopolitical Outlook June 2024.pdf"
+            />
+            <InfoCard
+              title1={"The Indian Geopolitical "}
+              title2="Outlook July 2024"
+              animation="right"
+              image={"/research/images/Monthly Geopolitical Newsletter.png"}
+              link="/research/The Indian Geopolitical Outlook July 2024.pdf"
             />
           </div>
         </section>
