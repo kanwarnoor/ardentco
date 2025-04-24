@@ -66,7 +66,7 @@ export default function About() {
               Ardent Co.
             </p>
           </div>
-          <div className="md:flex md:relative md:w-[400px] w-[30%] md:h-[80%] h-auto">
+          <div className="md:flex md:relative md:w-[400px] w-[35%] md:h-[80%] h-auto">
             <Queen angle={angle} />
           </div>
         </motion.div>
