@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     // Send email
     await transporter.sendMail({
       from: `"ArdentCo" <${process.env.SMTP_FROM}>`,
-      to: process.env.CLIENT, // Where you want to receive emails
+      to: "rushali.k@ardentco.in", // Where you want to receive emails
       replyTo: email, // Set reply-to as sender's email
       subject: "Job Application Submitted",
       text: `
