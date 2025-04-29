@@ -9,6 +9,8 @@ interface FormData {
   phone: string;
   email: string;
   message: string;
+  department: string;
+  cv: string;
 }
 
 export default function Contact() {
@@ -27,6 +29,8 @@ export default function Contact() {
     phone: "",
     email: "",
     message: "",
+    department: "",
+    cv: "",
   });
 
   const handleInputChange = (field: keyof typeof formData, value: string) => {
@@ -53,6 +57,8 @@ export default function Contact() {
           phone: "",
           email: "",
           message: "",
+          cv: "",
+          department: "",
         });
       })
       .catch((error) => {
@@ -81,6 +87,8 @@ export default function Contact() {
           phone: "",
           email: "",
           message: "",
+          cv: "",
+          department: "",
         });
       })
       .catch((error) => {
@@ -483,16 +491,47 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col">
-                <label htmlFor="message" className="text-black font-bold mb-1">
-                  Message
+                <label
+                  htmlFor="department"
+                  className="text-black font-bold mb-1"
+                >
+                  Choose Department
                 </label>
-                <textarea
-                  id="message"
-                  placeholder="Leave us Message"
-                  value={formData.message}
-                  onChange={(e) => handleInputChange("message", e.target.value)}
-                  className="px-4 py-2 border-black border-2 rounded resize-none focus:outline-none"
-                ></textarea>
+                <select
+                  required
+                  name="department"
+                  id="department"
+                  value={formData.department}
+                  onChange={(e) =>
+                    handleInputChange("department", e.target.value)
+                  }
+                  className="border-black border-2 rounded px-4 py-2 focus:outline-none cursor-pointer"
+                >
+                  <option value="">Select Department</option>
+                  <option value="Public Relations">Public Relations</option>
+                  <option value="Public Policy">Public Policy</option>
+                  <option value="Digital Communications">
+                    Digital Communications
+                  </option>
+                  <option value="Internship">Internship</option>
+                </select>
+              </div>
+              <div className="flex flex-col">
+                <label
+                  htmlFor="department"
+                  className="text-black font-bold mb-1"
+                >
+                  Link to your CV
+                </label>
+                <input
+                  required
+                  type="text"
+                  id="cv"
+                  placeholder="https://yourcv.com"
+                  value={formData.cv}
+                  onChange={(e) => handleInputChange("cv", e.target.value)}
+                  className="px-4 py-2 border-black border-2 rounded focus:outline-none"
+                />
               </div>
 
               {isSubmitting1 ? (

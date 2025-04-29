@@ -14,7 +14,8 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function POST(request: NextRequest) {
-  const { firstName, lastName, phone, email, message } = await request.json();
+  const { firstName, lastName, phone, email, department, cv } =
+    await request.json();
 
   try {
     // Send email
@@ -27,14 +28,16 @@ export async function POST(request: NextRequest) {
           Name: ${firstName + " " + lastName}
           Phone: ${phone}
           Email: ${email}
-          Message: ${message}
+          Department: ${department}
+          CV: ${cv}
         `,
       html: `
           <h1>Job Application Form</h1>
           <p><strong>Name:</strong> ${firstName} ${lastName}</p>
           <p><strong>Phone:</strong> ${phone}</p>
           <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Message:</strong> ${message}</p>
+          <p><strong>Departmnet:</strong> ${department}</p>
+          <p><strong>CV:</strong> ${cv}</p>
         `,
     });
 
