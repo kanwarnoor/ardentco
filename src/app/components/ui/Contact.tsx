@@ -10,7 +10,7 @@ interface FormData {
   email: string;
   message: string;
   department: string;
-  cv: string;
+  cv: File | null;
 }
 
 export default function Contact() {
@@ -30,7 +30,7 @@ export default function Contact() {
     email: "",
     message: "",
     department: "",
-    cv: "",
+    cv: null,
   });
 
   const handleInputChange = (field: keyof typeof formData, value: string) => {
@@ -46,20 +46,25 @@ export default function Contact() {
     setIsSubmitting(true);
 
     axios
-      .post("/api/ClientSubmit", formData)
+      .post("/api/ClientSubmit", {
+        firstname: formData.firstName,
+        lastname: formData.lastName,
+        phone: formData.phone,
+        email: formData.email,
+        message: formData.message,
+      })
       // eslint-disable-next-line no-use-before-define, @typescript-eslint/no-unused-vars
       .then((response) => {
         setStatus("Email sent successfully!");
         // Reset form
-        setFormData({
+        setFormData((prev) => ({
+          ...prev,
           firstName: "",
           lastName: "",
           phone: "",
           email: "",
           message: "",
-          cv: "",
-          department: "",
-        });
+        }));
       })
       .catch((error) => {
         setStatus("Network error. Please try again.");
@@ -75,21 +80,36 @@ export default function Contact() {
     setStatus1("");
     setIsSubmitting1(true);
 
+    if (formData.cv && formData.cv.size > 4 * 1024 * 1024) {
+      alert("File size exceeds 4MB limit.");
+      setStatus1("File size exceeds 4MB limit.");
+      setIsSubmitting1(false);
+      return;
+    }
+    const formDataToSend = new FormData();
+    formDataToSend.append("firstName", formData.firstName);
+    formDataToSend.append("lastName", formData.lastName);
+    formDataToSend.append("phone", formData.phone);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("department", formData.department);
+    if (formData.cv) {
+      formDataToSend.append("cv", formData.cv);
+    }
+
     axios
-      .post("/api/JobSubmit", formData)
+      .post("/api/JobSubmit", formDataToSend, {})
       // eslint-disable-next-line no-use-before-define, @typescript-eslint/no-unused-vars
       .then((response) => {
         setStatus1("Email sent successfully!");
         // Reset form
-        setFormData({
+        setFormData((prev) => ({
+          ...prev,
           firstName: "",
           lastName: "",
           phone: "",
           email: "",
-          message: "",
-          cv: "",
           department: "",
-        });
+        }));
       })
       .catch((error) => {
         setStatus1("Network error. Please try again.");
@@ -517,20 +537,22 @@ export default function Contact() {
                 </select>
               </div>
               <div className="flex flex-col">
-                <label
-                  htmlFor="department"
-                  className="text-black font-bold mb-1"
-                >
-                  Link to your CV
+                <label htmlFor="uplpad" className="text-black font-bold mb-1">
+                  Select your CV
                 </label>
+
                 <input
                   required
-                  type="text"
-                  id="cv"
-                  placeholder="https://yourcv.com"
-                  value={formData.cv}
-                  onChange={(e) => handleInputChange("cv", e.target.value)}
-                  className="px-4 py-2 border-black border-2 rounded focus:outline-none"
+                  accept=".pdf, .doc, .docx"
+                  type="file"
+                  id="upload"
+                  onChange={(e) =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      cv: e.target.files ? e.target.files[0] : null,
+                    }))
+                  }
+                  className=""
                 />
               </div>
 
