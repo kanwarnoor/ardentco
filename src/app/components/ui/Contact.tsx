@@ -458,7 +458,7 @@ export default function Contact() {
                 <div className="flex flex-col w-[49%]">
                   <label
                     htmlFor="lastName"
-                    className="text-black font-bold mb-1"
+                    className="text-black font-bold mb-1 "
                   >
                     Last name
                   </label>
@@ -470,7 +470,7 @@ export default function Contact() {
                     onChange={(e) =>
                       handleInputChange("lastName", e.target.value)
                     }
-                    className="px-4 py-2 border-black border-2 rounded"
+                    className="px-4 py-2 border-black border-2 rounded focus:outline-none"
                   />
                 </div>
               </div>
