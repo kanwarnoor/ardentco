@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
       // to: "rushali.k@ardentco.in", // Where you want to receive emails
       to: "famousforgames@gmail.com",
       replyTo: email, // Set reply-to as sender's email
-      subject: "Job Application Submitted",
+      subject: `Job Application Submitted by ${email}`,
       text: `
           Name: ${firstName + " " + lastName}
           Phone: ${phone}
