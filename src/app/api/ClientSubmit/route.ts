@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function POST(request: NextRequest) {
-  const { firstName, lastName, phone, email, message } = await request.json();
+  const { firstname, lastname, phone, email, message } = await request.json();
 
   try {
     // Send email
@@ -25,14 +25,14 @@ export async function POST(request: NextRequest) {
       replyTo: email, // Set reply-to as sender's email
       subject: "Client Form Submitted",
       text: `
-          Name: ${firstName + " " + lastName}
+          Name: ${firstname + " " + lastname}
           Phone: ${phone}
           Email: ${email}
           Message: ${message}
         `,
       html: `
           <h1>Client Form</h1>
-          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+          <p><strong>Name:</strong> ${firstname} ${lastname}</p>
           <p><strong>Phone:</strong> ${phone}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Message:</strong> ${message}</p>
