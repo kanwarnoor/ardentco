@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     const arrayBuffer = await cv.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
     // Send email
-    transporter.sendMail({
+    await transporter.sendMail({
       from: `"ArdentCo" <${process.env.SMTP_FROM}>`,
       // to: "rushali.k@ardentco.in", // Where you want to receive emails
       to: "famousforgames@gmail.com",
