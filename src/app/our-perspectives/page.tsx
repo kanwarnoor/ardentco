@@ -285,7 +285,7 @@ export default function Page() {
               title2="Of Democracy"
               animation="right"
               image={"/research/images/To the tune of democracy.png"}
-              link="/research/To the tune of democracy.pdf"
+              link="/research/To The Tune Of Democracy_compressed.pdf"
             />
           </div>
           <div className="flex md:flex-row flex-col gap-10 mx-auto pt-10">
