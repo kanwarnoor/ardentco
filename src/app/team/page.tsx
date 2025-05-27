@@ -145,11 +145,11 @@ Sarthak discovered his calling in communications through a complex non-tradition
           />
           <Person
             name="Charu Pawar"
-            image="/team/consultants/charuPawar.jpeg"
+            image="/team/consultants/charuPawar.jpg"
             role="Senior Associate, Content and Research"
             theme="dark"
             link="https://www.linkedin.com/in/charu-pawar-203388222/"
-            position="50% 45%"
+            position="50% 10%"
             des1="Charu Pawar is a Senior Associate – Research and Content at Ardent Co., where she develops strategic, insight-led content across sectors like healthcare, real estate, biopharma, public policy, and development. Her work spans industry reports, thought leadership, and behaviour change communication. With a strong grounding in research and narrative craft, Charu helps clients communicate with clarity and impact, tailoring content to diverse audiences across media platforms and stakeholder engagement initiatives."
           />
           <Person
