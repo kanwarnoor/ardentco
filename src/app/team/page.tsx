@@ -143,15 +143,15 @@ Sarthak discovered his calling in communications through a complex non-tradition
             position="50% 30%"
             des1="Binaira is an experienced communications professional with over four years in the industry. She began her career at Archetype, formerly known as Text100, and subsequently worked with Crosshairs’s, The Yellow Coin, and Jaipur Rugs as a corporate communications assistant manager. Recently, she transitioned to Ardent Co. as a PR manager. Throughout her career, Binaira has handled a diverse range of beats including auto, tech, business, lifestyle, consumer, education, health, social issues, art and culture, and MSME. Outside of work, Binaira enjoys spending time with animals, painting, reading, and cherishing moments at home."
           />
-          {/* <Person
-            name="Vaishnavi Chauhan"
-            image="/team/consultants/seniorAssociate3.jpeg"
+          <Person
+            name="Charu Pawar"
+            image="/team/consultants/charuPawar.jpeg"
             role="Senior Associate, Content and Research"
             theme="dark"
-            link="https://www.linkedin.com/in/vaishnavichauhan7/"
+            link="https://www.linkedin.com/in/charu-pawar-203388222/"
             position="50% 45%"
-            des1="Vaishnavi Chauhan is working with us as a Senior Research Associate with 2 years of xperience. At Ardent Co., she plays a pivotal role in shaping our public policy andcommunications initiatives by conducting in-depth research and advocating for issues that lie at the core of our clients’ mission. Vaishnavi Chauhan comes with experience in management consulting at Ernst and Young. She has worked extensively on projects across Biopharma, energy and utilities, and the digi-tech sectors. In her free time she likes to read about philosophy, brands, marketing, basically everything under the sun."
-          /> */}
+            des1="Charu Pawar is a Senior Associate – Research and Content at Ardent Co., where she develops strategic, insight-led content across sectors like healthcare, real estate, biopharma, public policy, and development. Her work spans industry reports, thought leadership, and behaviour change communication. With a strong grounding in research and narrative craft, Charu helps clients communicate with clarity and impact, tailoring content to diverse audiences across media platforms and stakeholder engagement initiatives."
+          />
           <Person
             name="Rushali Kumar"
             image="/team/consultants/hr.jpeg"
