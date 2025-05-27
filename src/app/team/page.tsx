@@ -277,6 +277,16 @@ He is the founding director of The Dialogue think tank, which was established in
             role="Advisor, Media and Communications"
             theme="dark"
           />
+          <Person
+            name="Sammrat A Dhawan"
+            image="/team/person.jpg"
+            position="50% 50%"
+            des1="Sammrat A Dhawan is a seasoned executive with a two-decade-long career spanning public policy, regulatory affairs, and corporate strategy. He began his career in the Indian government, serving in the Ministry of Commerce & Industry and the Ministry of Finance, where he was instrumental in shaping SEZ frameworks, export-oriented policies, and foreign investment regulations—laying the foundation for his deep regulatory acumen.
+"
+            des2="Transitioning to the private sector, he brought his policy insight to global advisory firms like PwC, KPMG, and RSM, where he advised multinationals on navigating India’s complex regulatory environment across sectors like telecom, pharma, alcobev, and tech. At Pernod Ricard India, he led external affairs for the East Zone, driving regulatory liberalisation and forging key government relationships in the alcobev sector. He has also served as the Vice President and Head of Corporate Affairs at VOIS (Vodafone Intelligent Solutions), where he led policy engagements across data privacy, ESG, AI, and trade regulations, playing a central role in shaping industry narratives through bodies like NASSCOM, CII, and UKIBC."
+            role="Advisor, Government Affairs"
+            theme="dark"
+          />
 
           {/* <Person
             name="Dr. Sabine Kapasi"
