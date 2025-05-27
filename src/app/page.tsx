@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 // import Inactive from "./components/ui/Inactive";
 
 export default function Home() {
+  console.log("Developed by @wellitsnoor");
   const { ref: aboutRef, inView: aboutInView } = useInView({
     threshold: [0.05, 0.5], // Fully visible
     rootMargin: "0px 0px -89% 0px",

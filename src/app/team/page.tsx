@@ -143,7 +143,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             position="50% 30%"
             des1="Binaira is an experienced communications professional with over four years in the industry. She began her career at Archetype, formerly known as Text100, and subsequently worked with Crosshairs’s, The Yellow Coin, and Jaipur Rugs as a corporate communications assistant manager. Recently, she transitioned to Ardent Co. as a PR manager. Throughout her career, Binaira has handled a diverse range of beats including auto, tech, business, lifestyle, consumer, education, health, social issues, art and culture, and MSME. Outside of work, Binaira enjoys spending time with animals, painting, reading, and cherishing moments at home."
           />
-          <Person
+          {/* <Person
             name="Vaishnavi Chauhan"
             image="/team/consultants/seniorAssociate3.jpeg"
             role="Senior Associate, Content and Research"
@@ -151,7 +151,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             link="https://www.linkedin.com/in/vaishnavichauhan7/"
             position="50% 45%"
             des1="Vaishnavi Chauhan is working with us as a Senior Research Associate with 2 years of xperience. At Ardent Co., she plays a pivotal role in shaping our public policy andcommunications initiatives by conducting in-depth research and advocating for issues that lie at the core of our clients’ mission. Vaishnavi Chauhan comes with experience in management consulting at Ernst and Young. She has worked extensively on projects across Biopharma, energy and utilities, and the digi-tech sectors. In her free time she likes to read about philosophy, brands, marketing, basically everything under the sun."
-          />
+          /> */}
           <Person
             name="Rushali Kumar"
             image="/team/consultants/hr.jpeg"
@@ -278,7 +278,7 @@ He is the founding director of The Dialogue think tank, which was established in
             theme="dark"
           />
 
-          <Person
+          {/* <Person
             name="Dr. Sabine Kapasi"
             image="/team/advisors/5.png"
             position="50% 20%"
@@ -290,7 +290,7 @@ President, India SME Forum"
 Dr. Kapasi has specialized in In-Vitro Fertilization (IVF) and has gained recognition as an expert in the area. In addition to her clinical expertise, Dr. Kapasi holds a crucial role as the Health Policy and Governance Strategy Lead of the UN Covid-19 task force. Her extensive consulting experience encompasses diverse areas such as medical tourism, infrastructure, supply chain, OBAMA care, and medical insurance."
             des2="Dr. Kapasi has also been actively engaged with governments, including her role as a research analyst for the Delhi government’s Mohalla clinic program. She has provided valuable guidance to multiple governments on pandemic management strategies, particularly in socio-politically fragile areas."
             theme="dark"
-          />
+          /> */}
         </div>
       </div>
       <Footer theme={"dark"} />
