@@ -161,6 +161,16 @@ Sarthak discovered his calling in communications through a complex non-tradition
             position="50% 10%"
             des1="Rushali is a HR professional currently serving as an Assistant Manager - HR, bringing nearly four years of experience in talent acquisition, employee relations, and workplace process optimization. She has previously sharpened her expertise at Weber Shandwick and HT Media. Outside of work, she enjoys unwinding with her dog and cherishing moments at home."
           />
+          <Person
+            name="Pramit Lahiri"
+            image="/team/consultants/pramit.jpg"
+            role="Senior Associate - Research and Content"
+            theme="dark"
+            link="https://www.linkedin.com/in/pramit-lahiri"
+            position="50% 10%"
+            des1="Pramit Lahiri is a policy professional with extensive experience working with the Government of India and Members of Parliament. He is currently enhancing his research and content development proficiency at Ardent Co. by consulting its multi-sectoral clients. As a Policy Associate to a Member of Parliament (MP) and a Legislative Advisor to an MP, he has contributed to constitutional federal relations through lawmaking and drafted more than 30 interventions across sectors such as health, climate change, sports, and technology. As a LAMP Fellow with PRS Legislative Research, he was the first one to be assigned to an independent parliamentarian. In that period, he worked on parliamentary interventions, media relations, district projects such as the DISHA Committee."
+            des2="His work spans across drafting Op-eds on topics like climate change, AI governance, and climate-smart agriculture, alongside over 60 parliamentary speeches, 200 parliamentary questions addressing education, finance, sports, healthcare, and social welfare among other topics. His strategic media campaigns achieved 23 million views, with 35 initiatives increasing visibility by 60% for his MP. His district-level innovations, including predictive investment models and an AI-integrated dashboard, improved oversight by 50% for his MP as Chairman of the District DISHA Committee. Maintaining robust networks with over 110 global and national stakeholders, including embassies, Central and State ministries, think tanks, and securing CSR partnerships. As a former researcher at the Wildlife Crime Control Bureau of the Government of India, he developed a sophisticated understanding of policy and political dynamics. His contributions at the Bureau, researching international laws and Indian legal framework, contributing to Indian environmental legislation incorporating invasive species for the first time."
+          />
         </div>
 
         <div className="flex w-full h-fit text-center justify-center my-20 ">
