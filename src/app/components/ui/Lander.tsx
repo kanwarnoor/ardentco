@@ -13,6 +13,8 @@ interface landerProps {
   description?: string;
   blurdata?: string;
   css?: string;
+  buttonTxt?: string;
+  buttonLink?: string;
 }
 
 export default function Lander({
@@ -20,6 +22,8 @@ export default function Lander({
   heading1,
   heading2,
   description,
+  buttonTxt,
+  buttonLink,
   blurdata,
   css,
 }: landerProps) {
@@ -128,7 +132,7 @@ export default function Lander({
           }}
           className="mt-10"
         >
-          <Button link="#more" />
+          <Button link={buttonLink || "#more"} buttonTxt={buttonTxt || "Know more"} />
         </motion.div>
 
         <br />
