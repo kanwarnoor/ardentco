@@ -30,7 +30,7 @@ export default function GetInTouch({ content }: Props) {
               transition={{ duration: 0.5 }}
               className="text-center flex flex-col items-center justify-center"
             >
-              <div className="w-fit flex md:size-12 size-7 text-black">
+              <div className="w-fit flex md:size-12 size-10 text-black">
                 {item.svg}
               </div>
               <div className="w-full flex h-fit text-center ">

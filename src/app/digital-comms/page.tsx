@@ -23,7 +23,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="duration-300 stroke-white cursor-pointer"
+          className="w-full h-full duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -44,7 +44,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="  duration-300 stroke-white cursor-pointer"
+          className="w-full h-full duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -65,7 +65,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="  duration-300 stroke-white cursor-pointer"
+          className="w-full h-full duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -86,7 +86,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="  duration-300 stroke-white cursor-pointer"
+          className="w-full h-full duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -107,7 +107,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="  duration-300 stroke-white cursor-pointer"
+          className=" w-full h-full duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -128,7 +128,7 @@ export default function Page() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="  duration-300 stroke-white cursor-pointer"
+          className="w-full h-full duration-300 stroke-white cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -207,13 +207,11 @@ export default function Page() {
             </motion.div>
             <div className="w-1/3 h-1 bg-white/0 rounded-full my-10"></div>
 
-        
             <GetInTouch content={content} />
-
           </div>
         </div>
       </section>
-      <section id="contact" className="bg-white">
+      <section id="contact" className="bg-white overflow-hidden">
         <Contact />
       </section>
 
