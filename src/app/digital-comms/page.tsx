@@ -205,7 +205,7 @@ export default function Page() {
                 measurable success.
               </p>
             </motion.div>
-            <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
+            <div className="w-1/3 h-1 bg-white/0 rounded-full my-10"></div>
 
         
             <GetInTouch content={content} />
