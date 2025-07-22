@@ -12,7 +12,7 @@ export default function GetInTouch({ content }: Props) {
     <>
       <motion.div
         initial={{ translateX: 0 }}
-        className="w-full grid xl:grid-cols-2 grid-flow-row md:overflow-x-visible overflow-x-auto"
+        className="w-full grid 2xl:grid-cols-2 grid-flow-row md:overflow-x-visible overflow-x-auto"
       >
         {content.map((item, index) => (
           <motion.div
