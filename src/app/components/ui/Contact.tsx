@@ -13,8 +13,12 @@ interface FormData {
   cv: File | null;
 }
 
-export default function Contact() {
-  const [clicked, setClicked] = useState(false);
+interface Props {
+  client?: boolean;
+}
+
+export default function Contact({ client }: Props) {
+  const [clicked, setClicked] = useState(client ? true : false);
   const [clicked1, setClicked1] = useState(false);
   const [zindex, setZindex] = useState("z-0");
 
@@ -134,6 +138,236 @@ export default function Contact() {
       clearTimeout(timer);
     };
   }, [clicked1]);
+
+  if (client) {
+    return (
+      <div className="md:w-[50%] w-screen h-screen">
+        <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-gradient-to-r bg-opacity-100">
+          
+
+          <div
+            className={`flex flex-col items-center p-8 w-screen h-fit max-w-md m-auto`}
+          >
+            <form
+              name="Clients"
+              className="space-y-4 w-full"
+              onSubmit={handleClientSubmit}
+            >
+              <div className="flex justify-between space-x-2">
+                <div className="flex flex-col w-[49%]">
+                  <label
+                    htmlFor="firstName"
+                    className="text-black font-bold mb-1"
+                  >
+                    First name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    placeholder="First name"
+                    value={formData.firstName}
+                    onChange={(e) =>
+                      handleInputChange("firstName", e.target.value)
+                    }
+                    className={`px-4 py-2 border-black border-2 rounded focus:outline-none`}
+                    required
+                  />
+                </div>
+                <div className="flex flex-col w-[49%]">
+                  <label
+                    htmlFor="lastName"
+                    className="text-black font-bold mb-1"
+                  >
+                    Last name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    placeholder="Last name"
+                    value={formData.lastName}
+                    onChange={(e) =>
+                      handleInputChange("lastName", e.target.value)
+                    }
+                    className="px-4 py-2 border-black border-2 rounded focus:outline-none"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="email" className="text-black font-bold mb-1">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="you@company.com"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange("email", e.target.value)}
+                  className="px-4 py-2 border-black border-2 rounded focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="phone" className="text-black font-bold mb-1">
+                  Phone number
+                </label>
+                <div className="flex space-x-2">
+                  <select className="px-4 py-2 border-black border-2 rounded bg-black text-white font-bold">
+                    <option>IND</option>
+                  </select>
+                  <input
+                    type="number"
+                    id="phone"
+                    placeholder="+91xxxxxxxxxx"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange("phone", e.target.value)}
+                    className="px-4 py-2 border-black border-2 rounded flex-grow w-full focus:outline-none"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="message" className="text-black font-bold mb-1">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  placeholder="Leave us Message"
+                  value={formData.message}
+                  onChange={(e) => handleInputChange("message", e.target.value)}
+                  className="px-4 py-2 border-black border-2 rounded resize-none focus:outline-none"
+                ></textarea>
+              </div>
+
+              {isSubmitting ? (
+                <div className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg duration-300 w-40 text-center justify-center items-center cursor-pointer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="xMidYMid"
+                    width="25px"
+                    height="25px"
+                    style={{
+                      shapeRendering: "auto",
+                      display: "block",
+                      background: "transparent",
+                    }}
+                    className="mr-1"
+                  >
+                    <g>
+                      <circle
+                        strokeDasharray="164.93361431346415 56.97787143782138"
+                        r="35"
+                        strokeWidth="10"
+                        stroke="#ffffff"
+                        fill="none"
+                        cy="50"
+                        cx="50"
+                      >
+                        <animateTransform
+                          keyTimes="0;1"
+                          values="0 50 50;360 50 50"
+                          dur="1s"
+                          repeatCount="indefinite"
+                          type="rotate"
+                          attributeName="transform"
+                        />
+                      </circle>
+                    </g>
+                  </svg>
+                  Sending...
+                </div>
+              ) : (
+                <button
+                  type="submit"
+                  className="flex mx-auto bg-black text-white font-black py-2 px-4 rounded-lg duration-300 w-40 text-center justify-center"
+                >
+                  {isSubmitting ? "Sending..." : "Book a call with us"}
+                </button>
+              )}
+
+              {status && (
+                <p
+                  className={`mt-2 text-sm text-center font-bold ${
+                    status.includes("successfully")
+                      ? "text-black"
+                      : "text-black"
+                  }`}
+                >
+                  {status}
+                </p>
+              )}
+            </form>
+          </div>
+        </div>
+        <motion.div
+          initial={{
+            x: "100%",
+            backgroundSize: "100%",
+          }}
+          whileInView={{
+            backgroundSize: "110%",
+          }}
+          viewport={{
+            amount: 0.5,
+          }}
+          animate={{ x: clicked ? "100%" : "0%" }}
+          transition={{
+            duration: 0.5,
+            ease: easeInOut,
+          }}
+          onClick={() => setClicked(true)}
+          className={`absolute md:w-[50%] w-screen h-screen bg-center bg-cover bg-no-repeat bg-gradient-to-r from-100% to-90% from-neutral-950   ${
+            clicked ? "z-10 cursor-auto" : "z-10 cursor-pointer"
+          }`}
+        >
+          <div className="absolute top-0 left-0 right-0 bottom-0 flex-col w-fit h-fit m-auto  mx-auto">
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: "-50%",
+              }}
+              whileInView={{
+                opacity: 1,
+                y: "0%",
+              }}
+              transition={{
+                duration: 0.5,
+              }}
+              viewport={{
+                amount: 0.3,
+              }}
+              className="text-ardent md:text-5xl text-4xl font-bold"
+            >
+              i am a <br />
+            </motion.p>
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: "-50%",
+              }}
+              whileInView={{
+                opacity: 1,
+                y: "0%",
+              }}
+              transition={{
+                duration: 0.5,
+              }}
+              viewport={{
+                amount: 0.3,
+              }}
+              className="text-ardent md:text-9xl text-8xl font-black"
+            >
+              CLIENT
+            </motion.p>
+          
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-[100%] grid md:grid-cols-2 grid-cols-1">

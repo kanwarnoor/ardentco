@@ -212,7 +212,7 @@ export default function Page() {
         </div>
       </section>
       <section id="contact" className="bg-white overflow-hidden">
-        <Contact />
+        <Contact client={true} />
       </section>
 
       <Footer theme={"dark"} />
