@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Button from "./button";
 import { FlipWords } from "./flip-words";
 
 interface landerProps {
