@@ -162,6 +162,7 @@ export default function Page() {
         heading1="Digital"
         heading2="Communications"
         buttonTxt="Get in touch"
+        button1hover={false}
         buttonLink="#contact"
         buttonTxt2="Know more"
         buttonLink2="#more"

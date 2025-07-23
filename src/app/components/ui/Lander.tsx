@@ -13,6 +13,7 @@ interface landerProps {
   description?: string;
   blurdata?: string;
   css?: string;
+  button1hover?: boolean;
   buttonTxt?: string;
   buttonLink?: string;
   buttonTxt2?: string;
@@ -30,8 +31,10 @@ export default function Lander({
   buttonLink2,
   blurdata,
   css,
+  button1hover = true,
 }: landerProps) {
   const [loaded, setLoaded] = useState(false);
+  // button1hover = button1hover || true;
 
   return (
     <section
@@ -137,24 +140,40 @@ export default function Lander({
           className="mt-10"
         >
           <a
-            href={buttonLink}
-            className="md:text-xl border-2 font-bold  bg-none border-ardent px-5 py-2 rounded-full bg-ardent text-black duration-300"
+            href={buttonLink || "#more"}
+            className={`md:text-xl border-2 font-bold bg-none border-ardent px-5 py-2 rounded-full   duration-300 ${
+              button1hover
+                ? "hover:bg-ardent hover:text-black  text-ardent"
+                : "bg-ardent text-black"
+            }`}
           >
-            {buttonTxt}
+            {buttonTxt || "Know more"}
           </a>
         </motion.div>
 
         <br />
       </div>
       {buttonTxt2 && buttonLink2 && (
-        <div className="absolute bottom-0 left-0 right-0 flex justify-center items-center mb-10">
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 1.2,
+          }}
+          className="absolute bottom-0 left-0 right-0 flex justify-center items-center mb-10"
+        >
           <a
             href={buttonLink2}
             className="text-sm  border-2 font-bold text-white bg-none  px-5 py-2 rounded-full hover:bg-white hover:text-black hover:border-black duration-300"
           >
             {buttonTxt2}
           </a>
-        </div>
+        </motion.div>
       )}
     </section>
   );
