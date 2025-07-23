@@ -163,6 +163,8 @@ export default function Page() {
         heading2="Communications"
         buttonTxt="Get in touch"
         buttonLink="#contact"
+        buttonTxt2="Know more"
+        buttonLink2="#more"
         description="A series of impersonation posts by parody accounts on a popular social media platform in 2022 resulted in $15 billion worth of losses in market value."
         css="text-white"
         blurdata="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAARCAYAAADKZhx3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADhUlEQVR4nLVVQW+SWxC90TQID0uxIKUWkddKX0VEbBBpG4RUqag8mpryEDFp2iBiF00XVNMgLkzTRaOIbWJqd11oYuxKt76utFtM6rK/QH9Ck2POtB+SF40an4vD3DvfnTkzc+cOqrOzE17vCXg8x+HznUQgcBo+nw+BQADRaBSjo6PI5/OYmJhANptFOn0V+fxNTE1NIZe7gULhFjKZaygWZ7C0tIRs9jr8fj/c7m60t7fDYrEKzGYzTCYTjEYj9Ho9VE9PDzo6OuQwSWOxIUQiEQwPDyOdTiOVSmFkZAThcFjklSujQjQ5OYnZ2Vkhe/bsOVZXV7G8/ASlUgnnzp2H2+0WvzabDRaLBS0tLUJsMrUIubLb7QiFQkgk/kYsFhPCVOofJBIJybZcvodyuYxMJiMgcTKZlMz4nQHUau+xvb2NavUxNjc/4OPHT6hWq+jv74fX64XL9acE0NraCrP5AJqbm6GYKR0NDV1AJBIVhMNnxYiO19bWsLW1hcXFRakAy3v//hxyuRyi0UGwYqzEgwcPpdzT09NYX19HpfJI/PT1hRAMBuUaPR4PurqOyhUoEhDB4Jk6QqE+uWOWjFnG43EsLCxgZWUFb978i7dv32F5+SlKpbsoFotyZm5uTrJk1UjAPunt7RVCgn3E7CkZrOIBgood6RWpgQ3mcByWMnHNTDY2NqTBKpUKarUaBgcHMTMzg5cvXyAevyj3u0NwDN3df+2iuw5mrXiIG3Yhoa15mN/Y9YzQ5XJJgzAAv/+UEM3Pz+PSpcsSIHuDzcTGcTqdYse7pSScTld9z++KPwQdO51HBFzvGH7REXTc1tYmXcoO5V1RDgwMYHx8XLJkYNQTPK+hvWEvd8yupjNu7HbCvmt4qE6k6diZVqtV9MzeYDCgqalJ+oHvmgkwEJ7hWUKzt9ls4l/TK0aogQaatFoP7r5BDgBL/T3SscPhkJIajfuh0+2TUr969VrsGAzfKgPj0KANn5DmlzpC0QHflSbpmJKGmjH32htk1MyMmXICkUgphdu370g3c20w/CF6SvrTJP3s6A1QNG4ElY1rZsWgdDqdvMexsbH62CNkCimFQqGAZHJ4l/iLj6/51XNk/vfAt0Bi7X60bBsz5kjle96zZy8Mhu/7Uz9KTJCwkbSRmFOME+xbGet/hVi7n68Rc/Dwz+W3EOu/cxU/UuL/nfhn8Rnsa/E3D6teFAAAAABJRU5ErkJggg=="

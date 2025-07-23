@@ -15,6 +15,8 @@ interface landerProps {
   css?: string;
   buttonTxt?: string;
   buttonLink?: string;
+  buttonTxt2?: string;
+  buttonLink2?: string;
 }
 
 export default function Lander({
@@ -24,6 +26,8 @@ export default function Lander({
   description,
   buttonTxt,
   buttonLink,
+  buttonTxt2,
+  buttonLink2,
   blurdata,
   css,
 }: landerProps) {
@@ -132,11 +136,26 @@ export default function Lander({
           }}
           className="mt-10"
         >
-          <Button link={buttonLink || "#more"} buttonTxt={buttonTxt || "Know more"} />
+          <a
+            href={buttonLink}
+            className="md:text-xl border-2 font-bold  bg-none border-ardent px-5 py-2 rounded-full bg-ardent text-black duration-300"
+          >
+            {buttonTxt}
+          </a>
         </motion.div>
 
         <br />
       </div>
+      {buttonTxt2 && buttonLink2 && (
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center items-center mb-10">
+          <a
+            href={buttonLink2}
+            className="text-sm  border-2 font-bold text-white bg-none  px-5 py-2 rounded-full hover:bg-white hover:text-black hover:border-black duration-300"
+          >
+            {buttonTxt2}
+          </a>
+        </div>
+      )}
     </section>
   );
 }
