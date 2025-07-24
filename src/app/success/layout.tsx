@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="en">
       {/* Google Analytics Script */}
 
-      <Script>
+      <Script id="google-analytics-success">
         {`
   gtag('event', 'conversion', {
       'send_to': 'AW-17389056295/4JMxCJzAy_caEKfi3-NA',
