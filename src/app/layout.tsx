@@ -25,7 +25,7 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
 
-        <Script
+        {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-GMWD07EPW2"
           strategy="afterInteractive"
         />
@@ -35,6 +35,20 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-GMWD07EPW2');
+          `}
+        </Script> */}
+
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17389056295"
+        ></Script>
+        <Script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-17389056295');
           `}
         </Script>
       </head>

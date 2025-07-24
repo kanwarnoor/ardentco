@@ -2,6 +2,7 @@ import React, { FormEvent, useEffect, useState } from "react";
 import { easeInOut, motion } from "framer-motion";
 import axios from "axios";
 import Button from "./button";
+import { redirect } from "next/navigation";
 
 interface FormData {
   firstName: string;
@@ -76,6 +77,7 @@ export default function Contact({ client }: Props) {
       })
       .finally(() => {
         setIsSubmitting(false);
+        redirect("/success");
       });
   };
 
@@ -143,8 +145,6 @@ export default function Contact({ client }: Props) {
     return (
       <div className="md:w-[50%] w-screen h-screen">
         <div className="flex flex-col absolute md:w-[50%] w-screen h-screen bg-gradient-to-r bg-opacity-100">
-          
-
           <div
             className={`flex flex-col items-center p-8 w-screen h-fit max-w-md m-auto`}
           >
@@ -362,7 +362,6 @@ export default function Contact({ client }: Props) {
             >
               CLIENT
             </motion.p>
-          
           </div>
         </motion.div>
       </div>
