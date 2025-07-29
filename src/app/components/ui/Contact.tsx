@@ -79,7 +79,7 @@ export default function Contact({ client }: Props) {
       })
       .finally(() => {
         setIsSubmitting(false);
-        router.push("/success");
+        router.replace("/success");
       });
   };
 
