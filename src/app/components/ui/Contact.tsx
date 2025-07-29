@@ -2,7 +2,7 @@ import React, { FormEvent, useEffect, useState } from "react";
 import { easeInOut, motion } from "framer-motion";
 import axios from "axios";
 import Button from "./button";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface FormData {
   firstName: string;
@@ -27,6 +27,8 @@ export default function Contact({ client }: Props) {
   const [status1, setStatus1] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [isSubmitting1, setIsSubmitting1] = useState<boolean>(false);
+
+  const router = useRouter();
 
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
@@ -77,7 +79,7 @@ export default function Contact({ client }: Props) {
       })
       .finally(() => {
         setIsSubmitting(false);
-        redirect("/success");
+        router.push("/success");
       });
   };
 
