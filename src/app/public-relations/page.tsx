@@ -7,7 +7,9 @@ import Lander from "../components/ui/Lander";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 // import Options from "../components/ui/Options";
-import OptionsFull from "../components/ui/OptionsFull";
+// import OptionsFull from "../components/ui/OptionsFull";
+import Contact from "../components/ui/Contact";
+import GetInTouch from "../components/GetInTouch";
 
 export default function Page() {
   const content = [
@@ -130,20 +132,30 @@ export default function Page() {
         image="/banner/publicRelations.png"
         heading1="Strategic Communication"
         heading2="Public Relations"
+        buttonTxt="Get in touch"
+        button1hover={false}
+        buttonLink="#contact"
+        buttonTxt2="Know more"
+        buttonLink2="#more"
         description="A study of 30 listed companies over 40 years found that crises caused an average 19% drop in share prices, took 147 days to recover, and led to lost deals, customers, and funding, affecting unlisted firms too.
 "
         css="text-white"
       />
+      
+      <section id="contact" className="bg-white overflow-hidden">
+        <Contact client={true} />
+      </section>
+
 
       <section
-        className="relative bg-neutral-950 bg-dot-black/[0.5] w-full h-auto min-h-screen"
+        className="relative bg-neutral-950 text-white bg-dot-black/[0.5] w-full h-auto min-h-screen"
         id="more"
         ref={ref}
       >
         {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(circle,white_10%,transparent_100%)] z-0"></div> */}
 
-        <div className="relative m-auto flex flex-col w-full h-auto z-10 justify-center items-center min-h-screen gap-5">
-          <div className="flex flex-wrap justify-center w-full h-fit text-center  gap-5 mx-auto mt-auto text-white">
+        <div className="relative m-auto flex flex-col w-full h-auto pt-20 z-10 justify-center items-center min-h-screen gap-5">
+          <div className="flex flex-wrap justify-center w-full h-fit text-center gap-5 mx-auto">
             <motion.div
               initial={{
                 opacity: 0,
@@ -156,12 +168,12 @@ export default function Page() {
               transition={{
                 duration: 0.5,
               }}
-              className=" flex flex-col m-auto mt-20 justify-center items-center"
+              className=" flex flex-col m-auto mt-10 justify-center items-center"
             >
               {/* <p className="md:text-5xl text-2xl font-black px-20 pb-10 text-center">
                 Strategic Communication Public Relations
               </p> */}
-              <p className="md:px-32 px-20 md:text-2xl text-base text-center">
+              <p className="md:px-32 px-20 md:text-2xl text-base text-center opac">
                 At the heart of strategic communications, we focus on shaping
                 your brand image and reinforcing your industry presence. Our
                 comprehensive suite of services builds and refines your
@@ -170,8 +182,9 @@ export default function Page() {
                 communication strategies.
               </p>
             </motion.div>
-            <div className="w-1/3 h-1 bg-white/20 rounded-full my-10"></div>
-            <OptionsFull content={content} />
+            <div className="w-1/3 h-1 bg-white/0 rounded-full my-10"></div>
+
+            <GetInTouch content={content} />
           </div>
         </div>
       </section>

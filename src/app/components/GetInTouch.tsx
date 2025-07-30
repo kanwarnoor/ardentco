@@ -12,7 +12,7 @@ export default function GetInTouch({ content }: Props) {
     <>
       <motion.div
         initial={{ translateX: 0 }}
-        className="w-full grid 2xl:grid-cols-2 grid-flow-row md:overflow-x-visible overflow-x-auto"
+        className="w-full flex flex-wrap md:overflow-x-visible overflow-x-auto"
       >
         {content.map((item, index) => (
           <motion.div
@@ -22,7 +22,13 @@ export default function GetInTouch({ content }: Props) {
                 1 - (index % content.length) * 0.1
               })`,
             }}
-            className="md:w-full w-full h-[30rem] p-10 flex flex-col justify-center items-center m-auto cursor-pointer"
+            className={`${
+              content.length % 2 === 0
+                ? "2xl:w-1/2"
+                : index !== content.length - 1
+                ? "2xl:w-1/2"
+                : "2xl:w-full"
+            } w-full h-[30rem] p-10 flex flex-col justify-center items-center m-auto cursor-pointer`}
           >
             <motion.div
               initial={{ opacity: 0, y: -50 }}
@@ -44,9 +50,9 @@ export default function GetInTouch({ content }: Props) {
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="md:w-1/2 w-[80%] mt-5"
+              className="md:w-[80%] w-[80%] mt-5"
             >
-              <p className="md:text-xl text-sm font-bold text-center ">
+              <p className="md:text-lg text-sm font-bold text-center ">
                 {item.description}
               </p>
             </motion.div>
