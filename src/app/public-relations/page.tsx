@@ -142,7 +142,7 @@ export default function Page() {
         css="text-white"
       />
       
-      <section id="contact" className="bg-white overflow-hidden">
+      <section id="contact" className="bg-white flex overflow-hidden overflow-x-hidden">
         <Contact client={true} />
       </section>
 

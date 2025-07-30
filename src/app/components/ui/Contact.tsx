@@ -321,7 +321,7 @@ export default function Contact({ client }: Props) {
             ease: easeInOut,
           }}
           onClick={() => setClicked(true)}
-          className={`absolute md:w-[50%] w-screen h-screen bg-center bg-cover bg-no-repeat bg-gradient-to-r from-100% to-90% from-neutral-950   ${
+          className={`absolute md:w-[50%] hidden md:flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-gradient-to-r from-100% to-90% from-neutral-950   ${
             clicked ? "z-10 cursor-auto" : "z-10 cursor-pointer"
           }`}
         >

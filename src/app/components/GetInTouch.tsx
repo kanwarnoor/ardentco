@@ -58,7 +58,7 @@ export default function GetInTouch({ content }: Props) {
             </motion.div>
           </motion.div>
         ))}
-        <div className="absolute bottom-0 left-0 right-0 flex justify-center items-center mb-10">
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center items-center md:mb-10 mb-3">
           <a
             href={"#contact"}
             className={`md:text-xl border-2 font-bold bg-none text-white border-white px-5 py-2 rounded-full hover:bg-white hover:text-black duration-300`}

@@ -7,7 +7,7 @@ import Lander from "../components/ui/Lander";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 // import Options from "../components/ui/Options";
-import GetInTouch from "./GetInTouch";
+import GetInTouch from "../components/GetInTouch";
 import Contact from "../components/ui/Contact";
 
 export default function Page() {
