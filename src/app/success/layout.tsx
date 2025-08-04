@@ -1,4 +1,4 @@
-// import Script from "next/script";
+import Script from "next/script";
 
 export const metadata = {
   title: "Success",
@@ -17,16 +17,18 @@ export default function RootLayout({
       {/* <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=AW-17389056295"
-      ></Script>
-      <Script id="google-analytics-success">
-        {`
+      ></Script> */}
+      <head>
+        <Script id="google-analytics-success">
+          {`
   gtag('event', 'conversion', {
       'send_to': 'AW-17389056295/4JMxCJzAy_caEKfi3-NA',
       'value': 1.0,
       'currency': 'INR'
   });
   `}
-      </Script> */}
+        </Script>
+      </head>
 
       <body>{children}</body>
     </html>

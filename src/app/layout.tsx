@@ -51,6 +51,11 @@ export default function RootLayout({
             gtag('config', 'AW-17389056295');
           `}
         </Script>
+        <Script id="message">
+          {`
+            console.log("Developed by @wellitsnoor");
+          `}
+        </Script>
       </head>
 
       <body className={rethink.className}>

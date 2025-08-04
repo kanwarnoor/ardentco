@@ -31,6 +31,11 @@ export default function Page() {
   });
   `}
       </Script>
+      <Script id="message">
+        {`
+          console.log("nigga");
+        `}
+      </Script>
 
       <div className="w-screen h-screen flex flex-col justify-center items-center bg-neutral-950 text-white">
         <h1 className="flex md:text-4xl text-2xl font-bold">
