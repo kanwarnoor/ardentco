@@ -256,7 +256,7 @@ Her passion and efforts have won her the recognition of BusinessWorld Disrupt 30
 Varda holds a Bachelor’s degree in Economics from the University of Delhi, India and a M.Sc. Management & Strategy from the London School of Economics, UK."
             theme="dark"
           />
-          <Person
+          {/* <Person
             name="Kazim Rizvi"
             image="/team/advisors/1.jpeg"
             position="50% 20%"
@@ -267,7 +267,7 @@ Varda holds a Bachelor’s degree in Economics from the University of Delhi, Ind
 He is the founding director of The Dialogue think tank, which was established in 2017, and since then has received national and global appreciation for its work, including being recognised as one of the top 10 think-tanks to watch out for by the University of Pennsylvania for two consecutive years (2020 and 2021)."
             des2="At The Dialogue, Kaizen aims to contribute to the creation of a progressive policy ecosystem in India through intellectual discussions and innovative solutions. Kazim is also a prolific writer and has contributed to significant policy discussions including the Digital Personal Data Protection Bill, Competition Regulations for Technology Enterprises, Satellite Internet Communications to name a few."
             theme="dark"
-          />
+          /> */}
           <Person
             name="Proful Lall"
             image="/team/person.jpg"
