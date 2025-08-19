@@ -179,7 +179,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
           </p>
         </div>
         <div className="w-[70%] h-full grid md:grid-cols-3 grid-cols-2 gap-10 mb-10">
-          <Person
+          {/* <Person
             name="Mr.Jai Prakash"
             image="/team/advisors/7.png"
             position="50% 20%"
@@ -192,7 +192,7 @@ Mr. Jai Prakash spent more than six-years working across key Ministries in the C
 
 Mr. Jai Prakash is an MBA from IIM Lucknow, and had a strong career in the private sector sector with various technology companies prior to working with the Government"
             theme="dark"
-          />
+          /> */}
           <Person
             name="Saptarshi Sanyal"
             image="/team/advisors/10.png"
