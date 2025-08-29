@@ -294,25 +294,41 @@ export default function BigTwo() {
           </div>
         </section>
         {/* end */}
-        <section className="w-full h-fit min-w-screen min-h-screen flex flex-col items-center justify-center text-white">
-          <p className="text-4xl flex flex-row items-center justify-center">
-            Why <span className="text-ardent font-bold mx-3">Choose</span>{" "}
+        <section className="w-full relative h-fit min-w-screen md:min-h-screen min-h-fit flex flex-col items-center justify-center text-white md:my-0 py-20">
+          <Image
+            src="/doctor.jpg"
+            alt="doctor"
+            fill
+            className="object-cover opacity-50 grayscale -z-10 absolute inset-0"
+          />
+
+          <p className="text-4xl flex md:flex-row flex-col items-center justify-center z-10">
+            Why{" "}
+            <span className="text-ardent font-bold md:mx-3 mx-2">Choose</span>{" "}
             Ardent Co.{" "}
             <a
               href="/healthcare#home"
-              className="font-bold xl:text-xl md:text-base text-sm border-2 ml-5 border-red-600 bg-yellow-500 rounded-full md:px-5 px-3 py-1 mt-3 md:mt-0 text-black"
+              className="font-bold xl:text-xl md:text-base text-sm border-2 md:ml-5 ml-0 border-red-600 bg-yellow-500 rounded-full md:px-5 px-3 py-1 mt-3 md:mt-0 text-black"
             >
               Book A Strategy Call
             </a>
           </p>
 
-          <div className="grid grid-cols-4 w-full h-fit justify-center items-center mx-10 gap-10">
-            <div className="bg-ardent text-black w-full h-[300px] text-4xl p-10">
-              <p className="text-xl font-bold">01</p>
-              <p className="font-black">
-                Proven ability to build trust and brand credibility
-              </p>
-            </div>
+          <div className="grid md:grid-cols-4 grid-cols-2 w-fit h-fit justify-center items-center mt-10 gap-5 z-10">
+            {[
+              "Proven ability to build trust and brand credibility",
+              "Integrated digital communication strategies tailored for healthcare",
+              "Collaborative approach ensuring regulatory compliance and impact",
+              "Trusted by clinics, hospitals, and health startups",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-ardent text-black md:w-[350px] w-[200px] md:h-[350px] h-[200px] md:text-3xl text-base p-5 flex flex-col cursor-pointer hover:shadow-2xl shadow-ardent transition-shadow duration-100 ease-in-out hover:shadow-ardent/50"
+              >
+                <p className="">0{index + 1}</p>
+                <p className="font-bold mt-auto ">{item}</p>
+              </div>
+            ))}
           </div>
         </section>
       </div>
