@@ -6,12 +6,13 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 interface Props {
-  left: boolean;
-  right: boolean;
+  left?: boolean;
+  right?: boolean;
   button?: boolean;
+  contact?: boolean;
 }
 
-export default function Navbar({ right, button }: Props) {
+export default function Navbar({ right, button, contact = true }: Props) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -84,18 +85,21 @@ export default function Navbar({ right, button }: Props) {
           }}
           className={`flex ml-auto text-center text-black justify-center items-center md:mr-10 mr-5 duration-300 transition-all`}
         >
-          <a
-            href="/#contact"
-            className={`flex justify-center items-center md:w-32 md:h-10 w-28 h-9 rounded-full font-medium duration-300 md:text-base text-sm select-none ${
-              open
-                ? "bg-ardent text-black"
-                : button
-                ? "bg-black text-white"
-                : "bg-ardent text-black"
-            }`}
-          >
-            {"Let's Connect"}
-          </a>
+          {contact && (
+            <a
+              href="/#contact"
+              className={`flex justify-center items-center md:w-32 md:h-10 w-28 h-9 rounded-full font-medium duration-300 md:text-base text-sm select-none ${
+                open
+                  ? "bg-ardent text-black"
+                  : button
+                  ? "bg-black text-white"
+                  : "bg-ardent text-black"
+              }`}
+            >
+              {"Let's Connect"}
+            </a>
+          )}
+
           {open ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
