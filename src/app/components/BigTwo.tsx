@@ -2,7 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Navbar from "@/app/components/ui/Navbar";
 
-export default function BigTwo() {
+interface BigTwoProps {
+  realestate?: boolean;
+  healthcare?: boolean;
+}
+
+export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
   return (
     <>
       <Navbar contact={false} />
@@ -10,7 +15,7 @@ export default function BigTwo() {
         {/* lander */}
         <div className=" md:h-screen h-[150vh] bg-black -z-10 absolute inset-0">
           <Image
-            src="/doctor.jpg"
+            src={realestate ? "/realestate.jpg" : "/doctor.jpg"}
             alt="doctor"
             fill
             className="object-cover opacity-50  grayscale"
@@ -25,21 +30,52 @@ export default function BigTwo() {
             <div className="w-full h-full min-w-screen flex flex-col items-center justify-center">
               <div className="w-[60%] h-full gap-10 flex flex-col  justify-center">
                 <p className="text-white md:text-2xl xl:text-4xl text-2xl font-bold">
-                  Patients Don&apos;t Just <br /> Choose,{" "}
-                  <span className="text-ardent">They Trust</span>
+                  {healthcare ? (
+                    <>
+                      Patients Don&apos;t Just <br /> Choose,{" "}
+                      <span className="text-ardent">They Trust</span>
+                    </>
+                  ) : (
+                    <>Lost In The Noise?</>
+                  )}
                 </p>
-                <p className="capitalize text-white xl:text-7xl text-4xl font-black md:text-5xl">
-                  We Help <br /> you <span className="text-ardent">earn</span>{" "}
-                  It!
+                <p
+                  className={`capitalize text-white 2xl:text-7xl xl:text-5xl font-black md:text-5xl ${
+                    healthcare ? "text-4xl" : "text-2xl"
+                  }`}
+                >
+                  {healthcare ? (
+                    <>
+                      We Help <br /> you{" "}
+                      <span className="text-ardent">earn</span> It!
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-ardent">
+                        We Make Your Property the Talk of the Town!
+                      </span>{" "}
+                    </>
+                  )}
                 </p>
 
                 <div className="flex flex-col gap-3 mt-10">
                   <div className="w-1/2 xl:h-[0.2rem] md:h-[0.1rem] h-[0.1rem] bg-white"></div>
 
                   <p className="xl:text-base md:text-sm text-sm text-white">
-                    Ardent Co. integrates public relations, research, and
-                    digital storytelling to build trust, navigate policy, and
-                    grow patient engagement for healthcare providers.
+                    {healthcare ? (
+                      <>
+                        Ardent Co. integrates public relations, research, and
+                        digital storytelling to build trust, navigate policy,
+                        and grow patient engagement for healthcare providers.
+                      </>
+                    ) : (
+                      <>
+                        Ardent Co. combines innovative public relations, deep
+                        research, and targeted digital storytelling to generate
+                        high-quality audience and build lasting credibility for
+                        real estate businesses.
+                      </>
+                    )}
                   </p>
                 </div>
               </div>
@@ -98,15 +134,38 @@ export default function BigTwo() {
                 </svg>
               </div>
               <div>
-                <p className="xl:text-5xl md:text-3xl text-2xl font-black text-ardent flex flex-row items-center">
-                  1500+{" "}
-                  <span className="xl:text-2xl md:text-xl text-base text-white ml-2 font-medium">
-                    media coverages
-                  </span>
-                </p>
+                {healthcare ? (
+                  <>
+                    <p className="xl:text-5xl md:text-3xl text-2xl font-black text-ardent flex flex-row items-center">
+                      1500+{" "}
+                      <span className="xl:text-2xl md:text-xl text-base text-white ml-2 font-medium">
+                        media coverages
+                      </span>
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="xl:text-5xl md:text-3xl text-2xl font-black text-ardent flex flex-row items-center">
+                      2000+{" "}
+                      <span className="xl:text-2xl md:text-xl text-base text-white ml-2 font-medium">
+                        media coverages
+                      </span>
+                    </p>
+                  </>
+                )}
+
                 <p className="md:text-base text-[10px]  text-white">
-                  across leading healthcare, national and regional news
-                  publications
+                  {healthcare ? (
+                    <>
+                      across leading healthcare, national and regional news
+                      publications
+                    </>
+                  ) : (
+                    <>
+                      across leading real-estate, national and regional news
+                      publications
+                    </>
+                  )}
                 </p>
               </div>
             </div>
@@ -127,12 +186,27 @@ export default function BigTwo() {
                 </svg>
               </div>
               <div>
-                <p className="xl:text-5xl md:text-3xl text-2xl font-black text-ardent flex flex-row items-center">
-                  12M+{" "}
-                  <span className="xl:text-2xl md:text-xl text-sm text-white ml-2 font-medium">
-                    avg readership potentailly achieved
-                  </span>
-                </p>
+                {healthcare ? (
+                  <>
+                    <p className="xl:text-5xl md:text-3xl text-2xl font-black text-ardent flex flex-row items-center">
+                      12M+{" "}
+                      <span className="xl:text-2xl md:text-xl text-sm text-white ml-2 font-medium">
+                        avg readership potentailly achieved
+                      </span>
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    {" "}
+                    <p className="xl:text-5xl md:text-3xl text-2xl font-black text-ardent flex flex-row items-center">
+                      1.6M+{" "}
+                      <span className="xl:text-2xl md:text-xl text-sm text-white ml-2 font-medium">
+                        avg readership potentailly achieved
+                      </span>
+                    </p>
+                  </>
+                )}
+
                 {/* <p className="text-base  text-white">
                   across leading healthcare, national and regional news publications
                 </p> */}
@@ -159,13 +233,33 @@ export default function BigTwo() {
                 The Problem <span className="font-black">We Solve</span>
               </p>
               <p className="md:text-xl text-base">
-                Healthcare providers often struggle to authentically connect
-                with patients while managing complex regulatory communication
-                demands
+                {healthcare ? (
+                  <>
+                    Healthcare providers often struggle to authentically connect
+                    with patients while managing complex regulatory
+                    communication demands
+                  </>
+                ) : (
+                  <>
+                    Real estate brands face the challenge of cutting through
+                    noise in crowded markets where traditional ads underperform
+                    and trust is hard to build.
+                  </>
+                )}
               </p>
               <p className="md:text-xl text-base">
-                Withouth strategic PR and integrated digital communication,
-                growth and patient trust log behind the competition.
+                {healthcare ? (
+                  <>
+                    Withouth strategic PR and integrated digital communication,
+                    growth and patient trust log behind the competition.
+                  </>
+                ) : (
+                  <>
+                    Without strong PR and integrated digital communication
+                    strategies, your projects can remain invisible or
+                    undervalued.
+                  </>
+                )}
               </p>
               {/* bulb */}
               <div className="flex flex-row items-center justify-center mt-20 relative ">
@@ -213,8 +307,17 @@ export default function BigTwo() {
                     </svg>
                   </div>
                   <p className="md:text-xl text-base">
-                    Crafting authentic healthcare narratives that humanize your
-                    brand
+                    {healthcare ? (
+                      <>
+                        Crafting authentic healthcare narratives that humanize
+                        your brand
+                      </>
+                    ) : (
+                      <>
+                        Crafting compelling brand narratives that resonate with
+                        buyers and investors
+                      </>
+                    )}
                   </p>
                 </li>
                 <li className="flex flex-row items-center gap-5">
@@ -229,8 +332,17 @@ export default function BigTwo() {
                     </svg>
                   </div>
                   <p className="md:text-xl text-base">
-                    Managing media relations to strengthen authority and
-                    compliance visibility
+                    {healthcare ? (
+                      <>
+                        Managing media relations to strengthen authority and
+                        compliance visibility
+                      </>
+                    ) : (
+                      <>
+                        Leveraging media relations to earn powerful coverage and
+                        endorsements
+                      </>
+                    )}
                   </p>
                 </li>
                 <li className="flex flex-row items-center gap-5">
@@ -250,8 +362,17 @@ export default function BigTwo() {
                     </svg>
                   </div>
                   <p className="md:text-xl text-base">
-                    Delivering research-backed multi-channel communication
-                    strategies
+                    {healthcare ? (
+                      <>
+                        Delivering research-backed multi-channel communication
+                        strategies
+                      </>
+                    ) : (
+                      <>
+                        Executing multi-channel campaigns that combine research
+                        insights and creative storytelling
+                      </>
+                    )}
                   </p>
                 </li>
                 <li className="flex flex-row items-center gap-5">
@@ -266,8 +387,17 @@ export default function BigTwo() {
                     </svg>
                   </div>
                   <p className="md:text-xl text-base">
-                    Engaging patients across digital platforms with targeted,
-                    meaningful content
+                    {healthcare ? (
+                      <>
+                        Engaging patients across digital platforms with
+                        targeted, meaningful content
+                      </>
+                    ) : (
+                      <>
+                        Amplifying your message through social, digital, and
+                        traditional channels
+                      </>
+                    )}
                   </p>
                 </li>
               </ul>
@@ -296,7 +426,7 @@ export default function BigTwo() {
         {/* end */}
         <section className="w-full relative h-fit min-w-screen md:min-h-screen min-h-fit flex flex-col items-center justify-center text-white md:my-0 py-20">
           <Image
-            src="/doctor.jpg"
+            src={healthcare ? "/doctor.jpg" : "/realestate.jpg"}
             alt="doctor"
             fill
             className="object-cover opacity-50 grayscale -z-10 absolute inset-0"
@@ -314,21 +444,36 @@ export default function BigTwo() {
             </a>
           </p>
 
-          <div className="grid md:grid-cols-4 grid-cols-2 w-fit h-fit justify-center items-center mt-10 gap-5 z-10">
-            {[
-              "Proven ability to build trust and brand credibility",
-              "Integrated digital communication strategies tailored for healthcare",
-              "Collaborative approach ensuring regulatory compliance and impact",
-              "Trusted by clinics, hospitals, and health startups",
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-ardent text-black md:w-[350px] w-[200px] md:h-[350px] h-[200px] md:text-3xl text-base p-5 flex flex-col cursor-pointer hover:shadow-2xl shadow-ardent transition-shadow duration-100 ease-in-out hover:shadow-ardent/50"
-              >
-                <p className="">0{index + 1}</p>
-                <p className="font-bold mt-auto ">{item}</p>
-              </div>
-            ))}
+          <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 grid-cols-2 w-fit h-fit place-items-center mt-10 gap-5 z-10">
+            {healthcare
+              ? [
+                  "Proven ability to build trust and brand credibility",
+                  "Integrated digital communication strategies tailored for healthcare",
+                  "Collaborative approach ensuring regulatory compliance and impact",
+                  "Trusted by clinics, hospitals, and health startups",
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-ardent text-black md:w-[350px] w-[200px] md:h-[350px] h-[200px] md:text-2xl text-base p-5 flex flex-col cursor-pointer hover:shadow-2xl shadow-ardent transition-shadow duration-100 ease-in-out hover:shadow-ardent/50"
+                  >
+                    <p className="font-bold">0{index + 1}</p>
+                    <p className="font-bold mt-10 ">{item}</p>
+                  </div>
+                ))
+              : [
+                  "Deep expertise in real estate PR and communications",
+                  "Proven success in securing targeted media coverage and leads",
+                  "Holistic digital campaigns to maximize reach and engagement",
+                  "Trusted by top developers and real estate brands",
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-ardent text-black md:w-[350px] w-[200px] md:h-[350px] h-[200px] md:text-2xl text-base p-5 flex flex-col cursor-pointer hover:shadow-2xl shadow-ardent transition-shadow duration-100 ease-in-out hover:shadow-ardent/50"
+                  >
+                    <p className="font-bold">0{index + 1}</p>
+                    <p className="font-bold mt-10 ">{item}</p>
+                  </div>
+                ))}
           </div>
         </section>
       </div>
