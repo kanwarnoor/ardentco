@@ -1,13 +1,66 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "@/app/components/ui/Navbar";
+import axios from "axios";
 
 interface BigTwoProps {
   realestate?: boolean;
   healthcare?: boolean;
 }
 
+interface FormData {
+  name: string;
+  phone: string;
+  email: string;
+  company: string;
+  loading: boolean;
+  success: boolean;
+  error: string;
+}
+
 export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    phone: "",
+    email: "",
+    company: "",
+    loading: false,
+    success: false,
+    error: "",
+  });
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(formData);
+
+    setFormData({ ...formData, loading: true, success: false, error: "" });
+
+    const response = await axios.post(healthcare ? "/api/healthcare" : "/api/realestate", {
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      company: formData.company,
+    });
+
+    if (response.status != 200) {
+      setFormData({
+        ...formData,
+        loading: false,
+        error: "Something went wrong",
+        success: false,
+      });
+    }
+
+    setFormData({
+      ...formData,
+      loading: false,
+      error: "",
+      success: true,
+    });
+  };
+
   return (
     <>
       <Navbar contact={false} />
@@ -82,10 +135,18 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
             </div>
             <div className="w-full h-full min-w-screen flex items-center justify-center md:mt-0 mt-10">
               <div className="xl:w-[60%] md:w-[70%] w-[70%] h-fit flex md:p-10 p-5 bg-white/50 backdrop-blur-sm border-2 border-ardent rounded-xl justify-center items-center">
-                <form className="w-full h-fit flex flex-col md:gap-10 gap-5 text-white md:text-base text-sm">
+                <form
+                  className="w-full h-fit flex flex-col md:gap-10 gap-5 text-white md:text-base text-sm"
+                  onSubmit={onSubmit}
+                >
                   <input
                     type="text"
                     name="name"
+                    required
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
                     className="w-full h-10  rounded-full p-5 bg-black/50"
                     placeholder="Name"
                     id="name"
@@ -93,6 +154,11 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                   <input
                     type="text"
                     name="Email"
+                    required
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     className="w-full h-10  rounded-full p-5 bg-black/50"
                     placeholder="Email"
                     id="email"
@@ -100,6 +166,11 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                   <input
                     type="number"
                     name="Phone"
+                    required
+                    value={formData.phone}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
                     className="w-full h-10  rounded-full p-5 bg-black/50"
                     placeholder="Phone"
                     id="phone"
@@ -107,12 +178,22 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                   <input
                     type="text"
                     name="companyName"
+                    required
+                    value={formData.company}
+                    onChange={(e) =>
+                      setFormData({ ...formData, company: e.target.value })
+                    }
                     className="w-full h-10  rounded-full p-5 bg-black/50"
                     placeholder="Company Name"
                     id="companyName"
                   />
-                  <button className="w-full p-3  rounded-full font-bold bg-ardent text-black border-2 border-black">
-                    Book A Strategy Call Now
+                  <button
+                    type="submit"
+                    className="w-full p-3  rounded-full font-bold bg-ardent text-black border-2 border-black"
+                  >
+                    {formData.loading
+                      ? "Loading..."
+                      : "Book A Strategy Call Now"}
                   </button>
                 </form>
               </div>
