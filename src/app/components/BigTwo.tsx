@@ -270,7 +270,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                     <p className="xl:text-5xl md:text-3xl text-2xl font-black text-ardent flex flex-row items-center">
                       1500+{" "}
                       <span className="xl:text-2xl md:text-xl text-base text-white ml-2 font-medium">
-                        media coverages
+                        media coverage
                       </span>
                     </p>
                   </>
@@ -279,7 +279,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                     <p className="xl:text-5xl md:text-3xl text-2xl font-black text-ardent flex flex-row items-center">
                       2000+{" "}
                       <span className="xl:text-2xl md:text-xl text-base text-white ml-2 font-medium">
-                        media coverages
+                        media coverage
                       </span>
                     </p>
                   </>
@@ -322,7 +322,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                     <p className="xl:text-5xl md:text-3xl text-2xl font-black text-ardent flex flex-row items-center">
                       12M+{" "}
                       <span className="xl:text-2xl md:text-xl text-sm text-white ml-2 font-medium">
-                        avg readership potentailly achieved
+                        avg readership potentially achieved
                       </span>
                     </p>
                   </>
@@ -332,7 +332,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                     <p className="xl:text-5xl md:text-3xl text-2xl font-black text-ardent flex flex-row items-center">
                       1.6M+{" "}
                       <span className="xl:text-2xl md:text-xl text-sm text-white ml-2 font-medium">
-                        avg readership potentailly achieved
+                        avg readership potentially achieved
                       </span>
                     </p>
                   </>
@@ -393,8 +393,8 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                 <p className="md:text-xl text-base">
                   {healthcare ? (
                     <>
-                      Withouth strategic PR and integrated digital
-                      communication, growth and patient trust log behind the
+                      Without strategic PR and integrated digital
+                      communication, growth and patient trust lag behind the
                       competition.
                     </>
                   ) : (
