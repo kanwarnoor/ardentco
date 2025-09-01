@@ -393,9 +393,8 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                 <p className="md:text-xl text-base">
                   {healthcare ? (
                     <>
-                      Without strategic PR and integrated digital
-                      communication, growth and patient trust lag behind the
-                      competition.
+                      Without strategic PR and integrated digital communication,
+                      growth and patient trust lag behind the competition.
                     </>
                   ) : (
                     <>
@@ -457,7 +456,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
               >
                 Our <span className="ml-3 font-bold">Solution</span>{" "}
                 <a
-                  href="/healthcare#home"
+                  href={healthcare ? "/healthcare#home" : "/realestate#home"}
                   className="font-bold xl:text-xl md:text-base text-sm border-2 ml-3 border-red-600 bg-yellow-500 rounded-full md:px-5 px-3 py-1 mt-3 md:mt-0"
                 >
                   Book A Strategy Call
@@ -631,7 +630,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
             <span className="text-ardent font-bold md:mx-3 mx-2">Choose</span>{" "}
             Ardent Co.{" "}
             <a
-              href="/healthcare#home"
+              href={healthcare ? "/healthcare#home" : "/realestate#home"}
               className="font-bold xl:text-xl md:text-base text-sm border-2 md:ml-5 ml-0 border-red-600 bg-yellow-500 rounded-full md:px-5 px-3 py-1 mt-3 md:mt-0 text-black"
             >
               Book A Strategy Call
