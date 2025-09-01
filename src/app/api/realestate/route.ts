@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     // Send email
     await transporter.sendMail({
       from: `"ArdentCo" <${process.env.SMTP_FROM}>`,
-      to: "wellitsnoor@gmail.com", // Where you want to receive emails
+      to: process.env.REALESTATE, // Where you want to receive emails
       // to: "famousforgames@gmail.com",
       replyTo: email, // Set reply-to as sender's email
       subject: `Real Estate Form Submitted by ${email}`,
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
           Company: ${company} 
         `,
       html: `
-          <h1>Client Form</h1>
+          <h1>Real Estate Form</h1>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Phone:</strong> ${phone}</p>
           <p><strong>Email:</strong> ${email}</p>

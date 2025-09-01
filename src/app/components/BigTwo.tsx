@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "@/app/components/ui/Navbar";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 interface BigTwoProps {
   realestate?: boolean;
@@ -37,12 +38,15 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
 
     setFormData({ ...formData, loading: true, success: false, error: "" });
 
-    const response = await axios.post(healthcare ? "/api/healthcare" : "/api/realestate", {
-      name: formData.name,
-      phone: formData.phone,
-      email: formData.email,
-      company: formData.company,
-    });
+    const response = await axios.post(
+      healthcare ? "/api/healthcare" : "/api/realestate",
+      {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        company: formData.company,
+      }
+    );
 
     if (response.status != 200) {
       setFormData({
@@ -61,25 +65,57 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
     });
   };
 
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <>
       <Navbar contact={false} />
       <div className=" md:h-full h-fit w-full">
         {/* lander */}
-        <div className=" md:h-screen h-[150vh] bg-black -z-10 absolute inset-0">
+        <motion.div
+          initial={{
+            scale: 0.8,
+            borderRadius: "1rem",
+          }}
+          animate={{
+            scale: 1,
+            borderRadius: "0px",
+          }}
+          transition={{
+            duration: 0.3,
+          }}
+          className={` md:h-screen h-[150vh] bg-black -z-10 absolute inset-0 rounded-2xl ${
+            loaded ? "blur-0" : "blur-xl"
+          }`}
+        >
           <Image
             src={realestate ? "/realestate.jpg" : "/doctor.jpg"}
             alt="doctor"
             fill
-            className="object-cover opacity-50  grayscale"
+            className={`object-cover opacity-50  grayscale ${
+              loaded ? "rounded-none" : "rounded-xl"
+            }`}
+            onLoad={() => setLoaded(true)}
           />
-        </div>
+        </motion.div>
         {/* lander */}
         <section
           id="home"
           className="w-full md:h-screen h-fit flex flex-col items-center justify-center"
         >
-          <div className="flex md:h-full h-fit mt-24 md:mt-0 md:flex-row flex-col items-center justify-center w-full">
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.3,
+            }}
+            className="flex md:h-full h-fit mt-24 md:mt-0 md:flex-row flex-col items-center justify-center w-full"
+          >
             <div className="w-full h-full min-w-screen flex flex-col items-center justify-center">
               <div className="w-[60%] h-full gap-10 flex flex-col  justify-center">
                 <p className="text-white md:text-2xl xl:text-4xl text-2xl font-bold">
@@ -192,14 +228,28 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                     className="w-full p-3  rounded-full font-bold bg-ardent text-black border-2 border-black"
                   >
                     {formData.loading
-                      ? "Loading..."
+                      ? "Sending..."
+                      : formData.success
+                      ? "Sent successfully!"
                       : "Book A Strategy Call Now"}
                   </button>
                 </form>
               </div>
             </div>
-          </div>
-          <div className="w-full md:mt-auto mt-10 h-fit flex flex-col md:flex-row md:mb-10 mb-5 items-center justify-center md:gap-32 gap-5">
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.8,
+            }}
+            className="w-full md:mt-auto mt-10 h-fit flex flex-col md:flex-row md:mb-10 mb-5 items-center justify-center md:gap-32 gap-5"
+          >
             <div className="flex flex-row items-center justify-center xl:w-[30rem] md:w-[25rem] w-[15rem]  gap-3">
               <div className="flex flex-row items-center justify-center">
                 <svg
@@ -293,7 +343,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                 </p> */}
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         <section
@@ -310,40 +360,68 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
           </div>
           <div className="w-full h-fit min-w-screen min-h-screen bg-white/70 flex flex-col justify-center items-center z-10">
             <div className="w-[80%] gap-5 flex flex-col">
-              <p className="text-bold text-4xl ">
-                The Problem <span className="font-black">We Solve</span>
-              </p>
-              <p className="md:text-xl text-base">
-                {healthcare ? (
-                  <>
-                    Healthcare providers often struggle to authentically connect
-                    with patients while managing complex regulatory
-                    communication demands
-                  </>
-                ) : (
-                  <>
-                    Real estate brands face the challenge of cutting through
-                    noise in crowded markets where traditional ads underperform
-                    and trust is hard to build.
-                  </>
-                )}
-              </p>
-              <p className="md:text-xl text-base">
-                {healthcare ? (
-                  <>
-                    Withouth strategic PR and integrated digital communication,
-                    growth and patient trust log behind the competition.
-                  </>
-                ) : (
-                  <>
-                    Without strong PR and integrated digital communication
-                    strategies, your projects can remain invisible or
-                    undervalued.
-                  </>
-                )}
-              </p>
+              <motion.div
+                className=" gap-5 flex flex-col"
+                initial={{
+                  opacity: 0,
+                }}
+                whileInView={{
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 0.5,
+                }}
+              >
+                <p className="text-bold text-4xl ">
+                  The Problem <span className="font-black">We Solve</span>
+                </p>
+                <p className="md:text-xl text-base">
+                  {healthcare ? (
+                    <>
+                      Healthcare providers often struggle to authentically
+                      connect with patients while managing complex regulatory
+                      communication demands
+                    </>
+                  ) : (
+                    <>
+                      Real estate brands face the challenge of cutting through
+                      noise in crowded markets where traditional ads
+                      underperform and trust is hard to build.
+                    </>
+                  )}
+                </p>
+                <p className="md:text-xl text-base">
+                  {healthcare ? (
+                    <>
+                      Withouth strategic PR and integrated digital
+                      communication, growth and patient trust log behind the
+                      competition.
+                    </>
+                  ) : (
+                    <>
+                      Without strong PR and integrated digital communication
+                      strategies, your projects can remain invisible or
+                      undervalued.
+                    </>
+                  )}
+                </p>
+              </motion.div>
+
               {/* bulb */}
-              <div className="flex flex-row items-center justify-center mt-20 relative ">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                }}
+                className="flex flex-row items-center justify-center mt-20 relative "
+              >
                 {Array.from({ length: 3 }).map((_, index) => (
                   <>
                     <div
@@ -360,12 +438,23 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                     />
                   </>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </div>
           <div className="w-full h-fit min-w-screen min-h-screen bg-ardent/70 z-10 flex flex-col items-center justify-center ">
             <div className="xl:w-[80%] md:w-[90%] w-[90%] gap-5 flex flex-col items-center justify-center ">
-              <p className="text-bold text-4xl flex md:flex-row flex-col items-center text-left">
+              <motion.p
+                initial={{
+                  opacity: 0,
+                }}
+                whileInView={{
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 0.5,
+                }}
+                className="text-bold text-4xl flex md:flex-row flex-col items-center text-left"
+              >
                 Our <span className="ml-3 font-bold">Solution</span>{" "}
                 <a
                   href="/healthcare#home"
@@ -373,8 +462,21 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                 >
                   Book A Strategy Call
                 </a>
-              </p>
-              <ul className="flex flex-col gap-10 w-[80%] mt-10">
+              </motion.p>
+              <motion.ul
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                }}
+                className="flex flex-col gap-10 w-[80%] mt-10"
+              >
                 <li className="flex flex-row items-center gap-5">
                   <div>
                     <svg
@@ -481,7 +583,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                     )}
                   </p>
                 </li>
-              </ul>
+              </motion.ul>
               {/* bulb */}
               {/* <div className="flex flex-row items-center justify-center mt-20 relative ">
                 {Array.from({ length: 3 }).map((_, index) => (
@@ -513,7 +615,18 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
             className="object-cover opacity-50 grayscale -z-10 absolute inset-0"
           />
 
-          <p className="text-4xl flex md:flex-row flex-col items-center justify-center z-10">
+          <motion.p
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="text-4xl flex md:flex-row flex-col items-center justify-center z-10"
+          >
             Why{" "}
             <span className="text-ardent font-bold md:mx-3 mx-2">Choose</span>{" "}
             Ardent Co.{" "}
@@ -523,7 +636,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
             >
               Book A Strategy Call
             </a>
-          </p>
+          </motion.p>
 
           <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 grid-cols-2 w-fit h-fit place-items-center mt-10 gap-5 z-10">
             {healthcare
@@ -533,13 +646,24 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                   "Collaborative approach ensuring regulatory compliance and impact",
                   "Trusted by clinics, hospitals, and health startups",
                 ].map((item, index) => (
-                  <div
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                      x: 50,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
                     key={index}
                     className="bg-ardent text-black md:w-[350px] w-[200px] md:h-[350px] h-[200px] md:text-2xl text-base p-5 flex flex-col cursor-pointer hover:shadow-2xl shadow-ardent transition-shadow duration-100 ease-in-out hover:shadow-ardent/50"
                   >
                     <p className="font-bold">0{index + 1}</p>
                     <p className="font-bold mt-10 ">{item}</p>
-                  </div>
+                  </motion.div>
                 ))
               : [
                   "Deep expertise in real estate PR and communications",
@@ -547,13 +671,24 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                   "Holistic digital campaigns to maximize reach and engagement",
                   "Trusted by top developers and real estate brands",
                 ].map((item, index) => (
-                  <div
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                      x: 50,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
                     key={index}
                     className="bg-ardent text-black md:w-[350px] w-[200px] md:h-[350px] h-[200px] md:text-2xl text-base p-5 flex flex-col cursor-pointer hover:shadow-2xl shadow-ardent transition-shadow duration-100 ease-in-out hover:shadow-ardent/50"
                   >
                     <p className="font-bold">0{index + 1}</p>
                     <p className="font-bold mt-10 ">{item}</p>
-                  </div>
+                  </motion.div>
                 ))}
           </div>
         </section>
