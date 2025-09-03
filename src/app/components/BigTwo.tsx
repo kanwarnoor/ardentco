@@ -57,6 +57,8 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
       });
     }
 
+    window.location.href = healthcare ? "/healthcare/success" : "realestate/success";
+
     setFormData({
       ...formData,
       loading: false,
