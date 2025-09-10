@@ -5,7 +5,6 @@ import Image from "next/image";
 import Navbar from "@/app/components/ui/Navbar";
 import axios from "axios";
 import { motion } from "framer-motion";
-import Script from "next/script";
 
 interface BigTwoProps {
   realestate?: boolean;
@@ -74,21 +73,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
 
   return (
     <>
-      <head>
-        <Script id="google-analytics-healthcare">{`function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17389056295/qd-gCOKRopMbEKfi3-NA',
-      'event_callback': callback
-  });
-  return false;
-}
- `}</Script>
-      </head>
+     
       <Navbar contact={false} />
       <div className=" md:h-full h-fit w-full">
         {/* lander */}
