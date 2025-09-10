@@ -22,13 +22,9 @@ export default function Page() {
 
   return (
     <>
-      <Script id="google-analytics-success">
+      <Script id="google-analytics-success-healthcare">
         {`
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17389056295/4JMxCJzAy_caEKfi3-NA',
-      'value': 1.0,
-      'currency': 'INR'
-  });
+  gtag('event', 'conversion', {'send_to': 'AW-17389056295/qd-gCOKRopMbEKfi3-NA'});
   `}
       </Script>
 
