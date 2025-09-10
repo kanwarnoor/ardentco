@@ -24,7 +24,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
-
         {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-GMWD07EPW2"
           strategy="afterInteractive"
@@ -37,26 +36,31 @@ export default function RootLayout({
             gtag('config', 'G-GMWD07EPW2');
           `}
         </Script> */}
-
+        {/* <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17389056295"
+        ></Script> */}
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-17389056295"
-        ></Script>
-        <Script id="google-analytics">
+        ></Script>{" "}
+        <Script id="google-analytics">{` window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17389056295'); `}</Script>
+        {/* <Script id="google-analytics">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', 'AW-17389056295');
+
+            
           `}
-        </Script>
+        </Script> */}
         <Script id="message">
           {`
             console.log("Developed by @wellitsnoor");
           `}
         </Script>
-
         {/* Meta Pixel Code */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`

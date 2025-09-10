@@ -18,8 +18,9 @@ export default function RootLayout({
         async
         src="https://www.googletagmanager.com/gtag/js?id=AW-17389056295"
       ></Script> */}
+
       <head>
-        <Script id="google-analytics-success">
+        {/* <Script id="google-analytics-success">
           {`
   gtag('event', 'conversion', {
       'send_to': 'AW-17389056295/4JMxCJzAy_caEKfi3-NA',
@@ -27,7 +28,9 @@ export default function RootLayout({
       'currency': 'INR'
   });
   `}
-        </Script>
+        </Script> */}
+
+        <Script id="google-analytics-success-healthcare">{` gtag('event', 'conversion', {'send_to': 'AW-17389056295/qd-gCOKRopMbEKfi3-NA'}); `}</Script>
       </head>
 
       <body>{children}</body>
