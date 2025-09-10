@@ -29,8 +29,14 @@ export default function RootLayout({
   });
   `}
         </Script> */}
+         <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17389056295"
+        ></Script>{" "}
 
         <Script id="google-analytics-success-healthcare">{` gtag('event', 'conversion', {'send_to': 'AW-17389056295/qd-gCOKRopMbEKfi3-NA'}); `}</Script>
+
+        
       </head>
 
       <body>{children}</body>
