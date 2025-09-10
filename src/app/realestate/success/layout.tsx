@@ -19,15 +19,7 @@ export default function RootLayout({
         src="https://www.googletagmanager.com/gtag/js?id=AW-17389056295"
       ></Script> */}
       <head>
-        <Script id="google-analytics-success">
-          {`
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17389056295/4JMxCJzAy_caEKfi3-NA',
-      'value': 1.0,
-      'currency': 'INR'
-  });
-  `}
-        </Script>
+        <Script id="google-analytics-success-realestate">{` gtag('event', 'conversion', {'send_to': 'AW-17389056295/qwMNCOXkoZMbEKfi3-NA'}); `}</Script>
       </head>
 
       <body>{children}</body>

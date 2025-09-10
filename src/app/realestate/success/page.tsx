@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Script from "next/script";
+// import Script from "next/script";
 
 import Button from "@/app/components/ui/button";
 
@@ -22,15 +22,7 @@ export default function Page() {
 
   return (
     <>
-      <Script id="google-analytics-success">
-        {`
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17389056295/4JMxCJzAy_caEKfi3-NA',
-      'value': 1.0,
-      'currency': 'INR'
-  });
-  `}
-      </Script>
+    
 
       <div className="w-screen h-screen flex flex-col justify-center items-center bg-neutral-950 text-white">
         <h1 className="flex md:text-4xl text-2xl font-bold">
