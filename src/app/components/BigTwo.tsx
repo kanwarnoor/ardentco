@@ -642,7 +642,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
             </a>
           </motion.p>
 
-          <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 grid-cols-2 w-fit h-fit place-items-center mt-10 gap-5 z-10">
+          <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 grid-cols-2 w-fit h-fit place-items-center mt-10 md:gap-5 gap-2 z-10">
             {healthcare
               ? [
                   "Proven ability to build trust and brand credibility",
@@ -663,7 +663,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                       duration: 0.5,
                     }}
                     key={index}
-                    className="bg-ardent text-black md:w-[350px] w-[200px] md:h-[350px] h-[200px] md:text-2xl text-base p-5 flex flex-col cursor-pointer hover:shadow-2xl shadow-ardent transition-shadow duration-100 ease-in-out hover:shadow-ardent/50"
+                    className="bg-ardent text-black md:w-[350px] w-[180px] md:h-[350px] h-[200px] md:text-2xl text-base md:p-5 p-3 flex flex-col cursor-pointer hover:shadow-2xl shadow-ardent transition-shadow duration-100 ease-in-out hover:shadow-ardent/50"
                   >
                     <p className="font-bold">0{index + 1}</p>
                     <p className="font-bold mt-10 ">{item}</p>
@@ -688,7 +688,7 @@ export default function BigTwo({ realestate, healthcare }: BigTwoProps) {
                       duration: 0.5,
                     }}
                     key={index}
-                    className="bg-ardent text-black md:w-[350px] w-[200px] md:h-[350px] h-[200px] md:text-2xl text-base p-5 flex flex-col cursor-pointer hover:shadow-2xl shadow-ardent transition-shadow duration-100 ease-in-out hover:shadow-ardent/50"
+                    className="bg-ardent text-black md:w-[350px] w-[180px] md:h-[350px] h-[200px] md:text-2xl text-base md:p-5 p-3 flex flex-col cursor-pointer hover:shadow-2xl shadow-ardent transition-shadow duration-100 ease-in-out hover:shadow-ardent/50"
                   >
                     <p className="font-bold">0{index + 1}</p>
                     <p className="font-bold mt-10 ">{item}</p>
