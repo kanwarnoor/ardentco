@@ -30,7 +30,7 @@ export default function RootLayout({
   `}
         </Script> */}
 
-        
+
          <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-17389056295"
