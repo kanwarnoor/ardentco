@@ -95,7 +95,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             des2="In the past, he has worked closely with the Govt. of Andhra Pradesh among a string of other politico-administrative entities in India on subject matters of development & public welfare, wherein he engaged with a multitude of key stakeholders. Tanush is high on sports and likes his coffee dark and bitter."
           />
 
-          <Person
+          {/* <Person
             name="Sristi Rai"
             image="/team/consultants/seniorAssociate1.jpg"
             role="Senior Associate, Media and Communications Strategy"
@@ -103,7 +103,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             link="https://www.linkedin.com/in/sristi-rai-b2a900183/"
             position="50% 30%"
             des1="Sristi Rai is working as Senior Public Relation Associate at Ardent Co with 2 years of experience. At Ardent co.,she handles the media relations and communications, along with documents work for the client. Earlier, her career revolved around political, commercial, edtech, healthcare, startups and lifestyle beats. Her expertise lies in strategic communication, media relations, and social skills. Sristi’s hobbies include traveling,music and dancing."
-          />
+          /> */}
           <Person
             name="Ekta Sharma"
             image="/team/consultants/assistantManager3.jpg"
@@ -114,7 +114,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             des1="Ekta Sharma is a seasoned professional, skilled in crafting cross-channel branding strategies that deeply resonate with audiences. Her journey artfully blends creativity with strategic prowess, amplifying brand visibility and consistency through dynamic marketing campaigns and media relations. Beyond the boardroom, Ekta is a music maker and an Indian hip-hop culture enthusiast, adding rhythm to both her professional and personal pursuits."
           />
 
-          <Person
+          {/* <Person
             name="Manya Singh"
             image="/team/consultants/seniorAssociate2.jpeg"
             role="Senior Associate, Media and Communications Strategy"
@@ -122,7 +122,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             link="https://www.linkedin.com/in/manya-singh-1b1789241/"
             position="50% 20%"
             des1="Manya is a PR professional with a bachelor’s degree in psychology from Delhi University. She brings to the table two years of experience across diverse sectors, including legal, healthcare, corporate, and power. Manya specializes in strategic communications, crafting compelling narratives, and building strong media relationships. Manya finds an escape in singing and dancing adding to her multifaceted personality."
-          />
+          /> */}
           <Person
             name="Manish"
             image="/team/consultants/graphicDesigner.jpeg"
@@ -143,7 +143,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             position="50% 30%"
             des1="Binaira is an experienced communications professional with over four years in the industry. She began her career at Archetype, formerly known as Text100, and subsequently worked with Crosshairs’s, The Yellow Coin, and Jaipur Rugs as a corporate communications assistant manager. Recently, she transitioned to Ardent Co. as a PR manager. Throughout her career, Binaira has handled a diverse range of beats including auto, tech, business, lifestyle, consumer, education, health, social issues, art and culture, and MSME. Outside of work, Binaira enjoys spending time with animals, painting, reading, and cherishing moments at home."
           />
-          <Person
+          {/* <Person
             name="Charu Pawar"
             image="/team/consultants/charuPawar.jpg"
             role="Senior Associate, Content and Research"
@@ -151,7 +151,7 @@ Sarthak discovered his calling in communications through a complex non-tradition
             link="https://www.linkedin.com/in/charu-pawar-203388222/"
             position="50% 10%"
             des1="Charu Pawar is a Senior Associate – Research and Content at Ardent Co., where she develops strategic, insight-led content across sectors like healthcare, real estate, biopharma, public policy, and development. Her work spans industry reports, thought leadership, and behaviour change communication. With a strong grounding in research and narrative craft, Charu helps clients communicate with clarity and impact, tailoring content to diverse audiences across media platforms and stakeholder engagement initiatives."
-          />
+          /> */}
           <Person
             name="Rushali Kumar"
             image="/team/consultants/hr.jpeg"

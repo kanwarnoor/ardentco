@@ -373,13 +373,31 @@ export default function Page() {
             <div className="flex md:flex-row flex-col gap-10 mx-auto pt-10">
               <InfoCard
                 // title1={"Navigating Climate Financing"}
+                title1="Pramit Lahiri"
+                des="Senior Associate - Research and Content"
+                animation="left"
+                image={"/1.png"}
+                link="https://indianexpress.com/article/opinion/columns/goa-needs-a-special-constitutional-amendment-for-environmental-survival-10522626/"
+              />
+              <InfoCard
+                // title1={"Navigating Climate Financing"}
+                title1="Pramit Lahiri"
+                des="Senior Associate - Research and Content"
+                animation="left"
+                image={"/2.png"}
+                link="https://www.downtoearth.org.in/climate-change/if-the-paris-agreement-was-about-shared-ambition-bel%C3%A9m-must-be-about-shared-architecture-where-finance-meets-fairness-and-growth-meets-governance"
+              />
+              <InfoCard
+                // title1={"Navigating Climate Financing"}
                 title1="Shivi Singh"
                 des="Senior Research Associate"
                 animation="left"
                 image={"/media1.png"}
                 link="https://pynr.in/navigating-climate-financing/#:~:text=India%20is%20estimated%20to%20need,agreed%20climate%20objectives%20by%202030"
               />
-
+            </div>
+            <div className="flex md:flex-row flex-col gap-10 mx-auto pt-10">
+              {" "}
               <InfoCard
                 // title1={"आत्मनिर्भर भारत, सशक्त अर्थव्यवस्था"}
                 title1="Sristi Rai"
@@ -388,7 +406,6 @@ export default function Page() {
                 image={"/media2.png"}
                 link="https://theyoungistaan.com/aatmanirbhar-bharat-strong-economy/"
               />
-
               <InfoCard
                 // title1={
                 //   "With UPI’s global buzz, India proves that it can be a digital trailblazer"
@@ -399,8 +416,6 @@ export default function Page() {
                 image={"/media3.png"}
                 link="https://www.moneycontrol.com/news/opinion/with-upis-global-buzz-india-proves-that-it-can-be-a-digital-trailblazer-11254981.html"
               />
-            </div>
-            <div className="flex md:flex-row flex-col gap-10 m-auto mt-10">
               <InfoCard
                 // title1={"Embracing empathy in the workplace landscape"}
                 title1="Aradhna Anand"
@@ -409,7 +424,8 @@ export default function Page() {
                 image={"/media4.png"}
                 link="https://www.peoplematters.in/article/culture/embracing-empathy-in-the-workplace-landscape-39637"
               />
-
+            </div>
+            <div className="flex md:flex-row flex-col gap-10 m-auto mt-10">
               <InfoCard
                 // title1={"India’s neonatal burden and the challenges ahead"}
                 title1="Shubhangi Misra"
@@ -427,8 +443,6 @@ export default function Page() {
                 image={"/media6.png"}
                 link="https://energy.economictimes.indiatimes.com/news/renewable/making-india-the-clean-durable-metals-hub-is-stainless-steel-the-option/101569608"
               />
-            </div>
-            <div className="flex md:flex-row flex-col gap-10 m-auto mt-10 pb-20">
               <InfoCard
                 // title1={"The guardians of earth"}
                 // title2={"& local forest lands"}
@@ -439,6 +453,7 @@ export default function Page() {
                 link="https://government.economictimes.indiatimes.com/blog/the-guardians-of-earth-local-forest-lands-indigenous-communities-in-decision-making/116156284"
               />
             </div>
+            <div className="flex md:flex-row flex-col gap-10 m-auto mt-10 pb-20"></div>
           </div>
         </section>
       )}
