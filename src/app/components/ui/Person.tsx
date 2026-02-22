@@ -156,8 +156,9 @@ export default function Person({
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1, duration: 0.5 }}
                   className="pt-2 md:w-[90%] md:text-sm text-xs"
+                  dangerouslySetInnerHTML={{ __html: des2 || "" }}
                 >
-                  {des2}
+                  {/* {des2} */}
                 </motion.p>
                 {link && (
                   <motion.div
