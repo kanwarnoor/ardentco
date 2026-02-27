@@ -162,12 +162,12 @@ export default function Lander({
                     1500+{" "}
                     <span className="text-white md:text-xl text-[10px] !font-bold ml-2">
                       {" "}
-                      media coverages
+                      Media Coverages
                     </span>
                   </span>
 
                   <span className="text-white md:text-sm text-[10px] !font-bold">
-                    across leading national and regional news publications
+                    Across national, business & regional publications
                   </span>
                 </div>
               </div>
@@ -187,7 +187,7 @@ export default function Lander({
                     12M+
                   </span>
                   <span className="text-white font-medium md:text-base text-xs leading-tight">
-                    avg readership potentially achieved
+                    Potential Readership Reached
                   </span>
                 </div>
               </div>
