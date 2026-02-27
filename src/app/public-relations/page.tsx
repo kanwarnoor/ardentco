@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 // import Options from "../components/ui/Options";
 // import OptionsFull from "../components/ui/OptionsFull";
 import Contact from "../components/ui/Contact";
-import GetInTouch from "../components/GetInTouch";
+import OptionsFull from "../components/ui/OptionsFull";
 
 export default function Page() {
   const content = [
@@ -137,6 +137,7 @@ export default function Page() {
         buttonLink="#contact"
         buttonTxt2="Know more"
         buttonLink2="#more"
+        ad={true}
         description="A study of 30 listed companies over 40 years found that crises caused an average 19% drop in share prices, took 147 days to recover, and led to lost deals, customers, and funding, affecting unlisted firms too.
 "
         css="text-white"
@@ -184,7 +185,7 @@ export default function Page() {
             </motion.div>
             <div className="w-1/3 h-1 bg-white/0 rounded-full my-10"></div>
 
-            <GetInTouch content={content} />
+            <OptionsFull content={content} />
           </div>
         </div>
       </section>
