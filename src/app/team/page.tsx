@@ -184,6 +184,16 @@ Sarthak discovered his calling in communications through a complex non-tradition
             des2="His experience spans legislative and policy engagement through internships with the Office of a Member of Parliament, where he contributed to legal and policy research supporting parliamentary functions including Question Hour, Zero Hour interventions, Special Mentions, and policy research. His policy exposure also includes work with the Vidhi Centre for Legal Policy, where he contributed to regulatory and governance reforms across municipal law, corporate regulation, and financial frameworks. This involved proposing reforms to Rajasthan’s municipal governance framework with emphasis on fiscal autonomy, participatory budgeting, and digitization, alongside comparative legal research across global jurisdictions.<br><br>Debjyoti has engaged extensively with technology and regulatory policy, including work within the Compliance Think Tank at Dhir & Dhir Associates in college, contributing to comparative analysis of global AI governance frameworks and assisting in policy recommendations that culminated in the publication AI For Good: India and Beyond. <br><br>In addition to professional engagements, Debjyoti has contributed to academic discourse through publications on environmental governance and public participation in lawmaking. 
 <br><br>With a foundation rooted in legal scholarship and practical policy exposure, Debjyoti, as the Junior Associate - Research and Content, continues to develop expertise at the intersection of law, governance, and institutional reform, combining analytical rigour with research-driven policymaking perspectives with Ardent Co."
           />
+           <Person
+            name="Meghna Juneja"
+            image="/team/consultants/meghna.jpeg"
+            role="Senior Associate, Public Relations"
+            theme="dark"
+            link="https://www.linkedin.com/in/meghna-juneja-174a70210/"
+            position="50% 50%"
+            des1="Meghna Juneja is a communications professional with expertise in strategic media relations, content development, and narrative building. Meghna has worked with a diverse set of clients across sectors, helping shape impactful communication strategies and strengthening brand positioning through targeted outreach. Leveraging her understanding of media landscapes, stakeholder engagement, and policy-linked narratives, she has supported clients in designing thought leadership platforms, executing integrated media campaigns, managing crisis communication, and driving sustained visibility through strategic storytelling and relationship building."
+            
+          />
         </div>
 
         <div className="flex w-full h-fit text-center justify-center my-20 ">
